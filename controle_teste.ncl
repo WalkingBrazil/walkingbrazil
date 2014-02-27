@@ -16,6 +16,6 @@
 	</head>
 	<body>
 		<port id="pLua" component="lua"/>
-		<media id="lua" src="controle.lua" descriptor="dLua"/>
+		<media id="lua" src="/Lua/controle.lua" descriptor="dLua"/>
 	</body>
 </ncl>
