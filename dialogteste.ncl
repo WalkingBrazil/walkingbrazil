@@ -25,7 +25,7 @@
 		
 		<port id="pInicio" component="ImgBotaoVermelho"/>
 		
-		<media id="lua"  src="/Lua/dialogo.lua"       descriptor="dLua"/>
+		<media id="lua"  src="/Lua/dialogo.lua" descriptor="dLua"/>
       
     	<media type="image/png" id="ImgFundo" src="media/fundo.png" descriptor="dFundo">
       	<property name="bounds"/>
