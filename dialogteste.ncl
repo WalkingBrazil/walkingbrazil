@@ -11,7 +11,7 @@
 		<descriptorBase>
 			<descriptor id="dFundo" region="rgFundo"/>
 			<descriptor id="dBotaoVermelho" region="rgBotaoVermelho"/>
-			<descriptor id="dLua"   region="rgLua">
+			<descriptor id="dLua"   region="rgLua" focusIndex="luaIdx">
 			</descriptor>
 		</descriptorBase>
 		
@@ -23,20 +23,20 @@
 	
 	<body>
 		
-		<port id="pInicio" component="ImgBotaoVermelho"/>
+		<port id="pInicio" component="lua"/>
 		
-		<media id="lua"  src="/Lua/dialogo.lua" descriptor="dLua"/>
+		<media type="application/x-ginga-settings" id="programSettings">
+        <property name="service.currentKeyMaster" value=""/>
+		</media>
+		
+		<media id="lua"  src="Lua/dialogo.lua" descriptor="dLua"/>
       
     	<media type="image/png" id="ImgFundo" src="media/fundo.png" descriptor="dFundo">
       	<property name="bounds"/>
         	<area id="aImgBotaoVermelho" begin="3s"/>
         </media>
 		
-		<media type="image/png" id="ImgBotaoVermelho" src="media/red.png" descriptor="dBotaoVermelho" >
-			
-			
-    
-		</media>  
+		<media type="image/png" id="ImgBotaoVermelho" src="media/red.png" descriptor="dBotaoVermelho"/>  
 		
 		<link id="link_ImgBotaoVermelho_Start" xconnector="connectors#onBeginStartN">
         	<bind component="ImgBotaoVermelho" role="onBegin" />
