@@ -20,6 +20,21 @@
 					<simpleAction role="abort" max="unbounded" qualifier="par"/>
 				</compoundAction>
 			</causalConnector>
+			 <causalConnector id="onBeginSet">
+	        	<connectorParam name="value"/>
+	        	<simpleCondition role="onBegin" />
+	        	<simpleAction role="set" value="$value" />
+	        </causalConnector>
+	        <causalConnector id="onKeySelectionStop">
+                <connectorParam name="key"/>
+                
+                <simpleCondition role="onSelection" key="$key"  />
+                <simpleAction role="stop" />
+            </causalConnector>
+       <causalConnector id="onEndStop">
+             <simpleCondition role="onEnd"/>
+             <simpleAction role="stop"/>
+       </causalConnector>
 		</connectorBase>
 	</head>
 </ncl>
