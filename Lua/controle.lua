@@ -6,8 +6,8 @@ local manaus = yellowmarker_p
 local rio = canvas:new('media/markerred_p.jpg')
 local selectrio = canvas:new('media/markeryellow_p.jpg')
 
-local salvador = canvas:new('media/markerred.jpg')
-local selectsalvador = canvas:new('media/markeryellow.jpg')
+local salvador = canvas:new('media/markerred_p.jpg')
+local selectsalvador = canvas:new('media/markeryellow_p.jpg')
 
 canvas:attrColor(0, 0, 0, 0)
 canvas:drawRect('fill', 10, 10, canvas:attrSize())
