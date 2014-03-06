@@ -32,12 +32,12 @@
 			<descriptor id="idLogo" region="regiaoLogo"/>
 			<descriptor id="idTelaInicial" region="regiaoTelaInicial"/>
 			<descriptor id="idNavegacao" region="regitaoNavegacao"/>
-			<descriptor id="idBotaoIdioma" region="regiaoBotaoIdioma"/>
-			<descriptor id="idBotaoSair" region="regiaoBotaoSair"/>
+			<descriptor id="idBotaoIdioma" region="regiaoBotaoIdioma" focusBorderWidth="2"/>
+			<descriptor id="idBotaoSair" region="regiaoBotaoSair" />
 			<descriptor id="idBotaoSobre" region="regiaoBotaoSobre"/>
 			<descriptor id="idTituloPreviewCidade" region="regiaoTituloPreviewCidade"/>
 			<descriptor id="idDescricaoPreviewCidade" region="regiaoDescricaoPreviewCidade"/>
-			<descriptor id="dsLua" region="rgLua" focusIndex="0" focusBorderWidth="0" />
+			<descriptor id="dsLua" region="rgLua" focusIndex="1" focusBorderWidth="5" />
 		</descriptorBase>
 	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE CONECTORES						 !
@@ -69,7 +69,10 @@
 		</media>
 		<media id="telaInicial" src="media/telaInicial.png" descriptor="idTelaInicial"/>
 		<media id="painelNavegacao" src="media/navegacao.png" descriptor="idNavegacao"/>
-		<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="idBotaoIdioma"/>
+		<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="idBotaoIdioma">
+			<property name="focusIndex" value="0"/>
+		</media>
+			
 		<media id="botaoSair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
 		<media id="botaoSobre" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
 		<media id="tituloPreviewCidade" src="media/cidadePreviewTitulo.png" descriptor="idTituloPreviewCidade"/>
@@ -102,7 +105,7 @@
 		<link xconnector="conectores#noInicio" id="ltelaInicialFixa">
 			<bind role="onBegin" component="telaInicial"/>
 			<bind role="start" component="painelNavegacao"/>
-			<bind role="start" component="botaoIdioma"/>
+			<bind role="start" component="botaoIdioma" interface="focusIndex" />
 			<bind role="start" component="botaoSair"/>
 			<bind role="start" component="botaoSobre"/>
 			<bind role="start" component="tituloPreviewCidade"/>
@@ -118,12 +121,10 @@
 			<bind component="logo" role="start"/>
 		</link>
 		
-		<link id="lSelecionaBotaoLua" xconnector="conectores#selecaoBotaoIntInicioFim">
+		<link id="lSelecionaBotaoLua" xconnector="conectores#onKeySelectionStart">
 			<bind role="onSelection" component="botaoSobre">
-				<bindParam name="keyCode" value="GREEN"/>
+				<bindParam name="key" value="GREEN"/>
 			</bind>
-			<bind component="botaoSobre" role="stop"/>
-			<bind component="botaoSobre" role="abort"/>
 			<bind component="lua" role="start"/>
 		</link>
 		
@@ -134,8 +135,17 @@
 			</bind>
  		</link>
  		
- 		  <link xconnector="conectores#onEndStop">
-         <bind component="lua" role="onEnd"/>
+ 		 <link xconnector="conectores#onEndStopSet">
+	         <bind component="lua" role="onEnd"/>
+	         
+	         <bind role="set" component="settings" interface="service.currentKeyMaster">
+				<bindParam name="value" value=""/>
+			 </bind>	
+			 <bind component="lua" role="stop"/>
+		  </link>
+ 		
+ 		  <link xconnector="conectores#onAbortStop">
+         <bind component="lua" role="onAbort"/>
          <bind component="teste" role="stop"/>
 		  </link>
 	</body>
