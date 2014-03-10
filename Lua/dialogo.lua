@@ -1,3 +1,7 @@
+--require "manaus"
+
+--print(teste)
+
 local botaoSimFocusOff = canvas:new('media/botaoYes.png')
 local botaoSimFocusOn = canvas:new('media/botaoYesFocus.png')
 local botaoNaoFocusOff = canvas:new('media/botaoNo.png')
