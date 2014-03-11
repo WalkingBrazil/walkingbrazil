@@ -17,7 +17,7 @@
 			<region id="regiaoBotaoSobre" width="8%" height="3.5%" left="67%" top="89%"/>
 			<region id="regiaoTituloPreviewCidade" width="20%" height="8%" left="10%" top="21%"/>
 			<region id="regiaoDescricaoPreviewCidade" width="20%" height="8%" left="10%" top="48%" />
-			<region width="50%"  height="50%"  right="25%" top="25%" id="rgLua" />
+			<region id="rgLua"/>
 		</regionBase>
 		
 		<descriptorBase>
@@ -35,7 +35,7 @@
 			<descriptor id="idPontoTur2" region="regiaoPontoTur2" focusIndex="2" moveLeft="1" moveDown="4" />
 			<descriptor id="idPontoTur3" region="regiaoPontoTur3" focusIndex="3" moveRight="4" moveUp="1" />
 			<descriptor id="idPontoTur4" region="regiaoPontoTur4" focusIndex="4" moveLeft="3" moveUp="2" />
-			<descriptor id="dsLua" region="rgLua" focusIndex="9" focusBorderWidth="5" />
+			<descriptor id="dsLua" region="rgLua"/>
 		</descriptorBase>
 		
 		<connectorBase>
@@ -45,30 +45,31 @@
 	</head>
 
 	<body>
-		<port id="porta1" component="imagemBackground"/>
+		<context id="mainTelaSelecao">
+		<port id="portaMainTelaSelecao" component="imagemBackground"/>
 		<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
 		<media id="logocopa" src="media/logocopa.jpg" descriptor="idLogoCopa"/>
 		<media id="imagemSelecao" src="media/logocopa.jpg" descriptor="idSelecao"/>
 		<media id="imagemTitulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
-		<media id="imagemPontoTur1" type="image/jpeg" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
-		<media id="imagemPontoTur2" type="image/jpeg" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
-		<media id="imagemPontoTur3" type="image/jpeg" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
-		<media id="imagemPontoTur4" type="image/jpeg" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
-				
-		<link id="lImagBotaoIntAparece" xconnector="conectores#noInicio">
+		<media id="imagemPontoTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+		<media id="imagemPontoTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+		<media id="imagemPontoTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+		<media id="imagemPontoTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+		<media id="textolua" src="Lua/selecao.lua" descriptor="dsLua">
+						<property name="cidadeSelec"/>
+		</media>
+			
+			
+		<link id="lIniciaTelaSelecao" xconnector="conectores#noInicio">
 			<bind role="onBegin" component="imagemBackground"/>
 			<bind role="start" component="logocopa"/>
 			<bind role="start" component="imagemSelecao"/>
-			<bind role="start" component="imagemTitulo"/>
-		</link>
-		
-		<link id="lImagPontoTurAparece" xconnector="conectores#noInicio">
-			<bind role="onBegin" component="imagemSelecao"/>
 			<bind role="start" component="imagemPontoTur1"/>
 			<bind role="start" component="imagemPontoTur2"/>
 			<bind role="start" component="imagemPontoTur3"/>
 			<bind role="start" component="imagemPontoTur4"/>
 		</link>
-
+	
+	</context>
 	</body>
 </ncl>

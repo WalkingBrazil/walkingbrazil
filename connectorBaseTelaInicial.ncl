@@ -22,9 +22,9 @@
 			</causalConnector>
 			
 			 <causalConnector id="onBeginSet">
-	        	<connectorParam name="value"/>
+	        	<connectorParam name="var"/>
 	        	<simpleCondition role="onBegin" />
-	        	<simpleAction role="set" value="$value" />
+	        	<simpleAction role="set" value="$var" />
 	        </causalConnector>
 	        
 	        <causalConnector id="onKeySelectionStop">
@@ -73,6 +73,25 @@
 			<simpleCondition role="onEndAttribution"/>
 			<simpleAction role="set" value="$var"/>
 		</causalConnector>
+		
+		<causalConnector id="onSelectionSetStartNStop">
+			<connectorParam name="var"/>
+			<simpleCondition role="onSelection"/>
+			<compoundAction operator="seq">
+				<simpleAction role="set" value="$var" max="unbounded"/>
+				<simpleAction role="stop" max="unbounded"/>
+				<simpleAction role="start" max="unbounded"/> 
+			</compoundAction>
+		</causalConnector>
+		
+			<causalConnector id="onSelectionStartNStop">
+			<simpleCondition role="onSelection"/>
+			<compoundAction operator="seq">
+				<simpleAction role="start" max="unbounded"/> 
+				<simpleAction role="stop" max="unbounded"/> 
+			</compoundAction>
+		</causalConnector>
+		
 		
 		</connectorBase>
 	</head>
