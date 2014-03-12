@@ -74,25 +74,19 @@
 			<bind role="onBegin" component="imagemBackground"/>
 			<bind role="start" component="botaoInt"/>
 		</link>
-		<link id="lImagBotaoIntDesaparece" xconnector="conectores#noFim">
-			<bind role="onEnd" component="imagemBackground"/>
-			<bind role="stop" component="imagemBackground"/>
-		</link>	
 		
-		<!-- exibe a tela inicial ap�s a exibi��o de alguns segundos do logo -->
-	
-		
-		<link id="lSelecionaBotaoInt" xconnector="conectores#selecaoBotaoIntInicioFim">
+			<link id="lSelecionaBotaoInt" xconnector="conectores#selecaoBotaoIntInicioFim">
 			<bind role="onSelection" component="botaoInt">
 				<bindParam name="keyCode" value="RED"/>
 			</bind>
 			<bind component="botaoInt" role="stop"/>
 			<bind component="botaoInt" role="abort"/>
+			<bind role="stop" component="imagemBackground"/>
 			<bind role="start" component="ctxTelaInicial"/>
 		</link>
 		
-		
-		
+		<!-- exibe a tela inicial ap�s a exibi��o de alguns segundos do logo -->
+	
 		<context id="ctxTelaInicial">
 			
 			
