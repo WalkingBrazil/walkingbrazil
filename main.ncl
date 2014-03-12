@@ -66,9 +66,6 @@
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 	 <media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
 		<media id="botaoInt" src="media/BotaoInterativo.png" descriptor="idBotaoInt"/>
-		<media id="logo" src="media/logo.png" descriptor="idLogo">
-			<area id="aLogoInicio" begin="1s" end="30s"/>
-		</media>
 		
 		<port id="porta1" component="imagemBackground"/>
 			
@@ -80,15 +77,10 @@
 		<link id="lImagBotaoIntDesaparece" xconnector="conectores#noFim">
 			<bind role="onEnd" component="imagemBackground"/>
 			<bind role="stop" component="imagemBackground"/>
-			<bind role="stop" component="logo"/>
 		</link>	
 		
 		<!-- exibe a tela inicial ap�s a exibi��o de alguns segundos do logo -->
-		<link xconnector="conectores#noInicio" id="ltelaInicialAparece">
-			<bind role="onBegin" interface="aLogoInicio" component="logo"/>
-			<bind role="start" component="ctxTelaInicial"/>
-			<bind role="stop" component="botaoInt"/>
-		</link>
+	
 		
 		<link id="lSelecionaBotaoInt" xconnector="conectores#selecaoBotaoIntInicioFim">
 			<bind role="onSelection" component="botaoInt">
@@ -96,8 +88,7 @@
 			</bind>
 			<bind component="botaoInt" role="stop"/>
 			<bind component="botaoInt" role="abort"/>
-			<bind component="logo" role="start" />
-			
+			<bind role="start" component="ctxTelaInicial"/>
 		</link>
 		
 		
