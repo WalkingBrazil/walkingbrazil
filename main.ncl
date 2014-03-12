@@ -186,7 +186,7 @@
 		
 		<link id= "lTerminaAplicacao" xconnector="conectores#onKeySelectionStop">
 			<bind role="onSelection" component="botaoSair">
-				<bindParam name="keyCode" value="RED"/>
+				<bindParam name="key" value="RED"/>
 			</bind>
 			<bind component="ctxTelaInicial" role="stop"/>
 			
