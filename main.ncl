@@ -131,6 +131,7 @@
 		</media>
 		
 		<context id="ctxTelaSelecao" refer="tSel#mainTelaSelecao"/>
+		<context id="ctxTelaSelecao2" refer="tSel#mainTelaSelecao2"/>
 	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						ELOS						             !
 	 ! 	  define os elos que regem o sincronismo entre as m�dias     !					 
@@ -167,6 +168,7 @@
 			<bind role="stop" component="cidade2" />
 
 			<bind role="start" component="ctxTelaSelecao" />
+			<bind role="start" component="ctxTelaSelecao2" />
 		</link>
 		
 		<link id= "lTerminaAplicacao" xconnector="conectores#onKeySelectionStop">

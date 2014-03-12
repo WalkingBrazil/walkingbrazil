@@ -73,5 +73,19 @@
 		
 	
 	</context>
+	
+		<context id="mainTelaSelecao2">
+		<port id="portaMainTelaSelecao2" component="imagemTeste"/>
+		<media id="imagemTeste" src="media/botaoYes.png" descriptor="idBotaoSobre" />
+		<media id="imagemPontoTur12" src="media/botaoNo.png" descriptor="idTitulo"/>
+		<link id="lIniciaTelaSelecao2" xconnector="conectores#noInicio">
+			<bind role="onBegin" component="imagemTeste"/>
+			<bind role="start" component="imagemPontoTur12"/>
+			
+		</link>
+		
+		
+	
+	</context>
 	</body>
 </ncl>
