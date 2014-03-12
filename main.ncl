@@ -100,6 +100,8 @@
 			
 		</link>
 		
+		
+		
 		<context id="ctxTelaInicial">
 			
 			
@@ -132,7 +134,7 @@
 		<media id="cidade1" src="media/anfiteatropoa2.jpg" descriptor="idCidade1">
 			<property name="nome" value="Manaus"/>
 		</media>
-		<media id="cidade2" src="media/Foto109_zps5860599d.jpg" descriptor="idCidade2">
+		<media id="cidade2" src="media/Foto109_zps5860599d.jpg" type="image/jpeg" descriptor="idCidade2">
 			<property name="nome" value="Rio de Janeiro"/>
 		</media>
 			
@@ -180,6 +182,14 @@
 			<bind role="stop" component="cidade2" />
 
 			<bind role="start" component="ctxTelaSelecao" />
+		</link>
+		
+		<link id= "lTerminaAplicacao" xconnector="conectores#onKeySelectionStop">
+			<bind role="onSelection" component="botaoSair">
+				<bindParam name="keyCode" value="RED"/>
+			</bind>
+			<bind component="ctxTelaInicial" role="stop"/>
+			
 		</link>
 		
 		</context>

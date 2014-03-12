@@ -44,7 +44,7 @@
 
 	</head>
 
-	<body>
+	<body id="bodyTelaSelecao">
 		<context id="mainTelaSelecao">
 		<port id="portaMainTelaSelecao" component="imagemBackground"/>
 		<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
@@ -69,6 +69,8 @@
 			<bind role="start" component="imagemPontoTur3"/>
 			<bind role="start" component="imagemPontoTur4"/>
 		</link>
+		
+		
 	
 	</context>
 	</body>
