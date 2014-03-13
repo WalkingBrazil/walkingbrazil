@@ -5,41 +5,60 @@
 	 !					CABEÇALHO DO PROGRAMA						 !
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 	<head>
-	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE REGIÕES							 !
 	 !	 define as regiï¿½es na tela onde as mï¿½dias serï¿½o mostradas	 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 		<regionBase>
-			<region id="regiaoBackground"/>
-			<region width="10%" height="10%" left="85%" top="3%" id="regiaoBotaoInt"/>
-			<region id="regiaoLogo"/>
+			<region id="regiaoBackground" width="1920" height="1080"/>
+			<region id="regiaoBotaoInt" width="10%" height="10%" left="85%" top="3%"/>
 			<region id="regiaoTelaInicial"/>
+			<region id="regiaoPontoAzul1" width="3%" height="7%" left="46%" top="30%"/>
+			<region id="regiaoPontoAzul2" width="3%" height="7%" left="54%" top="45%"/>
+			<region id="regiaoPontoAzul3" width="3%" height="7%" left="60%" top="49%"/>
+			<region id="regiaoPontoAzul4" width="3%" height="7%" left="61%" top="60%"/>
+			<region id="regiaoPontoAzul5" width="3%" height="7%" left="66%" top="60%"/>
+			<region id="regiaoPontoAzul6" width="3%" height="7%" left="57%" top="73%"/>
+			<region id="regiaoPontoAzul7" width="3%" height="7%" left="65%" top="53%"/>
+			<region id="regiaoPontoAzul8" width="3%" height="7%" left="58%" top="63%"/>
+			<region id="regiaoPontoAzul9" width="3%" height="7%" left="67%" top="45%"/>
+			<region id="regiaoPontoAzul10" width="3%" height="7%" left="72%" top="37%"/>
+			<region id="regiaoPontoAzul11" width="3%" height="7%" left="73%" top="32%"/>
+			<region id="regiaoPontoAzul12" width="3%" height="7%" left="70%" top="31%"/>
 			<region id="regitaoNavegacao" width="30%" height="12%" left="67%" top="75%"/>
 			<region id="regiaoBotaoIdioma" width="8%" height="3.5%" left="89%" top="89%"/>
 			<region id="regiaoBotaoSair" width="8%" height="3.5%" left="78.3%" top="89%"/>
 			<region id="regiaoBotaoSobre" width="8%" height="3.5%" left="67%" top="89%"/>
-			<region id="regiaoTituloPreviewCidade" width="20%" height="8%" left="10%" top="21%"/>
-			<region id="regiaoDescricaoPreviewCidade" width="20%" height="8%" left="10%" top="48%"/>
-			<region width="50%"  height="50%"  right="25%" top="25%" id="rgLua" />
+			<region width="50%" height="50%" right="25%" top="25%" id="rgLua"/>
 		</regionBase>
-	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE DESCRITORES						 !
 	 !	 		define como as mï¿½dias serï¿½o apresentadas			 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 		<descriptorBase>
 			<descriptor id="idImagemBackground" region="regiaoBackground"/>
 			<descriptor id="idBotaoInt" region="regiaoBotaoInt"/>
-			<descriptor id="idLogo" region="regiaoLogo"/>
 			<descriptor id="idTelaInicial" region="regiaoTelaInicial"/>
+			<descriptor id="idPontoAzul1" region="regiaoPontoAzul1" focusIndex="ixPontoAzul1" moveUp="ixPontoAzul2" moveDown="ixPontoAzul3" focusSrc="media/pontoAzul1.png" focusSelSrc="media/pontoAzul2.png"/>
+			<descriptor id="idPontoAzul2" region="regiaoPontoAzul2" focusSrc="media/pontoAzul2.png" focusSelSrc="media/pontoAzul2.png"/>
+			<descriptor id="idPontoAzul3" region="regiaoPontoAzul3" focusIndex="ixPontoAzul3" focusSrc="media/pontoAzul3.png" focusSelSrc=""/>
+			<descriptor id="idPontoAzul4" region="regiaoPontoAzul4" focusIndex="ixPontoAzul4" focusSrc="media/pontoAzul4.png" focusSelSrc=""/>
+			 />
+			<descriptor id="idPontoAzul5" region="regiaoPontoAzul5"/>
+			<descriptor id="idPontoAzul6" region="regiaoPontoAzul6"/>
+			<descriptor id="idPontoAzul7" region="regiaoPontoAzul7"/>
+			<descriptor id="idPontoAzul8" region="regiaoPontoAzul8"/>
+			<descriptor id="idPontoAzul9" region="regiaoPontoAzul9"/>
+			<descriptor id="idPontoAzul10" region="regiaoPontoAzul10"/>
+			<descriptor id="idPontoAzul11" region="regiaoPontoAzul11"/>
+			<descriptor id="idPontoAzul12" region="regiaoPontoAzul12"/>
 			<descriptor id="idNavegacao" region="regitaoNavegacao"/>
-			<descriptor id="idBotaoIdioma" region="regiaoBotaoIdioma" focusBorderWidth="2"/>
-			<descriptor id="idBotaoSair" region="regiaoBotaoSair" />
+			<descriptor id="idBotaoIdioma" region="regiaoBotaoIdioma"/>
+			<descriptor id="idBotaoSair" region="regiaoBotaoSair"/>
 			<descriptor id="idBotaoSobre" region="regiaoBotaoSobre"/>
-			<descriptor id="idTituloPreviewCidade" region="regiaoTituloPreviewCidade"/>
-			<descriptor id="idDescricaoPreviewCidade" region="regiaoDescricaoPreviewCidade"/>
-			<descriptor id="dsLua" region="rgLua" focusIndex="1" focusBorderWidth="5" />
+			<descriptor id="dsLua" region="rgLua" focusIndex="1" focusBorderWidth="5"/>
 		</descriptorBase>
-	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE CONECTORES						 !
 	 !	 			definem o comportamento dos elos				 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -52,101 +71,111 @@
 	 !	 		define as mï¿½dias e a estrutura do programa			 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 	<body id="teste">
-	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						PONTO DE ENTRADA						 !
 	 !	 		indica o componente onde o programa inicia			 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 		<port id="porta1" component="imagemBackground"/>
-	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						Mï¿½DIAS						             !
 	 ! 	  define o local dos arquivos de mï¿½dia e as associa a seus   !
 	 !					 	descritores								 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
-		<media id="botaoInt" src="media/BotaoInterativo.png" descriptor="idBotaoInt"/>
-		<media id="logo" src="media/logo.png" descriptor="idLogo">
-			<area id="aLogoInicio" begin="1s" end="30s"/>
+		<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground">
+			<area id="aImagemBackground" begin="1s"/>
+			<property name="bounds"/>
 		</media>
+		<media id="botaoInt" src="media/BotaoInterativo.png" descriptor="idBotaoInt"/>
 		<media id="telaInicial" src="media/telaInicial.png" descriptor="idTelaInicial"/>
 		<media id="painelNavegacao" src="media/navegacao.png" descriptor="idNavegacao"/>
 		<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="idBotaoIdioma">
 			<property name="focusIndex" value="0"/>
 		</media>
-			
 		<media id="botaoSair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
 		<media id="botaoSobre" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
-		<media id="tituloPreviewCidade" src="media/cidadePreviewTitulo.png" descriptor="idTituloPreviewCidade"/>
-		<media id="descricaoPreviewCidade" src="media/descricaoPreviewCidade.png" descriptor="idDescricaoPreviewCidade"/>
+		<media id="pontoAzul1" src="media/pontoAzul.png" descriptor="idPontoAzul1"/>
+		<media id="pontoAzul2" src="media/pontoAzul2.png" descriptor="idPontoAzul2"/>
+		<media id="pontoAzul3" src="media/pontoAzul3.png" descriptor="idPontoAzul3"/>
+		<media id="pontoAzul4" src="media/pontoAzul4.png" descriptor="idPontoAzul4"/>
+		<media id="pontoAzul5" src="media/pontoAzul5.png" descriptor="idPontoAzul5"/>
+		<media id="pontoAzul6" src="media/pontoAzul6.png" descriptor="idPontoAzul6"/>
+		<media id="pontoAzul7" src="media/pontoAzul7.png" descriptor="idPontoAzul7"/>
+		<media id="pontoAzul8" src="media/pontoAzul8.png" descriptor="idPontoAzul8"/>
+		<media id="pontoAzul9" src="media/pontoAzul9.png" descriptor="idPontoAzul9"/>
+		<media id="pontoAzul10" src="media/pontoAzul10.png" descriptor="idPontoAzul10"/>
+		<media id="pontoAzul11" src="media/pontoAzul11.png" descriptor="idPontoAzul11"/>
+		<media id="pontoAzul12" src="media/pontoAzul12.png" descriptor="idPontoAzul12"/>
 		<media id="settings" type="application/x-ginga-settings">
-		<property name="service.currentKeyMaster" value=""/>
- 		</media>
+			<property name="service.currentKeyMaster" value=""/>
+		</media>
 		<media id="lua" src="Lua/dialogo.lua" descriptor="dsLua"/>
-	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						ELOS						             !
 	 ! 	  define os elos que regem o sincronismo entre as mï¿½dias     !					 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		<!-- exibe a imagem de background juntamente com o botï¿½o de interaï¿½ï¿½o -->
 		<link id="lImagBotaoIntAparece" xconnector="conectores#noInicio">
 			<bind role="onBegin" component="imagemBackground"/>
 			<bind role="start" component="botaoInt"/>
 		</link>
 		<link id="lImagBotaoIntDesaparece" xconnector="conectores#noFim">
 			<bind role="onEnd" component="imagemBackground"/>
-			<bind role="stop" component="imagemBackground"/>
-			<bind role="stop" component="logo"/>
-		</link>
-		<!-- exibe a tela inicial apï¿½s a exibiï¿½ï¿½o de alguns segundos do logo -->
-		<link xconnector="conectores#noInicio" id="ltelaInicialAparece">
-			<bind role="onBegin" interface="aLogoInicio" component="logo"/>
-			<bind role="start" component="telaInicial"/>
 			<bind role="stop" component="botaoInt"/>
+			<bind role="start" component="telaInicial"/>
+			<bind role="start" component="pontoAzul1"/>
 		</link>
-		<!-- exibe todos os componentes da tela inicial -->
-		<link xconnector="conectores#noInicio" id="ltelaInicialFixa">
+		<link id="selecionaBotaoInteracao" xconnector="conectores#aoSelecionarBotao">
+			<bind role="onSelection" component="botaoInt">
+				<bindParam name="codigoChave" value="RED"/>
+			</bind>
+			<bind role="set" component="imagemBackground" interface="bounds">
+				<bindParam name="novaDimensao" value="149,339,515,454"/>
+				<!-- As dimensões de bounds são: left, top, width, height -->
+			</bind>
+			<bind role="stop" component="botaoInt"/>
+			<bind role="abort" component="botaoInt"/>
+			<bind role="start" component="telaInicial"/>
+		</link>
+		<link id="lTelaInicial" xconnector="conectores#noInicio">
 			<bind role="onBegin" component="telaInicial"/>
+			<bind role="start" component="pontoAzul1"/>
+			<bind role="start" component="pontoAzul2"/>
+			<bind role="start" component="pontoAzul3"/>
+			<bind role="start" component="pontoAzul4"/>
+			<bind role="start" component="pontoAzul5"/>
+			<bind role="start" component="pontoAzul6"/>
+			<bind role="start" component="pontoAzul7"/>
+			<bind role="start" component="pontoAzul8"/>
+			<bind role="start" component="pontoAzul9"/>
+			<bind role="start" component="pontoAzul10"/>
+			<bind role="start" component="pontoAzul11"/>
+			<bind role="start" component="pontoAzul12"/>
 			<bind role="start" component="painelNavegacao"/>
-			<bind role="start" component="botaoIdioma" interface="focusIndex" />
+			<bind role="start" component="botaoIdioma"/>
 			<bind role="start" component="botaoSair"/>
 			<bind role="start" component="botaoSobre"/>
-			<bind role="start" component="tituloPreviewCidade"/>
-			<bind role="start" component="descricaoPreviewCidade"/>
 		</link>
-		<!-- exibe o logo apï¿½s a seleï¿½ï¿½o do botï¿½o de interaï¿½ï¿½o -->
-		<link id="lSelecionaBotaoInt" xconnector="conectores#selecaoBotaoIntInicioFim">
-			<bind role="onSelection" component="botaoInt">
-				<bindParam name="keyCode" value="RED"/>
-			</bind>
-			<bind component="botaoInt" role="stop"/>
-			<bind component="botaoInt" role="abort"/>
-			<bind component="logo" role="start"/>
-		</link>
-		
 		<link id="lSelecionaBotaoLua" xconnector="conectores#onKeySelectionStart">
 			<bind role="onSelection" component="botaoSobre">
 				<bindParam name="key" value="GREEN"/>
 			</bind>
 			<bind component="lua" role="start"/>
 		</link>
-		
 		<link id="luaStart" xconnector="conectores#onBeginSet">
-			<bind role="onBegin" component="lua" />
+			<bind role="onBegin" component="lua"/>
 			<bind role="set" component="settings" interface="service.currentKeyMaster">
-			<bindParam name="value" value="lua"/>
+				<bindParam name="value" value="lua"/>
 			</bind>
- 		</link>
- 		
- 		 <link xconnector="conectores#onEndStopSet">
-	         <bind component="lua" role="onEnd"/>
-	         
-	         <bind role="set" component="settings" interface="service.currentKeyMaster">
+		</link>
+		<link xconnector="conectores#onEndStopSet">
+			<bind component="lua" role="onEnd"/>
+			<bind role="set" component="settings" interface="service.currentKeyMaster">
 				<bindParam name="value" value=""/>
-			 </bind>	
-			 <bind component="lua" role="stop"/>
-		  </link>
- 		
- 		  <link xconnector="conectores#onAbortStop">
-         <bind component="lua" role="onAbort"/>
-         <bind component="teste" role="stop"/>
-		  </link>
+			</bind>
+			<bind component="lua" role="stop"/>
+		</link>
+		<link xconnector="conectores#onAbortStop">
+			<bind component="lua" role="onAbort"/>
+			<bind component="teste" role="stop"/>
+		</link>
 	</body>
 </ncl>
