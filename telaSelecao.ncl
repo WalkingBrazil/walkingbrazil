@@ -23,7 +23,6 @@
 			<region id="regiaoBotaoSobre" width="8%" height="3.5%" left="67%" top="89%"/>
 			<region id="regiaoTituloPreviewCidade" width="20%" height="8%" left="10%" top="21%"/>
 			<region id="regiaoDescricaoPreviewCidade" width="20%" height="8%" left="10%" top="48%" />
-			<region id="rgLua"/>
 		</regionBase>
 		
 		<descriptorBase>
@@ -41,7 +40,6 @@
 			<descriptor id="idPontoTur2" region="regiaoPontoTur2" focusIndex="ixPontoTur2" moveLeft="ixPontoTur1" moveDown="ixPontoTur4" />
 			<descriptor id="idPontoTur3" region="regiaoPontoTur3" focusIndex="ixPontoTur3" moveRight="ixPontoTur4" moveUp="ixPontoTur1" />
 			<descriptor id="idPontoTur4" region="regiaoPontoTur4" focusIndex="ixPontoTur4" moveLeft="ixPontoTur3" moveUp="ixPontoTur2" />
-			<descriptor id="dsLua" region="rgLua"/>
 		</descriptorBase>
 		
 		<connectorBase>
@@ -66,14 +64,14 @@
 				</link>
 		</context>
 		
-		<switch id="switchSelCidade">
+		<!--<switch id="switchSelCidade">
 			<bindRule rule="rManaus" constituent="ctxManaus" />
 			<bindRule rule="rRiodeJaneiro" constituent="ctxRiodeJaneiro"/> 
 			
 			<switchPort id="cidadeSel">
 				<mapping component="ctxManaus" interface="portaManaus"/> 
 				<mapping component="ctxRiodeJaneiro" interface="portaRiodeJaneiro"/>
-			</switchPort>
+			</switchPort>-->
 			
 			
 			<!--
@@ -307,7 +305,7 @@
 			</context>
 			
 			
-		</switch>
-		
+<!--		</switch>
+-->		
 	</body>
 </ncl>
