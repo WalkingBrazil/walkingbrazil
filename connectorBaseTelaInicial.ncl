@@ -31,7 +31,7 @@
                 <connectorParam name="key"/>
                 
                 <simpleCondition role="onSelection" key="$key"  />
-                <simpleAction role="stop" />
+                <simpleAction role="stop" max="unbounded"/>
             </causalConnector>
             
              <causalConnector id="onKeySelectionStart">
@@ -48,6 +48,29 @@
        <causalConnector id="onEndStart">
              <simpleCondition role="onEnd"/>
              <simpleAction role="start"/>
+       </causalConnector>
+       
+         <causalConnector id="onEndStartNStop">
+             <simpleCondition role="onEnd"/>
+             	 <connectorParam name="var"/>
+             <compoundAction operator="seq">
+             	<simpleAction role="set" value="$var" max="unbounded"/>
+             	<simpleAction role="start" max="unbounded"/>
+              <simpleAction role="stop" max="unbounded"/>
+             </compoundAction>
+             
+       </causalConnector>
+       
+       
+        <causalConnector id="onAbortStartNStop">
+             <simpleCondition role="onAbort"/>
+             	 <connectorParam name="var"/>
+             <compoundAction operator="seq">
+             	<simpleAction role="set" value="$var" max="unbounded"/>
+             	<simpleAction role="start" max="unbounded"/>
+              <simpleAction role="stop" max="unbounded"/>
+             </compoundAction>
+             
        </causalConnector>
        
        <causalConnector id="onAbortStop">
@@ -99,24 +122,44 @@
 			</compoundAction>
 		</causalConnector>
 		
+		
 		<causalConnector id="onSelectionSet">
-			<connectorParam name="var"/>
+			<connectorParam name="nomeCidade" />
+			<simpleCondition role="onSelection"/>
+			<compoundAction operator="seq">
+				<simpleAction role="set" value="$nomeCidade" max="unbounded"/>
+			</compoundAction>
+		</causalConnector>
+		
+		<causalConnector id="onSelectionSetNStop">
+			<connectorParam name="var" />
 			<simpleCondition role="onSelection"/>
 			<compoundAction operator="seq">
 				<simpleAction role="set" value="$var" max="unbounded"/>
+				<simpleAction role="stop" max="unbounded"/> 
+			</compoundAction>
+		</causalConnector>
+		
+		<causalConnector id="onSelectionSetNAbort">
+			<connectorParam name="var" />
+			<simpleCondition role="onSelection"/>
+			<compoundAction operator="seq">
+				<simpleAction role="set" value="$var" max="unbounded"/>
+				<simpleAction role="abort" max="unbounded"/> 
 			</compoundAction>
 		</causalConnector>
 		
 		<causalConnector id="onSelectionSetStartNStop">
 			<connectorParam name="var"/>
-			<connectorParam name="key"/>
-			<simpleCondition role="onSelection" key="$key"/>
+			<simpleCondition role="onSelection"/>
 			<compoundAction operator="seq">
 				<simpleAction role="set" value="$var" max="unbounded"/>
 				<simpleAction role="stop" max="unbounded"/>
 				<simpleAction role="start" max="unbounded"/> 
 			</compoundAction>
 		</causalConnector>
+		
+		
 		
 			<causalConnector id="onSelectionStartNStop">
 			<simpleCondition role="onSelection" />
