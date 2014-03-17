@@ -12,7 +12,7 @@
 			<region id="regiaoBotaoSair" width="8%" height="3.5%" left="78.3%" top="89%" zIndex="10"/>
 			<region id="regiaoBotaoSobre" width="8%" height="3.5%" left="67%" top="89%" zIndex="10"/>
 			<region id="regiaoTituloPreviewCidade" width="20%" height="8%" left="10%" top="21%"/>
-			<region id="regiaoDescricaoInfoPonto" width="40%" height="80%" right="10%" top="10%"/>
+			<region id="regiaoDescricaoInfoPonto" width="40%" height="90%" right="10%" top="10%"/>
 		</regionBase>
 		<descriptorBase>
 			<descriptor id="idImagemBackground" region="regiaoBackground"/>
