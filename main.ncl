@@ -101,17 +101,10 @@
 			<media id="botaoSobre" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
 			<media id="tituloPreviewCidade" src="media/cidadePreviewTitulo.png" descriptor="idTituloPreviewCidade"/>
 			<media id="descricaoPreviewCidade" src="media/descricaoPreviewCidade.png" descriptor="idDescricaoPreviewCidade"/>
-			<media id="cidade1" src="media/anfiteatropoa2.jpg" descriptor="idCidade1">
-				<property name="nomeCidade" value="Manaus"/>
-			</media>
-			<media id="cidade2" src="media/Foto109_zps5860599d.jpg" type="image/jpeg" descriptor="idCidade2">
-				<property name="nomeCidade" value="Rio de Janeiro"/>
-			</media>
+			<media id="cidade1" src="media/anfiteatropoa2.jpg" descriptor="idCidade1"/>
+			<media id="cidade2" src="media/Foto109_zps5860599d.jpg" type="image/jpeg" descriptor="idCidade2"/>
 			<media id="settings" type="application/x-ginga-settings">
-				<property name="service.currentKeyMaster" value="0"/>
-			</media>
-			<media id="opcaoSel" type="application/x-ncl-settings">
-				<property name="nomeCidade"/>
+				<property name="service.currentKeyMaster" value=""/>
 			</media>
 			<context id="ctxTelaSelecao" refer="tSel#ctxTelaSelecao"/>
 			<context id="ctxBeloHorizonte" refer="tSel#ctxBeloHorizonte"/>
@@ -190,7 +183,7 @@
 				<bind role="stop" component="cidade1"/>
 				<bind role="stop" component="cidade2"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
+					<bindParam name="var" value="ctxManaus"/>
 				</bind>
 				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxManaus"/>
