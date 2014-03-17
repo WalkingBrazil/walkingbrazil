@@ -185,7 +185,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="ctxManaus"/>
 				</bind>
-				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxManaus"/>
 			</link>
 			<link id="lSelecionaNatal" xconnector="conectores#onSelectionSetStartNStop">
