@@ -75,14 +75,14 @@
 				</link>
 		</context>
 		
-		<switch id="switchSelCidade">
+		<!--<switch id="switchSelCidade">
 			<bindRule rule="rManaus" constituent="ctxManaus" />
 			<bindRule rule="rRiodeJaneiro" constituent="ctxRiodeJaneiro"/> 
 			
 			<switchPort id="cidadeSel">
 				<mapping component="ctxManaus" interface="portaManaus"/> 
 				<mapping component="ctxRiodeJaneiro" interface="portaRiodeJaneiro"/>
-			</switchPort>
+			</switchPort>-->
 			
 			
 			<!--
@@ -316,7 +316,7 @@
 			</context>
 			
 			
-		</switch>
+		<!--</switch>-->
 		
 	</body>
 </ncl>
