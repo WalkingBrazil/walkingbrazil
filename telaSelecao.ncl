@@ -61,18 +61,11 @@
 			<link id="lIniciaTelaSelecao" xconnector="conectores#noInicio">
 					<bind role="onBegin" component="imagemBackground"/>
 					<bind role="start" component="imagemVideo"/>
-					<bind role="start" component="imagemSelecao"/>
-				</link>
+<!--					<bind role="start" component="imagemSelecao"/>
+-->				</link>
 		</context>
 		
-		<switch id="switchSelCidade">
-			<bindRule rule="rManaus" constituent="ctxManaus" />
-			<bindRule rule="rRiodeJaneiro" constituent="ctxRiodeJaneiro"/> 
-			
-			<switchPort id="cidadeSel">
-				<mapping component="ctxManaus" interface="portaManaus"/> 
-				<mapping component="ctxRiodeJaneiro" interface="portaRiodeJaneiro"/>
-			</switchPort>-->
+	
 			
 			
 			<!--
@@ -304,9 +297,7 @@
 				</link>
 		
 			</context>
-			
-			
-		</switch>
+
 		
 	</body>
 </ncl>
