@@ -61,8 +61,8 @@
 			<link id="lIniciaTelaSelecao" xconnector="conectores#noInicio">
 					<bind role="onBegin" component="imagemBackground"/>
 					<bind role="start" component="imagemVideo"/>
-<!--					<bind role="start" component="imagemSelecao"/>
--->				</link>
+					<bind role="start" component="imagemSelecao"/>
+				</link>
 		</context>
 		
 	

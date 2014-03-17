@@ -140,8 +140,8 @@
 			<causalConnector id="onSelectionStartNStop">
 				<simpleCondition role="onSelection"/>
 				<compoundAction operator="seq">
-					<simpleAction role="start" max="unbounded"/>
 					<simpleAction role="stop" max="unbounded"/>
+					<simpleAction role="start" max="unbounded"/>
 				</compoundAction>
 			</causalConnector>
 			<causalConnector id="onKeySelection_and_NodeStateTestStartStop">
