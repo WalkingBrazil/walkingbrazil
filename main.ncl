@@ -193,8 +193,9 @@
 				<bind role="stop" component="cidade1"/>
 				<bind role="stop" component="cidade2"/>
 				<bind role="start" component="ctxTelaSelecao"/>
-				<bind role="start" component="ctxManaus"/>
-			</link>
+<!--				
+<bind role="start" component="ctxManaus"/>
+-->			</link>
 			<link id="lSelecionaNatal" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="cidade1"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
