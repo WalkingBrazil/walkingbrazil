@@ -53,20 +53,18 @@
 		<context id="ctxTelaSelecao">
 			<port id="portaTelaSelecao" component="imagemBackground" />
 		
-			<switch id="refSwitchSelCidade" refer="switchSelCidade"/>
-			
 			<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
 			<media id="imagemVideo" src="media/logocopa.jpg" descriptor="idVideo"/>
 			<media id="imagemSelecao" src="media/logocopa.jpg" descriptor="idSelecao"/>
 			<media id="botaoVoltar" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
 		
-			<link id= "lVoltaAplicacao" xconnector="conectores#onKeySelectionStop">
+			<!--<link id= "lVoltaAplicacao" xconnector="conectores#onKeySelectionStop">
 				<bind role="onSelection" component="botaoVoltar">
 					<bindParam name="key" value="YELLOW"/>
 				</bind>
 				<bind component="ctxTelaSelecao" role="stop"/>
 				<bind component="refSwitchSelCidade" role="stop"/>
-			</link>
+			</link>-->
 
 			<link id="lIniciaTelaSelecao" xconnector="conectores#noInicio">
 					<bind role="onBegin" component="imagemBackground"/>
