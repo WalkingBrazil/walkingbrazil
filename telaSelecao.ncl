@@ -49,14 +49,25 @@
 	</head>
 
 	<body id="bodyTelaSelecao">
-		
+
 		<context id="ctxTelaSelecao">
 			<port id="portaTelaSelecao" component="imagemBackground" />
+		
+			<switch id="refSwitchSelCidade" refer="switchSelCidade"/>
 			
 			<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
 			<media id="imagemVideo" src="media/logocopa.jpg" descriptor="idVideo"/>
 			<media id="imagemSelecao" src="media/logocopa.jpg" descriptor="idSelecao"/>
-			
+			<media id="botaoVoltar" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
+		
+			<link id= "lVoltaAplicacao" xconnector="conectores#onKeySelectionStop">
+				<bind role="onSelection" component="botaoVoltar">
+					<bindParam name="key" value="YELLOW"/>
+				</bind>
+				<bind component="ctxTelaSelecao" role="stop"/>
+				<bind component="refSwitchSelCidade" role="stop"/>
+			</link>
+
 			<link id="lIniciaTelaSelecao" xconnector="conectores#noInicio">
 					<bind role="onBegin" component="imagemBackground"/>
 					<bind role="start" component="imagemVideo"/>
@@ -64,14 +75,14 @@
 				</link>
 		</context>
 		
-		<!--<switch id="switchSelCidade">
+		<switch id="switchSelCidade">
 			<bindRule rule="rManaus" constituent="ctxManaus" />
 			<bindRule rule="rRiodeJaneiro" constituent="ctxRiodeJaneiro"/> 
 			
 			<switchPort id="cidadeSel">
 				<mapping component="ctxManaus" interface="portaManaus"/> 
 				<mapping component="ctxRiodeJaneiro" interface="portaRiodeJaneiro"/>
-			</switchPort>-->
+			</switchPort>
 			
 			
 			<!--
@@ -251,7 +262,7 @@
 				<port id="portaRiodeJaneiro" component="imgRiodeJaneiro_Titulo"/>
 				
 				<media id="imgRiodeJaneiro_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
-				<media id="imgRiodeJaneiro_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+				<media id="imgRiodeJaneiro_PTur1" src="media/botaoYes.png" descriptor="idPontoTur1"/>
 				<media id="imgRiodeJaneiro_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
 				<media id="imgRiodeJaneiro_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
 				<media id="imgRiodeJaneiro_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
@@ -305,7 +316,7 @@
 			</context>
 			
 			
-<!--		</switch>
--->		
+		</switch>
+		
 	</body>
 </ncl>
