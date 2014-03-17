@@ -25,7 +25,6 @@
 			<region id="regiaoDescricaoPreviewCidade" width="20%" height="8%" left="10%" top="48%"/>
 			<region id="regiaoCidade1" width="30%" height="30%" left="25%" top="30%"/>
 			<region id="regiaoCidade2" width="30%" height="30%" left="50%" top="30%"/>
-			<region id="rgLua"/>
 		</regionBase>
 		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE DESCRITORES						 !
@@ -126,7 +125,6 @@
 			<context id="ctxRiodeJaneiro" refer="tSel#ctxRiodeJaneiro"/>
 			<context id="ctxSalvador" refer="tSel#ctxSalvador"/>
 			<context id="ctxSaoPaulo" refer="tSel#ctxSaoPaulo"/>
-			<switch id="switchSelCidade" refer="tSel#switchSelCidade"/>
 			<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 		 !						ELOS						             !
 		 ! 	  define os elos que regem o sincronismo entre as m�dias     !					 
@@ -195,7 +193,7 @@
 				<bind role="stop" component="cidade1"/>
 				<bind role="stop" component="cidade2"/>
 				<bind role="start" component="ctxTelaSelecao"/>
-				<bind role="start" component="switchSelCidade"/>
+				<bind role="start" component="ctxManaus"/>
 			</link>
 			<link id="lSelecionaNatal" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="cidade1"/>
