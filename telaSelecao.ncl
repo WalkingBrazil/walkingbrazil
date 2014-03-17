@@ -62,7 +62,7 @@
 					<bind role="onBegin" component="imagemBackground"/>
 					<bind role="start" component="imagemVideo"/>
 					<bind role="start" component="imagemSelecao"/>
-				</link>
+			</link>
 		</context>
 		
 	

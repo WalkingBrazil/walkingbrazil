@@ -184,11 +184,14 @@
 				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxFortaleza"/>
 			</link>
-			<link id="lSelecionaManaus" xconnector="conectores#onSelectionStartNStop">
+			<link id="lSelecionaManaus" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="cidade1"/>
 				<bind role="stop" component="imagemTelaInicial"/>
 				<bind role="stop" component="cidade1"/>
 				<bind role="stop" component="cidade2"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
+					<bindParam name="var" value="tSel"/>
+				</bind>
 				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxManaus"/>
 			</link>

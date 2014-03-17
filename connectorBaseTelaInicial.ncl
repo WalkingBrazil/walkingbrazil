@@ -132,8 +132,8 @@
 				<connectorParam name="var"/>
 				<simpleCondition role="onSelection"/>
 				<compoundAction operator="seq">
-					<simpleAction role="set" value="$var" max="unbounded"/>
 					<simpleAction role="stop" max="unbounded"/>
+					<simpleAction role="set" value="$var" max="unbounded"/>
 					<simpleAction role="start" max="unbounded"/>
 				</compoundAction>
 			</causalConnector>
