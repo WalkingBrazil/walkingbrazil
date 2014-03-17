@@ -64,6 +64,37 @@
 					<bind role="start" component="imagemSelecao"/>
 				</link>
 		</context>
+		
+		<switch id="switchSelCidade">
+			<bindRule rule="rManaus" constituent="ctxManaus" />
+			<bindRule rule="rRiodeJaneiro" constituent="ctxRiodeJaneiro"/> 
+			
+			<switchPort id="cidadeSel">
+				<mapping component="ctxManaus" interface="portaManaus"/> 
+				<mapping component="ctxRiodeJaneiro" interface="portaRiodeJaneiro"/>
+			</switchPort>-->
+			
+			
+			<!--
+			<context id="ctx">
+				<port id="porta" component="img"/>
+				
+				<media id="img_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+				<media id="img_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+				<media id="img_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+				<media id="img_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+				<media id="img_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+				
+				<link id="lIniciaSelecao" xconnector="conectores#noInicio">
+					<bind role="onBegin" component="img"/>
+					<bind role="start" component="img"/>
+					<bind role="start" component="img"/>
+					<bind role="start" component="img"/>
+					<bind role="start" component="img"/>
+				</link>
+		
+			</context>
+			-->
 			
 			<context id="ctxBeloHorizonte">
 				<port id="portaBeloHorizonte" component="imgBeloHorizonte_Titulo"/>
@@ -273,5 +304,9 @@
 				</link>
 		
 			</context>
+			
+			
+		</switch>
+		
 	</body>
 </ncl>

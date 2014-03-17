@@ -125,6 +125,7 @@
 			<context id="ctxRiodeJaneiro" refer="tSel#ctxRiodeJaneiro"/>
 			<context id="ctxSalvador" refer="tSel#ctxSalvador"/>
 			<context id="ctxSaoPaulo" refer="tSel#ctxSaoPaulo"/>
+			<switch id="switchSelCidade" refer="tSel#switchSelCidade"/>
 			<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 		 !						ELOS						             !
 		 ! 	  define os elos que regem o sincronismo entre as m�dias     !					 
@@ -186,6 +187,9 @@
 			</link>
 			<link id="lSelecionaManaus" xconnector="conectores#onSelectionSetStart">
 				<bind role="onSelection" component="cidade1"/>
+				<bind role="set" component="opcaoSel" interface="nomeCidade">
+					<bindParam name="var" value="Manaus"/>
+				</bind>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
@@ -193,9 +197,8 @@
 				<bind role="stop" component="cidade1"/>
 				<bind role="stop" component="cidade2"/>
 				<bind role="start" component="ctxTelaSelecao"/>
-<!--				
-<bind role="start" component="ctxManaus"/>
--->			</link>
+				<bind role="start" component="switchSelCidade"/>
+			</link>
 			<link id="lSelecionaNatal" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="cidade1"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
