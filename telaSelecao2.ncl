@@ -21,6 +21,7 @@
 			<region id="regiaoBotaoSobre" width="8%" height="3.5%" left="67%" top="89%"/>
 			<region id="regiaoTituloPreviewCidade" width="20%" height="8%" left="10%" top="21%"/>
 			<region id="regiaoDescricaoPreviewCidade" width="20%" height="8%" left="10%" top="48%"/>
+			<region id="regiaoInfoPTur" width="40%" height="80%" left="10%" top="10%"/>
 			<region id="rgLua"/>
 		</regionBase>
 		<descriptorBase>
@@ -38,6 +39,7 @@
 			<descriptor id="idPontoTur2" region="regiaoPontoTur2" focusIndex="ixPontoTur2" moveLeft="ixPontoTur1" moveDown="ixPontoTur4"/>
 			<descriptor id="idPontoTur3" region="regiaoPontoTur3" focusIndex="ixPontoTur3" moveRight="ixPontoTur4" moveUp="ixPontoTur1"/>
 			<descriptor id="idPontoTur4" region="regiaoPontoTur4" focusIndex="ixPontoTur4" moveLeft="ixPontoTur3" moveUp="ixPontoTur2"/>
+			<descriptor id="idInfoPTur" region="regiaoInfoPTur" />
 			<descriptor id="dsLua" region="rgLua"/>
 		</descriptorBase>
 		<connectorBase>
@@ -45,7 +47,7 @@
 		</connectorBase>
 	</head>
 	<body id="bodyTelaSelecao">
-		<context id="ctxTelaSelecao">
+<!--		<context id="ctxTelaSelecao">
 			<port id="portaTelaSelecao" component="imagemBackground"/>
 			<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
 			<media id="logocopa" src="media/logocopa.jpg" descriptor="idLogoCopa"/>
@@ -55,15 +57,8 @@
 				<bind role="start" component="logocopa"/>
 				<bind role="start" component="imagemSelecao"/>
 			</link>
-		</context>
-		<switch id="switchSelCidade">
-			<bindRule rule="rManaus" constituent="ctxManaus"/>
-			<bindRule rule="rRiodeJaneiro" constituent="ctxRiodeJaneiro"/>
-			<switchPort id="cidadeSel">
-				<mapping component="ctxManaus" interface="portaManaus"/>
-				<mapping component="ctxRiodeJaneiro" interface="portaRiodeJaneiro"/>
-			</switchPort>
-			<!--
+		</context>-->
+		<!--
 			<context id="ctx">
 				<port id="porta" component="img"/>
 				
@@ -83,96 +78,111 @@
 		
 			</context>
 			-->
-			<context id="ctxBeloHorizonte">
-				<port id="portaBeloHorizonte" component="imgBeloHorionte_Titulo"/>
-				<media id="imgBeloHorionte_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
-				<media id="imgBeloHorionte_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
-				<media id="imgBeloHorionte_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
-				<media id="imgBeloHorionte_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
-				<media id="imgBeloHorionte_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
-				<link id="lIniciaSelecaoBeloHorionte" xconnector="conectores#noInicio">
-					<bind role="onBegin" component="imgBeloHorionte_Titulo"/>
-					<bind role="start" component="imgBeloHorionte_PTur1"/>
-					<bind role="start" component="imgBeloHorionte_PTur2"/>
-					<bind role="start" component="imgBeloHorionte_PTur3"/>
-					<bind role="start" component="imgBeloHorionte_PTur4"/>
-				</link>
-			</context>
-			<context id="ctxBrasilia">
-				<port id="portaBrasilia" component="imgBrasilia_Titulo"/>
-				<media id="imgBrasilia_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
-				<media id="imgBrasilia_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
-				<media id="imgBrasilia_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
-				<media id="imgBrasilia_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
-				<media id="imgBrasilia_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
-				<link id="lIniciaSelecaoBrasilia" xconnector="conectores#noInicio">
-					<bind role="onBegin" component="imgBrasilia_Titulo"/>
-					<bind role="start" component="imgBrasilia_PTur1"/>
-					<bind role="start" component="imgBrasilia_PTur2"/>
-					<bind role="start" component="imgBrasilia_PTur3"/>
-					<bind role="start" component="imgBrasilia_PTur4"/>
-				</link>
-			</context>
-			<context id="ctxCuiaba">
-				<port id="portaCuiaba" component="imgCuiaba_Titulo"/>
-				<media id="imgCuiaba_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
-				<media id="imgCuiaba_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
-				<media id="imgCuiaba_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
-				<media id="imgCuiaba_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
-				<media id="imgCuiaba_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
-				<link id="lIniciaSelecaoCuiaba" xconnector="conectores#noInicio">
-					<bind role="onBegin" component="imgCuiaba_Titulo"/>
-					<bind role="start" component="imgCuiaba_PTur1"/>
-					<bind role="start" component="imgCuiaba_PTur2"/>
-					<bind role="start" component="imgCuiaba_PTur3"/>
-					<bind role="start" component="imgCuiaba_PTur4"/>
-				</link>
-			</context>
-			<context id="ctxCuritiba">
-				<port id="portaCuritiba" component="imgCuritiba_Titulo"/>
-				<media id="imgCuritiba_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
-				<media id="imgCuritiba_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
-				<media id="imgCuritiba_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
-				<media id="imgCuritiba_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
-				<media id="imgCuritiba_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
-				<link id="lIniciaSelecaoCuritiba" xconnector="conectores#noInicio">
-					<bind role="onBegin" component="imgCuritiba_Titulo"/>
-					<bind role="start" component="imgCuritiba_PTur1"/>
-					<bind role="start" component="imgCuritiba_PTur2"/>
-					<bind role="start" component="imgCuritiba_PTur3"/>
-					<bind role="start" component="imgCuritiba_PTur4"/>
-				</link>
-			</context>
-			<context id="ctxManaus">
-				<port id="portaManaus" component="imgManaus_Titulo"/>
-				<media id="imgManaus_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
-				<media id="imgManaus_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
-				<media id="imgManaus_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
-				<media id="imgManaus_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
-				<media id="imgManaus_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
-				<link id="lIniciaSelecaoManaus" xconnector="conectores#noInicio">
-					<bind role="onBegin" component="imgManaus_Titulo"/>
-					<bind role="start" component="imgManaus_PTur1"/>
-					<bind role="start" component="imgManaus_PTur2"/>
-					<bind role="start" component="imgManaus_PTur3"/>
-					<bind role="start" component="imgManaus_PTur4"/>
-				</link>
-			</context>
-			<context id="ctxRiodeJaneiro">
-				<port id="portaRiodeJaneiro" component="imgRiodeJaneiro_Titulo"/>
-				<media id="imgRiodeJaneiro_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
-				<media id="imgRiodeJaneiro_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
-				<media id="imgRiodeJaneiro_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
-				<media id="imgRiodeJaneiro_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
-				<media id="imgRiodeJaneiro_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
-				<link id="lIniciaSelecaoRiodeJaneiro" xconnector="conectores#noInicio">
-					<bind role="onBegin" component="imgRiodeJaneiro_Titulo"/>
-					<bind role="start" component="imgRiodeJaneiro_PTur1"/>
-					<bind role="start" component="imgRiodeJaneiro_PTur2"/>
-					<bind role="start" component="imgRiodeJaneiro_PTur3"/>
-					<bind role="start" component="imgRiodeJaneiro_PTur4"/>
-				</link>
-			</context>
-		</switch>
+		<context id="ctxBeloHorizonte">
+			<port id="portaBeloHorizonte" component="imagemBackground"/>
+			<media id="imgBeloHorionte_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+			<media id="imgBeloHorionte_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+			<media id="imgBeloHorionte_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+			<media id="imgBeloHorionte_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+			<media id="imgBeloHorionte_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+			<media id="imgBH_PTur1_G" src="media/BackgroundInicio.jpg" descriptor="idInfoPTur"/>
+			<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
+			<media id="logocopa" src="media/logocopa.jpg" descriptor="idLogoCopa"/>
+			<media id="imagemSelecao" src="media/logocopa.jpg" descriptor="idSelecao"/>
+
+			<link id="lIniciaSelecaoBeloHorizonte" xconnector="conectores#noInicio">
+				<bind role="onBegin" component="imagemBackground"/>
+				<bind role="start" component="imgBeloHorionte_Titulo"/>
+				<bind role="start" component="logocopa"/>
+				<bind role="start" component="imagemSelecao"/>
+				<bind role="start" component="imgBeloHorionte_PTur1"/>
+				<bind role="start" component="imgBeloHorionte_PTur2"/>
+				<bind role="start" component="imgBeloHorionte_PTur3"/>
+				<bind role="start" component="imgBeloHorionte_PTur4"/>
+			</link>
+			<link id="link_SelBH_PTur1" xconnector="conectores#onSelectionStartNStop">
+				<bind role="onSelection" component="imgBeloHorionte_PTur1"/>
+				<bind role="stop" component="imgBeloHorionte_PTur1"/>
+				<bind role="stop" component="imgBeloHorionte_PTur2"/>
+				<bind role="stop" component="imgBeloHorionte_PTur3"/>
+				<bind role="stop" component="imgBeloHorionte_PTur4"/>
+				<bind role="start" component="imgBH_PTur1_G"/>
+			</link>
+		</context>
+		<context id="ctxBrasilia">
+			<port id="portaBrasilia" component="imgBrasilia_Titulo"/>
+			<media id="imgBrasilia_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+			<media id="imgBrasilia_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+			<media id="imgBrasilia_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+			<media id="imgBrasilia_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+			<media id="imgBrasilia_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+			<link id="lIniciaSelecaoBrasilia" xconnector="conectores#noInicio">
+				<bind role="onBegin" component="imgBrasilia_Titulo"/>
+				<bind role="start" component="imgBrasilia_PTur1"/>
+				<bind role="start" component="imgBrasilia_PTur2"/>
+				<bind role="start" component="imgBrasilia_PTur3"/>
+				<bind role="start" component="imgBrasilia_PTur4"/>
+			</link>
+		</context>
+		<context id="ctxCuiaba">
+			<port id="portaCuiaba" component="imgCuiaba_Titulo"/>
+			<media id="imgCuiaba_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+			<media id="imgCuiaba_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+			<media id="imgCuiaba_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+			<media id="imgCuiaba_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+			<media id="imgCuiaba_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+			<link id="lIniciaSelecaoCuiaba" xconnector="conectores#noInicio">
+				<bind role="onBegin" component="imgCuiaba_Titulo"/>
+				<bind role="start" component="imgCuiaba_PTur1"/>
+				<bind role="start" component="imgCuiaba_PTur2"/>
+				<bind role="start" component="imgCuiaba_PTur3"/>
+				<bind role="start" component="imgCuiaba_PTur4"/>
+			</link>
+		</context>
+		<context id="ctxCuritiba">
+			<port id="portaCuritiba" component="imgCuritiba_Titulo"/>
+			<media id="imgCuritiba_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+			<media id="imgCuritiba_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+			<media id="imgCuritiba_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+			<media id="imgCuritiba_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+			<media id="imgCuritiba_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+			<link id="lIniciaSelecaoCuritiba" xconnector="conectores#noInicio">
+				<bind role="onBegin" component="imgCuritiba_Titulo"/>
+				<bind role="start" component="imgCuritiba_PTur1"/>
+				<bind role="start" component="imgCuritiba_PTur2"/>
+				<bind role="start" component="imgCuritiba_PTur3"/>
+				<bind role="start" component="imgCuritiba_PTur4"/>
+			</link>
+		</context>
+		<context id="ctxManaus">
+			<port id="portaManaus" component="imgManaus_Titulo"/>
+			<media id="imgManaus_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+			<media id="imgManaus_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+			<media id="imgManaus_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+			<media id="imgManaus_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+			<media id="imgManaus_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+			<link id="lIniciaSelecaoManaus" xconnector="conectores#noInicio">
+				<bind role="onBegin" component="imgManaus_Titulo"/>
+				<bind role="start" component="imgManaus_PTur1"/>
+				<bind role="start" component="imgManaus_PTur2"/>
+				<bind role="start" component="imgManaus_PTur3"/>
+				<bind role="start" component="imgManaus_PTur4"/>
+			</link>
+		</context>
+		<context id="ctxRiodeJaneiro">
+			<port id="portaRiodeJaneiro" component="imgRiodeJaneiro_Titulo"/>
+			<media id="imgRiodeJaneiro_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+			<media id="imgRiodeJaneiro_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+			<media id="imgRiodeJaneiro_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+			<media id="imgRiodeJaneiro_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+			<media id="imgRiodeJaneiro_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+			<link id="lIniciaSelecaoRiodeJaneiro" xconnector="conectores#noInicio">
+				<bind role="onBegin" component="imgRiodeJaneiro_Titulo"/>
+				<bind role="start" component="imgRiodeJaneiro_PTur1"/>
+				<bind role="start" component="imgRiodeJaneiro_PTur2"/>
+				<bind role="start" component="imgRiodeJaneiro_PTur3"/>
+				<bind role="start" component="imgRiodeJaneiro_PTur4"/>
+			</link>
+		</context>
 	</body>
 </ncl>
