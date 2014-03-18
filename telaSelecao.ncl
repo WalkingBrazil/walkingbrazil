@@ -45,7 +45,7 @@
 
 	<body id="bodyTelaSelecao">
 
-		<context id="ctxTelaSelecao">
+		<!--<context id="ctxTelaSelecao">
 			<port id="portaTelaSelecao" component="imagemBackground" />
 		
 			<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
@@ -84,6 +84,9 @@
 			<context id="ctxBeloHorizonte">
 				<port id="portaBeloHorizonte" component="imgBeloHorizonte_Titulo"/>
 				
+				<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
+				<media id="imagemVideo" src="media/logocopa.jpg" descriptor="idVideo"/>
+				<media id="imagemSelecao" src="media/logocopa.jpg" descriptor="idSelecao"/>
 				<media id="imgBeloHorizonte_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
 				<media id="imgBeloHorizonte_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
 				<media id="imgBeloHorizonte_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
@@ -92,6 +95,8 @@
 				
 				<link id="lIniciaSelecaoBeloHorionte" xconnector="conectores#noInicio">
 					<bind role="onBegin" component="imgBeloHorizonte_Titulo"/>
+					<bind role="start" component="imagemVideo"/>
+					<bind role="start" component="imagemSelecao"/>
 					<bind role="start" component="imgBeloHorizonte_PTur1"/>
 					<bind role="start" component="imgBeloHorizonte_PTur2"/>
 					<bind role="start" component="imgBeloHorizonte_PTur3"/>
