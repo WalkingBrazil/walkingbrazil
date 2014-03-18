@@ -8,8 +8,7 @@
 		<importedDocumentBase>
 			<importNCL documentURI="telaSelecao.ncl" alias="tSel"/>
 		</importedDocumentBase>
-		
-	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE REGIÕES							 !
 	 !	 define as regiï¿½es na tela onde as mï¿½dias serï¿½o mostradas	 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -28,7 +27,7 @@
 			<region id="regiaoCidade2" width="30%" height="30%" left="50%" top="30%"/>
 			<region id="rgLua"/>
 		</regionBase>
-	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE DESCRITORES						 !
 	 !	 		define como as mï¿½dias serï¿½o apresentadas			 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -39,7 +38,7 @@
 			<descriptor id="idTelaInicial" region="regiaoTelaInicial"/>
 			<descriptor id="idNavegacao" region="regiaoNavegacao"/>
 			<descriptor id="idBotaoIdioma" region="regiaoBotaoIdioma" focusBorderWidth="2"/>
-			<descriptor id="idBotaoSair" region="regiaoBotaoSair" />
+			<descriptor id="idBotaoSair" region="regiaoBotaoSair"/>
 			<descriptor id="idBotaoSobre" region="regiaoBotaoSobre"/>
 			<descriptor id="idTituloPreviewCidade" region="regiaoTituloPreviewCidade"/>
 			<descriptor id="idDescricaoPreviewCidade" region="regiaoDescricaoPreviewCidade"/>
@@ -47,7 +46,7 @@
 			<descriptor id="idCidade2" region="regiaoCidade2" focusIndex="2" moveLeft="1"/>
 			<descriptor id="dsLua" region="rgLua"/>
 		</descriptorBase>
-	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE CONECTORES						 !
 	 !	 			definem o comportamento dos elos				 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -60,22 +59,19 @@
 	 !	 		define as mï¿½dias e a estrutura do programa			 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 	<body id="teste">
-	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						PONTO DE ENTRADA						 !
 	 !	 		indica o componente onde o programa inicia			 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-	 <media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
+		<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
 		<media id="botaoInt" src="media/BotaoInterativo.png" descriptor="idBotaoInt"/>
-		
 		<port id="porta1" component="imagemBackground"/>
-			
 		<!-- exibe a imagem de background juntamente com o botï¿½o de interaï¿½ï¿½o -->
 		<link id="lImagBotaoIntAparece" xconnector="conectores#noInicio">
 			<bind role="onBegin" component="imagemBackground"/>
 			<bind role="start" component="botaoInt"/>
 		</link>
-		
-			<link id="lSelecionaBotaoInt" xconnector="conectores#selecaoBotaoIntInicioFim">
+		<link id="lSelecionaBotaoInt" xconnector="conectores#selecaoBotaoIntInicioFim">
 			<bind role="onSelection" component="botaoInt">
 				<bindParam name="keyCode" value="RED"/>
 			</bind>
@@ -84,12 +80,8 @@
 			<bind role="stop" component="imagemBackground"/>
 			<bind role="start" component="ctxTelaInicial"/>
 		</link>
-		
 		<!-- exibe a tela inicial apï¿½s a exibiï¿½ï¿½o de alguns segundos do logo -->
-	
 		<context id="ctxTelaInicial">
-			
-			
 			<port id="portaImagemTelaInicial" component="imagemTelaInicial"/>
 			<port id="portaPainelNavegacao" component="painelNavegacao"/>
 			<port id="portaBotaoIdioma" component="botaoIdioma"/>
@@ -97,22 +89,17 @@
 			<port id="portaBotaoSobre" component="botaoSobre"/>
 			<port id="portaCidade1" component="cidade1"/>
 			<port id="portaCidade2" component="cidade2"/>
-			<port id="portaLua" component="lua"/>
 			<port id="portaOpcaoSel" component="opcaoSel"/>
-			
-	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+			<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						Mï¿½DIAS						             !
 	 ! 	  define o local dos arquivos de mï¿½dia e as associa a seus   !
 	 !					 	descritores								 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		
-		
 			<media id="imagemTelaInicial" src="media/telaInicial.png" descriptor="idTelaInicial"/>
 			<media id="painelNavegacao" src="media/navegacao.png" descriptor="idNavegacao"/>
 			<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="idBotaoIdioma">
 				<property name="focusIndex" value="0"/>
 			</media>
-				
 			<media id="botaoSair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
 			<media id="botaoSobre" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
 			<media id="tituloPreviewCidade" src="media/cidadePreviewTitulo.png" descriptor="idTituloPreviewCidade"/>
@@ -123,84 +110,73 @@
 			<media id="cidade2" src="media/Foto109_zps5860599d.jpg" type="image/jpeg" descriptor="idCidade2">
 				<property name="nomeCidade" value="Rio de Janeiro"/>
 			</media>
-				
 			<media id="settings" type="application/x-ginga-settings">
 				<property name="service.currentKeyMaster" value="0"/>
-	 		</media>
-			<media id="lua" src="Lua/selecao.lua" descriptor="dsLua">
-				<property name="cidadeSel" value=""/>
 			</media>
-			
-			<media id="opcaoSel" type="application/x-ncl-settings"> 
+			<media id="opcaoSel" type="application/x-ncl-settings">
 				<property name="nomeCidade"/>
 			</media>
-			
+			<media id="opcaoSelTur" type="application/x-ncl-settings">
+				<property name="nomeTur"/>
+			</media>
 			<context id="ctxTelaSelecao" refer="tSel#ctxTelaSelecao"/>
 			<switch id="switchSelCidade" refer="tSel#switchSelCidade"/>
-		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+			<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 		 !						ELOS						             !
 		 ! 	  define os elos que regem o sincronismo entre as mï¿½dias     !					 
 		 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			
-			
 			<link id="lSelecionaBeloHorizonte" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="cidade1"/>
 				<bind role="getCidade" component="cidade1" interface="nomeCidade"/>
-				<bind role="set" component="opcaoSel" interface="nomeCidade">	
+				<bind role="set" component="opcaoSel" interface="nomeCidade">
 					<bindParam name="var" value="$getCidade"/>
 				</bind>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "switchSelCidade" />
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="stop" component="cidade1"/>
+				<bind role="stop" component="cidade2"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="switchSelCidade"/>
 			</link>
-			
-		
 			<link id="lSelecionaManaus" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="cidade1"/>
 				<bind role="getCidade" component="cidade1" interface="nomeCidade"/>
-				<bind role="set" component="opcaoSel" interface="nomeCidade">	
+				<bind role="set" component="opcaoSel" interface="nomeCidade">
 					<bindParam name="var" value="$getCidade"/>
 				</bind>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "switchSelCidade" />
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="stop" component="cidade1"/>
+				<bind role="stop" component="cidade2"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="switchSelCidade"/>
 			</link>
-	
 			<link id="lSelecionaRioJaneiro" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="cidade2"/>
 				<bind role="getCidade2" component="cidade2" interface="nomeCidade"/>
-				<bind role="set" component="opcaoSel" interface="nomeCidade" >	
+				<bind role="set" component="opcaoSel" interface="nomeCidade">
 					<bindParam name="var" value="$getCidade2"/>
 				</bind>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "switchSelCidade" />
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="stop" component="cidade1"/>
+				<bind role="stop" component="cidade2"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="switchSelCidade"/>
 			</link>
-			
-			<link id= "lTerminaAplicacao" xconnector="conectores#onKeySelectionStop">
+			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionStop">
 				<bind role="onSelection" component="botaoSair">
 					<bindParam name="key" value="RED"/>
 				</bind>
 				<bind component="ctxTelaInicial" role="stop"/>
 				<bind component="ctxTelaSelecao" role="stop"/>
-				
 			</link>
-		
 		</context>
 	</body>
 </ncl>
