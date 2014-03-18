@@ -58,7 +58,7 @@
 					<bind role="start" component="imagemVideo"/>
 					<bind role="start" component="imagemSelecao"/>
 			</link>
-		</context>
+		</context>-->
 		
 			<!--
 			<context id="ctx">
@@ -81,6 +81,100 @@
 			</context>
 			-->
 			
+			<context id="ctxBeloHorizonte">
+				<port id="portaBeloHorizonte" component="imgBeloHorizonte_Titulo"/>
+				
+				<media id="imgBeloHorizonte_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+				<media id="imgBeloHorizonte_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+				<media id="imgBeloHorizonte_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+				<media id="imgBeloHorizonte_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+				<media id="imgBeloHorizonte_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+				
+				<link id="lIniciaSelecaoBeloHorionte" xconnector="conectores#noInicio">
+					<bind role="onBegin" component="imgBeloHorizonte_Titulo"/>
+					<bind role="start" component="imgBeloHorizonte_PTur1"/>
+					<bind role="start" component="imgBeloHorizonte_PTur2"/>
+					<bind role="start" component="imgBeloHorizonte_PTur3"/>
+					<bind role="start" component="imgBeloHorizonte_PTur4"/>
+				</link>
+		
+			</context>
+			
+			<context id="ctxBrasilia">
+				<port id="portaBrasilia" component="imgBrasilia_Titulo"/>
+				
+				<media id="imgBrasilia_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+				<media id="imgBrasilia_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+				<media id="imgBrasilia_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+				<media id="imgBrasilia_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+				<media id="imgBrasilia_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+				
+				<link id="lIniciaSelecaoBrasilia" xconnector="conectores#noInicio">
+					<bind role="onBegin" component="imgBrasilia_Titulo"/>
+					<bind role="start" component="imgBrasilia_PTur1"/>
+					<bind role="start" component="imgBrasilia_PTur2"/>
+					<bind role="start" component="imgBrasilia_PTur3"/>
+					<bind role="start" component="imgBrasilia_PTur4"/>
+				</link>
+		
+			</context>
+			
+			<context id="ctxCuiaba">
+				<port id="portaCuiaba" component="imgCuiaba_Titulo"/>
+				
+				<media id="imgCuiaba_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+				<media id="imgCuiaba_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+				<media id="imgCuiaba_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+				<media id="imgCuiaba_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+				<media id="imgCuiaba_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+				
+				<link id="lIniciaSelecaoCuiaba" xconnector="conectores#noInicio">
+					<bind role="onBegin" component="imgCuiaba_Titulo"/>
+					<bind role="start" component="imgCuiaba_PTur1"/>
+					<bind role="start" component="imgCuiaba_PTur2"/>
+					<bind role="start" component="imgCuiaba_PTur3"/>
+					<bind role="start" component="imgCuiaba_PTur4"/>
+				</link>
+		
+			</context>
+			
+			<context id="ctxCuritiba">
+				<port id="portaCuritiba" component="imgCuritiba_Titulo"/>
+				
+				<media id="imgCuritiba_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+				<media id="imgCuritiba_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+				<media id="imgCuritiba_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+				<media id="imgCuritiba_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+				<media id="imgCuritiba_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+				
+				<link id="lIniciaSelecaoCuritiba" xconnector="conectores#noInicio">
+					<bind role="onBegin" component="imgCuritiba_Titulo"/>
+					<bind role="start" component="imgCuritiba_PTur1"/>
+					<bind role="start" component="imgCuritiba_PTur2"/>
+					<bind role="start" component="imgCuritiba_PTur3"/>
+					<bind role="start" component="imgCuritiba_PTur4"/>
+				</link>
+		
+			</context>
+			
+			<context id="ctxFortaleza">
+				<port id="portaFortaleza" component="imgFortaleza_Titulo"/>
+				
+				<media id="imgFortaleza_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+				<media id="imgFortaleza_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+				<media id="imgFortaleza_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+				<media id="imgFortaleza_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+				<media id="imgFortaleza_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+				
+				<link id="lIniciaSelecaoFortaleza" xconnector="conectores#noInicio">
+					<bind role="onBegin" component="imgFortaleza_Titulo"/>
+					<bind role="start" component="imgFortaleza_PTur1"/>
+					<bind role="start" component="imgFortaleza_PTur2"/>
+					<bind role="start" component="imgFortaleza_PTur3"/>
+					<bind role="start" component="imgFortaleza_PTur4"/>
+				</link>
+		
+			</context>
 			
 			<context id="ctxManaus">
 				<port id="portaManaus" component="imgManaus_Titulo"/>
@@ -101,7 +195,43 @@
 		
 			</context>
 			
+			<context id="ctxNatal">
+				<port id="portaNatal" component="imgNatal_Titulo"/>
+				
+				<media id="imgNatal_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+				<media id="imgNatal_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+				<media id="imgNatal_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+				<media id="imgNatal_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+				<media id="imgNatal_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+				
+				<link id="lIniciaSelecaoNatal" xconnector="conectores#noInicio">
+					<bind role="onBegin" component="imgNatal_Titulo"/>
+					<bind role="start" component="imgNatal_PTur1"/>
+					<bind role="start" component="imgNatal_PTur2"/>
+					<bind role="start" component="imgNatal_PTur3"/>
+					<bind role="start" component="imgNatal_PTur4"/>
+				</link>
 		
+			</context>
+			
+			<context id="ctxPortoAlegre">
+				<port id="portaPortoAlegre" component="imgPortoAlegre_Titulo"/>
+				
+				<media id="imgPortoAlegre_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+				<media id="imgPortoAlegre_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+				<media id="imgPortoAlegre_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+				<media id="imgPortoAlegre_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+				<media id="imgPortoAlegre_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+				
+				<link id="lIniciaSelecaoPortoAlegre" xconnector="conectores#noInicio">
+					<bind role="onBegin" component="imgPortoAlegre_Titulo"/>
+					<bind role="start" component="imgPortoAlegre_PTur1"/>
+					<bind role="start" component="imgPortoAlegre_PTur2"/>
+					<bind role="start" component="imgPortoAlegre_PTur3"/>
+					<bind role="start" component="imgPortoAlegre_PTur4"/>
+				</link>
+		
+			</context>
 	
 			<context id="ctxRiodeJaneiro">
 				<port id="portaRiodeJaneiro" component="imgRiodeJaneiro_Titulo"/>
@@ -122,7 +252,44 @@
 		
 			</context>
 			
+			<context id="ctxSalvador">
+				<port id="portaSalvador" component="imgSalvador_Titulo"/>
+				
+				<media id="imgSalvador_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+				<media id="imgSalvador_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+				<media id="imgSalvador_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+				<media id="imgSalvador_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+				<media id="imgSalvador_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+				
+				<link id="lIniciaSelecaoSalvador" xconnector="conectores#noInicio">
+					<bind role="onBegin" component="imgSalvador_Titulo"/>
+					<bind role="start" component="imgSalvador_PTur1"/>
+					<bind role="start" component="imgSalvador_PTur2"/>
+					<bind role="start" component="imgSalvador_PTur3"/>
+					<bind role="start" component="imgSalvador_PTur4"/>
+				</link>
 		
+			</context>
+			
+			<context id="ctxSaoPaulo">
+				<port id="portaSaoPaulo" component="imgSaoPaulo_Titulo"/>
+				
+				<media id="imgSaoPaulo_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
+				<media id="imgSaoPaulo_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
+				<media id="imgSaoPaulo_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
+				<media id="imgSaoPaulo_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
+				<media id="imgSaoPaulo_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+				
+				<link id="lIniciaSelecaoSaoPaulo" xconnector="conectores#noInicio">
+					<bind role="onBegin" component="imgSaoPaulo_Titulo"/>
+					<bind role="start" component="imgSaoPaulo_PTur1"/>
+					<bind role="start" component="imgSaoPaulo_PTur2"/>
+					<bind role="start" component="imgSaoPaulo_PTur3"/>
+					<bind role="start" component="imgSaoPaulo_PTur4"/>
+				</link>
+		
+			</context>
+
 		
 	</body>
 </ncl>
