@@ -43,7 +43,7 @@
 
 	</head>
 
-	<body id="bodyTelaSelecao">
+	<body>
 
 		<!--<context id="ctxTelaSelecao">
 			<port id="portaTelaSelecao" component="imagemBackground" />
@@ -82,7 +82,7 @@
 			-->
 			
 			<context id="ctxBeloHorizonte">
-				<port id="portaBeloHorizonte" component="imgBeloHorizonte_Titulo"/>
+				<port id="portaBeloHorizonte" component="imagemBackground"/>
 				
 				<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
 				<media id="imagemVideo" src="media/logocopa.jpg" descriptor="idVideo"/>
@@ -94,9 +94,10 @@
 				<media id="imgBeloHorizonte_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
 				
 				<link id="lIniciaSelecaoBeloHorionte" xconnector="conectores#noInicio">
-					<bind role="onBegin" component="imgBeloHorizonte_Titulo"/>
+					<bind role="onBegin" component="imagemBackground"/>
 					<bind role="start" component="imagemVideo"/>
 					<bind role="start" component="imagemSelecao"/>
+					<bind role="start" component="imgBeloHorizonte_Titulo"/>
 					<bind role="start" component="imgBeloHorizonte_PTur1"/>
 					<bind role="start" component="imgBeloHorizonte_PTur2"/>
 					<bind role="start" component="imgBeloHorizonte_PTur3"/>

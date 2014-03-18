@@ -128,18 +128,29 @@
 		 !						ELOS						             !
 		 ! 	  define os elos que regem o sincronismo entre as m�dias     !					 
 		 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<link id="lSelecionaBeloHorizonte" xconnector="conectores#onSelectionSetStartNStop">
+			<link id="lSelecionaBeloHorizonte" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="cidade1"/>
+				<!--
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
-				</bind>
+				</bind>-->
 				<bind role="stop" component="imagemTelaInicial"/>
 				<bind role="stop" component="cidade1"/>
 				<bind role="stop" component="cidade2"/>
+				<bind role="stop" component="ctxBrasilia"/>
+				<bind role="stop" component="ctxCuiaba"/>
+				<bind role="stop" component="ctxCuritiba"/>
+				<bind role="stop" component="ctxFortaleza"/>
+				<bind role="stop" component="ctxManaus"/>
+				<bind role="stop" component="ctxNatal"/>
+				<bind role="stop" component="ctxPortoAlegre"/>
+				<bind role="stop" component="ctxRiodeJaneiro"/>
+				<bind role="stop" component="ctxSalvador"/>
+				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="start" component="ctxBeloHorizonte"/>
 			</link>
 			<link id="lSelecionaBrasilia" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
+				<bind role="onSelection" component="cidade2"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
@@ -149,7 +160,7 @@
 				<bind role="start" component="ctxBrasilia"/>
 			</link>
 			<link id="lSelecionaCuiaba" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
+				<bind role="onSelection" component="cidade2"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
@@ -159,7 +170,7 @@
 				<bind role="start" component="ctxCuiaba"/>
 			</link>
 			<link id="lSelecionaCuritiba" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
+				<bind role="onSelection" component="cidade2"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
@@ -169,7 +180,7 @@
 				<bind role="start" component="ctxCuritiba"/>
 			</link>
 			<link id="lSelecionaFortaleza" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
+				<bind role="onSelection" component="cidade2"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
@@ -179,7 +190,7 @@
 				<bind role="start" component="ctxFortaleza"/>
 			</link>
 			<link id="lSelecionaManaus" xconnector="conectores#onSelectionStartNStop">
-				<bind role="onSelection" component="cidade1"/>
+				<bind role="onSelection" component="cidade2"/>
 				<bind role="stop" component="imagemTelaInicial"/>
 				<bind role="stop" component="cidade1"/>
 				<bind role="stop" component="cidade2"/>
@@ -187,7 +198,7 @@
 				<bind role="start" component="ctxManaus"/>
 			</link>
 			<link id="lSelecionaNatal" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
+				<bind role="onSelection" component="cidade2"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
@@ -197,7 +208,7 @@
 				<bind role="start" component="ctxNatal"/>
 			</link>
 			<link id="lSelecionaPortoAlegre" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
+				<bind role="onSelection" component="cidade2"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
