@@ -6,7 +6,7 @@
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 	<head>
 		<importedDocumentBase>
-			<importNCL documentURI="telaSelecao.ncl" alias="tSel"/>
+			<importNCL documentURI="telaSelecao2.ncl" alias="tSel"/>
 		</importedDocumentBase>
 		<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE REGIÕES							 !
@@ -119,27 +119,23 @@
 			<media id="opcaoSelTur" type="application/x-ncl-settings">
 				<property name="nomeTur"/>
 			</media>
-			<context id="ctxTelaSelecao" refer="tSel#ctxTelaSelecao"/>
-			<switch id="switchSelCidade" refer="tSel#switchSelCidade"/>
+			<context id="ctxBeloHorizonte" refer="tSel#ctxBeloHorizonte"/>
+			<context id="ctxTelaSelecao" refer="tSel#ctxBeloHorizonte"/>
 			<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 		 !						ELOS						             !
 		 ! 	  define os elos que regem o sincronismo entre as mï¿½dias     !					 
 		 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<link id="lSelecionaBeloHorizonte" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="cidade1"/>
-				<bind role="getCidade" component="cidade1" interface="nomeCidade"/>
-				<bind role="set" component="opcaoSel" interface="nomeCidade">
-					<bindParam name="var" value="$getCidade"/>
-				</bind>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
 				<bind role="stop" component="imagemTelaInicial"/>
 				<bind role="stop" component="cidade1"/>
 				<bind role="stop" component="cidade2"/>
-				<bind role="start" component="ctxTelaSelecao"/>
-				<bind role="start" component="switchSelCidade"/>
+				<bind role="start" component="ctxBeloHorizonte"/>
 			</link>
+<!--			
 			<link id="lSelecionaManaus" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="cidade1"/>
 				<bind role="getCidade" component="cidade1" interface="nomeCidade"/>
@@ -154,7 +150,7 @@
 				<bind role="stop" component="cidade2"/>
 				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="switchSelCidade"/>
-			</link>
+			</link>-->
 			<link id="lSelecionaRioJaneiro" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="cidade2"/>
 				<bind role="getCidade2" component="cidade2" interface="nomeCidade"/>
@@ -168,7 +164,6 @@
 				<bind role="stop" component="cidade1"/>
 				<bind role="stop" component="cidade2"/>
 				<bind role="start" component="ctxTelaSelecao"/>
-				<bind role="start" component="switchSelCidade"/>
 			</link>
 			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionStop">
 				<bind role="onSelection" component="botaoSair">

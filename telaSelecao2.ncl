@@ -21,7 +21,7 @@
 			<region id="regiaoBotaoSobre" width="8%" height="3.5%" left="67%" top="89%"/>
 			<region id="regiaoTituloPreviewCidade" width="20%" height="8%" left="10%" top="21%"/>
 			<region id="regiaoDescricaoPreviewCidade" width="20%" height="8%" left="10%" top="48%"/>
-			<region id="regiaoInfoPTur" width="40%" height="80%" left="10%" top="10%"/>
+			<region id="regiaoInfoPTur" width="40%" height="80%" right="10%" top="10%"/>
 			<region id="rgLua"/>
 		</regionBase>
 		<descriptorBase>
@@ -39,7 +39,7 @@
 			<descriptor id="idPontoTur2" region="regiaoPontoTur2" focusIndex="ixPontoTur2" moveLeft="ixPontoTur1" moveDown="ixPontoTur4"/>
 			<descriptor id="idPontoTur3" region="regiaoPontoTur3" focusIndex="ixPontoTur3" moveRight="ixPontoTur4" moveUp="ixPontoTur1"/>
 			<descriptor id="idPontoTur4" region="regiaoPontoTur4" focusIndex="ixPontoTur4" moveLeft="ixPontoTur3" moveUp="ixPontoTur2"/>
-			<descriptor id="idInfoPTur" region="regiaoInfoPTur" />
+			<descriptor id="idInfoPTur" region="regiaoInfoPTur"/>
 			<descriptor id="dsLua" region="rgLua"/>
 		</descriptorBase>
 		<connectorBase>
@@ -47,7 +47,7 @@
 		</connectorBase>
 	</head>
 	<body id="bodyTelaSelecao">
-<!--		<context id="ctxTelaSelecao">
+		<!--		<context id="ctxTelaSelecao">
 			<port id="portaTelaSelecao" component="imagemBackground"/>
 			<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
 			<media id="logocopa" src="media/logocopa.jpg" descriptor="idLogoCopa"/>
@@ -86,10 +86,12 @@
 			<media id="imgBeloHorionte_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
 			<media id="imgBeloHorionte_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
 			<media id="imgBH_PTur1_G" src="media/BackgroundInicio.jpg" descriptor="idInfoPTur"/>
+			<media id="imgBH_PTur2_G" src="media/BackgroundInicio.jpg" descriptor="idInfoPTur"/>
+			<media id="imgBH_PTur3_G" src="media/BackgroundInicio.jpg" descriptor="idInfoPTur"/>
+			<media id="imgBH_PTur4_G" src="media/BackgroundInicio.jpg" descriptor="idInfoPTur"/>
 			<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground"/>
 			<media id="logocopa" src="media/logocopa.jpg" descriptor="idLogoCopa"/>
 			<media id="imagemSelecao" src="media/logocopa.jpg" descriptor="idSelecao"/>
-
 			<link id="lIniciaSelecaoBeloHorizonte" xconnector="conectores#noInicio">
 				<bind role="onBegin" component="imagemBackground"/>
 				<bind role="start" component="imgBeloHorionte_Titulo"/>
@@ -106,7 +108,35 @@
 				<bind role="stop" component="imgBeloHorionte_PTur2"/>
 				<bind role="stop" component="imgBeloHorionte_PTur3"/>
 				<bind role="stop" component="imgBeloHorionte_PTur4"/>
+				<bind role="stop" component="imagemSelecao"/>
 				<bind role="start" component="imgBH_PTur1_G"/>
+			</link>
+			<link id="link_SelBH_PTur2" xconnector="conectores#onSelectionStartNStop">
+				<bind role="onSelection" component="imgBeloHorionte_PTur2"/>
+				<bind role="stop" component="imgBeloHorionte_PTur1"/>
+				<bind role="stop" component="imgBeloHorionte_PTur2"/>
+				<bind role="stop" component="imgBeloHorionte_PTur3"/>
+				<bind role="stop" component="imgBeloHorionte_PTur4"/>
+				<bind role="stop" component="imagemSelecao"/>
+				<bind role="start" component="imgBH_PTur2_G"/>
+			</link>
+			<link id="link_SelBH_PTur3" xconnector="conectores#onSelectionStartNStop">
+				<bind role="onSelection" component="imgBeloHorionte_PTur3"/>
+				<bind role="stop" component="imgBeloHorionte_PTur1"/>
+				<bind role="stop" component="imgBeloHorionte_PTur2"/>
+				<bind role="stop" component="imgBeloHorionte_PTur3"/>
+				<bind role="stop" component="imgBeloHorionte_PTur4"/>
+				<bind role="stop" component="imagemSelecao"/>
+				<bind role="start" component="imgBH_PTur3_G"/>
+			</link>
+			<link id="link_SelBH_PTur4" xconnector="conectores#onSelectionStartNStop">
+				<bind role="onSelection" component="imgBeloHorionte_PTur4"/>
+				<bind role="stop" component="imgBeloHorionte_PTur1"/>
+				<bind role="stop" component="imgBeloHorionte_PTur2"/>
+				<bind role="stop" component="imgBeloHorionte_PTur3"/>
+				<bind role="stop" component="imgBeloHorionte_PTur4"/>
+				<bind role="stop" component="imagemSelecao"/>
+				<bind role="start" component="imgBH_PTur4_G"/>
 			</link>
 		</context>
 		<context id="ctxBrasilia">
