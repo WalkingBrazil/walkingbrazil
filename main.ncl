@@ -11,24 +11,24 @@
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 		<regionBase>
 			<region id="regiaoBackground" width="1920" height="1080"/>
-			<region id="regiaoBotaoInt" width="10%" height="10%" left="85%" top="3%"/>
+			<region id="regiaoBotaoInt" width="7%" height="9%" left="85%" top="3%"/>
 			<region id="regiaoTelaInicial"/>
-			<region id="regiaoPontoAM" width="3%" height="7%" left="46%" top="30%"/>
-			<region id="regiaoPontoMT" width="3%" height="7%" left="54%" top="45%"/>
-			<region id="regiaoPontoDF" width="3%" height="7%" left="60%" top="49%"/>
-			<region id="regiaoPontoSP" width="3%" height="7%" left="61%" top="60%"/>
-			<region id="regiaoPontoRJ" width="3%" height="7%" left="66%" top="60%"/>
-			<region id="regiaoPontoRS" width="3%" height="7%" left="57%" top="73%"/>
-			<region id="regiaoPontoMG" width="3%" height="7%" left="65%" top="53%"/>
-			<region id="regiaoPontoPR" width="3%" height="7%" left="58%" top="63%"/>
-			<region id="regiaoPontoBA" width="3%" height="7%" left="67%" top="45%"/>
-			<region id="regiaoPontoPE" width="3%" height="7%" left="72%" top="37%"/>
-			<region id="regiaoPontoRN" width="3%" height="7%" left="73%" top="32%"/>
-			<region id="regiaoPontoCE" width="3%" height="7%" left="70%" top="31%"/>
-			<region id="regitaoNavegacao" width="30%" height="12%" left="67%" top="75%"/>
-			<region id="regiaoBotaoIdioma" width="8%" height="3.5%" left="89%" top="89%"/>
-			<region id="regiaoBotaoSair" width="8%" height="3.5%" left="78.3%" top="89%"/>
-			<region id="regiaoBotaoSobre" width="8%" height="3.5%" left="67%" top="89%"/>
+			<region id="regiaoPontoAM" width="3%" height="7%" left="64%" top="30%"/>
+			<region id="regiaoPontoMT" width="3%" height="7%" left="73%" top="45%"/>
+			<region id="regiaoPontoDF" width="3%" height="7%" left="79%" top="50%"/>
+			<region id="regiaoPontoSP" width="3%" height="7%" left="79%" top="60%"/>
+			<region id="regiaoPontoRJ" width="3%" height="7%" left="85%" top="60%"/>
+			<region id="regiaoPontoRS" width="3%" height="7%" left="75%" top="73%"/>
+			<region id="regiaoPontoMG" width="3%" height="7%" left="83%" top="54%"/>
+			<region id="regiaoPontoPR" width="3%" height="7%" left="76%" top="63%"/>
+			<region id="regiaoPontoBA" width="3%" height="7%" left="86%" top="44%"/>
+			<region id="regiaoPontoPE" width="3%" height="7%" left="90%" top="37%"/>
+			<region id="regiaoPontoRN" width="3%" height="7%" left="92%" top="32%"/>
+			<region id="regiaoPontoCE" width="3%" height="7%" left="88%" top="31%"/>
+			<region id="regitaoNavegacao" width="30%" height="12%" left="6%" top="80%"/>
+			<region id="regiaoBotaoIdioma" width="8%" height="3.5%" left="6%" top="93%"/>
+			<region id="regiaoBotaoSair" width="8%" height="3.5%" left="17%" top="93%"/>
+			<region id="regiaoBotaoSobre" width="8%" height="3.5%" left="28%" top="93%"/>
 			<region width="50%" height="50%" right="25%" top="25%" id="rgLua"/>
 		</regionBase>
 		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -45,16 +45,16 @@
 			<descriptor id="idPontoDF" region="regiaoPontoDF" focusIndex="ixPontoDF" moveUp="ixPontoMT" moveDown="ixPontoMG" moveLeft="ixPontoMT" moveRight="ixPontoMG" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoSP" region="regiaoPontoSP" focusIndex="ixPontoSP" moveUp="ixPontoMG" moveLeft="ixPontoPR" moveRight="ixPontoRJ" moveDown="ixPontoPR" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoRJ" region="regiaoPontoRJ" focusIndex="ixPontoRJ" moveUp="ixPontoMG" moveLeft="ixPontoSP" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoRS" region="regiaoPontoRS" focusIndex="ixPontoRS" moveUp="ixPontoPR" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoRS" region="regiaoPontoRS" focusIndex="ixPontoRS" moveUp="ixPontoPR" moveDown="ixBotaoSobre" moveLeft="ixBotaoSobre" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoMG" region="regiaoPontoMG" focusIndex="ixPontoMG" moveUp="ixPontoBA" moveDown="ixPontoRJ" moveLeft="ixPontoDF" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoPR" region="regiaoPontoPR" focusIndex="ixPontoPR" moveUp="ixPontoSP" moveDown="ixPontoRS" moveRight="ixPontoSP" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoBA" region="regiaoPontoBA" focusIndex="ixPontoBA" moveUp="ixPontoPE" moveDown="ixPontoMG" moveLeft="ixPontoDF" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoPE" region="regiaoPontoPE" focusIndex="ixPontoPE" moveUp="ixPontoRN" moveDown="ixPontoBA" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoRN" region="regiaoPontoRN" focusIndex="ixPontoRN" moveUp="ixPontoCE" moveDown="ixPontoPE" moveLeft="ixPontoCE" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idNavegacao" region="regitaoNavegacao"/>
-			<descriptor id="idBotaoIdioma" region="regiaoBotaoIdioma"/>
-			<descriptor id="idBotaoSair" region="regiaoBotaoSair"/>
-			<descriptor id="idBotaoSobre" region="regiaoBotaoSobre"/>
+			<descriptor id="idBotaoIdioma" region="regiaoBotaoIdioma" focusIndex="ixBotaoIdioma" moveRight="ixBotaoSair" focusSrc="media/botaoIdioma.png" />
+			<descriptor id="idBotaoSair" region="regiaoBotaoSair" focusIndex="ixBotaoSair" moveLeft="ixBotaoIdioma" moveRight="ixBotaoSobre" focusSrc="media/botaoSair.png"/>
+			<descriptor id="idBotaoSobre" region="regiaoBotaoSobre" focusIndex="ixBotaoSobre" moveLeft="ixBotaoSair" moveRight="ixPontoRS" moveUp="ixPontoRS" focusSrc="media/botaoSobre.png" />
 			<descriptor id="dsLua" region="rgLua" focusIndex="1" focusBorderWidth="5"/>
 		</descriptorBase>
 		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -127,7 +127,7 @@
 				<bindParam name="codigoChave" value="RED"/>
 			</bind>
 			<bind role="set" component="imagemBackground" interface="bounds">
-				<bindParam name="novaDimensao" value="149,339,515,454"/>
+				<bindParam name="novaDimensao" value="111,294,960,540"/>
 				<!-- As dimensões de bounds são: left, top, width, height -->
 			</bind>
 			<bind role="stop" component="botaoInt"/>
