@@ -1,0 +1,3 @@
+listaPontosTuristicos = {'Ponta Negra', 'Arena da Amazonia'}
+descricaoCidade = string.format('%q', 'a string with "quotes" and \n new line')
+--descricaoCidade = string.format('%s', 'A capital localizada no centro da maior floresta tropical do mundo,oferece inúmeras opções de lazer, que vão desde os clássicos passeios de barco que permitem ao viajante ver  de pertinho o encontro dos rios Negro e Solimões ou deslizar calmamente sobre as águas do Rio Amazonas, a visitas a monumentos históricos como o Teatro Amazonas e o Mercado Municipal.')
