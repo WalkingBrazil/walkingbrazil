@@ -52,9 +52,9 @@
 			<descriptor id="idPontoPE" region="regiaoPontoPE" focusIndex="ixPontoPE" moveUp="ixPontoRN" moveDown="ixPontoBA" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoRN" region="regiaoPontoRN" focusIndex="ixPontoRN" moveUp="ixPontoCE" moveDown="ixPontoPE" moveLeft="ixPontoCE" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idNavegacao" region="regitaoNavegacao"/>
-			<descriptor id="idBotaoIdioma" region="regiaoBotaoIdioma" focusIndex="ixBotaoIdioma" moveRight="ixBotaoSair" focusSrc="media/botaoIdioma.png" />
-			<descriptor id="idBotaoSair" region="regiaoBotaoSair" focusIndex="ixBotaoSair" moveLeft="ixBotaoIdioma" moveRight="ixBotaoSobre" focusSrc="media/botaoSair.png"/>
-			<descriptor id="idBotaoSobre" region="regiaoBotaoSobre" focusIndex="ixBotaoSobre" moveLeft="ixBotaoSair" moveRight="ixPontoRS" moveUp="ixPontoRS" focusSrc="media/botaoSobre.png" />
+			<descriptor id="idBotaoIdioma" region="regiaoBotaoIdioma" />
+			<descriptor id="idBotaoSair" region="regiaoBotaoSair" />
+			<descriptor id="idBotaoSobre" region="regiaoBotaoSobre" />
 			<descriptor id="dsLua" region="rgLua" focusIndex="1" focusBorderWidth="5"/>
 		</descriptorBase>
 		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -80,7 +80,7 @@
 	 ! 	  define o local dos arquivos de m�dia e as associa a seus   !
 	 !					 	descritores								 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		<media id="imagemBackground" src="media/BackgroundInicio.jpg" descriptor="idImagemBackground">
+		<media id="imagemBackground" src="media/BackgroundInicio.png" descriptor="idImagemBackground">
 			<area id="aImagemBackground" begin="1s"/>
 			<property name="bounds"/>
 		</media>
