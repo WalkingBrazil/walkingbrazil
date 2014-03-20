@@ -52,9 +52,9 @@
 			<descriptor id="idPontoPE" region="regiaoPontoPE" focusIndex="ixPontoPE" moveUp="ixPontoRN" moveDown="ixPontoBA" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoRN" region="regiaoPontoRN" focusIndex="ixPontoRN" moveUp="ixPontoCE" moveDown="ixPontoPE" moveLeft="ixPontoCE" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idNavegacao" region="regitaoNavegacao"/>
-			<descriptor id="idBotaoIdioma" region="regiaoBotaoIdioma" />
-			<descriptor id="idBotaoSair" region="regiaoBotaoSair" />
-			<descriptor id="idBotaoSobre" region="regiaoBotaoSobre" />
+			<descriptor id="idBotaoIdioma" region="regiaoBotaoIdioma"/>
+			<descriptor id="idBotaoSair" region="regiaoBotaoSair"/>
+			<descriptor id="idBotaoSobre" region="regiaoBotaoSobre"/>
 			<descriptor id="dsLua" region="rgLua" focusIndex="1" focusBorderWidth="5"/>
 		</descriptorBase>
 		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -127,7 +127,7 @@
 				<bindParam name="codigoChave" value="RED"/>
 			</bind>
 			<bind role="set" component="imagemBackground" interface="bounds">
-				<bindParam name="novaDimensao" value="111,294,960,540"/>
+				<bindParam name="novaDimensao" value="5.78125%,27.038%,50%,50%"/>
 				<!-- As dimensões de bounds são: left, top, width, height -->
 			</bind>
 			<bind role="stop" component="botaoInt"/>
