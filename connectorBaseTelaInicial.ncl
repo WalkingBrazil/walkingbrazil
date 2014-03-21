@@ -9,7 +9,7 @@
 			</causalConnector>
 			<causalConnector id="noFim">
 				<simpleCondition role="onEnd"/>
-				<simpleAction role="stop" max="unbounded" qualifier="par"/>
+				<simpleAction role="stop" max="unbounded"/>
 			</causalConnector>
 			<causalConnector id="aoSelecionarBotao">
 				<connectorParam name="codigoChave"/>
@@ -17,9 +17,28 @@
 				<simpleCondition role="onSelection" key="$codigoChave"/>
 				<compoundAction operator="par">
 					<simpleAction role="set" value="$novaDimensao" max="unbounded"/>
-					<simpleAction role="start" value="unbounded" qualifier="par"/>
+					<simpleAction role="start" max="unbounded" value="unbounded" qualifier="par"/>
 					<simpleAction role="stop" value="unbounded" qualifier="par"/>
 					<simpleAction role="abort" value="unbounded" qualifier="par"/>
+				</compoundAction>
+			</causalConnector>
+			<causalConnector id="onSelectionSetStartNStop">
+				<connectorParam name="var"/>
+				<simpleCondition role="onSelection"/>
+				<compoundAction operator="seq">
+					<simpleAction role="set" value="$var"/>
+					<simpleAction role="stop" max="unbounded"/>
+					<simpleAction role="start" max="unbounded"/>
+				</compoundAction>
+			</causalConnector>
+			<causalConnector id="onKeySelectionSetStartNStop">
+				<connectorParam name="key"/>
+				<connectorParam name="var"/>
+				<simpleCondition role="onSelection" key="$key"/>
+				<compoundAction operator="seq">
+					<simpleAction role="stop" max="unbounded"/>
+					<simpleAction role="set" value="$var"/>
+					<simpleAction role="start" max="unbounded"/>
 				</compoundAction>
 			</causalConnector>
 			<causalConnector id="onBeginSet">
@@ -30,7 +49,15 @@
 			<causalConnector id="onKeySelectionStop">
 				<connectorParam name="key"/>
 				<simpleCondition role="onSelection" key="$key"/>
-				<simpleAction role="stop"/>
+				<simpleAction role="stop" max="unbounded"/>
+			</causalConnector>
+			<causalConnector id="onKeySelectionStartNStop">
+				<connectorParam name="key"/>
+				<simpleCondition role="onSelection" key="$key"/>
+				<compoundAction operator="seq">
+					<simpleAction role="stop" max="unbounded"/>
+					<simpleAction role="start" max="unbounded"/>
+				</compoundAction>	
 			</causalConnector>
 			<causalConnector id="onKeySelectionStart">
 				<connectorParam name="key"/>

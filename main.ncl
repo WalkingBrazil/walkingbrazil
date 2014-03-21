@@ -9,6 +9,9 @@
 	 !						BASE DE REGIÕES							 !
 	 !	 define as regiï¿½es na tela onde as mï¿½dias serï¿½o mostradas	 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+		<importedDocumentBase>
+			<importNCL documentURI="telaSelecao.ncl" alias="tSel"/>
+		</importedDocumentBase>
 		<regionBase>
 			<region id="regiaoBackground" width="1920" height="1080"/>
 			<region id="regiaoBotaoInt" width="7%" height="9%" left="85%" top="3%"/>
@@ -85,33 +88,6 @@
 			<property name="bounds"/>
 		</media>
 		<media id="botaoInt" src="media/BotaoInterativo.png" descriptor="idBotaoInt"/>
-		<media id="telaInicial" src="media/telaInicial.png" descriptor="idTelaInicial"/>
-		<media id="painelNavegacao" src="media/navegacao.png" descriptor="idNavegacao"/>
-		<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="idBotaoIdioma">
-			<property name="focusIndex" value="0"/>
-		</media>
-		<media id="botaoSair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
-		<media id="botaoSobre" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
-		<media id="pontoAM" src="media/pontoAzul.png" descriptor="idPontoAM"/>
-		<media id="pontoMT" src="media/pontoAzul2.png" descriptor="idPontoMT"/>
-		<media id="pontoDF" src="media/pontoAzul3.png" descriptor="idPontoDF"/>
-		<media id="pontoSP" src="media/pontoAzul4.png" descriptor="idPontoSP"/>
-		<media id="pontoRJ" src="media/pontoAzul5.png" descriptor="idPontoRJ"/>
-		<media id="pontoRS" src="media/pontoAzul6.png" descriptor="idPontoRS"/>
-		<media id="pontoMG" src="media/pontoAzul7.png" descriptor="idPontoMG"/>
-		<media id="pontoPR" src="media/pontoAzul8.png" descriptor="idPontoPR"/>
-		<media id="pontoBA" src="media/pontoAzul9.png" descriptor="idPontoBA"/>
-		<media id="pontoPE" src="media/pontoAzul10.png" descriptor="idPontoPE"/>
-		<media id="pontoRN" src="media/pontoAzul11.png" descriptor="idPontoRN"/>
-		<media id="pontoCE" src="media/pontoAzul12.png" descriptor="idPontoCE"/>
-		<media id="settings" type="application/x-ginga-settings">
-			<property name="service.currentKeyMaster" value=""/>
-		</media>
-		<media id="lua" src="Lua/dialogo.lua" descriptor="dsLua"/>
-		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	 !						ELOS						             !
-	 ! 	  define os elos que regem o sincronismo entre as mï¿½dias     !					 
-	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 		<link id="lImagBotaoIntAparece" xconnector="conectores#noInicio">
 			<bind role="onBegin" component="imagemBackground"/>
 			<bind role="start" component="botaoInt"/>
@@ -119,8 +95,6 @@
 		<link id="lImagBotaoIntDesaparece" xconnector="conectores#noFim">
 			<bind role="onEnd" component="imagemBackground"/>
 			<bind role="stop" component="botaoInt"/>
-			<bind role="start" component="telaInicial"/>
-			<bind role="start" component="pontoAM"/>
 		</link>
 		<link id="selecionaBotaoInteracao" xconnector="conectores#aoSelecionarBotao">
 			<bind role="onSelection" component="botaoInt">
@@ -132,57 +106,9 @@
 			</bind>
 			<bind role="stop" component="botaoInt"/>
 			<bind role="abort" component="botaoInt"/>
-			<bind role="start" component="telaInicial"/>
+			<bind role="start" component="ctxTelaInicial"/>
 		</link>
-		
 		<context id="ctxTelaInicial">
-
-
-		
-		<link id="lTelaInicial" xconnector="conectores#noInicio">
-			<bind role="onBegin" component="telaInicial"/>
-			<bind role="start" component="pontoAM"/>
-			<bind role="start" component="pontoMT"/>
-			<bind role="start" component="pontoDF"/>
-			<bind role="start" component="pontoSP"/>
-			<bind role="start" component="pontoRJ"/>
-			<bind role="start" component="pontoRS"/>
-			<bind role="start" component="pontoMG"/>
-			<bind role="start" component="pontoPR"/>
-			<bind role="start" component="pontoBA"/>
-			<bind role="start" component="pontoPE"/>
-			<bind role="start" component="pontoRN"/>
-			<bind role="start" component="pontoCE"/>
-			<bind role="start" component="painelNavegacao"/>
-			<bind role="start" component="botaoIdioma"/>
-			<bind role="start" component="botaoSair"/>
-			<bind role="start" component="botaoSobre"/>
-		</link>
-		<link id="lSelecionaBotaoLua" xconnector="conectores#onKeySelectionStart">
-			<bind role="onSelection" component="botaoSobre">
-				<bindParam name="key" value="GREEN"/>
-			</bind>
-			<bind component="lua" role="start"/>
-		</link>
-		<link id="luaStart" xconnector="conectores#onBeginSet">
-			<bind role="onBegin" component="lua"/>
-			<bind role="set" component="settings" interface="service.currentKeyMaster">
-				<bindParam name="value" value="lua"/>
-			</bind>
-		</link>
-		<link xconnector="conectores#onEndStopSet">
-			<bind component="lua" role="onEnd"/>
-			<bind role="set" component="settings" interface="service.currentKeyMaster">
-				<bindParam name="value" value=""/>
-			</bind>
-			<bind component="lua" role="stop"/>
-		</link>
-		<link xconnector="conectores#onAbortStop">
-			<bind component="lua" role="onAbort"/>
-			<bind component="teste" role="stop"/>
-		</link>
-
-			
 			<context id="ctxTelaSelecao" refer="tSel#ctxTelaSelecao"/>
 			<context id="ctxBeloHorizonte" refer="tSel#ctxBeloHorizonte"/>
 			<context id="ctxBrasilia" refer="tSel#ctxBrasilia"/>
@@ -192,155 +118,455 @@
 			<context id="ctxManaus" refer="tSel#ctxManaus"/>
 			<context id="ctxNatal" refer="tSel#ctxNatal"/>
 			<context id="ctxPortoAlegre" refer="tSel#ctxPortoAlegre"/>
+			<context id="ctxRecife" refer="tSel#ctxRecife"/>
 			<context id="ctxRiodeJaneiro" refer="tSel#ctxRiodeJaneiro"/>
 			<context id="ctxSalvador" refer="tSel#ctxSalvador"/>
 			<context id="ctxSaoPaulo" refer="tSel#ctxSaoPaulo"/>
-<!--			<switch id="switchSelCidade" refer="tSel#switchSelCidade"/>
--->		
-		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+			<port id="portaTelaInicial" component="imagemTelaInicial"/>
+			<port id="portaPainelNavegacao" component="painelNavegacao"/>
+			<port id="portaBotaoIdioma" component="botaoIdioma"/>
+			<port id="portaBotaoSair" component="botaoSair"/>
+			<port id="portaBotaoSobre" component="botaoSobre"/>
+			<port id="portaPontoAM" component="pontoAM"/>
+			<port id="portaPontoMT" component="pontoMT"/>
+			<port id="portaPontoDF" component="pontoDF"/>
+			<port id="portaPontoSP" component="pontoSP"/>
+			<port id="portaPontoRJ" component="pontoRJ"/>
+			<port id="portaPontoRS" component="pontoRS"/>
+			<port id="portaPontoMG" component="pontoMG"/>
+			<port id="portaPontoPR" component="pontoPR"/>
+			<port id="portaPontoBA" component="pontoBA"/>
+			<port id="portaPontoPE" component="pontoPE"/>
+			<port id="portaPontoRN" component="pontoRN"/>
+			<port id="portaPontoCE" component="pontoCE"/>
+			<media id="pontoAM" src="media/pontoAzul.png" descriptor="idPontoAM"/>
+			<media id="pontoMT" src="media/pontoAzul2.png" descriptor="idPontoMT"/>
+			<media id="pontoDF" src="media/pontoAzul3.png" descriptor="idPontoDF"/>
+			<media id="pontoSP" src="media/pontoAzul4.png" descriptor="idPontoSP"/>
+			<media id="pontoRJ" src="media/pontoAzul5.png" descriptor="idPontoRJ"/>
+			<media id="pontoRS" src="media/pontoAzul6.png" descriptor="idPontoRS"/>
+			<media id="pontoMG" src="media/pontoAzul7.png" descriptor="idPontoMG"/>
+			<media id="pontoPR" src="media/pontoAzul8.png" descriptor="idPontoPR"/>
+			<media id="pontoBA" src="media/pontoAzul9.png" descriptor="idPontoBA"/>
+			<media id="pontoPE" src="media/pontoAzul10.png" descriptor="idPontoPE"/>
+			<media id="pontoRN" src="media/pontoAzul11.png" descriptor="idPontoRN"/>
+			<media id="pontoCE" src="media/pontoAzul12.png" descriptor="idPontoCE"/>
+			<media id="imagemTelaInicial" src="media/telaInicial.png" descriptor="idTelaInicial"/>
+			<media id="painelNavegacao" src="media/navegacao.png" descriptor="idNavegacao"/>
+			<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="idBotaoIdioma">
+				<property name="focusIndex" value="0"/>
+			</media>
+			<media id="botaoSair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
+			<media id="botaoSobre" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
+			<media id="settings" type="application/x-ginga-settings">
+				<property name="service.currentKeyMaster" value=""/>
+			</media>
+			<media id="imgBackground" refer="imagemBackground" instance="instSame"/>
+			<media id="imgInt" refer="botaoInt" instance="instSame"/>
+			<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	 !						ELOS						             !
+	 ! 	  define os elos que regem o sincronismo entre as mï¿½dias     !					 
+	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+			<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 		 !						ELOS						             !
 		 ! 	  define os elos que regem o sincronismo entre as mï¿½dias     !					 
 		 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		 
-		 	<link id="lSelecionaBeloHorizonte" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+			<link id="lSelecionaBeloHorizonte" xconnector="conectores#onSelectionSetStartNStop">
+				<bind role="onSelection" component="pontoMG"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "ctxBeloHorizonte" />
+				<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>
+				<bind role="stop" component="ctxBrasilia"/>
+				<bind role="stop" component="ctxCuiaba"/>
+				<bind role="stop" component="ctxCuritiba"/>
+				<bind role="stop" component="ctxFortaleza"/>
+				<bind role="stop" component="ctxManaus"/>
+				<bind role="stop" component="ctxNatal"/>
+				<bind role="stop" component="ctxPortoAlegre"/>
+				<bind role="stop" component="ctxRecife"/>
+				<bind role="stop" component="ctxRiodeJaneiro"/>
+				<bind role="stop" component="ctxSalvador"/>
+				<bind role="stop" component="ctxSaoPaulo"/>
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="ctxBeloHorizonte"/>
 			</link>
-			
 			<link id="lSelecionaBrasilia" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="onSelection" component="pontoDF"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "ctxBrasilia" />
+				<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>
+				<bind role="stop" component="ctxBeloHorizonte"/>
+				<bind role="stop" component="ctxCuiaba"/>
+				<bind role="stop" component="ctxCuritiba"/>
+				<bind role="stop" component="ctxFortaleza"/>
+				<bind role="stop" component="ctxManaus"/>
+				<bind role="stop" component="ctxNatal"/>
+				<bind role="stop" component="ctxPortoAlegre"/>
+				<bind role="stop" component="ctxRecife"/>
+				<bind role="stop" component="ctxRiodeJaneiro"/>
+				<bind role="stop" component="ctxSalvador"/>
+				<bind role="stop" component="ctxSaoPaulo"/>
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="ctxBrasilia"/>
 			</link>
-			
 			<link id="lSelecionaCuiaba" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="onSelection" component="pontoMT"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "ctxCuiaba" />
+				<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>
+				<bind role="stop" component="ctxBeloHorizonte"/>
+				<bind role="stop" component="ctxBrasilia"/>
+				<bind role="stop" component="ctxCuritiba"/>
+				<bind role="stop" component="ctxFortaleza"/>
+				<bind role="stop" component="ctxManaus"/>
+				<bind role="stop" component="ctxNatal"/>
+				<bind role="stop" component="ctxPortoAlegre"/>
+				<bind role="stop" component="ctxRecife"/>
+				<bind role="stop" component="ctxRiodeJaneiro"/>
+				<bind role="stop" component="ctxSalvador"/>
+				<bind role="stop" component="ctxSaoPaulo"/>
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="ctxCuiaba"/>
 			</link>
-			
 			<link id="lSelecionaCuritiba" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="onSelection" component="pontoPR"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "ctxCuritiba" />
+				<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>
+				<bind role="stop" component="ctxBeloHorizonte"/>
+				<bind role="stop" component="ctxBrasilia"/>
+				<bind role="stop" component="ctxCuiaba"/>
+				<bind role="stop" component="ctxFortaleza"/>
+				<bind role="stop" component="ctxManaus"/>
+				<bind role="stop" component="ctxNatal"/>
+				<bind role="stop" component="ctxPortoAlegre"/>
+				<bind role="stop" component="ctxRecife"/>
+				<bind role="stop" component="ctxRiodeJaneiro"/>
+				<bind role="stop" component="ctxSalvador"/>
+				<bind role="stop" component="ctxSaoPaulo"/>
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="ctxCuritiba"/>
 			</link>
-			
 			<link id="lSelecionaFortaleza" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="onSelection" component="pontoCE"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "ctxFortaleza" />
+				<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>
+				<bind role="stop" component="ctxBeloHorizonte"/>
+				<bind role="stop" component="ctxBrasilia"/>
+				<bind role="stop" component="ctxCuiaba"/>
+				<bind role="stop" component="ctxCuritiba"/>
+				<bind role="stop" component="ctxManaus"/>
+				<bind role="stop" component="ctxNatal"/>
+				<bind role="stop" component="ctxPortoAlegre"/>
+				<bind role="stop" component="ctxRecife"/>
+				<bind role="stop" component="ctxRiodeJaneiro"/>
+				<bind role="stop" component="ctxSalvador"/>
+				<bind role="stop" component="ctxSaoPaulo"/>
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="ctxFortaleza"/>
 			</link>
-			
 			<link id="lSelecionaManaus" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="onSelection" component="pontoAM"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "ctxManaus" />
+				<!--<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>-->
+				<bind role="stop" component="ctxBeloHorizonte"/>
+				<bind role="stop" component="ctxBrasilia"/>
+				<bind role="stop" component="ctxCuiaba"/>
+				<bind role="stop" component="ctxCuritiba"/>
+				<bind role="stop" component="ctxFortaleza"/>
+				<bind role="stop" component="ctxNatal"/>
+				<bind role="stop" component="ctxPortoAlegre"/>
+				<bind role="stop" component="ctxRecife"/>
+				<bind role="stop" component="ctxRiodeJaneiro"/>
+				<bind role="stop" component="ctxSalvador"/>
+				<bind role="stop" component="ctxSaoPaulo"/>
+<!--				<bind role="stop" component="imagemTelaInicial"/>
+-->				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="ctxManaus"/>
 			</link>
-		
 			<link id="lSelecionaNatal" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="onSelection" component="pontoRN"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "ctxNatal" />
+				<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>
+				<bind role="stop" component="ctxBeloHorizonte"/>
+				<bind role="stop" component="ctxBrasilia"/>
+				<bind role="stop" component="ctxCuiaba"/>
+				<bind role="stop" component="ctxCuritiba"/>
+				<bind role="stop" component="ctxFortaleza"/>
+				<bind role="stop" component="ctxManaus"/>
+				<bind role="stop" component="ctxPortoAlegre"/>
+				<bind role="stop" component="ctxRecife"/>
+				<bind role="stop" component="ctxRiodeJaneiro"/>
+				<bind role="stop" component="ctxSalvador"/>
+				<bind role="stop" component="ctxSaoPaulo"/>
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="ctxNatal"/>
 			</link>
-			
 			<link id="lSelecionaPortoAlegre" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade1"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="onSelection" component="pontoRS"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "ctxPortoAlegre" />
+				<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>
+				<bind role="stop" component="ctxBeloHorizonte"/>
+				<bind role="stop" component="ctxBrasilia"/>
+				<bind role="stop" component="ctxCuiaba"/>
+				<bind role="stop" component="ctxCuritiba"/>
+				<bind role="stop" component="ctxFortaleza"/>
+				<bind role="stop" component="ctxManaus"/>
+				<bind role="stop" component="ctxNatal"/>
+				<bind role="stop" component="ctxRecife"/>
+				<bind role="stop" component="ctxRiodeJaneiro"/>
+				<bind role="stop" component="ctxSalvador"/>
+				<bind role="stop" component="ctxSaoPaulo"/>
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="ctxPortoAlegre"/>
 			</link>
-	
+			<link id="lSelecionaRecife" xconnector="conectores#onSelectionSetStartNStop">
+				<bind role="onSelection" component="pontoPE"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
+					<bindParam name="var" value="tSel"/>
+				</bind>
+				<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>
+				<bind role="stop" component="ctxBeloHorizonte"/>
+				<bind role="stop" component="ctxBrasilia"/>
+				<bind role="stop" component="ctxCuiaba"/>
+				<bind role="stop" component="ctxCuritiba"/>
+				<bind role="stop" component="ctxFortaleza"/>
+				<bind role="stop" component="ctxManaus"/>
+				<bind role="stop" component="ctxNatal"/>
+				<bind role="stop" component="ctxPortoAlegre"/>
+				<bind role="stop" component="ctxRiodeJaneiro"/>
+				<bind role="stop" component="ctxSalvador"/>
+				<bind role="stop" component="ctxSaoPaulo"/>
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="ctxRecife"/>
+			</link>
 			<link id="lSelecionaRioJaneiro" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade2"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="onSelection" component="pontoRJ"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "ctxRiodeJaneiro" />
+				<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>
+				<bind role="stop" component="ctxBeloHorizonte"/>
+				<bind role="stop" component="ctxBrasilia"/>
+				<bind role="stop" component="ctxCuiaba"/>
+				<bind role="stop" component="ctxCuritiba"/>
+				<bind role="stop" component="ctxFortaleza"/>
+				<bind role="stop" component="ctxManaus"/>
+				<bind role="stop" component="ctxNatal"/>
+				<bind role="stop" component="ctxPortoAlegre"/>
+				<bind role="stop" component="ctxRecife"/>
+				<bind role="stop" component="ctxSalvador"/>
+				<bind role="stop" component="ctxSaoPaulo"/>
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="ctxRiodeJaneiro"/>
 			</link>
-			
 			<link id="lSelecionaSalvador" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade2"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="onSelection" component="pontoBA"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "ctxSalvador" />
+				<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>
+				<bind role="stop" component="ctxBeloHorizonte"/>
+				<bind role="stop" component="ctxBrasilia"/>
+				<bind role="stop" component="ctxCuiaba"/>
+				<bind role="stop" component="ctxCuritiba"/>
+				<bind role="stop" component="ctxFortaleza"/>
+				<bind role="stop" component="ctxManaus"/>
+				<bind role="stop" component="ctxNatal"/>
+				<bind role="stop" component="ctxPortoAlegre"/>
+				<bind role="stop" component="ctxRecife"/>
+				<bind role="stop" component="ctxRiodeJaneiro"/>
+				<bind role="stop" component="ctxSaoPaulo"/>
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="ctxSalvador"/>
 			</link>
-			
 			<link id="lSelecionaSaoPaulo" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="cidade2"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">	
+				<bind role="onSelection" component="pontoSP"/>
+				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="imagemTelaInicial" />
-				<bind role="stop" component="cidade1" />
-				<bind role="stop" component="cidade2" />
-				<bind role="start" component="ctxTelaSelecao" />
-				<bind role="start" component= "ctxSaoPaulo" />
+				<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>
+				<bind role="stop" component="ctxBeloHorizonte"/>
+				<bind role="stop" component="ctxBrasilia"/>
+				<bind role="stop" component="ctxCuiaba"/>
+				<bind role="stop" component="ctxCuritiba"/>
+				<bind role="stop" component="ctxFortaleza"/>
+				<bind role="stop" component="ctxManaus"/>
+				<bind role="stop" component="ctxNatal"/>
+				<bind role="stop" component="ctxPortoAlegre"/>
+				<bind role="stop" component="ctxRecife"/>
+				<bind role="stop" component="ctxRiodeJaneiro"/>
+				<bind role="stop" component="ctxSalvador"/>
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="start" component="ctxSaoPaulo"/>
 			</link>
-			
-			<link id= "lTerminaAplicacao" xconnector="conectores#onKeySelectionStop">
+			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionSetStartNStop">
 				<bind role="onSelection" component="botaoSair">
 					<bindParam name="key" value="RED"/>
 				</bind>
 				<bind component="ctxTelaInicial" role="stop"/>
 				<bind component="ctxTelaSelecao" role="stop"/>
-				
+				<bind role="set" component="imgBackground" interface="bounds">
+					<bindParam name="var" value="0,0,1920,1080"/>
+					<!-- As dimensões de bounds são: left, top, width, height -->
+				</bind>
+				<bind role="start" component="imgInt"/>
 			</link>
+		</context>
 	</body>
 </ncl>
