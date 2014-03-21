@@ -164,10 +164,10 @@
 		<context id="ctxManaus">
 			<port id="portaManaus" component="imgManaus_Titulo"/>
 			<media id="imgManaus_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
-			<media id="imgManaus_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
-			<media id="imgManaus_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
-			<media id="imgManaus_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
-			<media id="imgManaus_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+			<media id="imgManaus_PTur1" src="media/igrejapoa5.png" descriptor="idPontoTur1"/>
+			<media id="imgManaus_PTur2" src="media/beirario2.png" descriptor="idPontoTur2"/>
+			<media id="imgManaus_PTur3" src="media/anfiteatropoa2.png" descriptor="idPontoTur3"/>
+			<media id="imgManaus_PTur4" src="media/Foto109_zps5860599d.png" descriptor="idPontoTur4"/>
 			<link id="lIniciaSelecaoManaus" xconnector="conectores#noInicio">
 				<bind role="onBegin" component="imgManaus_Titulo"/>
 				<bind role="start" component="imgManaus_PTur1"/>
@@ -186,10 +186,10 @@
 		<context id="ctxNatal">
 			<port id="portaNatal" component="imgNatal_Titulo"/>
 			<media id="imgNatal_Titulo" src="media/cidadePreviewTitulo.png" descriptor="idTitulo"/>
-			<media id="imgNatal_PTur1" src="media/igrejapoa5.jpg" descriptor="idPontoTur1"/>
-			<media id="imgNatal_PTur2" src="media/beirario2.jpg" descriptor="idPontoTur2"/>
-			<media id="imgNatal_PTur3" src="media/anfiteatropoa2.jpg" descriptor="idPontoTur3"/>
-			<media id="imgNatal_PTur4" src="media/Foto109_zps5860599d.jpg" descriptor="idPontoTur4"/>
+			<media id="imgNatal_PTur1" src="media/igrejapoa5.png" descriptor="idPontoTur1"/>
+			<media id="imgNatal_PTur2" src="media/beirario2.png" descriptor="idPontoTur2"/>
+			<media id="imgNatal_PTur3" src="media/anfiteatropoa2.png" descriptor="idPontoTur3"/>
+			<media id="imgNatal_PTur4" src="media/Foto109_zps5860599d.png" descriptor="idPontoTur4"/>
 			<link id="lIniciaSelecaoNatal" xconnector="conectores#noInicio">
 				<bind role="onBegin" component="imgNatal_Titulo"/>
 				<bind role="start" component="imgNatal_PTur1"/>
