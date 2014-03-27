@@ -426,7 +426,6 @@
 			</link>
 			<link id="lVoltaAplicacaodManaus" xconnector="conectores#onKeySelectionStop">
 				<bind role="onSelection" component="imgManaus_Titulo">
-					<!--muda essa component-->
 					<bindParam name="key" value="YELLOW"/>
 				</bind>
 				<bind component="ctxManaus" role="stop"/>
@@ -489,7 +488,6 @@
 			</link>
 			<link id="lVoltaAplicacaodNatal" xconnector="conectores#onKeySelectionStop">
 				<bind role="onSelection" component="imgNatal_Titulo">
-					<!--muda essa component-->
 					<bindParam name="key" value="YELLOW"/>
 				</bind>
 				<bind component="ctxNatal" role="stop"/>
@@ -552,7 +550,6 @@
 			</link>
 			<link id="lVoltaAplicacaodPortoAlegre" xconnector="conectores#onKeySelectionStop">
 				<bind role="onSelection" component="imgPortoAlegre_Titulo">
-					<!--muda essa component-->
 					<bindParam name="key" value="YELLOW"/>
 				</bind>
 				<bind component="ctxPortoAlegre" role="stop"/>
@@ -615,7 +612,6 @@
 			</link>
 			<link id="lVoltaAplicacaodRecife" xconnector="conectores#onKeySelectionStop">
 				<bind role="onSelection" component="imgRecife_Titulo">
-					<!--muda essa component-->
 					<bindParam name="key" value="YELLOW"/>
 				</bind>
 				<bind component="ctxRecife" role="stop"/>
@@ -678,7 +674,6 @@
 			</link>
 			<link id="lVoltaAplicacaodRiodeJaneiro" xconnector="conectores#onKeySelectionStop">
 				<bind role="onSelection" component="imgRiodeJaneiro_Titulo">
-					<!--muda essa component-->
 					<bindParam name="key" value="YELLOW"/>
 				</bind>
 				<bind component="ctxRiodeJaneiro" role="stop"/>
@@ -705,7 +700,6 @@
 			</link>
 			<link id="lVoltaAplicacaodSalvador" xconnector="conectores#onKeySelectionStop">
 				<bind role="onSelection" component="imgSalvador_Titulo">
-					<!--muda essa component-->
 					<bindParam name="key" value="YELLOW"/>
 				</bind>
 				<bind component="ctxSalvador" role="stop"/>
@@ -768,7 +762,6 @@
 			</link>
 			<link id="lVoltaAplicacaodSaoPaulo" xconnector="conectores#onKeySelectionStop">
 				<bind role="onSelection" component="imgSaoPaulo_Titulo">
-					<!--muda essa component-->
 					<bindParam name="key" value="YELLOW"/>
 				</bind>
 				<bind component="ctxSaoPaulo" role="stop"/>
