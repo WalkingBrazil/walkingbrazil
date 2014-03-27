@@ -31,6 +31,14 @@
 					<simpleAction role="start" max="unbounded"/>
 				</compoundAction>
 			</causalConnector>
+			<causalConnector id="onSelectionStartNStop">
+				<connectorParam name="var"/>
+				<simpleCondition role="onSelection"/>
+				<compoundAction operator="seq">
+					<simpleAction role="stop" max="unbounded"/>
+					<simpleAction role="start" max="unbounded"/>
+				</compoundAction>
+			</causalConnector>
 			<causalConnector id="onKeySelectionSetStartNStop">
 				<connectorParam name="key"/>
 				<connectorParam name="var"/>
@@ -57,7 +65,7 @@
 				<compoundAction operator="seq">
 					<simpleAction role="stop" max="unbounded"/>
 					<simpleAction role="start" max="unbounded"/>
-				</compoundAction>	
+				</compoundAction>
 			</causalConnector>
 			<causalConnector id="onKeySelectionStart">
 				<connectorParam name="key"/>
