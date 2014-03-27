@@ -41,13 +41,11 @@
 	<body id="bodyTelaSelecao">
 		<context id="ctxTelaSelecao">
 			<port id="portaTelaSelecao" component="imagemBackground"/>
-			<context id="vCtxManaus" refer="ctxManaus"/>
 			<media id="imagemBackground" src="media/BackgroundInicio.png" descriptor="idImagemBackground"/>
 			<media id="imagemVideo" src="media/logocopa.jpg" descriptor="idVideo"/>
 			<media id="imagemSelecao" src="media/logocopa.jpg" descriptor="idSelecao"/>
 			<link id="lIniciaTelaSelecao" xconnector="conectores#noInicio">
 				<bind role="onBegin" component="imagemBackground"/>
-				<bind role="start" component="imagemVideo"/>
 				<bind role="start" component="imagemSelecao"/>
 			</link>
 			<link id="lVoltaAplicacaodTelaSelecao" xconnector="conectores#onKeySelectionStop">
@@ -55,7 +53,7 @@
 					<!--alterar essa componente-->
 					<bindParam name="key" value="YELLOW"/>
 				</bind>
-				<bind component="ctxTelaSelecao" role="stop"/>
+				<bind role="stop" component="ctxTelaSelecao"/>
 			</link>
 		</context>
 
@@ -66,7 +64,7 @@
 			<media id="imgBeloHorizonte_PTur2" src="media/beirario2.png" descriptor="idPontoTur2"/>
 			<media id="imgBeloHorizonte_PTur3" src="media/anfiteatropoa2.png" descriptor="idPontoTur3"/>
 			<media id="imgBeloHorizonte_PTur4" src="media/Foto109_zps5860599d.png" descriptor="idPontoTur4"/>
-			<link id="lIniciaSelecaoBeloHorionte" xconnector="conectores#noInicio">
+			<link id="lIniciaSelecaoBeloHorizonte" xconnector="conectores#noInicio">
 				<bind role="onBegin" component="imgBeloHorizonte_Titulo"/>
 				<bind role="start" component="imgBeloHorizonte_PTur1"/>
 				<bind role="start" component="imgBeloHorizonte_PTur2"/>
@@ -88,6 +86,13 @@
 				<bind role="start" component="imgBrasilia_PTur3"/>
 				<bind role="start" component="imgBrasilia_PTur4"/>
 			</link>
+			
+			<link id="lVoltaAplicacaodBrasilia" xconnector="conectores#onKeySelectionStop">
+				<bind role="onSelection" component="imgBrasilia_Titulo"><!--muda essa component-->
+					<bindParam name="key" value="YELLOW"/>
+				</bind>
+				<bind component="ctxBrasilia" role="stop"/>
+			</link>
 		</context>
 		<context id="ctxCuiaba">
 			<port id="portaCuiaba" component="imgCuiaba_Titulo"/>
@@ -102,6 +107,13 @@
 				<bind role="start" component="imgCuiaba_PTur2"/>
 				<bind role="start" component="imgCuiaba_PTur3"/>
 				<bind role="start" component="imgCuiaba_PTur4"/>
+			</link>
+			
+			<link id="lVoltaAplicacaodCuiaba" xconnector="conectores#onKeySelectionStop">
+				<bind role="onSelection" component="imgCuiaba_Titulo"><!--muda essa component-->
+					<bindParam name="key" value="YELLOW"/>
+				</bind>
+				<bind component="ctxCuiaba" role="stop"/>
 			</link>
 		</context>
 		<context id="ctxCuritiba">
@@ -118,6 +130,13 @@
 				<bind role="start" component="imgCuritiba_PTur3"/>
 				<bind role="start" component="imgCuritiba_PTur4"/>
 			</link>
+			
+			<link id="lVoltaAplicacaodCuritiba" xconnector="conectores#onKeySelectionStop">
+				<bind role="onSelection" component="imgCuritiba_Titulo"><!--muda essa component-->
+					<bindParam name="key" value="YELLOW"/>
+				</bind>
+				<bind component="ctxCuritiba" role="stop"/>
+			</link>
 		</context>
 		<context id="ctxFortaleza">
 			<port id="portaFortaleza" component="imgFortaleza_Titulo"/>
@@ -132,6 +151,13 @@
 				<bind role="start" component="imgFortaleza_PTur2"/>
 				<bind role="start" component="imgFortaleza_PTur3"/>
 				<bind role="start" component="imgFortaleza_PTur4"/>
+			</link>
+			
+			<link id="lVoltaAplicacaodFortaleza" xconnector="conectores#onKeySelectionStop">
+				<bind role="onSelection" component="imgFortaleza_Titulo"><!--muda essa component-->
+					<bindParam name="key" value="YELLOW"/>
+				</bind>
+				<bind component="ctxFortaleza" role="stop"/>
 			</link>
 		</context>
 		<context id="ctxManaus">
@@ -149,8 +175,7 @@
 				<bind role="start" component="imgManaus_PTur4"/>
 			</link>
 			<link id="lVoltaAplicacaodManaus" xconnector="conectores#onKeySelectionStop">
-				<bind role="onSelection" component="imgManaus_Titulo">
-					<!--alterar essa componente-->
+				<bind role="onSelection" component="imgManaus_Titulo"><!--muda essa component-->
 					<bindParam name="key" value="YELLOW"/>
 				</bind>
 				<bind component="ctxManaus" role="stop"/>
@@ -170,6 +195,13 @@
 				<bind role="start" component="imgNatal_PTur3"/>
 				<bind role="start" component="imgNatal_PTur4"/>
 			</link>
+			
+			<link id="lVoltaAplicacaodNatal" xconnector="conectores#onKeySelectionStop">
+				<bind role="onSelection" component="imgNatal_Titulo"><!--muda essa component-->
+					<bindParam name="key" value="YELLOW"/>
+				</bind>
+				<bind component="ctxNatal" role="stop"/>
+			</link>
 		</context>
 		<context id="ctxPortoAlegre">
 			<port id="portaPortoAlegre" component="imgPortoAlegre_Titulo"/>
@@ -184,6 +216,13 @@
 				<bind role="start" component="imgPortoAlegre_PTur2"/>
 				<bind role="start" component="imgPortoAlegre_PTur3"/>
 				<bind role="start" component="imgPortoAlegre_PTur4"/>
+			</link>
+			
+			<link id="lVoltaAplicacaodPortoAlegre" xconnector="conectores#onKeySelectionStop">
+				<bind role="onSelection" component="imgPortoAlegre_Titulo"><!--muda essa component-->
+					<bindParam name="key" value="YELLOW"/>
+				</bind>
+				<bind component="ctxPortoAlegre" role="stop"/>
 			</link>
 		</context>
 		<context id="ctxRecife">
@@ -200,6 +239,13 @@
 				<bind role="start" component="imgRecife_PTur3"/>
 				<bind role="start" component="imgRecife_PTur4"/>
 			</link>
+			
+			<link id="lVoltaAplicacaodRecife" xconnector="conectores#onKeySelectionStop">
+				<bind role="onSelection" component="imgRecife_Titulo"><!--muda essa component-->
+					<bindParam name="key" value="YELLOW"/>
+				</bind>
+				<bind component="ctxRecife" role="stop"/>
+			</link>
 		</context>
 		<context id="ctxRiodeJaneiro">
 			<port id="portaRiodeJaneiro" component="imgRiodeJaneiro_Titulo"/>
@@ -214,6 +260,13 @@
 				<bind role="start" component="imgRiodeJaneiro_PTur2"/>
 				<bind role="start" component="imgRiodeJaneiro_PTur3"/>
 				<bind role="start" component="imgRiodeJaneiro_PTur4"/>
+			</link>
+			
+			<link id="lVoltaAplicacaodRiodeJaneiro" xconnector="conectores#onKeySelectionStop">
+				<bind role="onSelection" component="imgRiodeJaneiro_Titulo"><!--muda essa component-->
+					<bindParam name="key" value="YELLOW"/>
+				</bind>
+				<bind component="ctxRiodeJaneiro" role="stop"/>
 			</link>
 		</context>
 		<context id="ctxSalvador">
@@ -230,6 +283,13 @@
 				<bind role="start" component="imgSalvador_PTur3"/>
 				<bind role="start" component="imgSalvador_PTur4"/>
 			</link>
+			
+			<link id="lVoltaAplicacaodSalvador" xconnector="conectores#onKeySelectionStop">
+				<bind role="onSelection" component="imgSalvador_Titulo"><!--muda essa component-->
+					<bindParam name="key" value="YELLOW"/>
+				</bind>
+				<bind component="ctxSalvador" role="stop"/>
+			</link>
 		</context>
 		<context id="ctxSaoPaulo">
 			<port id="portaSaoPaulo" component="imgSaoPaulo_Titulo"/>
@@ -244,6 +304,13 @@
 				<bind role="start" component="imgSaoPaulo_PTur2"/>
 				<bind role="start" component="imgSaoPaulo_PTur3"/>
 				<bind role="start" component="imgSaoPaulo_PTur4"/>
+			</link>
+			
+			<link id="lVoltaAplicacaodSaoPaulo" xconnector="conectores#onKeySelectionStop">
+				<bind role="onSelection" component="imgSaoPaulo_Titulo"><!--muda essa component-->
+					<bindParam name="key" value="YELLOW"/>
+				</bind>
+				<bind component="ctxSaoPaulo" role="stop"/>
 			</link>
 		</context>
 	</body>

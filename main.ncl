@@ -28,10 +28,10 @@
 			<region id="regiaoPontoPE" width="3%" height="7%" left="90%" top="37%"/>
 			<region id="regiaoPontoRN" width="3%" height="7%" left="92%" top="32%"/>
 			<region id="regiaoPontoCE" width="3%" height="7%" left="88%" top="31%"/>
-			<region id="regitaoNavegacao" width="30%" height="12%" left="6%" top="80%"/>
-			<region id="regiaoBotaoIdioma" width="8%" height="3.5%" left="6%" top="93%"/>
-			<region id="regiaoBotaoSair" width="8%" height="3.5%" left="17%" top="93%"/>
-			<region id="regiaoBotaoSobre" width="8%" height="3.5%" left="28%" top="93%"/>
+			<region id="regitaoNavegacao" width="30%" height="12%" left="6%" top="80%" zIndex="5"/>
+			<region id="regiaoBotaoIdioma" width="8%" height="3.5%" left="6%" top="93%" zIndex="5"/>
+			<region id="regiaoBotaoSair" width="8%" height="3.5%" left="17%" top="93%" zIndex="5"/>
+			<region id="regiaoBotaoSobre" width="8%" height="3.5%" left="28%" top="93%" zIndex="5"/>
 			<region width="50%" height="50%" right="25%" top="25%" id="rgLua"/>
 		</regionBase>
 		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -108,7 +108,21 @@
 			<bind role="abort" component="botaoInt"/>
 			<bind role="start" component="ctxTelaInicial"/>
 		</link>
+		<context id="ctxNavegacao">
+			<port id="portaPainelNavegacao" component="painelNavegacao"/>
+			<port id="portaBotaoIdioma" component="botaoIdioma"/>
+			<port id="portaBotaoSair" component="botaoSair"/>
+			<port id="portaBotaoSobre" component="botaoSobre"/>
+			
+			<media id="painelNavegacao" src="media/navegacao.png" descriptor="idNavegacao"/>
+			<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="idBotaoIdioma">
+				<property name="focusIndex" value="0"/>
+			</media>
+			<media id="botaoSair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
+			<media id="botaoSobre" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
+		</context>
 		<context id="ctxTelaInicial">
+			<context id="ctxPainelNavegacaoInicial" refer="ctxNavegacao"/>
 			<context id="ctxTelaSelecao" refer="tSel#ctxTelaSelecao"/>
 			<context id="ctxBeloHorizonte" refer="tSel#ctxBeloHorizonte"/>
 			<context id="ctxBrasilia" refer="tSel#ctxBrasilia"/>
@@ -122,11 +136,9 @@
 			<context id="ctxRiodeJaneiro" refer="tSel#ctxRiodeJaneiro"/>
 			<context id="ctxSalvador" refer="tSel#ctxSalvador"/>
 			<context id="ctxSaoPaulo" refer="tSel#ctxSaoPaulo"/>
+			
 			<port id="portaTelaInicial" component="imagemTelaInicial"/>
-			<port id="portaPainelNavegacao" component="painelNavegacao"/>
-			<port id="portaBotaoIdioma" component="botaoIdioma"/>
-			<port id="portaBotaoSair" component="botaoSair"/>
-			<port id="portaBotaoSobre" component="botaoSobre"/>
+			<port id="portalPainelNavegacaoInicial" component="ctxPainelNavegacaoInicial"/>
 			<port id="portaPontoAM" component="pontoAM"/>
 			<port id="portaPontoMT" component="pontoMT"/>
 			<port id="portaPontoDF" component="pontoDF"/>
@@ -139,6 +151,7 @@
 			<port id="portaPontoPE" component="pontoPE"/>
 			<port id="portaPontoRN" component="pontoRN"/>
 			<port id="portaPontoCE" component="pontoCE"/>
+			
 			<media id="pontoAM" src="media/pontoAzul.png" descriptor="idPontoAM"/>
 			<media id="pontoMT" src="media/pontoAzul2.png" descriptor="idPontoMT"/>
 			<media id="pontoDF" src="media/pontoAzul3.png" descriptor="idPontoDF"/>
@@ -152,12 +165,7 @@
 			<media id="pontoRN" src="media/pontoAzul11.png" descriptor="idPontoRN"/>
 			<media id="pontoCE" src="media/pontoAzul12.png" descriptor="idPontoCE"/>
 			<media id="imagemTelaInicial" src="media/telaInicial.png" descriptor="idTelaInicial"/>
-			<media id="painelNavegacao" src="media/navegacao.png" descriptor="idNavegacao"/>
-			<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="idBotaoIdioma">
-				<property name="focusIndex" value="0"/>
-			</media>
-			<media id="botaoSair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
-			<media id="botaoSobre" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
+			
 			<media id="settings" type="application/x-ginga-settings">
 				<property name="service.currentKeyMaster" value=""/>
 			</media>
@@ -171,6 +179,12 @@
 		 !						ELOS						             !
 		 ! 	  define os elos que regem o sincronismo entre as m�dias     !					 
 		 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+		 <link id ="lReiniciaTelaInicial" xconnector="conectores#onEndStart">
+		 	<bind role="onEnd" component="ctxTelaSelecao"/>
+			<bind role="start" component="ctxTelaInicial"/>
+		 </link>
+		 
+		 
 			<link id="lSelecionaBeloHorizonte" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoMG"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
@@ -336,7 +350,7 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -347,7 +361,7 @@
 				<bind role="stop" component="pontoBA"/>
 				<bind role="stop" component="pontoPE"/>
 				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>-->
+				<bind role="stop" component="pontoCE"/>
 				<bind role="stop" component="ctxBeloHorizonte"/>
 				<bind role="stop" component="ctxBrasilia"/>
 				<bind role="stop" component="ctxCuiaba"/>
@@ -359,8 +373,9 @@
 				<bind role="stop" component="ctxRiodeJaneiro"/>
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
-<!--				<bind role="stop" component="imagemTelaInicial"/>
--->				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="stop" component="ctxPainelNavegacaoInicial"/>
+				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxManaus"/>
 			</link>
 			<link id="lSelecionaNatal" xconnector="conectores#onSelectionSetStartNStop">
@@ -556,7 +571,7 @@
 				<bind role="start" component="ctxSaoPaulo"/>
 			</link>
 			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionSetStartNStop">
-				<bind role="onSelection" component="botaoSair">
+				<bind role="onSelection" component="pontoAM"><!--so para teste-->
 					<bindParam name="key" value="RED"/>
 				</bind>
 				<bind component="ctxTelaInicial" role="stop"/>

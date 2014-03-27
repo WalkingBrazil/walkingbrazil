@@ -64,6 +64,10 @@
 				<simpleCondition role="onSelection" key="$key"/>
 				<simpleAction role="start"/>
 			</causalConnector>
+			<causalConnector id="onEndStart">
+				<simpleCondition role="onEnd"/>
+				<simpleAction role="start"/>
+			</causalConnector>
 			<causalConnector id="onEndStop">
 				<simpleCondition role="onEnd"/>
 				<simpleAction role="stop"/>
