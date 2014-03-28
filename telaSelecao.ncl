@@ -44,15 +44,22 @@
 		<context id="ctxTelaSelecao">
 			<context id="ctxBeloHorizonte_Sel" refer="ctxBeloHorizonte"/>
 			<context id="ctxBrasilia_Sel" refer="ctxBrasilia"/>
+			<context id="ctxCuiaba_Sel" refer="ctxCuiaba"/>
+			<context id="ctxCuritiba_Sel" refer="ctxCuritiba"/>
+			<context id="ctxFortaleza_Sel" refer="ctxFortaleza"/>
+			<context id="ctxManaus_Sel" refer="ctxManaus"/>
+			<context id="ctxNatal_Sel" refer="ctxNatal"/>
+			<context id="ctxPortoAlegre_Sel" refer="ctxPortoAlegre"/>
+			<context id="ctxRecife_Sel" refer="ctxRecife"/>
+			<context id="ctxRiodeJaneiro_Sel" refer="ctxRiodeJaneiro"/>
+			<context id="ctxSalavador_Sel" refer="ctxSalvador"/>
+			<context id="ctxSaoPaulo_Sel" refer="ctxSaoPaulo"/>
+			
 			<port id="portaTelaSelecao" component="imagemBackground"/>
 			<media id="imagemBackground" src="media/BackgroundInicio.png" descriptor="idImagemBackground"/>
 			<media id="imagemVideo" src="media/logocopa.jpg" descriptor="idVideo"/>
-			<!--			<media id="imagemSelecao" src="media/logocopa.jpg" descriptor="idSelecao"/>
--->
 			<link id="lIniciaTelaSelecao" xconnector="conectores#noInicio">
 				<bind role="onBegin" component="imagemBackground"/>
-				<!--				<bind role="start" component="imagemSelecao"/>
--->
 				<bind role="start" component="imagemVideo"/>
 			</link>
 			<link id="lVoltaAplicacaodTelaSelecao" xconnector="conectores#onKeySelectionStop">
@@ -62,11 +69,52 @@
 				</bind>
 				<bind role="stop" component="ctxTelaSelecao"/>
 			</link>
+			
 			<link id="lNoFimCtxBeloHorizonte" xconnector="conectores#onEndStop">
 				<bind role="onEnd" component="ctxBeloHorizonte_Sel"/>
 				<bind role="stop" component="ctxTelaSelecao"/>
 			</link>
 			<link id="lNoFimCtxBrasilia" xconnector="conectores#onEndStop">
+				<bind role="onEnd" component="ctxBrasilia_Sel"/>
+				<bind role="stop" component="ctxTelaSelecao"/>
+			</link>
+			<link id="lNoFimCtxCuiaba" xconnector="conectores#onEndStop">
+				<bind role="onEnd" component="ctxBrasilia_Sel"/>
+				<bind role="stop" component="ctxTelaSelecao"/>
+			</link>
+			<link id="lNoFimCtxCuritiba" xconnector="conectores#onEndStop">
+				<bind role="onEnd" component="ctxBrasilia_Sel"/>
+				<bind role="stop" component="ctxTelaSelecao"/>
+			</link>
+			<link id="lNoFimCtxFortaleza" xconnector="conectores#onEndStop">
+				<bind role="onEnd" component="ctxBrasilia_Sel"/>
+				<bind role="stop" component="ctxTelaSelecao"/>
+			</link>
+			<link id="lNoFimCtxManaus" xconnector="conectores#onEndStop">
+				<bind role="onEnd" component="ctxBrasilia_Sel"/>
+				<bind role="stop" component="ctxTelaSelecao"/>
+			</link>
+			<link id="lNoFimCtxNatal" xconnector="conectores#onEndStop">
+				<bind role="onEnd" component="ctxBrasilia_Sel"/>
+				<bind role="stop" component="ctxTelaSelecao"/>
+			</link>
+			<link id="lNoFimCtxPortoAlegre" xconnector="conectores#onEndStop">
+				<bind role="onEnd" component="ctxBrasilia_Sel"/>
+				<bind role="stop" component="ctxTelaSelecao"/>
+			</link>
+			<link id="lNoFimCtxRecife" xconnector="conectores#onEndStop">
+				<bind role="onEnd" component="ctxBrasilia_Sel"/>
+				<bind role="stop" component="ctxTelaSelecao"/>
+			</link>
+			<link id="lNoFimCtxRiodeJaneiro" xconnector="conectores#onEndStop">
+				<bind role="onEnd" component="ctxBrasilia_Sel"/>
+				<bind role="stop" component="ctxTelaSelecao"/>
+			</link>
+			<link id="lNoFimCtxSalvador" xconnector="conectores#onEndStop">
+				<bind role="onEnd" component="ctxBrasilia_Sel"/>
+				<bind role="stop" component="ctxTelaSelecao"/>
+			</link>
+			<link id="lNoFimCtxSaoPaulo" xconnector="conectores#onEndStop">
 				<bind role="onEnd" component="ctxBrasilia_Sel"/>
 				<bind role="stop" component="ctxTelaSelecao"/>
 			</link>
