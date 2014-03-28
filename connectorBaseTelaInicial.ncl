@@ -32,7 +32,6 @@
 				</compoundAction>
 			</causalConnector>
 			<causalConnector id="onSelectionStartNStop">
-				<connectorParam name="var"/>
 				<simpleCondition role="onSelection"/>
 				<compoundAction operator="seq">
 					<simpleAction role="stop" max="unbounded"/>
