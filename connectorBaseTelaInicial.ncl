@@ -77,6 +77,14 @@
 					<simpleAction role="stop" max="unbounded"/>
 				</compoundAction>
 			</causalConnector>
+			<causalConnector id="onEndOr">
+				<compoundCondition operator="or">
+					<simpleCondition role="onEnd" max="unbounded"/>
+				</compoundCondition>
+				<compoundAction operator="seq">
+					<simpleAction role="start"/>
+				</compoundAction>
+			</causalConnector>
 			<causalConnector id="onBeginSet">
 				<connectorParam name="value"/>
 				<simpleCondition role="onBegin"/>

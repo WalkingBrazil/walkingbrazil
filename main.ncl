@@ -123,7 +123,6 @@
 		</context>
 		<context id="ctxTelaInicial">
 			<context id="ctxPainelNavegacaoInicial" refer="ctxNavegacao"/>
-			<context id="ctxTelaSelecao" refer="tSel#ctxTelaSelecao"/>
 			<context id="ctxBeloHorizonte" refer="tSel#ctxBeloHorizonte"/>
 			<context id="ctxBrasilia" refer="tSel#ctxBrasilia"/>
 			<context id="ctxCuiaba" refer="tSel#ctxCuiaba"/>
@@ -179,8 +178,21 @@
 		 !						ELOS						             !
 		 ! 	  define os elos que regem o sincronismo entre as mï¿½dias     !					 
 		 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		 <link id ="lReiniciaTelaInicial" xconnector="conectores#onEndStart">
-		 	<bind role="onEnd" component="ctxTelaSelecao"/>
+		 <link id ="lReiniciaTelaInicial" xconnector="conectores#onEndOr">
+		 	<bind role="onEnd" component="ctxBeloHorizonte"/>
+		 	<bind role="onEnd" component="ctxBrasilia"/>
+		 	<bind role="onEnd" component="ctxCuiaba"/>
+		 	<bind role="onEnd" component="ctxCuritiba"/>
+		 	<bind role="onEnd" component="ctxFortaleza"/>
+		 	<bind role="onEnd" component="ctxManaus"/>
+		 	<bind role="onEnd" component="ctxNatal"/>
+		 	<bind role="onEnd" component="ctxPortoAlegre"/>
+		 	<bind role="onEnd" component="ctxRecife"/>
+		 	<bind role="onEnd" component="ctxRiodeJaneiro"/>
+		 	<bind role="onEnd" component="ctxSalvador"/>
+		 	<bind role="onEnd" component="ctxSaoPaulo"/>
+		 	
+		 	
 			<bind role="start" component="ctxTelaInicial"/>
 		 </link>
 		 
@@ -214,7 +226,7 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxTelaSelecao"/>
+				<bind role="stop" component="ctxPainelNavegacaoInicial"/>
 				<bind role="start" component="ctxBeloHorizonte"/>
 			</link>
 			<link id="lSelecionaBrasilia" xconnector="conectores#onSelectionSetStartNStop">
@@ -246,7 +258,6 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxBrasilia"/>
 			</link>
 			<link id="lSelecionaCuiaba" xconnector="conectores#onSelectionSetStartNStop">
@@ -278,7 +289,6 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxCuiaba"/>
 			</link>
 			<link id="lSelecionaCuritiba" xconnector="conectores#onSelectionSetStartNStop">
@@ -310,7 +320,6 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxCuritiba"/>
 			</link>
 			<link id="lSelecionaFortaleza" xconnector="conectores#onSelectionSetStartNStop">
@@ -342,7 +351,6 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxFortaleza"/>
 			</link>
 			<link id="lSelecionaManaus" xconnector="conectores#onSelectionSetStartNStop">
@@ -375,7 +383,6 @@
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
 				<bind role="stop" component="ctxPainelNavegacaoInicial"/>
-				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxManaus"/>
 			</link>
 			<link id="lSelecionaNatal" xconnector="conectores#onSelectionSetStartNStop">
@@ -407,7 +414,6 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxNatal"/>
 			</link>
 			<link id="lSelecionaPortoAlegre" xconnector="conectores#onSelectionSetStartNStop">
@@ -439,7 +445,6 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxPortoAlegre"/>
 			</link>
 			<link id="lSelecionaRecife" xconnector="conectores#onSelectionSetStartNStop">
@@ -471,7 +476,6 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxRecife"/>
 			</link>
 			<link id="lSelecionaRioJaneiro" xconnector="conectores#onSelectionSetStartNStop">
@@ -503,7 +507,6 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxRiodeJaneiro"/>
 			</link>
 			<link id="lSelecionaSalvador" xconnector="conectores#onSelectionSetStartNStop">
@@ -535,7 +538,6 @@
 				<bind role="stop" component="ctxRiodeJaneiro"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxSalvador"/>
 			</link>
 			<link id="lSelecionaSaoPaulo" xconnector="conectores#onSelectionSetStartNStop">
@@ -567,7 +569,6 @@
 				<bind role="stop" component="ctxRiodeJaneiro"/>
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxTelaSelecao"/>
 				<bind role="start" component="ctxSaoPaulo"/>
 			</link>
 			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionSetStartNStop">
@@ -575,7 +576,6 @@
 					<bindParam name="key" value="RED"/>
 				</bind>
 				<bind component="ctxTelaInicial" role="stop"/>
-				<bind component="ctxTelaSelecao" role="stop"/>
 				<bind role="set" component="imgBackground" interface="bounds">
 					<bindParam name="var" value="0,0,1920,1080"/>
 					<!-- As dimensões de bounds são: left, top, width, height -->
