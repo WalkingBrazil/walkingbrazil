@@ -54,7 +54,6 @@
 			<context id="ctxRiodeJaneiro_Sel" refer="ctxRiodeJaneiro"/>
 			<context id="ctxSalavador_Sel" refer="ctxSalvador"/>
 			<context id="ctxSaoPaulo_Sel" refer="ctxSaoPaulo"/>
-			
 			<port id="portaTelaSelecao" component="imagemBackground"/>
 			<media id="imagemBackground" src="media/BackgroundInicio.png" descriptor="idImagemBackground"/>
 			<media id="imagemVideo" src="media/logocopa.jpg" descriptor="idVideo"/>
@@ -62,14 +61,12 @@
 				<bind role="onBegin" component="imagemBackground"/>
 				<bind role="start" component="imagemVideo"/>
 			</link>
-			<link id="lVoltaAplicacaodTelaSelecao" xconnector="conectores#onKeySelectionStop">
+			<!--<link id="lVoltaAplicacaodTelaSelecao" xconnector="conectores#onKeySelectionStop">
 				<bind role="onSelection" component="imagemBackground">
-					<!--alterar essa componente-->
 					<bindParam name="key" value="YELLOW"/>
 				</bind>
 				<bind role="stop" component="ctxTelaSelecao"/>
-			</link>
-			
+			</link>-->
 			<link id="lNoFimCtxBeloHorizonte" xconnector="conectores#onEndStop">
 				<bind role="onEnd" component="ctxBeloHorizonte_Sel"/>
 				<bind role="stop" component="ctxTelaSelecao"/>
@@ -121,7 +118,7 @@
 		</context>
 		<context id="ctxBeloHorizonte">
 			<port id="portaBeloHorizonteTitulo" component="imgBeloHorizonte_Titulo"/>
-			<port id="portaBeloHorizonteSelecao" component="imgSelecaoBeloHorizonte"/>
+			<port id="portaBeloHorizonte_Selecao" component="imgBeloHorizonte_Selecao"/>
 			<port id="portaBeloHorizonte_PTur1" component="imgBeloHorizonte_PTur1"/>
 			<port id="portaBeloHorizonte_PTur2" component="imgBeloHorizonte_PTur2"/>
 			<port id="portaBeloHorizonte_PTur3" component="imgBeloHorizonte_PTur3"/>
@@ -135,7 +132,7 @@
 			<media id="imgBH_PTur2_G" src="media/BeloHorizonte/ponto2.png" descriptor="idInfoPTur"/>
 			<media id="imgBH_PTur3_G" src="media/BeloHorizonte/ponto3.png" descriptor="idInfoPTur"/>
 			<media id="imgBH_PTur4_G" src="media/BeloHorizonte/ponto4.png" descriptor="idInfoPTur"/>
-			<media id="imgSelecaoBeloHorizonte" src="media/logocopa.jpg" descriptor="idSelecao"/>
+			<media id="imgBeloHorizonte_Selecao" src="media/logocopa.jpg" descriptor="idSelecao"/>
 			<link id="link_SelBH_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgBeloHorizonte_PTur1"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur1"/>
@@ -143,7 +140,7 @@
 				<bind role="stop" component="imgBeloHorizonte_PTur2"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur3"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur4"/>
-				<bind role="stop" component="imgSelecaoBeloHorizonte"/>
+				<bind role="stop" component="imgBeloHorizonte_Selecao"/>
 				<bind role="stop" component="imgBeloHorizonte_Titulo"/>
 				<bind role="start" component="imgBH_PTur1_G"/>
 			</link>
@@ -153,7 +150,7 @@
 				<bind role="stop" component="imgBeloHorizonte_PTur2"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur3"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur4"/>
-				<bind role="stop" component="imgSelecaoBeloHorizonte"/>
+				<bind role="stop" component="imgBeloHorizonte_Selecao"/>
 				<bind role="start" component="imgBH_PTur2_G"/>
 			</link>
 			<link id="link_SelBH_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -162,7 +159,7 @@
 				<bind role="stop" component="imgBeloHorizonte_PTur2"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur3"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur4"/>
-				<bind role="stop" component="imgSelecaoBeloHorizonte"/>
+				<bind role="stop" component="imgBeloHorizonte_Selecao"/>
 				<bind role="start" component="imgBH_PTur3_G"/>
 			</link>
 			<link id="link_SelBH_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -171,8 +168,29 @@
 				<bind role="stop" component="imgBeloHorizonte_PTur2"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur3"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur4"/>
-				<bind role="stop" component="imgSelecaoBeloHorizonte"/>
+				<bind role="stop" component="imgBeloHorizonte_Selecao"/>
 				<bind role="start" component="imgBH_PTur4_G"/>
+			</link>
+			<link id="lVoltaBeloHorizonteParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
+				<bind role="onSelection" component="imgBH_PTur1_G">
+					<!--muda essa component-->
+					<bindParam name="vKey" value="YELLOW"/>
+				</bind>
+				<bind role="test" component="imgBeloHorizonte_Selecao">
+					<bindParam name="vState" value="occurring"/>
+				</bind>
+				<bind component="ctxBeloHorizonte" role="stop"/>
+			</link>
+			<link id="lVoltaBeloHorizonteParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
+				<bind role="onSelection" component="imgBH_PTur1_G">
+					<!--muda essa component-->
+					<bindParam name="vKey" value="YELLOW"/>
+				</bind>
+				<bind role="test" component="imgBH_PTur1_G">
+					<bindParam name="vState" value="occurring"/>
+				</bind>
+				<bind component="imgBH_PTur1_G" role="stop"/>
+				<bind component="ctxBeloHorizonte" role="start"/>
 			</link>
 		</context>
 		<context id="ctxBrasilia">
@@ -186,10 +204,9 @@
 			<media id="imgBrasilia_PTur2_G" src="media/Brasilia/ponto2.png" descriptor="idInfoPTur"/>
 			<media id="imgBrasilia_PTur3_G" src="media/Brasilia/ponto3.png" descriptor="idInfoPTur"/>
 			<media id="imgBrasilia_PTur4_G" src="media/Brasilia/ponto4.png" descriptor="idInfoPTur"/>
-			<media id="imgBrasiliaSelecao" src="media/logocopa.jpg" descriptor="idSelecao"/>
+			<media id="imagemSelecao3" src="media/logocopa.jpg" descriptor="idSelecao"/>
 			<link id="lIniciaSelecaoBrasilia" xconnector="conectores#noInicio">
 				<bind role="onBegin" component="imgBrasilia_Titulo"/>
-				<bind role="start" component="imgBrasiliaSelecao"/>
 				<bind role="start" component="imgBrasilia_PTur1"/>
 				<bind role="start" component="imgBrasilia_PTur2"/>
 				<bind role="start" component="imgBrasilia_PTur3"/>
@@ -201,7 +218,7 @@
 				<bind role="stop" component="imgBrasilia_PTur2"/>
 				<bind role="stop" component="imgBrasilia_PTur3"/>
 				<bind role="stop" component="imgBrasilia_PTur4"/>
-				<bind role="stop" component="imgBrasiliaSelecao"/>
+				<bind role="stop" component="imagemSelecao3"/>
 				<bind role="start" component="imgBrasilia_PTur1_G"/>
 			</link>
 			<link id="link_SelBrasilia_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -210,7 +227,7 @@
 				<bind role="stop" component="imgBrasilia_PTur2"/>
 				<bind role="stop" component="imgBrasilia_PTur3"/>
 				<bind role="stop" component="imgBrasilia_PTur4"/>
-				<bind role="stop" component="imgBrasiliaSelecao"/>
+				<bind role="stop" component="imagemSelecao3"/>
 				<bind role="start" component="imgBrasilia_PTur2_G"/>
 			</link>
 			<link id="link_SelBrasilia_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -219,7 +236,7 @@
 				<bind role="stop" component="imgBrasilia_PTur2"/>
 				<bind role="stop" component="imgBrasilia_PTur3"/>
 				<bind role="stop" component="imgBrasilia_PTur4"/>
-				<bind role="stop" component="imgBrasiliaSelecao"/>
+				<bind role="stop" component="imagemSelecao3"/>
 				<bind role="start" component="imgBrasilia_PTur3_G"/>
 			</link>
 			<link id="link_SelBrasilia_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -228,7 +245,7 @@
 				<bind role="stop" component="imgBrasilia_PTur2"/>
 				<bind role="stop" component="imgBrasilia_PTur3"/>
 				<bind role="stop" component="imgBrasilia_PTur4"/>
-				<bind role="stop" component="imgBrasiliaSelecao"/>
+				<bind role="stop" component="imagemSelecao3"/>
 				<bind role="start" component="imgBrasilia_PTur4_G"/>
 			</link>
 			<link id="lVoltaAplicacaodBrasilia" xconnector="conectores#onKeySelectionStop">
