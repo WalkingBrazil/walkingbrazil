@@ -115,6 +115,8 @@
 				<bind role="stop" component="imgBeloHorizonte_Selecao"/>
 				<bind role="start" component="imgBH_PTur4_G"/>
 			</link>
+			
+			
 			<link id="lVoltaBeloHorizonteParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoVoltar">
 					<!--muda essa component-->
@@ -325,6 +327,7 @@
 		<context id="ctxCuritiba">
 			<port id="portaCuritiba" component="imgCuritiba_Titulo"/> 
 			<port id="portaCuritibaTelaSelecao" component="imgCuritiba_Background"/>
+			<port id="portaCuritiba_Video" component="imgCuritiba_Video"/>
 			<port id="portaCuritibaBotaoSair" component="botaoCuritiba_Sair"/>
 			<port id="portaCuritibaBotaoVoltar" component="botaoCuritiba_Voltar"/>
 			<port id="portaCuritiba_Selecao" component="imgCuritiba_Selecao"/>
@@ -502,6 +505,7 @@
 		<context id="ctxManaus">
 			<port id="portaManaus" component="imgManaus_Titulo"/> 
 			<port id="portaManausTelaSelecao" component="imgManaus_Background"/>
+			<port id="portaManaus_Video" component="imgManaus_Video"/>
 			<port id="portaManausBotaoSair" component="botaoManaus_Sair"/>
 			<port id="portaManausBotaoVoltar" component="botaoManaus_Voltar"/>
 			<port id="portaManaus_Selecao" component="imgManaus_Selecao"/>
@@ -592,6 +596,7 @@
 		<context id="ctxNatal">
 			<port id="portaNatal" component="imgNatal_Titulo"/> 
 			<port id="portaNatalTelaSelecao" component="imgNatal_Background"/>
+			<port id="portaNatal_Video" component="imgNatal_Video"/>
 			<port id="portaNatalBotaoSair" component="botaoNatal_Sair"/>
 			<port id="portaNatalBotaoVoltar" component="botaoNatal_Voltar"/>
 			<port id="portaNatal_Selecao" component="imgNatal_Selecao"/>
@@ -680,6 +685,7 @@
 		<context id="ctxPortoAlegre">
 			<port id="portaPortoAlegre" component="imgPortoAlegre_Titulo"/> 
 			<port id="portaPortoAlegreTelaSelecao" component="imgPortoAlegre_Background"/>
+			<port id="portaPortoAlegre_Video" component="imgPortoAlegre_Video"/>
 			<port id="portaPortoAlegreBotaoSair" component="botaoPortoAlegre_Sair"/>
 			<port id="portaPortoAlegreBotaoVoltar" component="botaoPortoAlegre_Voltar"/>
 			<port id="portaPortoAlegre_Selecao" component="imgPortoAlegre_Selecao"/>
@@ -768,6 +774,7 @@
 		<context id="ctxRecife">
 			<port id="portaRecife" component="imgRecife_Titulo"/> 
 			<port id="portaRecifeTelaSelecao" component="imgRecife_Background"/>
+			<port id="portaRecife_Video" component="imgRecife_Video"/>
 			<port id="portaRecifeBotaoSair" component="botaoRecife_Sair"/>
 			<port id="portaRecifeBotaoVoltar" component="botaoRecife_Voltar"/>
 			<port id="portaRecife_Selecao" component="imgRecife_Selecao"/>
@@ -856,6 +863,7 @@
 		<context id="ctxRiodeJaneiro">
 			<port id="portaRiodeJaneiro" component="imgRiodeJaneiro_Titulo"/> 
 			<port id="portaRiodeJaneiroTelaSelecao" component="imgRiodeJaneiro_Background"/>
+			<port id="portaRiodeJaneiro_Video" component="imgRiodeJaneiro_Video"/>
 			<port id="portaRiodeJaneiroBotaoSair" component="botaoRiodeJaneiro_Sair"/>
 			<port id="portaRiodeJaneiroBotaoVoltar" component="botaoRiodeJaneiro_Voltar"/>
 			<port id="portaRiodeJaneiro_Selecao" component="imgRiodeJaneiro_Selecao"/>
@@ -944,6 +952,7 @@
 		<context id="ctxSalvador">
 			<port id="portaSalvador" component="imgSalvador_Titulo"/> 
 			<port id="portaSalvadorTelaSelecao" component="imgSalvador_Background"/>
+			<port id="portaSalvador_Video" component="imgSalvador_Video"/>
 			<port id="portaSalvadorBotaoSair" component="botaoSalvador_Sair"/>
 			<port id="portaSalvadorBotaoVoltar" component="botaoSalvador_Voltar"/>
 			<port id="portaSalvador_Selecao" component="imgSalvador_Selecao"/>
@@ -1033,6 +1042,7 @@
 		<context id="ctxSaoPaulo">
 			<port id="portaSaoPaulo" component="imgSaoPaulo_Titulo"/> 
 			<port id="portaSaoPauloTelaSelecao" component="imgSaoPaulo_Background"/>
+			<port id="portaSaoPaulo_Video" component="imgSaoPaulo_Video"/>
 			<port id="portaSaoPauloBotaoSair" component="botaoSaoPaulo_Sair"/>
 			<port id="portaSaoPauloBotaoVoltar" component="botaoSaoPaulo_Voltar"/>
 			<port id="portaSaoPaulo_Selecao" component="imgSaoPaulo_Selecao"/>

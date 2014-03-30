@@ -108,21 +108,7 @@
 			<bind role="abort" component="botaoInt"/>
 			<bind role="start" component="ctxTelaInicial"/>
 		</link>
-		<context id="ctxNavegacao">
-			<port id="portaPainelNavegacao" component="painelNavegacao"/>
-			<port id="portaBotaoIdioma" component="botaoIdioma"/>
-			<port id="portaBotaoSair" component="botaoSair"/>
-			<port id="portaBotaoSobre" component="botaoSobre"/>
-			
-			<media id="painelNavegacao" src="media/navegacao.png" descriptor="idNavegacao"/>
-			<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="idBotaoIdioma">
-				<property name="focusIndex" value="0"/>
-			</media>
-			<media id="botaoSair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
-			<media id="botaoSobre" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
-		</context>
 		<context id="ctxTelaInicial">
-			<context id="ctxPainelNavegacaoInicial" refer="ctxNavegacao"/>
 			<context id="ctxBeloHorizonte" refer="tSel#ctxBeloHorizonte"/>
 			<context id="ctxBrasilia" refer="tSel#ctxBrasilia"/>
 			<context id="ctxCuiaba" refer="tSel#ctxCuiaba"/>
@@ -137,7 +123,6 @@
 			<context id="ctxSaoPaulo" refer="tSel#ctxSaoPaulo"/>
 			
 			<port id="portaTelaInicial" component="imagemTelaInicial"/>
-			<port id="portalPainelNavegacaoInicial" component="ctxPainelNavegacaoInicial"/>
 			<port id="portaPontoAM" component="pontoAM"/>
 			<port id="portaPontoMT" component="pontoMT"/>
 			<port id="portaPontoDF" component="pontoDF"/>
@@ -150,6 +135,18 @@
 			<port id="portaPontoPE" component="pontoPE"/>
 			<port id="portaPontoRN" component="pontoRN"/>
 			<port id="portaPontoCE" component="pontoCE"/>
+			
+			<port id="portaPainelNavegacao" component="painelNavegacao"/>
+			<port id="portaBotaoIdioma" component="botaoIdioma"/>
+			<port id="portaBotaoSair" component="botaoSair"/>
+			<port id="portaBotaoSobre" component="botaoSobre"/>
+			
+			<media id="painelNavegacao" src="media/navegacao.png" descriptor="idNavegacao"/>
+			<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="idBotaoIdioma">
+				<property name="focusIndex" value="0"/>
+			</media>
+			<media id="botaoSair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
+			<media id="botaoSobre" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
 			
 			<media id="pontoAM" src="media/pontoAzul.png" descriptor="idPontoAM"/>
 			<media id="pontoMT" src="media/pontoAzul2.png" descriptor="idPontoMT"/>
@@ -192,7 +189,6 @@
 		 	<bind role="onEnd" component="ctxSalvador"/>
 		 	<bind role="onEnd" component="ctxSaoPaulo"/>
 		 	
-		 	
 			<bind role="start" component="ctxTelaInicial"/>
 		 </link>
 		 
@@ -226,7 +222,7 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="stop" component="ctxPainelNavegacaoInicial"/>
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxBeloHorizonte"/>
 			</link>
 			<link id="lSelecionaBrasilia" xconnector="conectores#onSelectionSetStartNStop">
@@ -382,7 +378,6 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="stop" component="ctxPainelNavegacaoInicial"/>
 				<bind role="start" component="ctxManaus"/>
 			</link>
 			<link id="lSelecionaNatal" xconnector="conectores#onSelectionSetStartNStop">
@@ -571,17 +566,9 @@
 				<bind role="stop" component="imagemTelaInicial"/>
 				<bind role="start" component="ctxSaoPaulo"/>
 			</link>
-			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionSetStartNStop">
-				<bind role="onSelection" component="pontoAM"><!--so para teste-->
-					<bindParam name="key" value="RED"/>
-				</bind>
-				<bind component="ctxTelaInicial" role="stop"/>
-				<bind role="set" component="imgBackground" interface="bounds">
-					<bindParam name="var" value="0,0,1920,1080"/>
-					<!-- As dimensões de bounds são: left, top, width, height -->
-				</bind>
-				<bind role="start" component="imgInt"/>
-			</link>
+			
 		</context>
+				
+		
 	</body>
 </ncl>
