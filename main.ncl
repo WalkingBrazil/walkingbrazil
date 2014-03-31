@@ -159,7 +159,7 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="pontoAM"/>
+				<!--<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -184,14 +184,18 @@
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
 				<bind role="stop" component="ctxTelaInicial"/>
+				<bind role="start" component="ctxBeloHorizonte"/>-->
+				
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxBeloHorizonte"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			<link id="lSelecionaBrasilia" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoDF"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="pontoAM"/>
+				<!--<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -215,14 +219,18 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxBrasilia"/>-->
+				
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxBrasilia"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			<link id="lSelecionaCuiaba" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoMT"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="pontoAM"/>
+				<!--<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -246,14 +254,18 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxCuiaba"/>-->
+				
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxCuiaba"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			<link id="lSelecionaCuritiba" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoPR"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="pontoAM"/>
+				<!--<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -277,14 +289,18 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxCuritiba"/>-->
+				
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxCuritiba"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			<link id="lSelecionaFortaleza" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoCE"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="pontoAM"/>
+				<!--<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -308,14 +324,18 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxFortaleza"/>-->
+				
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxFortaleza"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			<link id="lSelecionaManaus" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoAM"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="pontoAM"/>
+				<!--<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -338,15 +358,17 @@
 				<bind role="stop" component="ctxRiodeJaneiro"/>
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
-				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="stop" component="imagemTelaInicial"/>-->
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxManaus"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			<link id="lSelecionaNatal" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoRN"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="pontoAM"/>
+				<!--<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -370,14 +392,18 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxNatal"/>-->
+				
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxNatal"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			<link id="lSelecionaPortoAlegre" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoRS"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="pontoAM"/>
+				<!--<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -401,14 +427,18 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxPortoAlegre"/>-->
+				
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxPortoAlegre"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			<link id="lSelecionaRecife" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoPE"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="pontoAM"/>
+				<!--<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -432,14 +462,18 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxRecife"/>-->
+				
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxRecife"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			<link id="lSelecionaRioJaneiro" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoRJ"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="pontoAM"/>
+				<!--<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -463,14 +497,18 @@
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxRiodeJaneiro"/>-->
+				
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxRiodeJaneiro"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			<link id="lSelecionaSalvador" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoBA"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="pontoAM"/>
+				<!--<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -494,14 +532,18 @@
 				<bind role="stop" component="ctxRiodeJaneiro"/>
 				<bind role="stop" component="ctxSaoPaulo"/>
 				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxSalvador"/>-->
+				
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxSalvador"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			<link id="lSelecionaSaoPaulo" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoSP"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<bind role="stop" component="pontoAM"/>
+				<!--<bind role="stop" component="pontoAM"/>
 				<bind role="stop" component="pontoMT"/>
 				<bind role="stop" component="pontoDF"/>
 				<bind role="stop" component="pontoSP"/>
@@ -525,10 +567,14 @@
 				<bind role="stop" component="ctxRiodeJaneiro"/>
 				<bind role="stop" component="ctxSalvador"/>
 				<bind role="stop" component="imagemTelaInicial"/>
+				<bind role="start" component="ctxSaoPaulo"/>-->
+				
+				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxSaoPaulo"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			
-			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionSetStartNStopNAbort">
+			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionSetStartNAbort">
   				<bind role="onSelection" component="botaoSair">
   					<bindParam name="key" value="RED"/>
   				</bind>

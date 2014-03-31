@@ -48,7 +48,7 @@
 					<simpleAction role="start" max="unbounded"/>
 				</compoundAction>
 			</causalConnector>
-			<causalConnector id="onKeySelectionSetStartNStopNAbort">
+			<causalConnector id="onKeySelectionSetStartNAbort">
 				<connectorParam name="key"/>
 				<connectorParam name="var"/>
 				<simpleCondition role="onSelection" key="$key"/>
