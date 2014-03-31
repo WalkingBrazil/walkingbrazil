@@ -10,56 +10,19 @@
 	 !	 define as regiï¿½es na tela onde as mï¿½dias serï¿½o mostradas	 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 		<importedDocumentBase>
-			<importNCL documentURI="telaSelecao.ncl" alias="tSel"/>
+			<importNCL alias="tSel" documentURI="telaSelecao.ncl"/>
 		</importedDocumentBase>
 		<regionBase>
-			<region id="regiaoBackground" width="1920" height="1080"/>
-			<region id="regiaoBotaoInt" width="7%" height="9%" left="85%" top="3%"/>
-			<region id="regiaoTelaInicial"/>
-			<region id="regiaoPontoAM" width="3%" height="7%" left="64%" top="30%"/>
-			<region id="regiaoPontoMT" width="3%" height="7%" left="73%" top="45%"/>
-			<region id="regiaoPontoDF" width="3%" height="7%" left="79%" top="50%"/>
-			<region id="regiaoPontoSP" width="3%" height="7%" left="79%" top="60%"/>
-			<region id="regiaoPontoRJ" width="3%" height="7%" left="85%" top="60%"/>
-			<region id="regiaoPontoRS" width="3%" height="7%" left="75%" top="73%"/>
-			<region id="regiaoPontoMG" width="3%" height="7%" left="83%" top="54%"/>
-			<region id="regiaoPontoPR" width="3%" height="7%" left="76%" top="63%"/>
-			<region id="regiaoPontoBA" width="3%" height="7%" left="86%" top="44%"/>
-			<region id="regiaoPontoPE" width="3%" height="7%" left="90%" top="37%"/>
-			<region id="regiaoPontoRN" width="3%" height="7%" left="92%" top="32%"/>
-			<region id="regiaoPontoCE" width="3%" height="7%" left="88%" top="31%"/>
-			<region id="regitaoNavegacao" width="30%" height="12%" left="6%" top="80%" zIndex="5"/>
-			<region id="regiaoBotaoIdioma" width="8%" height="3.5%" left="6%" top="93%" zIndex="5"/>
-			<region id="regiaoBotaoSair" width="8%" height="3.5%" left="17%" top="93%" zIndex="5"/>
-			<region id="regiaoBotaoSobre" width="8%" height="3.5%" left="28%" top="93%" zIndex="5"/>
-			<region width="50%" height="50%" right="25%" top="25%" id="rgLua"/>
+			<importBase alias="reg" documentURI="regioes.ncl"/>
 		</regionBase>
-		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+			<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE DESCRITORES						 !
 	 !	 		define como as mï¿½dias serï¿½o apresentadas			 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 		<descriptorBase>
-			<descriptor id="idImagemBackground" region="regiaoBackground"/>
-			<descriptor id="idBotaoInt" region="regiaoBotaoInt"/>
-			<descriptor id="idTelaInicial" region="regiaoTelaInicial"/>
-			<descriptor id="idPontoAM" region="regiaoPontoAM" focusIndex="ixPontoAM" moveDown="ixPontoMT" moveRight="ixPontoCE" focusSrc="media/pontoVerde.png" focusSelSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoMT" region="regiaoPontoMT" focusIndex="ixPontoMT" moveUp="ixPontoAM" moveDown="ixPontoDF" moveRight="ixPontoDF" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoCE" region="regiaoPontoCE" focusIndex="ixPontoCE" moveUp="ixPontoRS" moveDown="ixPontoRN" moveLeft="ixPontoAM" moveRight="ixPontoRN" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoDF" region="regiaoPontoDF" focusIndex="ixPontoDF" moveUp="ixPontoMT" moveDown="ixPontoMG" moveLeft="ixPontoMT" moveRight="ixPontoMG" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoSP" region="regiaoPontoSP" focusIndex="ixPontoSP" moveUp="ixPontoMG" moveLeft="ixPontoPR" moveRight="ixPontoRJ" moveDown="ixPontoPR" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoRJ" region="regiaoPontoRJ" focusIndex="ixPontoRJ" moveUp="ixPontoMG" moveLeft="ixPontoSP" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoRS" region="regiaoPontoRS" focusIndex="ixPontoRS" moveUp="ixPontoPR" moveDown="ixBotaoSobre" moveLeft="ixBotaoSobre" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoMG" region="regiaoPontoMG" focusIndex="ixPontoMG" moveUp="ixPontoBA" moveDown="ixPontoRJ" moveLeft="ixPontoDF" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoPR" region="regiaoPontoPR" focusIndex="ixPontoPR" moveUp="ixPontoSP" moveDown="ixPontoRS" moveRight="ixPontoSP" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoBA" region="regiaoPontoBA" focusIndex="ixPontoBA" moveUp="ixPontoPE" moveDown="ixPontoMG" moveLeft="ixPontoDF" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoPE" region="regiaoPontoPE" focusIndex="ixPontoPE" moveUp="ixPontoRN" moveDown="ixPontoBA" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoRN" region="regiaoPontoRN" focusIndex="ixPontoRN" moveUp="ixPontoCE" moveDown="ixPontoPE" moveLeft="ixPontoCE" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
-			<descriptor id="idNavegacao" region="regitaoNavegacao"/>
-			<descriptor id="idBotaoIdioma" region="regiaoBotaoIdioma"/>
-			<descriptor id="idBotaoSair" region="regiaoBotaoSair"/>
-			<descriptor id="idBotaoSobre" region="regiaoBotaoSobre"/>
-			<descriptor id="dsLua" region="rgLua" focusIndex="1" focusBorderWidth="5"/>
+			<importBase alias="des" documentURI="descritores.ncl"/>
 		</descriptorBase>
+	
 		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE CONECTORES						 !
 	 !	 			definem o comportamento dos elos				 !						 
@@ -77,30 +40,30 @@
 	 !						PONTO DE ENTRADA						 !
 	 !	 		indica o componente onde o programa inicia			 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		<port id="porta1" component="imagemBackground"/>
+		<port id="porta1" component="Video"/>
 		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						Mï¿½DIAS						             !
 	 ! 	  define o local dos arquivos de mï¿½dia e as associa a seus   !
 	 !					 	descritores								 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		<media id="imagemBackground" src="media/BackgroundInicio.png" descriptor="idImagemBackground">
+		<media id="Video" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground">
 			<area id="aImagemBackground" begin="1s"/>
 			<property name="bounds"/>
 		</media>
-		<media id="botaoInt" src="media/BotaoInterativo.png" descriptor="idBotaoInt"/>
+		<media id="botaoInt" src="media/BotaoInterativo.png" descriptor="des#idBotaoInt"/>
 		<link id="lImagBotaoIntAparece" xconnector="conectores#noInicio">
-			<bind role="onBegin" component="imagemBackground"/>
+			<bind role="onBegin" component="Video"/>
 			<bind role="start" component="botaoInt"/>
 		</link>
 		<link id="lImagBotaoIntDesaparece" xconnector="conectores#noFim">
-			<bind role="onEnd" component="imagemBackground"/>
+			<bind role="onEnd" component="Video"/>
 			<bind role="stop" component="botaoInt"/>
 		</link>
 		<link id="selecionaBotaoInteracao" xconnector="conectores#aoSelecionarBotao">
 			<bind role="onSelection" component="botaoInt">
 				<bindParam name="codigoChave" value="RED"/>
 			</bind>
-			<bind role="set" component="imagemBackground" interface="bounds">
+			<bind role="set" component="Video" interface="bounds">
 				<bindParam name="novaDimensao" value="5.78125%,27.038%,50%,50%"/>
 				<!-- As dimensões de bounds são: left, top, width, height -->
 			</bind>
@@ -109,64 +72,65 @@
 			<bind role="start" component="ctxTelaInicial"/>
 		</link>
 		<context id="ctxTelaInicial">
-			<context id="ctxBeloHorizonte" refer="tSel#ctxBeloHorizonte"/>
-			<context id="ctxBrasilia" refer="tSel#ctxBrasilia"/>
-			<context id="ctxCuiaba" refer="tSel#ctxCuiaba"/>
-			<context id="ctxCuritiba" refer="tSel#ctxCuritiba"/>
-			<context id="ctxFortaleza" refer="tSel#ctxFortaleza"/>
-			<context id="ctxManaus" refer="tSel#ctxManaus"/>
-			<context id="ctxNatal" refer="tSel#ctxNatal"/>
-			<context id="ctxPortoAlegre" refer="tSel#ctxPortoAlegre"/>
-			<context id="ctxRecife" refer="tSel#ctxRecife"/>
-			<context id="ctxRiodeJaneiro" refer="tSel#ctxRiodeJaneiro"/>
-			<context id="ctxSalvador" refer="tSel#ctxSalvador"/>
-			<context id="ctxSaoPaulo" refer="tSel#ctxSaoPaulo"/>
+			<context id="ctxBeloHorizonte"	refer="tSel#ctxBeloHorizonte"/>
+			<context id="ctxBrasilia"		refer="tSel#ctxBrasilia"/>
+			<context id="ctxCuiaba"			refer="tSel#ctxCuiaba"/>
+			<context id="ctxCuritiba"		refer="tSel#ctxCuritiba"/>
+			<context id="ctxFortaleza"		refer="tSel#ctxFortaleza"/>
+			<context id="ctxManaus"			refer="tSel#ctxManaus"/>
+			<context id="ctxNatal"			refer="tSel#ctxNatal"/>
+			<context id="ctxPortoAlegre"	refer="tSel#ctxPortoAlegre"/>
+			<context id="ctxRecife"			refer="tSel#ctxRecife"/>
+			<context id="ctxRiodeJaneiro"	refer="tSel#ctxRiodeJaneiro"/>
+			<context id="ctxSalvador"		refer="tSel#ctxSalvador"/>
+			<context id="ctxSaoPaulo"		refer="tSel#ctxSaoPaulo"/>
 			
-			<port id="portaTelaInicial" component="imagemTelaInicial"/>
-			<port id="portaPontoAM" component="pontoAM"/>
-			<port id="portaPontoMT" component="pontoMT"/>
-			<port id="portaPontoDF" component="pontoDF"/>
-			<port id="portaPontoSP" component="pontoSP"/>
-			<port id="portaPontoRJ" component="pontoRJ"/>
-			<port id="portaPontoRS" component="pontoRS"/>
-			<port id="portaPontoMG" component="pontoMG"/>
-			<port id="portaPontoPR" component="pontoPR"/>
-			<port id="portaPontoBA" component="pontoBA"/>
-			<port id="portaPontoPE" component="pontoPE"/>
-			<port id="portaPontoRN" component="pontoRN"/>
-			<port id="portaPontoCE" component="pontoCE"/>
+			<port id="portaTelaInicial"		component="imagemTelaInicial"/>
+			<port id="portaPontoAM" 		component="pontoAM"/>
+			<port id="portaPontoMT" 		component="pontoMT"/>
+			<port id="portaPontoDF" 		component="pontoDF"/>
+			<port id="portaPontoSP" 		component="pontoSP"/>
+			<port id="portaPontoRJ" 		component="pontoRJ"/>
+			<port id="portaPontoRS" 		component="pontoRS"/>
+			<port id="portaPontoMG" 		component="pontoMG"/>
+			<port id="portaPontoPR" 		component="pontoPR"/>
+			<port id="portaPontoBA" 		component="pontoBA"/>
+			<port id="portaPontoPE" 		component="pontoPE"/>
+			<port id="portaPontoRN" 		component="pontoRN"/>
+			<port id="portaPontoCE" 		component="pontoCE"/>
 			
 			<port id="portaPainelNavegacao" component="painelNavegacao"/>
-			<port id="portaBotaoIdioma" component="botaoIdioma"/>
-			<port id="portaBotaoSair" component="botaoSair"/>
-			<port id="portaBotaoSobre" component="botaoSobre"/>
+			<port id="portaBotaoSair" 		component="botaoSair"/>
+			<port id="portaBotaoSobre" 		component="botaoSobre"/>
+			<port id="portaBotaoVoltar" 	component="botaoVoltar"/>
+			<port id="portaBotaoIdioma" 	component="botaoIdioma"/>
 			
-			<media id="painelNavegacao" src="media/navegacao.png" descriptor="idNavegacao"/>
-			<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="idBotaoIdioma">
-				<property name="focusIndex" value="0"/>
-			</media>
-			<media id="botaoSair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
-			<media id="botaoSobre" src="media/botaoSobre.png" descriptor="idBotaoSobre"/>
+			<media id="painelNavegacao" src="media/navegacao.png" descriptor="des#idNavegacao"/>
+			<media id="botaoSair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
+			<media id="botaoSobre" src="media/botaoSobre.png" descriptor="des#idBotaoSobre"/>
+			<media id="botaoVoltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
+			<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="des#idBotaoIdioma"/>
 			
-			<media id="pontoAM" src="media/pontoAzul.png" descriptor="idPontoAM"/>
-			<media id="pontoMT" src="media/pontoAzul2.png" descriptor="idPontoMT"/>
-			<media id="pontoDF" src="media/pontoAzul3.png" descriptor="idPontoDF"/>
-			<media id="pontoSP" src="media/pontoAzul4.png" descriptor="idPontoSP"/>
-			<media id="pontoRJ" src="media/pontoAzul5.png" descriptor="idPontoRJ"/>
-			<media id="pontoRS" src="media/pontoAzul6.png" descriptor="idPontoRS"/>
-			<media id="pontoMG" src="media/pontoAzul7.png" descriptor="idPontoMG"/>
-			<media id="pontoPR" src="media/pontoAzul8.png" descriptor="idPontoPR"/>
-			<media id="pontoBA" src="media/pontoAzul9.png" descriptor="idPontoBA"/>
-			<media id="pontoPE" src="media/pontoAzul10.png" descriptor="idPontoPE"/>
-			<media id="pontoRN" src="media/pontoAzul11.png" descriptor="idPontoRN"/>
-			<media id="pontoCE" src="media/pontoAzul12.png" descriptor="idPontoCE"/>
-			<media id="imagemTelaInicial" src="media/telaInicial.png" descriptor="idTelaInicial"/>
+			<media id="pontoAM" src="media/pontoAzul.png" descriptor="des#idPontoAM"/>
+			<media id="pontoMT" src="media/pontoAzul2.png" descriptor="des#idPontoMT"/>
+			<media id="pontoDF" src="media/pontoAzul3.png" descriptor="des#idPontoDF"/>
+			<media id="pontoSP" src="media/pontoAzul4.png" descriptor="des#idPontoSP"/>
+			<media id="pontoRJ" src="media/pontoAzul5.png" descriptor="des#idPontoRJ"/>
+			<media id="pontoRS" src="media/pontoAzul6.png" descriptor="des#idPontoRS"/>
+			<media id="pontoMG" src="media/pontoAzul7.png" descriptor="des#idPontoMG"/>
+			<media id="pontoPR" src="media/pontoAzul8.png" descriptor="des#idPontoPR"/>
+			<media id="pontoBA" src="media/pontoAzul9.png" descriptor="des#idPontoBA"/>
+			<media id="pontoPE" src="media/pontoAzul10.png" descriptor="des#idPontoPE"/>
+			<media id="pontoRN" src="media/pontoAzul11.png" descriptor="des#idPontoRN"/>
+			<media id="pontoCE" src="media/pontoAzul12.png" descriptor="des#idPontoCE"/>
 			
+			<media id="video_refer" refer="Video" instance="instSame"/>
+  			<media id="botaoInt_refer" refer="botaoInt" instance="instSame"/>
+			<media id="imagemTelaInicial" src="media/telaInicial.png" descriptor="des#idTelaInicial"/>
 			<media id="settings" type="application/x-ginga-settings">
 				<property name="service.currentKeyMaster" value=""/>
 			</media>
-			<media id="imgBackground" refer="imagemBackground" instance="instSame"/>
-			<media id="imgInt" refer="botaoInt" instance="instSame"/>
+			
 			<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						ELOS						             !
 	 ! 	  define os elos que regem o sincronismo entre as mï¿½dias     !					 
@@ -175,24 +139,21 @@
 		 !						ELOS						             !
 		 ! 	  define os elos que regem o sincronismo entre as mï¿½dias     !					 
 		 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		 <link id ="lReiniciaTelaInicial" xconnector="conectores#onEndOr">
-		 	<bind role="onEnd" component="ctxBeloHorizonte"/>
-		 	<bind role="onEnd" component="ctxBrasilia"/>
-		 	<bind role="onEnd" component="ctxCuiaba"/>
-		 	<bind role="onEnd" component="ctxCuritiba"/>
-		 	<bind role="onEnd" component="ctxFortaleza"/>
-		 	<bind role="onEnd" component="ctxManaus"/>
-		 	<bind role="onEnd" component="ctxNatal"/>
-		 	<bind role="onEnd" component="ctxPortoAlegre"/>
-		 	<bind role="onEnd" component="ctxRecife"/>
-		 	<bind role="onEnd" component="ctxRiodeJaneiro"/>
-		 	<bind role="onEnd" component="ctxSalvador"/>
-		 	<bind role="onEnd" component="ctxSaoPaulo"/>
-		 	
-			<bind role="start" component="ctxTelaInicial"/>
-		 </link>
-		 
-		 
+			<link id="lReiniciaTelaInicial" xconnector="conectores#onEndOr">
+				<bind role="onEnd" component="ctxBeloHorizonte"/>
+				<bind role="onEnd" component="ctxBrasilia"/>
+				<bind role="onEnd" component="ctxCuiaba"/>
+				<bind role="onEnd" component="ctxCuritiba"/>
+				<bind role="onEnd" component="ctxFortaleza"/>
+				<bind role="onEnd" component="ctxManaus"/>
+				<bind role="onEnd" component="ctxNatal"/>
+				<bind role="onEnd" component="ctxPortoAlegre"/>
+				<bind role="onEnd" component="ctxRecife"/>
+				<bind role="onEnd" component="ctxRiodeJaneiro"/>
+				<bind role="onEnd" component="ctxSalvador"/>
+				<bind role="onEnd" component="ctxSaoPaulo"/>
+				<bind role="start" component="ctxTelaInicial"/>
+			</link>
 			<link id="lSelecionaBeloHorizonte" xconnector="conectores#onSelectionSetStartNStop">
 				<bind role="onSelection" component="pontoMG"/>
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
@@ -567,8 +528,17 @@
 				<bind role="start" component="ctxSaoPaulo"/>
 			</link>
 			
+			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionSetStartNStopNAbort">
+  				<bind role="onSelection" component="botaoSair">
+  					<bindParam name="key" value="RED"/>
+  				</bind>
+  				<bind component="ctxTelaInicial" role="abort"/>
+  				<bind role="set" component="video_refer" interface="bounds">
+  					<bindParam name="var" value="0,0,1920,1080"/>
+  					<!-- As dimensões de bounds são: left, top, width, height -->
+  				</bind>
+  				<bind role="start" component="botaoInt_refer"/>
+  			</link>
 		</context>
-				
-		
 	</body>
 </ncl>

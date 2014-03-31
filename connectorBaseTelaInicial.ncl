@@ -48,6 +48,16 @@
 					<simpleAction role="start" max="unbounded"/>
 				</compoundAction>
 			</causalConnector>
+			<causalConnector id="onKeySelectionSetStartNStopNAbort">
+				<connectorParam name="key"/>
+				<connectorParam name="var"/>
+				<simpleCondition role="onSelection" key="$key"/>
+				<compoundAction operator="seq">
+					<simpleAction role="abort" max="unbounded"/>
+					<simpleAction role="set" value="$var"/>
+					<simpleAction role="start" max="unbounded"/>
+				</compoundAction>
+			</causalConnector>
 			<causalConnector id="onKeySelection_and_NodeStateTestStop">
 				<connectorParam name="vKey"/>
 				<connectorParam name="vState"/>
