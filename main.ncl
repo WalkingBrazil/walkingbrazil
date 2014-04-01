@@ -112,17 +112,17 @@
 			<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="des#idBotaoIdioma"/>
 			
 			<media id="pontoAM" src="media/pontoAzul.png" descriptor="des#idPontoAM"/>
-			<media id="pontoMT" src="media/pontoAzul2.png" descriptor="des#idPontoMT"/>
-			<media id="pontoDF" src="media/pontoAzul3.png" descriptor="des#idPontoDF"/>
-			<media id="pontoSP" src="media/pontoAzul4.png" descriptor="des#idPontoSP"/>
-			<media id="pontoRJ" src="media/pontoAzul5.png" descriptor="des#idPontoRJ"/>
-			<media id="pontoRS" src="media/pontoAzul6.png" descriptor="des#idPontoRS"/>
-			<media id="pontoMG" src="media/pontoAzul7.png" descriptor="des#idPontoMG"/>
-			<media id="pontoPR" src="media/pontoAzul8.png" descriptor="des#idPontoPR"/>
-			<media id="pontoBA" src="media/pontoAzul9.png" descriptor="des#idPontoBA"/>
-			<media id="pontoPE" src="media/pontoAzul10.png" descriptor="des#idPontoPE"/>
-			<media id="pontoRN" src="media/pontoAzul11.png" descriptor="des#idPontoRN"/>
-			<media id="pontoCE" src="media/pontoAzul12.png" descriptor="des#idPontoCE"/>
+			<media id="pontoMT" src="media/pontoAzul.png" descriptor="des#idPontoMT"/>
+			<media id="pontoDF" src="media/pontoAzul.png" descriptor="des#idPontoDF"/>
+			<media id="pontoSP" src="media/pontoAzul.png" descriptor="des#idPontoSP"/>
+			<media id="pontoRJ" src="media/pontoAzul.png" descriptor="des#idPontoRJ"/>
+			<media id="pontoRS" src="media/pontoAzul.png" descriptor="des#idPontoRS"/>
+			<media id="pontoMG" src="media/pontoAzul.png" descriptor="des#idPontoMG"/>
+			<media id="pontoPR" src="media/pontoAzul.png" descriptor="des#idPontoPR"/>
+			<media id="pontoBA" src="media/pontoAzul.png" descriptor="des#idPontoBA"/>
+			<media id="pontoPE" src="media/pontoAzul.png" descriptor="des#idPontoPE"/>
+			<media id="pontoRN" src="media/pontoAzul.png" descriptor="des#idPontoRN"/>
+			<media id="pontoCE" src="media/pontoAzul.png" descriptor="des#idPontoCE"/>
 			
 			<media id="video_refer" refer="Video" instance="instSame"/>
   			<media id="botaoInt_refer" refer="botaoInt" instance="instSame"/>
@@ -159,33 +159,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-				<bind role="stop" component="ctxBrasilia"/>
-				<bind role="stop" component="ctxCuiaba"/>
-				<bind role="stop" component="ctxCuritiba"/>
-				<bind role="stop" component="ctxFortaleza"/>
-				<bind role="stop" component="ctxManaus"/>
-				<bind role="stop" component="ctxNatal"/>
-				<bind role="stop" component="ctxPortoAlegre"/>
-				<bind role="stop" component="ctxRecife"/>
-				<bind role="stop" component="ctxRiodeJaneiro"/>
-				<bind role="stop" component="ctxSalvador"/>
-				<bind role="stop" component="ctxSaoPaulo"/>
-				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxBeloHorizonte"/>-->
-				
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxBeloHorizonte"/>
 				<bind role="start" component="botaoSair"/>
@@ -195,32 +168,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-				<bind role="stop" component="ctxBeloHorizonte"/>
-				<bind role="stop" component="ctxCuiaba"/>
-				<bind role="stop" component="ctxCuritiba"/>
-				<bind role="stop" component="ctxFortaleza"/>
-				<bind role="stop" component="ctxManaus"/>
-				<bind role="stop" component="ctxNatal"/>
-				<bind role="stop" component="ctxPortoAlegre"/>
-				<bind role="stop" component="ctxRecife"/>
-				<bind role="stop" component="ctxRiodeJaneiro"/>
-				<bind role="stop" component="ctxSalvador"/>
-				<bind role="stop" component="ctxSaoPaulo"/>
-				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxBrasilia"/>-->
-				
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxBrasilia"/>
 				<bind role="start" component="botaoSair"/>
@@ -230,32 +177,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-				<bind role="stop" component="ctxBeloHorizonte"/>
-				<bind role="stop" component="ctxBrasilia"/>
-				<bind role="stop" component="ctxCuritiba"/>
-				<bind role="stop" component="ctxFortaleza"/>
-				<bind role="stop" component="ctxManaus"/>
-				<bind role="stop" component="ctxNatal"/>
-				<bind role="stop" component="ctxPortoAlegre"/>
-				<bind role="stop" component="ctxRecife"/>
-				<bind role="stop" component="ctxRiodeJaneiro"/>
-				<bind role="stop" component="ctxSalvador"/>
-				<bind role="stop" component="ctxSaoPaulo"/>
-				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxCuiaba"/>-->
-				
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxCuiaba"/>
 				<bind role="start" component="botaoSair"/>
@@ -265,32 +186,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-				<bind role="stop" component="ctxBeloHorizonte"/>
-				<bind role="stop" component="ctxBrasilia"/>
-				<bind role="stop" component="ctxCuiaba"/>
-				<bind role="stop" component="ctxFortaleza"/>
-				<bind role="stop" component="ctxManaus"/>
-				<bind role="stop" component="ctxNatal"/>
-				<bind role="stop" component="ctxPortoAlegre"/>
-				<bind role="stop" component="ctxRecife"/>
-				<bind role="stop" component="ctxRiodeJaneiro"/>
-				<bind role="stop" component="ctxSalvador"/>
-				<bind role="stop" component="ctxSaoPaulo"/>
-				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxCuritiba"/>-->
-				
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxCuritiba"/>
 				<bind role="start" component="botaoSair"/>
@@ -300,32 +195,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-				<bind role="stop" component="ctxBeloHorizonte"/>
-				<bind role="stop" component="ctxBrasilia"/>
-				<bind role="stop" component="ctxCuiaba"/>
-				<bind role="stop" component="ctxCuritiba"/>
-				<bind role="stop" component="ctxManaus"/>
-				<bind role="stop" component="ctxNatal"/>
-				<bind role="stop" component="ctxPortoAlegre"/>
-				<bind role="stop" component="ctxRecife"/>
-				<bind role="stop" component="ctxRiodeJaneiro"/>
-				<bind role="stop" component="ctxSalvador"/>
-				<bind role="stop" component="ctxSaoPaulo"/>
-				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxFortaleza"/>-->
-				
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxFortaleza"/>
 				<bind role="start" component="botaoSair"/>
@@ -335,30 +204,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-				<bind role="stop" component="ctxBeloHorizonte"/>
-				<bind role="stop" component="ctxBrasilia"/>
-				<bind role="stop" component="ctxCuiaba"/>
-				<bind role="stop" component="ctxCuritiba"/>
-				<bind role="stop" component="ctxFortaleza"/>
-				<bind role="stop" component="ctxNatal"/>
-				<bind role="stop" component="ctxPortoAlegre"/>
-				<bind role="stop" component="ctxRecife"/>
-				<bind role="stop" component="ctxRiodeJaneiro"/>
-				<bind role="stop" component="ctxSalvador"/>
-				<bind role="stop" component="ctxSaoPaulo"/>
-				<bind role="stop" component="imagemTelaInicial"/>-->
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxManaus"/>
 				<bind role="start" component="botaoSair"/>
@@ -368,32 +213,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-				<bind role="stop" component="ctxBeloHorizonte"/>
-				<bind role="stop" component="ctxBrasilia"/>
-				<bind role="stop" component="ctxCuiaba"/>
-				<bind role="stop" component="ctxCuritiba"/>
-				<bind role="stop" component="ctxFortaleza"/>
-				<bind role="stop" component="ctxManaus"/>
-				<bind role="stop" component="ctxPortoAlegre"/>
-				<bind role="stop" component="ctxRecife"/>
-				<bind role="stop" component="ctxRiodeJaneiro"/>
-				<bind role="stop" component="ctxSalvador"/>
-				<bind role="stop" component="ctxSaoPaulo"/>
-				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxNatal"/>-->
-				
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxNatal"/>
 				<bind role="start" component="botaoSair"/>
@@ -403,32 +222,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-				<bind role="stop" component="ctxBeloHorizonte"/>
-				<bind role="stop" component="ctxBrasilia"/>
-				<bind role="stop" component="ctxCuiaba"/>
-				<bind role="stop" component="ctxCuritiba"/>
-				<bind role="stop" component="ctxFortaleza"/>
-				<bind role="stop" component="ctxManaus"/>
-				<bind role="stop" component="ctxNatal"/>
-				<bind role="stop" component="ctxRecife"/>
-				<bind role="stop" component="ctxRiodeJaneiro"/>
-				<bind role="stop" component="ctxSalvador"/>
-				<bind role="stop" component="ctxSaoPaulo"/>
-				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxPortoAlegre"/>-->
-				
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxPortoAlegre"/>
 				<bind role="start" component="botaoSair"/>
@@ -438,32 +231,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-				<bind role="stop" component="ctxBeloHorizonte"/>
-				<bind role="stop" component="ctxBrasilia"/>
-				<bind role="stop" component="ctxCuiaba"/>
-				<bind role="stop" component="ctxCuritiba"/>
-				<bind role="stop" component="ctxFortaleza"/>
-				<bind role="stop" component="ctxManaus"/>
-				<bind role="stop" component="ctxNatal"/>
-				<bind role="stop" component="ctxPortoAlegre"/>
-				<bind role="stop" component="ctxRiodeJaneiro"/>
-				<bind role="stop" component="ctxSalvador"/>
-				<bind role="stop" component="ctxSaoPaulo"/>
-				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxRecife"/>-->
-				
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxRecife"/>
 				<bind role="start" component="botaoSair"/>
@@ -473,32 +240,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-				<bind role="stop" component="ctxBeloHorizonte"/>
-				<bind role="stop" component="ctxBrasilia"/>
-				<bind role="stop" component="ctxCuiaba"/>
-				<bind role="stop" component="ctxCuritiba"/>
-				<bind role="stop" component="ctxFortaleza"/>
-				<bind role="stop" component="ctxManaus"/>
-				<bind role="stop" component="ctxNatal"/>
-				<bind role="stop" component="ctxPortoAlegre"/>
-				<bind role="stop" component="ctxRecife"/>
-				<bind role="stop" component="ctxSalvador"/>
-				<bind role="stop" component="ctxSaoPaulo"/>
-				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxRiodeJaneiro"/>-->
-				
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxRiodeJaneiro"/>
 				<bind role="start" component="botaoSair"/>
@@ -508,32 +249,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-				<bind role="stop" component="ctxBeloHorizonte"/>
-				<bind role="stop" component="ctxBrasilia"/>
-				<bind role="stop" component="ctxCuiaba"/>
-				<bind role="stop" component="ctxCuritiba"/>
-				<bind role="stop" component="ctxFortaleza"/>
-				<bind role="stop" component="ctxManaus"/>
-				<bind role="stop" component="ctxNatal"/>
-				<bind role="stop" component="ctxPortoAlegre"/>
-				<bind role="stop" component="ctxRecife"/>
-				<bind role="stop" component="ctxRiodeJaneiro"/>
-				<bind role="stop" component="ctxSaoPaulo"/>
-				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxSalvador"/>-->
-				
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxSalvador"/>
 				<bind role="start" component="botaoSair"/>
@@ -543,32 +258,6 @@
 				<bind role="set" component="settings" interface="service.currentKeyMaster">
 					<bindParam name="var" value="tSel"/>
 				</bind>
-				<!--<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-				<bind role="stop" component="ctxBeloHorizonte"/>
-				<bind role="stop" component="ctxBrasilia"/>
-				<bind role="stop" component="ctxCuiaba"/>
-				<bind role="stop" component="ctxCuritiba"/>
-				<bind role="stop" component="ctxFortaleza"/>
-				<bind role="stop" component="ctxManaus"/>
-				<bind role="stop" component="ctxNatal"/>
-				<bind role="stop" component="ctxPortoAlegre"/>
-				<bind role="stop" component="ctxRecife"/>
-				<bind role="stop" component="ctxRiodeJaneiro"/>
-				<bind role="stop" component="ctxSalvador"/>
-				<bind role="stop" component="imagemTelaInicial"/>
-				<bind role="start" component="ctxSaoPaulo"/>-->
-				
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxSaoPaulo"/>
 				<bind role="start" component="botaoSair"/>

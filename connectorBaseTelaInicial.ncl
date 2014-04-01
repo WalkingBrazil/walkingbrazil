@@ -68,7 +68,7 @@
 						<valueAssessment value="$vState"/>
 					</assessmentStatement>
 				</compoundCondition>
-				<compoundAction operator="par">
+				<compoundAction operator="seq">
 					<simpleAction role="stop"/>
 				</compoundAction>
 			</causalConnector>
@@ -82,9 +82,9 @@
 						<valueAssessment value="$vState"/>
 					</assessmentStatement>
 				</compoundCondition>
-				<compoundAction operator="par">
-					<simpleAction role="start"/>
+				<compoundAction operator="seq">
 					<simpleAction role="stop" max="unbounded"/>
+					<simpleAction role="start"/>
 				</compoundAction>
 			</causalConnector>
 			<causalConnector id="onEndOr">
