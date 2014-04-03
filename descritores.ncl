@@ -8,6 +8,8 @@
 			<descriptor id="idImagemBackground" region="reg#regiaoBackground"/>
 			<descriptor id="idBotaoInt" region="reg#regiaoBotaoInt"/>
 			<descriptor id="idTelaInicial" region="reg#regiaoTelaInicial"/>
+			<descriptor id="idMapa" region="reg#regiaoMapa"/>
+			
 			<descriptor id="idPontoAM" region="reg#regiaoPontoAM" focusIndex="ixPontoAM" moveDown="ixPontoMT" moveRight="ixPontoCE" focusSrc="media/pontoVerde.png" focusSelSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoMT" region="reg#regiaoPontoMT" focusIndex="ixPontoMT" moveUp="ixPontoAM" moveDown="ixPontoDF" moveRight="ixPontoDF" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoCE" region="reg#regiaoPontoCE" focusIndex="ixPontoCE" moveUp="ixPontoRS" moveDown="ixPontoRN" moveLeft="ixPontoAM" moveRight="ixPontoRN" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>

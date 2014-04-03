@@ -64,7 +64,7 @@
 				<bindParam name="codigoChave" value="RED"/>
 			</bind>
 			<bind role="set" component="Video" interface="bounds">
-				<bindParam name="novaDimensao" value="5.78125%,27.038%,50%,50%"/>
+				<bindParam name="novaDimensao" value="4.16666666666667%,5.55555555555556%,50%,50%"/>
 				<!-- As dimensões de bounds são: left, top, width, height -->
 			</bind>
 			<bind role="stop" component="botaoInt"/>
@@ -86,6 +86,7 @@
 			<context id="ctxSaoPaulo"		refer="tSel#ctxSaoPaulo"/>
 			
 			<port id="portaTelaInicial"		component="imagemTelaInicial"/>
+			<port id="portaMapa"			component="imagemMapa"/>
 			<port id="portaPontoAM" 		component="pontoAM"/>
 			<port id="portaPontoMT" 		component="pontoMT"/>
 			<port id="portaPontoDF" 		component="pontoDF"/>
@@ -126,7 +127,8 @@
 			
 			<media id="video_refer" refer="Video" instance="instSame"/>
   			<media id="botaoInt_refer" refer="botaoInt" instance="instSame"/>
-			<media id="imagemTelaInicial" src="media/telaInicial.png" descriptor="des#idTelaInicial"/>
+			<media id="imagemTelaInicial" src="media/plano_fundo.png" descriptor="des#idTelaInicial"/>
+			<media id="imagemMapa" src="media/mapa.png" descriptor="des#idMapa"/>
 			<media id="settings" type="application/x-ginga-settings">
 				<property name="service.currentKeyMaster" value=""/>
 			</media>

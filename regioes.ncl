@@ -5,6 +5,7 @@
 			<region id="regiaoBackground" width="1920" height="1080"/>
 			<region id="regiaoBotaoInt" width="7%" height="9%" left="85%" top="3%"/>
 			<region id="regiaoTelaInicial"/>
+			<region id="regiaoMapa" width="35%" height="70%" left="60%" top="5%"/>
 			
 			<region id="regiaoPontoAM" width="3%" height="7%" left="64%" top="30%"/>
 			<region id="regiaoPontoMT" width="3%" height="7%" left="73%" top="45%"/>
@@ -25,7 +26,7 @@
 			<region id="regiaoBotaoVoltar" width="8%" height="3.5%" left="28%" top="93%" zIndex="5"/>
 			<region id="regiaoBotaoIdioma" width="8%" height="3.5%" left="39%" top="93%" zIndex="5"/>
 			
-			<region id="regiaoVideo" width="50%" height="50%" top="25%" left="5%" zIndex="1"/>
+			<region id="regiaoVideo" width="50%" height="50%" top="5%" left="5%" zIndex="10"/>
 			
 			<region id="regiaoTitulo" width="90%" height="15%" left="5%" top="5%" zIndex="2"/>
 			<region id="regiaoSelecao" width="35%" height="50%" left="60%" top="25%" zIndex="1"/>
