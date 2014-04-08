@@ -26,7 +26,7 @@
 			<port id="portaBeloHorizonte_PTur3" component="imgBeloHorizonte_PTur3"/>
 			<port id="portaBeloHorizonte_PTur4" component="imgBeloHorizonte_PTur4"/>
 			
-			<media id="imagemBackground" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground"/>
+			<media id="imagemBackground" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="imagemVideo" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoSair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoVoltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -124,7 +124,7 @@
 			<port id="portaBrasilia_PTur3" component="imgBrasilia_PTur3"/>
 			<port id="portaBrasilia_PTur4" component="imgBrasilia_PTur4"/>
 			
-			<media id="imgBrasilia_Background" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground"/>
+			<media id="imgBrasilia_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="imgBrasilia_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoBrasilia_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoBrasilia_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -213,7 +213,7 @@
 			<port id="portaCuiaba_PTur3" component="imgCuiaba_PTur3"/>
 			<port id="portaCuiaba_PTur4" component="imgCuiaba_PTur4"/>
 			
-			<media id="imgCuiaba_Background" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground"/>
+			<media id="imgCuiaba_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="imgCuiaba_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoCuiaba_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoCuiaba_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -303,7 +303,7 @@
 			<port id="portaCuritiba_PTur3" component="imgCuritiba_PTur3"/>
 			<port id="portaCuritiba_PTur4" component="imgCuritiba_PTur4"/>
 			
-			<media id="imgCuritiba_Background" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground"/>
+			<media id="imgCuritiba_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="imgCuritiba_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoCuritiba_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoCuritiba_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -392,7 +392,7 @@
 			<port id="portaFortaleza_PTur3" component="imgFortaleza_PTur3"/>
 			<port id="portaFortaleza_PTur4" component="imgFortaleza_PTur4"/>
 			
-			<media id="imgFortaleza_Background" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground"/>
+			<media id="imgFortaleza_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="imgFortaleza_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoFortaleza_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoFortaleza_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -481,7 +481,7 @@
 			<port id="portaManaus_PTur3" component="imgManaus_PTur3"/>
 			<port id="portaManaus_PTur4" component="imgManaus_PTur4"/>
 			
-			<media id="imgManaus_Background" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground"/>
+			<media id="imgManaus_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="imgManaus_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoManaus_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoManaus_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -573,7 +573,7 @@
 			<port id="portaNatal_PTur3" component="imgNatal_PTur3"/>
 			<port id="portaNatal_PTur4" component="imgNatal_PTur4"/>
 			
-			<media id="imgNatal_Background" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground"/>
+			<media id="imgNatal_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="imgNatal_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoNatal_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoNatal_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -662,7 +662,7 @@
 			<port id="portaPortoAlegre_PTur3" component="imgPortoAlegre_PTur3"/>
 			<port id="portaPortoAlegre_PTur4" component="imgPortoAlegre_PTur4"/>
 			
-			<media id="imgPortoAlegre_Background" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground"/>
+			<media id="imgPortoAlegre_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="imgPortoAlegre_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoPortoAlegre_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoPortoAlegre_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -751,7 +751,7 @@
 			<port id="portaRecife_PTur3" component="imgRecife_PTur3"/>
 			<port id="portaRecife_PTur4" component="imgRecife_PTur4"/>
 			
-			<media id="imgRecife_Background" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground"/>
+			<media id="imgRecife_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="imgRecife_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoRecife_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoRecife_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -840,7 +840,7 @@
 			<port id="portaRiodeJaneiro_PTur3" component="imgRiodeJaneiro_PTur3"/>
 			<port id="portaRiodeJaneiro_PTur4" component="imgRiodeJaneiro_PTur4"/>
 			
-			<media id="imgRiodeJaneiro_Background" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground"/>
+			<media id="imgRiodeJaneiro_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="imgRiodeJaneiro_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoRiodeJaneiro_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoRiodeJaneiro_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -929,7 +929,7 @@
 			<port id="portaSalvador_PTur3" component="imgSalvador_PTur3"/>
 			<port id="portaSalvador_PTur4" component="imgSalvador_PTur4"/>
 			
-			<media id="imgSalvador_Background" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground"/>
+			<media id="imgSalvador_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="imgSalvador_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoSalvador_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoSalvador_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -1019,7 +1019,7 @@
 			<port id="portaSaoPaulo_PTur3" component="imgSaoPaulo_PTur3"/>
 			<port id="portaSaoPaulo_PTur4" component="imgSaoPaulo_PTur4"/>
 			
-			<media id="imgSaoPaulo_Background" src="media/BackgroundInicio.png" descriptor="des#idImagemBackground"/>
+			<media id="imgSaoPaulo_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="imgSaoPaulo_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoSaoPaulo_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoSaoPaulo_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -1110,7 +1110,7 @@
 			<port id="portateste_PTur3" component="imgteste_PTur3"/>
 			<port id="portateste_PTur4" component="imgteste_PTur4"/>
 			
-			<media id="imgteste_Background" src="media/BackgroundInicio.png" descriptor="idImagemBackground"/>
+			<media id="imgteste_Background" src="media/plano_fundo.png" descriptor="idImagemBackground"/>
 			<media id="imgteste_Video" src="media/logocopa.jpg" descriptor="idVideo"/>
 			<media id="botaoteste_Sair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
 			<media id="botaoteste_Voltar" src="media/botaoVoltar.png" descriptor="idBotaoVoltar"/>
