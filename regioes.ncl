@@ -20,11 +20,11 @@
 			<region id="regiaoPontoRN" width="3%" height="7%" left="92%" top="18%"/>
 			<region id="regiaoPontoCE" width="3%" height="7%" left="90%" top="17%"/>
 			
-			<region id="regitaoNavegacao" width="30%" height="12%" left="6%" top="80%" zIndex="5"/>
-			<region id="regiaoBotaoSair" width="8%" height="3.5%" left="6%" top="93%" zIndex="5"/>
-			<region id="regiaoBotaoSobre" width="8%" height="3.5%" left="17%" top="93%" zIndex="5"/>
-			<region id="regiaoBotaoVoltar" width="8%" height="3.5%" left="28%" top="93%" zIndex="5"/>
-			<region id="regiaoBotaoIdioma" width="8%" height="3.5%" left="39%" top="93%" zIndex="5"/>
+			<region id="regiaoNavegacao" width="30%" height="12%" left="6%" top="60%" zIndex="5"/>
+			<region id="regiaoBotaoSair" width="108" height="137" left="6%" top="77%" zIndex="5"/>
+			<region id="regiaoBotaoVoltar" width="108" height="137" left="17%" top="77%" zIndex="5"/>
+			<region id="regiaoBotaoSobre" width="108" height="137" left="28%" top="77%" zIndex="5"/>
+			<region id="regiaoBotaoIdioma" width="108" height="137" left="39%" top="77%" zIndex="5"/>
 			
 			<region id="regiaoVideo" width="50%" height="50%" top="5%" left="5%" zIndex="10"/>
 			

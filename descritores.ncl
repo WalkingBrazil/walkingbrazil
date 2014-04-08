@@ -23,7 +23,7 @@
 			<descriptor id="idPontoPE" region="reg#regiaoPontoPE" focusIndex="ixPontoPE" moveUp="ixPontoRN" moveDown="ixPontoBA" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoRN" region="reg#regiaoPontoRN" focusIndex="ixPontoRN" moveUp="ixPontoCE" moveDown="ixPontoPE" moveLeft="ixPontoCE" focusSrc="media/pontoVerde.png" focusBorderWidth="0"/>
 			
-			<descriptor id="idNavegacao" region="reg#regitaoNavegacao"/>
+			<descriptor id="idNavegacao" region="reg#regiaoNavegacao"/>
 			<descriptor id="idBotaoSair" region="reg#regiaoBotaoSair"/>
 			<descriptor id="idBotaoSobre" region="reg#regiaoBotaoSobre"/>
 			<descriptor id="idBotaoVoltar" region="reg#regiaoBotaoVoltar"/>

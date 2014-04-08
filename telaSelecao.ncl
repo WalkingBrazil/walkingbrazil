@@ -89,7 +89,7 @@
 			<link id="lVoltaBeloHorizonteParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoVoltar">
 					<!--muda essa component-->
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgBeloHorizonte_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -99,7 +99,7 @@
 			<link id="lVoltaBeloHorizonteParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoVoltar">
 					<!--muda essa component-->
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgBeloHorizonte_Selecao">
 					<bindParam name="vState" value="sleeping"/>
@@ -178,7 +178,7 @@
 			</link>
 			<link id="lVoltaBrasiliaParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoBrasilia_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgBrasilia_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -187,7 +187,7 @@
 			</link>
 			<link id="lVoltaBrasiliaParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoBrasilia_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgBrasilia_Selecao">
 					<bindParam name="vState" value="sleeping"/>
@@ -269,7 +269,7 @@
 			</link>
 			<link id="lVoltaCuiabaParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoCuiaba_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgCuiaba_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -278,7 +278,7 @@
 			</link>
 			<link id="lVoltaCuiabaParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoCuiaba_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgCuiaba_Selecao">
 					<bindParam name="vState" value="sleeping"/>
@@ -358,7 +358,7 @@
 			</link>
 			<link id="lVoltaCuritibaParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoCuritiba_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgCuritiba_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -367,7 +367,7 @@
 			</link>
 			<link id="lVoltaCuritibaParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoCuritiba_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgCuritiba_Selecao">
 					<bindParam name="vState" value="sleeping"/>
@@ -447,7 +447,7 @@
 			</link>
 			<link id="lVoltaFortalezaParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoFortaleza_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgFortaleza_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -456,7 +456,7 @@
 			</link>
 			<link id="lVoltaFortalezaParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoFortaleza_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgFortaleza_Selecao">
 					<bindParam name="vState" value="sleeping"/>
@@ -538,7 +538,7 @@
 			</link>
 			<link id="lVoltaManausParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoManaus_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgManaus_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -547,7 +547,7 @@
 			</link>
 			<link id="lVoltaManausParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoManaus_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgManaus_Selecao">
 					<bindParam name="vState" value="sleeping"/>
@@ -627,7 +627,7 @@
 			</link>
 			<link id="lVoltaNatalParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoNatal_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgNatal_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -636,7 +636,7 @@
 			</link>
 			<link id="lVoltaNatalParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoNatal_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgNatal_Selecao">
 					<bindParam name="vState" value="sleeping"/>
@@ -716,7 +716,7 @@
 			</link>
 			<link id="lVoltaPortoAlegreParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoPortoAlegre_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgPortoAlegre_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -725,7 +725,7 @@
 			</link>
 			<link id="lVoltaPortoAlegreParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoPortoAlegre_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgPortoAlegre_Selecao">
 					<bindParam name="vState" value="sleeping"/>
@@ -805,7 +805,7 @@
 			</link>
 			<link id="lVoltaRecifeParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoRecife_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgRecife_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -814,7 +814,7 @@
 			</link>
 			<link id="lVoltaRecifeParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoRecife_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgRecife_Selecao">
 					<bindParam name="vState" value="sleeping"/>
@@ -894,7 +894,7 @@
 			</link>
 			<link id="lVoltaRiodeJaneiroParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoRiodeJaneiro_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgRiodeJaneiro_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -903,7 +903,7 @@
 			</link>
 			<link id="lVoltaRiodeJaneiroParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoRiodeJaneiro_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgRiodeJaneiro_Selecao">
 					<bindParam name="vState" value="sleeping"/>
@@ -984,7 +984,7 @@
 			
 			<link id="lVoltaSalvadorParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoSalvador_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgSalvador_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -993,7 +993,7 @@
 			</link>
 			<link id="lVoltaSalvadorParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoSalvador_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgSalvador_Selecao">
 					<bindParam name="vState" value="sleeping"/>
@@ -1073,7 +1073,7 @@
 			</link>
 			<link id="lVoltaSaoPauloParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoSaoPaulo_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgSaoPaulo_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -1082,7 +1082,7 @@
 			</link>
 			<link id="lVoltaSaoPauloParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoSaoPaulo_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgSaoPaulo_Selecao">
 					<bindParam name="vState" value="sleeping"/>
@@ -1117,7 +1117,7 @@
 			
 			<link id="lVoltatesteParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoteste_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgteste_Selecao">
 					<bindParam name="vState" value="occurring"/>
@@ -1126,7 +1126,8 @@
 			</link>
 			<link id="lVoltatesteParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="botaoteste_Voltar">
-					<bindParam name="vKey" value="YELLOW"/>
+					<bindParam name="vKey" value="
+"/>
 				</bind>
 				<bind role="test" component="imgteste_Selecao">
 					<bindParam name="vState" value="sleeping"/>
