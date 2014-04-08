@@ -502,6 +502,7 @@
 		
 			<link id="link_SelManaus_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgManaus_PTur1"/>
+				<bind role="stop" component="imgManaus_Titulo"/>
 				<bind role="stop" component="imgManaus_PTur1"/>
 				<bind role="stop" component="imgManaus_PTur2"/>
 				<bind role="stop" component="imgManaus_PTur3"/>

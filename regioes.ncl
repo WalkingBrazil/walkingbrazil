@@ -28,7 +28,7 @@
 			
 			<region id="regiaoVideo" width="50%" height="50%" top="5%" left="5%" zIndex="10"/>
 			
-			<region id="regiaoTitulo" width="90%" height="15%" left="5%" top="5%" zIndex="2"/>
+			<region id="regiaoTitulo" width="25%" height="15%" left="60%" top="5%" zIndex="2"/>
 			<region id="regiaoSelecao" width="35%" height="50%" left="60%" top="25%" zIndex="1"/>
 			<region id="regiaoPontoTur1" width="12.5%" height="12.5%" left="63.5%" top="35%" zIndex="2"/>
 			<region id="regiaoPontoTur2" width="12.5%" height="12.5%" left="79%" top="35%" zIndex="2"/>
