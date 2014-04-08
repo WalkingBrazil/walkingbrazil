@@ -16,8 +16,8 @@
 		
 		<context id="ctxBeloHorizonte">
 			<port id="portaTelaSelecao" component="imagemBackground"/>
-			<port id="portaBeloHorizonte_Video" component="imagemVideo"/>
-			<port id="portaBotaoSair" component="botaoSair"/>
+<!--			<port id="portaBeloHorizonte_Video" component="imagemVideo"/>
+-->			<port id="portaBotaoSair" component="botaoSair"/>
 			<port id="portaBotaoVoltar" component="botaoVoltar"/>
 			<port id="portaBeloHorizonteTitulo" component="imgBeloHorizonte_Titulo"/>
 			<port id="portaBeloHorizonte_Selecao" component="imgBeloHorizonte_Selecao"/>
@@ -27,8 +27,8 @@
 			<port id="portaBeloHorizonte_PTur4" component="imgBeloHorizonte_PTur4"/>
 			
 			<media id="imagemBackground" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="imagemVideo" src="media/logocopa.jpg" descriptor="des#idVideo"/>
-			<media id="botaoSair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
+<!--			<media id="imagemVideo" src="media/logocopa.jpg" descriptor="des#idVideo"/>
+-->			<media id="botaoSair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoVoltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="imgBeloHorizonte_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgBeloHorizonte_PTur1" src="media/BeloHorizonte/ponto1.png" descriptor="des#idPontoTur1"/>
@@ -43,7 +43,7 @@
 			
 			<link id="lIniciaTelaSelecao" xconnector="conectores#noInicio">
 				<bind role="onBegin" component="imagemBackground"/>
-				<bind role="start" component="imagemVideo"/>
+				<bind role="start" component="botaoSair"/>
 			</link>
 			
 			<link id="link_SelBH_PTur1" xconnector="conectores#onSelectionStartNStop">
