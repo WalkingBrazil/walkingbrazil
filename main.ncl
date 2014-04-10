@@ -131,7 +131,7 @@
 			<media id="video_refer" refer="Video" instance="instSame"/>
   			<media id="botaoInt_refer" refer="botaoInt" instance="instSame"/>
 			<!--<media id="imagemTelaInicial" src="media/plano_fundo.png" descriptor="des#idTelaInicial"/>-->
-			<media id="imagemMapa" src="media/mapa.png" descriptor="des#idMapa"/>
+			<media id="imagemMapa" src="media/mapa_novo.png" descriptor="des#idMapa"/>
 			<media id="settings" type="application/x-ginga-settings">
 				<property name="service.currentKeyMaster" value=""/>
 			</media>

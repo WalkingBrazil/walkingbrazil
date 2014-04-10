@@ -15,9 +15,7 @@
 	<body id="bodyTelaSelecao">
 		
 		<context id="ctxBeloHorizonte">
-			<!--<port id="portaTelaSelecao" component="imagemBackground"/>-->
-<!--			<port id="portaBeloHorizonte_Video" component="imagemVideo"/>
--->			<port id="portaBotaoSair" component="botaoSair"/>
+			<port id="portaBotaoSair" component="botaoSair"/>
 			<port id="portaBotaoVoltar" component="botaoVoltar"/>
 			<port id="portaBeloHorizonteTitulo" component="imgBeloHorizonte_Titulo"/>
 			<port id="portaBeloHorizonte_Selecao" component="imgBeloHorizonte_Selecao"/>
@@ -27,8 +25,7 @@
 			<port id="portaBeloHorizonte_PTur4" component="imgBeloHorizonte_PTur4"/>
 			
 			<media id="imagemBackground" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-<!--			<media id="imagemVideo" src="media/logocopa.jpg" descriptor="des#idVideo"/>
--->			<media id="botaoSair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
+			<media id="botaoSair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoVoltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="imgBeloHorizonte_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgBeloHorizonte_PTur1" src="media/BeloHorizonte/ponto1.png" descriptor="des#idPontoTur1"/>
@@ -39,7 +36,7 @@
 			<media id="imgBH_PTur2_G" src="media/BeloHorizonte/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgBH_PTur3_G" src="media/BeloHorizonte/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgBH_PTur4_G" src="media/BeloHorizonte/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imgBeloHorizonte_Selecao" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imgBeloHorizonte_Selecao" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			
 			<link id="lIniciaTelaSelecao" xconnector="conectores#noInicio">
 				<bind role="onBegin" component="imagemBackground"/>
@@ -114,7 +111,6 @@
 		</context>
 		<context id="ctxBrasilia">
 			<port id="portaBrasilia" component="imgBrasilia_Titulo"/> 
-			<port id="portaBrasilia_Video" component="imgBrasilia_Video"/>
 			<port id="portaBrasiliaTelaSelecao" component="imgBrasilia_Background"/>
 			<port id="portaBrasiliaBotaoSair" component="botaoBrasilia_Sair"/>
 			<port id="portaBrasiliaBotaoVoltar" component="botaoBrasilia_Voltar"/>
@@ -125,10 +121,9 @@
 			<port id="portaBrasilia_PTur4" component="imgBrasilia_PTur4"/>
 			
 			<media id="imgBrasilia_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="imgBrasilia_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoBrasilia_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoBrasilia_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
-			<media id="imgBrasilia_Selecao" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imgBrasilia_Selecao" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			
 			<media id="imgBrasilia_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgBrasilia_PTur1" src="media/Brasilia/ponto1.png" descriptor="des#idPontoTur1"/>
@@ -204,7 +199,6 @@
 		<context id="ctxCuiaba">
 			<port id="portaCuiaba" component="imgCuiaba_Titulo"/>
 			<port id="portaCuiabaTelaSelecao" component="imgCuiaba_Background"/>
-			<port id="portaCuiaba_Video" component="imgCuiaba_Video"/>
 			<port id="portaCuiabaBotaoSair" component="botaoCuiaba_Sair"/>
 			<port id="portaCuiabaBotaoVoltar" component="botaoCuiaba_Voltar"/>
 			<port id="portaCuiaba_Selecao" component="imgCuiaba_Selecao"/>
@@ -214,10 +208,9 @@
 			<port id="portaCuiaba_PTur4" component="imgCuiaba_PTur4"/>
 			
 			<media id="imgCuiaba_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="imgCuiaba_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoCuiaba_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoCuiaba_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
-			<media id="imgCuiaba_Selecao" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imgCuiaba_Selecao" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			
 			
 			<media id="imgCuiaba_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
@@ -229,7 +222,7 @@
 			<media id="imgCuiaba_PTur2_G" src="media/Cuiaba/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgCuiaba_PTur3_G" src="media/Cuiaba/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgCuiaba_PTur4_G" src="media/Cuiaba/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imagemSelecao4" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imagemSelecao4" src="media/logocopa.png" descriptor="des#idSelecao"/>
 
 			<link id="link_SelCuiaba_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgCuiaba_PTur1"/>
@@ -294,7 +287,6 @@
 		<context id="ctxCuritiba">
 			<port id="portaCuritiba" component="imgCuritiba_Titulo"/> 
 			<port id="portaCuritibaTelaSelecao" component="imgCuritiba_Background"/>
-			<port id="portaCuritiba_Video" component="imgCuritiba_Video"/>
 			<port id="portaCuritibaBotaoSair" component="botaoCuritiba_Sair"/>
 			<port id="portaCuritibaBotaoVoltar" component="botaoCuritiba_Voltar"/>
 			<port id="portaCuritiba_Selecao" component="imgCuritiba_Selecao"/>
@@ -304,10 +296,9 @@
 			<port id="portaCuritiba_PTur4" component="imgCuritiba_PTur4"/>
 			
 			<media id="imgCuritiba_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="imgCuritiba_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoCuritiba_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoCuritiba_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
-			<media id="imgCuritiba_Selecao" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imgCuritiba_Selecao" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			<media id="imgCuritiba_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgCuritiba_PTur1" src="media/Curitiba/ponto1.png" descriptor="des#idPontoTur1"/>
 			<media id="imgCuritiba_PTur2" src="media/Curitiba/ponto2.png" descriptor="des#idPontoTur2"/>
@@ -317,7 +308,7 @@
 			<media id="imgCuritiba_PTur2_G" src="media/Curitiba/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgCuritiba_PTur3_G" src="media/Curitiba/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgCuritiba_PTur4_G" src="media/Curitiba/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imagemSelecao5" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imagemSelecao5" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			
 
 			<link id="link_SelCuritiba_PTur1" xconnector="conectores#onSelectionStartNStop">
@@ -383,7 +374,6 @@
 		<context id="ctxFortaleza">
 			<port id="portaFortaleza" component="imgFortaleza_Titulo"/> 
 			<port id="portaFortalezaTelaSelecao" component="imgFortaleza_Background"/>
-			<port id="portaFortaleza_Video" component="imgFortaleza_Video"/>
 			<port id="portaFortalezaBotaoSair" component="botaoFortaleza_Sair"/>
 			<port id="portaFortalezaBotaoVoltar" component="botaoFortaleza_Voltar"/>
 			<port id="portaFortaleza_Selecao" component="imgFortaleza_Selecao"/>
@@ -393,10 +383,9 @@
 			<port id="portaFortaleza_PTur4" component="imgFortaleza_PTur4"/>
 			
 			<media id="imgFortaleza_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="imgFortaleza_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoFortaleza_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoFortaleza_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
-			<media id="imgFortaleza_Selecao" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imgFortaleza_Selecao" src="media/logocopa.png" descriptor="des#idSelecao"/>
 
 			<media id="imgFortaleza_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgFortaleza_PTur1" src="media/Fortaleza/ponto1.png" descriptor="des#idPontoTur1"/>
@@ -407,7 +396,7 @@
 			<media id="imgFortaleza_PTur2_G" src="media/Fortaleza/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgFortaleza_PTur3_G" src="media/Fortaleza/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgFortaleza_PTur4_G" src="media/Fortaleza/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imagemSelecao6" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imagemSelecao6" src="media/logocopa.png" descriptor="des#idSelecao"/>
 
 			<link id="link_SelFortaleza_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgFortaleza_PTur1"/>
@@ -472,7 +461,6 @@
 		<context id="ctxManaus">
 			<port id="portaManaus" component="imgManaus_Titulo"/> 
 			<port id="portaManausTelaSelecao" component="imgManaus_Background"/>
-			<port id="portaManaus_Video" component="imgManaus_Video"/>
 			<port id="portaManausBotaoSair" component="botaoManaus_Sair"/>
 			<port id="portaManausBotaoVoltar" component="botaoManaus_Voltar"/>
 			<port id="portaManaus_Selecao" component="imgManaus_Selecao"/>
@@ -482,10 +470,9 @@
 			<port id="portaManaus_PTur4" component="imgManaus_PTur4"/>
 			
 			<media id="imgManaus_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="imgManaus_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoManaus_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoManaus_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
-			<media id="imgManaus_Selecao" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imgManaus_Selecao" src="media/logocopa.png" descriptor="des#idSelecao"/>
 
 
 			<media id="imgManaus_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
@@ -497,7 +484,7 @@
 			<media id="imgManaus_PTur2_G" src="media/Manaus/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgManaus_PTur3_G" src="media/Manaus/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgManaus_PTur4_G" src="media/Manaus/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imagemSelecao7" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imagemSelecao7" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			
 		
 			<link id="link_SelManaus_PTur1" xconnector="conectores#onSelectionStartNStop">
@@ -564,7 +551,6 @@
 		<context id="ctxNatal">
 			<port id="portaNatal" component="imgNatal_Titulo"/> 
 			<port id="portaNatalTelaSelecao" component="imgNatal_Background"/>
-			<port id="portaNatal_Video" component="imgNatal_Video"/>
 			<port id="portaNatalBotaoSair" component="botaoNatal_Sair"/>
 			<port id="portaNatalBotaoVoltar" component="botaoNatal_Voltar"/>
 			<port id="portaNatal_Selecao" component="imgNatal_Selecao"/>
@@ -574,10 +560,9 @@
 			<port id="portaNatal_PTur4" component="imgNatal_PTur4"/>
 			
 			<media id="imgNatal_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="imgNatal_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoNatal_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoNatal_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
-			<media id="imgNatal_Selecao" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imgNatal_Selecao" src="media/logocopa.png" descriptor="des#idSelecao"/>
 
 			<media id="imgNatal_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgNatal_PTur1" src="media/Natal/ponto1.png" descriptor="des#idPontoTur1"/>
@@ -588,7 +573,7 @@
 			<media id="imgNatal_PTur2_G" src="media/Natal/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgNatal_PTur3_G" src="media/Natal/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgNatal_PTur4_G" src="media/Natal/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imagemSelecao8" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imagemSelecao8" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			
 			<link id="link_SelNatal_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgNatal_PTur1"/>
@@ -653,7 +638,6 @@
 		<context id="ctxPortoAlegre">
 			<port id="portaPortoAlegre" component="imgPortoAlegre_Titulo"/> 
 			<port id="portaPortoAlegreTelaSelecao" component="imgPortoAlegre_Background"/>
-			<port id="portaPortoAlegre_Video" component="imgPortoAlegre_Video"/>
 			<port id="portaPortoAlegreBotaoSair" component="botaoPortoAlegre_Sair"/>
 			<port id="portaPortoAlegreBotaoVoltar" component="botaoPortoAlegre_Voltar"/>
 			<port id="portaPortoAlegre_Selecao" component="imgPortoAlegre_Selecao"/>
@@ -663,10 +647,9 @@
 			<port id="portaPortoAlegre_PTur4" component="imgPortoAlegre_PTur4"/>
 			
 			<media id="imgPortoAlegre_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="imgPortoAlegre_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoPortoAlegre_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoPortoAlegre_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
-			<media id="imgPortoAlegre_Selecao" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imgPortoAlegre_Selecao" src="media/logocopa.png" descriptor="des#idSelecao"/>
 
 			<media id="imgPortoAlegre_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgPortoAlegre_PTur1" src="media/PortoAlegre/ponto1.png" descriptor="des#idPontoTur1"/>
@@ -677,7 +660,7 @@
 			<media id="imgPortoAlegre_PTur2_G" src="media/PortoAlegre/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgPortoAlegre_PTur3_G" src="media/PortoAlegre/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgPortoAlegre_PTur4_G" src="media/PortoAlegre/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imagemSelecao9" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imagemSelecao9" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			
 			<link id="link_SelPortoAlegre_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgPortoAlegre_PTur1"/>
@@ -742,7 +725,6 @@
 		<context id="ctxRecife">
 			<port id="portaRecife" component="imgRecife_Titulo"/> 
 			<port id="portaRecifeTelaSelecao" component="imgRecife_Background"/>
-			<port id="portaRecife_Video" component="imgRecife_Video"/>
 			<port id="portaRecifeBotaoSair" component="botaoRecife_Sair"/>
 			<port id="portaRecifeBotaoVoltar" component="botaoRecife_Voltar"/>
 			<port id="portaRecife_Selecao" component="imgRecife_Selecao"/>
@@ -752,10 +734,9 @@
 			<port id="portaRecife_PTur4" component="imgRecife_PTur4"/>
 			
 			<media id="imgRecife_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="imgRecife_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoRecife_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoRecife_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
-			<media id="imgRecife_Selecao" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imgRecife_Selecao" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			
 			<media id="imgRecife_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgRecife_PTur1" src="media/Recife/ponto1.png" descriptor="des#idPontoTur1"/>
@@ -766,7 +747,7 @@
 			<media id="imgRecife_PTur2_G" src="media/Recife/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgRecife_PTur3_G" src="media/Recife/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgRecife_PTur4_G" src="media/Recife/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imagemSelecao10" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imagemSelecao10" src="media/logocopa.png" descriptor="des#idSelecao"/>
 		
 			<link id="link_SelRecife_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgRecife_PTur1"/>
@@ -831,7 +812,6 @@
 		<context id="ctxRiodeJaneiro">
 			<port id="portaRiodeJaneiro" component="imgRiodeJaneiro_Titulo"/> 
 			<port id="portaRiodeJaneiroTelaSelecao" component="imgRiodeJaneiro_Background"/>
-			<port id="portaRiodeJaneiro_Video" component="imgRiodeJaneiro_Video"/>
 			<port id="portaRiodeJaneiroBotaoSair" component="botaoRiodeJaneiro_Sair"/>
 			<port id="portaRiodeJaneiroBotaoVoltar" component="botaoRiodeJaneiro_Voltar"/>
 			<port id="portaRiodeJaneiro_Selecao" component="imgRiodeJaneiro_Selecao"/>
@@ -841,10 +821,9 @@
 			<port id="portaRiodeJaneiro_PTur4" component="imgRiodeJaneiro_PTur4"/>
 			
 			<media id="imgRiodeJaneiro_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="imgRiodeJaneiro_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoRiodeJaneiro_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoRiodeJaneiro_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
-			<media id="imgRiodeJaneiro_Selecao" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imgRiodeJaneiro_Selecao" src="media/logocopa.png" descriptor="des#idSelecao"/>
 
 			<media id="imgRiodeJaneiro_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgRiodeJaneiro_PTur1" src="media/RiodeJaneiro/ponto1.png" descriptor="des#idPontoTur1"/>
@@ -855,7 +834,7 @@
 			<media id="imgRiodeJaneiro_PTur2_G" src="media/RiodeJaneiro/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgRiodeJaneiro_PTur3_G" src="media/RiodeJaneiro/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgRiodeJaneiro_PTur4_G" src="media/RiodeJaneiro/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imagemSelecao11" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imagemSelecao11" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			
 			<link id="link_SelRiodeJaneiro_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgRiodeJaneiro_PTur1"/>
@@ -920,7 +899,6 @@
 		<context id="ctxSalvador">
 			<port id="portaSalvador" component="imgSalvador_Titulo"/> 
 			<port id="portaSalvadorTelaSelecao" component="imgSalvador_Background"/>
-			<port id="portaSalvador_Video" component="imgSalvador_Video"/>
 			<port id="portaSalvadorBotaoSair" component="botaoSalvador_Sair"/>
 			<port id="portaSalvadorBotaoVoltar" component="botaoSalvador_Voltar"/>
 			<port id="portaSalvador_Selecao" component="imgSalvador_Selecao"/>
@@ -930,10 +908,9 @@
 			<port id="portaSalvador_PTur4" component="imgSalvador_PTur4"/>
 			
 			<media id="imgSalvador_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="imgSalvador_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoSalvador_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoSalvador_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
-			<media id="imgSalvador_Selecao" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imgSalvador_Selecao" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			
 			<media id="imgSalvador_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgSalvador_PTur1" src="media/Salvador/ponto1.png" descriptor="des#idPontoTur1"/>
@@ -944,7 +921,7 @@
 			<media id="imgSalvador_PTur2_G" src="media/Salvador/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgSalvador_PTur3_G" src="media/Salvador/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgSalvador_PTur4_G" src="media/Salvador/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imagemSelecao12" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imagemSelecao12" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			
 			<link id="link_SelSalvador_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgSalvador_PTur1"/>
@@ -1010,7 +987,6 @@
 		<context id="ctxSaoPaulo">
 			<port id="portaSaoPaulo" component="imgSaoPaulo_Titulo"/> 
 			<port id="portaSaoPauloTelaSelecao" component="imgSaoPaulo_Background"/>
-			<port id="portaSaoPaulo_Video" component="imgSaoPaulo_Video"/>
 			<port id="portaSaoPauloBotaoSair" component="botaoSaoPaulo_Sair"/>
 			<port id="portaSaoPauloBotaoVoltar" component="botaoSaoPaulo_Voltar"/>
 			<port id="portaSaoPaulo_Selecao" component="imgSaoPaulo_Selecao"/>
@@ -1020,10 +996,9 @@
 			<port id="portaSaoPaulo_PTur4" component="imgSaoPaulo_PTur4"/>
 			
 			<media id="imgSaoPaulo_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="imgSaoPaulo_Video" src="media/logocopa.jpg" descriptor="des#idVideo"/>
 			<media id="botaoSaoPaulo_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoSaoPaulo_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
-			<media id="imgSaoPaulo_Selecao" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imgSaoPaulo_Selecao" src="media/logocopa.png" descriptor="des#idSelecao"/>
 			
 			<media id="imgSaoPaulo_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgSaoPaulo_PTur1" src="media/SaoPaulo/ponto1.png" descriptor="des#idPontoTur1"/>
@@ -1034,7 +1009,7 @@
 			<media id="imgSaoPaulo_PTur2_G" src="media/SaoPaulo/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgSaoPaulo_PTur3_G" src="media/SaoPaulo/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgSaoPaulo_PTur4_G" src="media/SaoPaulo/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imagemSelecao13" src="media/logocopa.jpg" descriptor="des#idSelecao"/>
+			<media id="imagemSelecao13" src="media/logocopa.png" descriptor="des#idSelecao"/>
 
 			<link id="link_SelSaoPaulo_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgSaoPaulo_PTur1"/>
@@ -1111,10 +1086,10 @@
 			<port id="portateste_PTur4" component="imgteste_PTur4"/>
 			
 			<media id="imgteste_Background" src="media/plano_fundo.png" descriptor="idImagemBackground"/>
-			<media id="imgteste_Video" src="media/logocopa.jpg" descriptor="idVideo"/>
+			<media id="imgteste_Video" src="media/logocopa.png" descriptor="idVideo"/>
 			<media id="botaoteste_Sair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
 			<media id="botaoteste_Voltar" src="media/botaoVoltar.png" descriptor="idBotaoVoltar"/>
-			<media id="imgteste_Selecao" src="media/logocopa.jpg" descriptor="idSelecao"/>
+			<media id="imgteste_Selecao" src="media/logocopa.png" descriptor="idSelecao"/>
 			
 			<link id="lVoltatesteParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoteste_Voltar">
