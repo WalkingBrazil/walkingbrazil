@@ -50,7 +50,7 @@
 			<area id="aImagemBackground" begin="1s"/>
 			<property name="bounds"/>
 		</media>
-		<media id="botaoInt" src="media/BotaoInterativo.png" descriptor="des#idBotaoInt"/>
+		<media id="botaoInt" src="media/botaoInteratividade.png" descriptor="des#idBotaoInt"/>
 		<link id="lImagBotaoIntAparece" xconnector="conectores#noInicio">
 			<bind role="onBegin" component="Video"/>
 			<bind role="start" component="botaoInt"/>
