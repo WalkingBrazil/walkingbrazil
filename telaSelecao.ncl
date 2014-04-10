@@ -15,7 +15,7 @@
 	<body id="bodyTelaSelecao">
 		
 		<context id="ctxBeloHorizonte">
-			<port id="portaTelaSelecao" component="imagemBackground"/>
+			<!--<port id="portaTelaSelecao" component="imagemBackground"/>-->
 <!--			<port id="portaBeloHorizonte_Video" component="imagemVideo"/>
 -->			<port id="portaBotaoSair" component="botaoSair"/>
 			<port id="portaBotaoVoltar" component="botaoVoltar"/>

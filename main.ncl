@@ -51,6 +51,8 @@
 			<property name="bounds"/>
 		</media>
 		<media id="botaoInt" src="media/botaoInteratividade.png" descriptor="des#idBotaoInt"/>
+		<media id="imagemTelaInicial" src="media/plano_fundo.png" descriptor="des#idTelaInicial"/>
+		
 		<link id="lImagBotaoIntAparece" xconnector="conectores#noInicio">
 			<bind role="onBegin" component="Video"/>
 			<bind role="start" component="botaoInt"/>
@@ -69,6 +71,7 @@
 			</bind>
 			<bind role="stop" component="botaoInt"/>
 			<bind role="abort" component="botaoInt"/>
+			<bind role="start" component="imagemTelaInicial"/>
 			<bind role="start" component="ctxTelaInicial"/>
 		</link>
 		<context id="ctxTelaInicial">
@@ -85,7 +88,7 @@
 			<context id="ctxSalvador"		refer="tSel#ctxSalvador"/>
 			<context id="ctxSaoPaulo"		refer="tSel#ctxSaoPaulo"/>
 			
-			<port id="portaTelaInicial"		component="imagemTelaInicial"/>
+			<!--<port id="portaTelaInicial"		component="imagemTelaInicial"/>-->
 			<port id="portaMapa"			component="imagemMapa"/>
 			<port id="portaPontoAM" 		component="pontoAM"/>
 			<port id="portaPontoMT" 		component="pontoMT"/>
@@ -127,7 +130,7 @@
 			
 			<media id="video_refer" refer="Video" instance="instSame"/>
   			<media id="botaoInt_refer" refer="botaoInt" instance="instSame"/>
-			<media id="imagemTelaInicial" src="media/plano_fundo.png" descriptor="des#idTelaInicial"/>
+			<!--<media id="imagemTelaInicial" src="media/plano_fundo.png" descriptor="des#idTelaInicial"/>-->
 			<media id="imagemMapa" src="media/mapa.png" descriptor="des#idMapa"/>
 			<media id="settings" type="application/x-ginga-settings">
 				<property name="service.currentKeyMaster" value=""/>
