@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- Generated	by NCL Eclipse -->
-<ncl id="connectorBaseTelaInicial" xmlns="http://www.ncl.org.br/NCL3.0/EDTVProfile">
+<ncl id="conectores" xmlns="http://www.ncl.org.br/NCL3.0/EDTVProfile">
 	<head>
 		<connectorBase>
 			<causalConnector id="noInicio">
@@ -36,6 +36,15 @@
 				<compoundAction operator="seq">
 					<simpleAction role="stop" max="unbounded"/>
 					<simpleAction role="start" max="unbounded"/>
+				</compoundAction>
+			</causalConnector>
+			<causalConnector id="onEndStartStopSet">
+				<connectorParam name="var"/>
+				<simpleCondition role="onEnd"/>
+				<compoundAction operator="seq">
+					<simpleAction role="set" value="$var"/>
+					<simpleAction role="stop"/>
+					<simpleAction role="start"/>
 				</compoundAction>
 			</causalConnector>
 			<causalConnector id="onKeySelectionSetStartNStop">

@@ -9,11 +9,10 @@
 			<importBase alias="des" documentURI="descritores.ncl"/>
 		</descriptorBase>
 		<connectorBase>
-			<importBase documentURI="connectorBaseTelaInicial.ncl" alias="conectores"/>
+			<importBase documentURI="conectores.ncl" alias="conectores"/>
 		</connectorBase>
 	</head>
 	<body id="bodyTelaSelecao">
-		
 		<context id="ctxBeloHorizonte">
 			<port id="portaBotaoSair" component="botaoSair"/>
 			<port id="portaBotaoVoltar" component="botaoVoltar"/>
@@ -23,7 +22,6 @@
 			<port id="portaBeloHorizonte_PTur2" component="imgBeloHorizonte_PTur2"/>
 			<port id="portaBeloHorizonte_PTur3" component="imgBeloHorizonte_PTur3"/>
 			<port id="portaBeloHorizonte_PTur4" component="imgBeloHorizonte_PTur4"/>
-			
 			<media id="imagemBackground" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="botaoSair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoVoltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -37,12 +35,10 @@
 			<media id="imgBH_PTur3_G" src="media/BeloHorizonte/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgBH_PTur4_G" src="media/BeloHorizonte/ponto4.png" descriptor="des#idInfoPTur"/>
 			<media id="imgBeloHorizonte_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			
 			<link id="lIniciaTelaSelecao" xconnector="conectores#noInicio">
 				<bind role="onBegin" component="imagemBackground"/>
 				<bind role="start" component="botaoSair"/>
 			</link>
-			
 			<link id="link_SelBH_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgBeloHorizonte_PTur1"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur1"/>
@@ -61,6 +57,7 @@
 				<bind role="stop" component="imgBeloHorizonte_PTur3"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur4"/>
 				<bind role="stop" component="imgBeloHorizonte_Selecao"/>
+				<bind role="stop" component="imgBeloHorizonte_Titulo"/>
 				<bind role="start" component="imgBH_PTur2_G"/>
 			</link>
 			<link id="link_SelBH_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -70,6 +67,7 @@
 				<bind role="stop" component="imgBeloHorizonte_PTur3"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur4"/>
 				<bind role="stop" component="imgBeloHorizonte_Selecao"/>
+				<bind role="stop" component="imgBeloHorizonte_Titulo"/>
 				<bind role="start" component="imgBH_PTur3_G"/>
 			</link>
 			<link id="link_SelBH_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -79,10 +77,9 @@
 				<bind role="stop" component="imgBeloHorizonte_PTur3"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur4"/>
 				<bind role="stop" component="imgBeloHorizonte_Selecao"/>
+				<bind role="stop" component="imgBeloHorizonte_Titulo"/>
 				<bind role="start" component="imgBH_PTur4_G"/>
 			</link>
-			
-			
 			<link id="lVoltaBeloHorizonteParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoVoltar">
 					<!--muda essa component-->
@@ -105,12 +102,11 @@
 				<bind component="imgBH_PTur2_G" role="stop"/>
 				<bind component="imgBH_PTur3_G" role="stop"/>
 				<bind component="imgBH_PTur4_G" role="stop"/>
-				
 				<bind component="ctxBeloHorizonte" role="start"/>
 			</link>
 		</context>
 		<context id="ctxBrasilia">
-			<port id="portaBrasilia" component="imgBrasilia_Titulo"/> 
+			<port id="portaBrasilia" component="imgBrasilia_Titulo"/>
 			<port id="portaBrasiliaTelaSelecao" component="imgBrasilia_Background"/>
 			<port id="portaBrasiliaBotaoSair" component="botaoBrasilia_Sair"/>
 			<port id="portaBrasiliaBotaoVoltar" component="botaoBrasilia_Voltar"/>
@@ -119,12 +115,10 @@
 			<port id="portaBrasilia_PTur2" component="imgBrasilia_PTur2"/>
 			<port id="portaBrasilia_PTur3" component="imgBrasilia_PTur3"/>
 			<port id="portaBrasilia_PTur4" component="imgBrasilia_PTur4"/>
-			
 			<media id="imgBrasilia_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="botaoBrasilia_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoBrasilia_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="imgBrasilia_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			
 			<media id="imgBrasilia_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgBrasilia_PTur1" src="media/Brasilia/ponto1.png" descriptor="des#idPontoTur1"/>
 			<media id="imgBrasilia_PTur2" src="media/Brasilia/ponto2.png" descriptor="des#idPontoTur2"/>
@@ -134,7 +128,6 @@
 			<media id="imgBrasilia_PTur2_G" src="media/Brasilia/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgBrasilia_PTur3_G" src="media/Brasilia/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgBrasilia_PTur4_G" src="media/Brasilia/ponto4.png" descriptor="des#idInfoPTur"/>
-			
 			<link id="link_SelBrasilia_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgBrasilia_PTur1"/>
 				<bind role="stop" component="imgBrasilia_PTur1"/>
@@ -142,6 +135,7 @@
 				<bind role="stop" component="imgBrasilia_PTur3"/>
 				<bind role="stop" component="imgBrasilia_PTur4"/>
 				<bind role="stop" component="imgBrasilia_Selecao"/>
+				<bind role="stop" component="imgBrasilia_Titulo"/>
 				<bind role="start" component="imgBrasilia_PTur1_G"/>
 			</link>
 			<link id="link_SelBrasilia_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -151,6 +145,7 @@
 				<bind role="stop" component="imgBrasilia_PTur3"/>
 				<bind role="stop" component="imgBrasilia_PTur4"/>
 				<bind role="stop" component="imgBrasilia_Selecao"/>
+				<bind role="stop" component="imgBrasilia_Titulo"/>
 				<bind role="start" component="imgBrasilia_PTur2_G"/>
 			</link>
 			<link id="link_SelBrasilia_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -160,6 +155,7 @@
 				<bind role="stop" component="imgBrasilia_PTur3"/>
 				<bind role="stop" component="imgBrasilia_PTur4"/>
 				<bind role="stop" component="imgBrasilia_Selecao"/>
+				<bind role="stop" component="imgBrasilia_Titulo"/>
 				<bind role="start" component="imgBrasilia_PTur3_G"/>
 			</link>
 			<link id="link_SelBrasilia_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -169,6 +165,7 @@
 				<bind role="stop" component="imgBrasilia_PTur3"/>
 				<bind role="stop" component="imgBrasilia_PTur4"/>
 				<bind role="stop" component="imgBrasilia_Selecao"/>
+				<bind role="stop" component="imgBrasilia_Titulo"/>
 				<bind role="start" component="imgBrasilia_PTur4_G"/>
 			</link>
 			<link id="lVoltaBrasiliaParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
@@ -191,11 +188,9 @@
 				<bind component="imgBrasilia_PTur2_G" role="stop"/>
 				<bind component="imgBrasilia_PTur3_G" role="stop"/>
 				<bind component="imgBrasilia_PTur4_G" role="stop"/>
-				
 				<bind component="ctxBrasilia" role="start"/>
 			</link>
 		</context>
-		
 		<context id="ctxCuiaba">
 			<port id="portaCuiaba" component="imgCuiaba_Titulo"/>
 			<port id="portaCuiabaTelaSelecao" component="imgCuiaba_Background"/>
@@ -206,13 +201,10 @@
 			<port id="portaCuiaba_PTur2" component="imgCuiaba_PTur2"/>
 			<port id="portaCuiaba_PTur3" component="imgCuiaba_PTur3"/>
 			<port id="portaCuiaba_PTur4" component="imgCuiaba_PTur4"/>
-			
 			<media id="imgCuiaba_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="botaoCuiaba_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoCuiaba_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="imgCuiaba_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			
-			
 			<media id="imgCuiaba_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgCuiaba_PTur1" src="media/Cuiaba/ponto1.png" descriptor="des#idPontoTur1"/>
 			<media id="imgCuiaba_PTur2" src="media/Cuiaba/ponto2.png" descriptor="des#idPontoTur2"/>
@@ -223,7 +215,6 @@
 			<media id="imgCuiaba_PTur3_G" src="media/Cuiaba/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgCuiaba_PTur4_G" src="media/Cuiaba/ponto4.png" descriptor="des#idInfoPTur"/>
 			<media id="imagemSelecao4" src="media/ponto1.png" descriptor="des#idSelecao"/>
-
 			<link id="link_SelCuiaba_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgCuiaba_PTur1"/>
 				<bind role="stop" component="imgCuiaba_PTur1"/>
@@ -231,6 +222,7 @@
 				<bind role="stop" component="imgCuiaba_PTur3"/>
 				<bind role="stop" component="imgCuiaba_PTur4"/>
 				<bind role="stop" component="imgCuiaba_Selecao"/>
+				<bind role="stop" component="imgCuiaba_Titulo"/>
 				<bind role="start" component="imgCuiaba_PTur1_G"/>
 			</link>
 			<link id="link_SelCuiaba_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -240,6 +232,7 @@
 				<bind role="stop" component="imgCuiaba_PTur3"/>
 				<bind role="stop" component="imgCuiaba_PTur4"/>
 				<bind role="stop" component="imgCuiaba_Selecao"/>
+				<bind role="stop" component="imgCuiaba_Titulo"/>
 				<bind role="start" component="imgCuiaba_PTur2_G"/>
 			</link>
 			<link id="link_SelCuiaba_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -249,6 +242,7 @@
 				<bind role="stop" component="imgCuiaba_PTur3"/>
 				<bind role="stop" component="imgCuiaba_PTur4"/>
 				<bind role="stop" component="imgCuiaba_Selecao"/>
+				<bind role="stop" component="imgCuiaba_Titulo"/>
 				<bind role="start" component="imgCuiaba_PTur3_G"/>
 			</link>
 			<link id="link_SelCuiaba_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -258,6 +252,7 @@
 				<bind role="stop" component="imgCuiaba_PTur3"/>
 				<bind role="stop" component="imgCuiaba_PTur4"/>
 				<bind role="stop" component="imgCuiaba_Selecao"/>
+				<bind role="stop" component="imgCuiaba_Titulo"/>
 				<bind role="start" component="imgCuiaba_PTur4_G"/>
 			</link>
 			<link id="lVoltaCuiabaParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
@@ -280,12 +275,11 @@
 				<bind component="imgCuiaba_PTur2_G" role="stop"/>
 				<bind component="imgCuiaba_PTur3_G" role="stop"/>
 				<bind component="imgCuiaba_PTur4_G" role="stop"/>
-				
 				<bind component="ctxCuiaba" role="start"/>
 			</link>
 		</context>
 		<context id="ctxCuritiba">
-			<port id="portaCuritiba" component="imgCuritiba_Titulo"/> 
+			<port id="portaCuritiba" component="imgCuritiba_Titulo"/>
 			<port id="portaCuritibaTelaSelecao" component="imgCuritiba_Background"/>
 			<port id="portaCuritibaBotaoSair" component="botaoCuritiba_Sair"/>
 			<port id="portaCuritibaBotaoVoltar" component="botaoCuritiba_Voltar"/>
@@ -294,7 +288,6 @@
 			<port id="portaCuritiba_PTur2" component="imgCuritiba_PTur2"/>
 			<port id="portaCuritiba_PTur3" component="imgCuritiba_PTur3"/>
 			<port id="portaCuritiba_PTur4" component="imgCuritiba_PTur4"/>
-			
 			<media id="imgCuritiba_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="botaoCuritiba_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoCuritiba_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
@@ -309,8 +302,6 @@
 			<media id="imgCuritiba_PTur3_G" src="media/Curitiba/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgCuritiba_PTur4_G" src="media/Curitiba/ponto4.png" descriptor="des#idInfoPTur"/>
 			<media id="imagemSelecao5" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			
-
 			<link id="link_SelCuritiba_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgCuritiba_PTur1"/>
 				<bind role="stop" component="imgCuritiba_PTur1"/>
@@ -318,6 +309,7 @@
 				<bind role="stop" component="imgCuritiba_PTur3"/>
 				<bind role="stop" component="imgCuritiba_PTur4"/>
 				<bind role="stop" component="imgCuritiba_Selecao"/>
+				<bind role="stop" component="imgCuritiba_Titulo"/>
 				<bind role="start" component="imgCuritiba_PTur1_G"/>
 			</link>
 			<link id="link_SelCuritiba_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -327,6 +319,7 @@
 				<bind role="stop" component="imgCuritiba_PTur3"/>
 				<bind role="stop" component="imgCuritiba_PTur4"/>
 				<bind role="stop" component="imgCuritiba_Selecao"/>
+				<bind role="stop" component="imgCuritiba_Titulo"/>
 				<bind role="start" component="imgCuritiba_PTur2_G"/>
 			</link>
 			<link id="link_SelCuritiba_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -336,6 +329,7 @@
 				<bind role="stop" component="imgCuritiba_PTur3"/>
 				<bind role="stop" component="imgCuritiba_PTur4"/>
 				<bind role="stop" component="imgCuritiba_Selecao"/>
+				<bind role="stop" component="imgCuritiba_Titulo"/>
 				<bind role="start" component="imgCuritiba_PTur3_G"/>
 			</link>
 			<link id="link_SelCuritiba_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -345,6 +339,7 @@
 				<bind role="stop" component="imgCuritiba_PTur3"/>
 				<bind role="stop" component="imgCuritiba_PTur4"/>
 				<bind role="stop" component="imgCuritiba_Selecao"/>
+				<bind role="stop" component="imgCuritiba_Titulo"/>
 				<bind role="start" component="imgCuritiba_PTur4_G"/>
 			</link>
 			<link id="lVoltaCuritibaParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
@@ -367,12 +362,11 @@
 				<bind component="imgCuritiba_PTur2_G" role="stop"/>
 				<bind component="imgCuritiba_PTur3_G" role="stop"/>
 				<bind component="imgCuritiba_PTur4_G" role="stop"/>
-				
 				<bind component="ctxCuritiba" role="start"/>
 			</link>
 		</context>
 		<context id="ctxFortaleza">
-			<port id="portaFortaleza" component="imgFortaleza_Titulo"/> 
+			<port id="portaFortaleza" component="imgFortaleza_Titulo"/>
 			<port id="portaFortalezaTelaSelecao" component="imgFortaleza_Background"/>
 			<port id="portaFortalezaBotaoSair" component="botaoFortaleza_Sair"/>
 			<port id="portaFortalezaBotaoVoltar" component="botaoFortaleza_Voltar"/>
@@ -381,12 +375,10 @@
 			<port id="portaFortaleza_PTur2" component="imgFortaleza_PTur2"/>
 			<port id="portaFortaleza_PTur3" component="imgFortaleza_PTur3"/>
 			<port id="portaFortaleza_PTur4" component="imgFortaleza_PTur4"/>
-			
 			<media id="imgFortaleza_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="botaoFortaleza_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoFortaleza_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="imgFortaleza_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-
 			<media id="imgFortaleza_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgFortaleza_PTur1" src="media/Fortaleza/ponto1.png" descriptor="des#idPontoTur1"/>
 			<media id="imgFortaleza_PTur2" src="media/Fortaleza/ponto2.png" descriptor="des#idPontoTur2"/>
@@ -397,7 +389,6 @@
 			<media id="imgFortaleza_PTur3_G" src="media/Fortaleza/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgFortaleza_PTur4_G" src="media/Fortaleza/ponto4.png" descriptor="des#idInfoPTur"/>
 			<media id="imagemSelecao6" src="media/ponto1.png" descriptor="des#idSelecao"/>
-
 			<link id="link_SelFortaleza_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgFortaleza_PTur1"/>
 				<bind role="stop" component="imgFortaleza_PTur1"/>
@@ -405,6 +396,7 @@
 				<bind role="stop" component="imgFortaleza_PTur3"/>
 				<bind role="stop" component="imgFortaleza_PTur4"/>
 				<bind role="stop" component="imgFortaleza_Selecao"/>
+				<bind role="stop" component="imgFortaleza_Titulo"/>
 				<bind role="start" component="imgFortaleza_PTur1_G"/>
 			</link>
 			<link id="link_SelFortaleza_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -414,6 +406,7 @@
 				<bind role="stop" component="imgFortaleza_PTur3"/>
 				<bind role="stop" component="imgFortaleza_PTur4"/>
 				<bind role="stop" component="imgFortaleza_Selecao"/>
+				<bind role="stop" component="imgFortaleza_Titulo"/>
 				<bind role="start" component="imgFortaleza_PTur2_G"/>
 			</link>
 			<link id="link_SelFortaleza_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -423,6 +416,7 @@
 				<bind role="stop" component="imgFortaleza_PTur3"/>
 				<bind role="stop" component="imgFortaleza_PTur4"/>
 				<bind role="stop" component="imgFortaleza_Selecao"/>
+				<bind role="stop" component="imgFortaleza_Titulo"/>
 				<bind role="start" component="imgFortaleza_PTur3_G"/>
 			</link>
 			<link id="link_SelFortaleza_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -432,6 +426,7 @@
 				<bind role="stop" component="imgFortaleza_PTur3"/>
 				<bind role="stop" component="imgFortaleza_PTur4"/>
 				<bind role="stop" component="imgFortaleza_Selecao"/>
+				<bind role="stop" component="imgFortaleza_Titulo"/>
 				<bind role="start" component="imgFortaleza_PTur4_G"/>
 			</link>
 			<link id="lVoltaFortalezaParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
@@ -454,12 +449,11 @@
 				<bind component="imgFortaleza_PTur2_G" role="stop"/>
 				<bind component="imgFortaleza_PTur3_G" role="stop"/>
 				<bind component="imgFortaleza_PTur4_G" role="stop"/>
-				
 				<bind component="ctxFortaleza" role="start"/>
 			</link>
 		</context>
 		<context id="ctxManaus">
-			<port id="portaManaus" component="imgManaus_Titulo"/> 
+			<port id="portaManaus" component="imgManaus_Titulo"/>
 			<port id="portaManausTelaSelecao" component="imgManaus_Background"/>
 			<port id="portaManausBotaoSair" component="botaoManaus_Sair"/>
 			<port id="portaManausBotaoVoltar" component="botaoManaus_Voltar"/>
@@ -468,13 +462,10 @@
 			<port id="portaManaus_PTur2" component="imgManaus_PTur2"/>
 			<port id="portaManaus_PTur3" component="imgManaus_PTur3"/>
 			<port id="portaManaus_PTur4" component="imgManaus_PTur4"/>
-			
 			<media id="imgManaus_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="botaoManaus_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoManaus_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="imgManaus_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-
-
 			<media id="imgManaus_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgManaus_PTur1" src="media/Manaus/ponto1.png" descriptor="des#idPontoTur1"/>
 			<media id="imgManaus_PTur2" src="media/Manaus/ponto2.png" descriptor="des#idPontoTur2"/>
@@ -485,8 +476,6 @@
 			<media id="imgManaus_PTur3_G" src="media/Manaus/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgManaus_PTur4_G" src="media/Manaus/ponto4.png" descriptor="des#idInfoPTur"/>
 			<media id="imagemSelecao7" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			
-		
 			<link id="link_SelManaus_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgManaus_PTur1"/>
 				<bind role="stop" component="imgManaus_Titulo"/>
@@ -495,6 +484,7 @@
 				<bind role="stop" component="imgManaus_PTur3"/>
 				<bind role="stop" component="imgManaus_PTur4"/>
 				<bind role="stop" component="imgManaus_Selecao"/>
+				<bind role="stop" component="imgManaus_Titulo"/>
 				<bind role="start" component="imgManaus_PTur1_G"/>
 			</link>
 			<link id="link_SelManaus_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -504,6 +494,7 @@
 				<bind role="stop" component="imgManaus_PTur3"/>
 				<bind role="stop" component="imgManaus_PTur4"/>
 				<bind role="stop" component="imgManaus_Selecao"/>
+				<bind role="stop" component="imgManaus_Titulo"/>
 				<bind role="start" component="imgManaus_PTur2_G"/>
 			</link>
 			<link id="link_SelManaus_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -513,6 +504,7 @@
 				<bind role="stop" component="imgManaus_PTur3"/>
 				<bind role="stop" component="imgManaus_PTur4"/>
 				<bind role="stop" component="imgManaus_Selecao"/>
+				<bind role="stop" component="imgManaus_Titulo"/>
 				<bind role="start" component="imgManaus_PTur3_G"/>
 			</link>
 			<link id="link_SelManaus_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -522,6 +514,7 @@
 				<bind role="stop" component="imgManaus_PTur3"/>
 				<bind role="stop" component="imgManaus_PTur4"/>
 				<bind role="stop" component="imgManaus_Selecao"/>
+				<bind role="stop" component="imgManaus_Titulo"/>
 				<bind role="start" component="imgManaus_PTur4_G"/>
 			</link>
 			<link id="lVoltaManausParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
@@ -544,12 +537,11 @@
 				<bind component="imgManaus_PTur2_G" role="stop"/>
 				<bind component="imgManaus_PTur3_G" role="stop"/>
 				<bind component="imgManaus_PTur4_G" role="stop"/>
-				
 				<bind component="ctxManaus" role="start"/>
 			</link>
 		</context>
 		<context id="ctxNatal">
-			<port id="portaNatal" component="imgNatal_Titulo"/> 
+			<port id="portaNatal" component="imgNatal_Titulo"/>
 			<port id="portaNatalTelaSelecao" component="imgNatal_Background"/>
 			<port id="portaNatalBotaoSair" component="botaoNatal_Sair"/>
 			<port id="portaNatalBotaoVoltar" component="botaoNatal_Voltar"/>
@@ -558,12 +550,10 @@
 			<port id="portaNatal_PTur2" component="imgNatal_PTur2"/>
 			<port id="portaNatal_PTur3" component="imgNatal_PTur3"/>
 			<port id="portaNatal_PTur4" component="imgNatal_PTur4"/>
-			
 			<media id="imgNatal_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="botaoNatal_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoNatal_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="imgNatal_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-
 			<media id="imgNatal_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgNatal_PTur1" src="media/Natal/ponto1.png" descriptor="des#idPontoTur1"/>
 			<media id="imgNatal_PTur2" src="media/Natal/ponto2.png" descriptor="des#idPontoTur2"/>
@@ -574,7 +564,6 @@
 			<media id="imgNatal_PTur3_G" src="media/Natal/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgNatal_PTur4_G" src="media/Natal/ponto4.png" descriptor="des#idInfoPTur"/>
 			<media id="imagemSelecao8" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			
 			<link id="link_SelNatal_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgNatal_PTur1"/>
 				<bind role="stop" component="imgNatal_PTur1"/>
@@ -582,6 +571,7 @@
 				<bind role="stop" component="imgNatal_PTur3"/>
 				<bind role="stop" component="imgNatal_PTur4"/>
 				<bind role="stop" component="imgNatal_Selecao"/>
+				<bind role="stop" component="imgNatal_Titulo"/>
 				<bind role="start" component="imgNatal_PTur1_G"/>
 			</link>
 			<link id="link_SelNatal_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -591,6 +581,7 @@
 				<bind role="stop" component="imgNatal_PTur3"/>
 				<bind role="stop" component="imgNatal_PTur4"/>
 				<bind role="stop" component="imgNatal_Selecao"/>
+				<bind role="stop" component="imgNatal_Titulo"/>
 				<bind role="start" component="imgNatal_PTur2_G"/>
 			</link>
 			<link id="link_SelNatal_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -600,6 +591,7 @@
 				<bind role="stop" component="imgNatal_PTur3"/>
 				<bind role="stop" component="imgNatal_PTur4"/>
 				<bind role="stop" component="imgNatal_Selecao"/>
+				<bind role="stop" component="imgNatal_Titulo"/>
 				<bind role="start" component="imgNatal_PTur3_G"/>
 			</link>
 			<link id="link_SelNatal_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -609,6 +601,7 @@
 				<bind role="stop" component="imgNatal_PTur3"/>
 				<bind role="stop" component="imgNatal_PTur4"/>
 				<bind role="stop" component="imgNatal_Selecao"/>
+				<bind role="stop" component="imgNatal_Titulo"/>
 				<bind role="start" component="imgNatal_PTur4_G"/>
 			</link>
 			<link id="lVoltaNatalParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
@@ -631,12 +624,11 @@
 				<bind component="imgNatal_PTur2_G" role="stop"/>
 				<bind component="imgNatal_PTur3_G" role="stop"/>
 				<bind component="imgNatal_PTur4_G" role="stop"/>
-				
 				<bind component="ctxNatal" role="start"/>
 			</link>
 		</context>
 		<context id="ctxPortoAlegre">
-			<port id="portaPortoAlegre" component="imgPortoAlegre_Titulo"/> 
+			<port id="portaPortoAlegre" component="imgPortoAlegre_Titulo"/>
 			<port id="portaPortoAlegreTelaSelecao" component="imgPortoAlegre_Background"/>
 			<port id="portaPortoAlegreBotaoSair" component="botaoPortoAlegre_Sair"/>
 			<port id="portaPortoAlegreBotaoVoltar" component="botaoPortoAlegre_Voltar"/>
@@ -645,12 +637,10 @@
 			<port id="portaPortoAlegre_PTur2" component="imgPortoAlegre_PTur2"/>
 			<port id="portaPortoAlegre_PTur3" component="imgPortoAlegre_PTur3"/>
 			<port id="portaPortoAlegre_PTur4" component="imgPortoAlegre_PTur4"/>
-			
 			<media id="imgPortoAlegre_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="botaoPortoAlegre_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoPortoAlegre_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="imgPortoAlegre_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-
 			<media id="imgPortoAlegre_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgPortoAlegre_PTur1" src="media/PortoAlegre/ponto1.png" descriptor="des#idPontoTur1"/>
 			<media id="imgPortoAlegre_PTur2" src="media/PortoAlegre/ponto2.png" descriptor="des#idPontoTur2"/>
@@ -661,7 +651,6 @@
 			<media id="imgPortoAlegre_PTur3_G" src="media/PortoAlegre/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgPortoAlegre_PTur4_G" src="media/PortoAlegre/ponto4.png" descriptor="des#idInfoPTur"/>
 			<media id="imagemSelecao9" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			
 			<link id="link_SelPortoAlegre_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgPortoAlegre_PTur1"/>
 				<bind role="stop" component="imgPortoAlegre_PTur1"/>
@@ -669,6 +658,7 @@
 				<bind role="stop" component="imgPortoAlegre_PTur3"/>
 				<bind role="stop" component="imgPortoAlegre_PTur4"/>
 				<bind role="stop" component="imgPortoAlegre_Selecao"/>
+				<bind role="stop" component="imgPortoAlegre_Titulo"/>
 				<bind role="start" component="imgPortoAlegre_PTur1_G"/>
 			</link>
 			<link id="link_SelPortoAlegre_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -678,6 +668,7 @@
 				<bind role="stop" component="imgPortoAlegre_PTur3"/>
 				<bind role="stop" component="imgPortoAlegre_PTur4"/>
 				<bind role="stop" component="imgPortoAlegre_Selecao"/>
+				<bind role="stop" component="imgPortoAlegre_Titulo"/>
 				<bind role="start" component="imgPortoAlegre_PTur2_G"/>
 			</link>
 			<link id="link_SelPortoAlegre_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -687,6 +678,7 @@
 				<bind role="stop" component="imgPortoAlegre_PTur3"/>
 				<bind role="stop" component="imgPortoAlegre_PTur4"/>
 				<bind role="stop" component="imgPortoAlegre_Selecao"/>
+				<bind role="stop" component="imgPortoAlegre_Titulo"/>
 				<bind role="start" component="imgPortoAlegre_PTur3_G"/>
 			</link>
 			<link id="link_SelPortoAlegre_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -696,6 +688,7 @@
 				<bind role="stop" component="imgPortoAlegre_PTur3"/>
 				<bind role="stop" component="imgPortoAlegre_PTur4"/>
 				<bind role="stop" component="imgPortoAlegre_Selecao"/>
+				<bind role="stop" component="imgPortoAlegre_Titulo"/>
 				<bind role="start" component="imgPortoAlegre_PTur4_G"/>
 			</link>
 			<link id="lVoltaPortoAlegreParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
@@ -718,12 +711,11 @@
 				<bind component="imgPortoAlegre_PTur2_G" role="stop"/>
 				<bind component="imgPortoAlegre_PTur3_G" role="stop"/>
 				<bind component="imgPortoAlegre_PTur4_G" role="stop"/>
-				
 				<bind component="ctxPortoAlegre" role="start"/>
 			</link>
 		</context>
 		<context id="ctxRecife">
-			<port id="portaRecife" component="imgRecife_Titulo"/> 
+			<port id="portaRecife" component="imgRecife_Titulo"/>
 			<port id="portaRecifeTelaSelecao" component="imgRecife_Background"/>
 			<port id="portaRecifeBotaoSair" component="botaoRecife_Sair"/>
 			<port id="portaRecifeBotaoVoltar" component="botaoRecife_Voltar"/>
@@ -732,12 +724,10 @@
 			<port id="portaRecife_PTur2" component="imgRecife_PTur2"/>
 			<port id="portaRecife_PTur3" component="imgRecife_PTur3"/>
 			<port id="portaRecife_PTur4" component="imgRecife_PTur4"/>
-			
 			<media id="imgRecife_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="botaoRecife_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoRecife_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="imgRecife_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			
 			<media id="imgRecife_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgRecife_PTur1" src="media/Recife/ponto1.png" descriptor="des#idPontoTur1"/>
 			<media id="imgRecife_PTur2" src="media/Recife/ponto2.png" descriptor="des#idPontoTur2"/>
@@ -748,7 +738,6 @@
 			<media id="imgRecife_PTur3_G" src="media/Recife/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgRecife_PTur4_G" src="media/Recife/ponto4.png" descriptor="des#idInfoPTur"/>
 			<media id="imagemSelecao10" src="media/ponto1.png" descriptor="des#idSelecao"/>
-		
 			<link id="link_SelRecife_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgRecife_PTur1"/>
 				<bind role="stop" component="imgRecife_PTur1"/>
@@ -756,6 +745,7 @@
 				<bind role="stop" component="imgRecife_PTur3"/>
 				<bind role="stop" component="imgRecife_PTur4"/>
 				<bind role="stop" component="imgRecife_Selecao"/>
+				<bind role="stop" component="imgRecife_Titulo"/>
 				<bind role="start" component="imgRecife_PTur1_G"/>
 			</link>
 			<link id="link_SelRecife_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -765,6 +755,7 @@
 				<bind role="stop" component="imgRecife_PTur3"/>
 				<bind role="stop" component="imgRecife_PTur4"/>
 				<bind role="stop" component="imgRecife_Selecao"/>
+				<bind role="stop" component="imgRecife_Titulo"/>
 				<bind role="start" component="imgRecife_PTur2_G"/>
 			</link>
 			<link id="link_SelRecife_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -774,6 +765,7 @@
 				<bind role="stop" component="imgRecife_PTur3"/>
 				<bind role="stop" component="imgRecife_PTur4"/>
 				<bind role="stop" component="imgRecife_Selecao"/>
+				<bind role="stop" component="imgRecife_Titulo"/>
 				<bind role="start" component="imgRecife_PTur3_G"/>
 			</link>
 			<link id="link_SelRecife_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -783,6 +775,7 @@
 				<bind role="stop" component="imgRecife_PTur3"/>
 				<bind role="stop" component="imgRecife_PTur4"/>
 				<bind role="stop" component="imgRecife_Selecao"/>
+				<bind role="stop" component="imgRecife_Titulo"/>
 				<bind role="start" component="imgRecife_PTur4_G"/>
 			</link>
 			<link id="lVoltaRecifeParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
@@ -805,12 +798,11 @@
 				<bind component="imgRecife_PTur2_G" role="stop"/>
 				<bind component="imgRecife_PTur3_G" role="stop"/>
 				<bind component="imgRecife_PTur4_G" role="stop"/>
-				
 				<bind component="ctxRecife" role="start"/>
 			</link>
 		</context>
 		<context id="ctxRiodeJaneiro">
-			<port id="portaRiodeJaneiro" component="imgRiodeJaneiro_Titulo"/> 
+			<port id="portaRiodeJaneiro" component="imgRiodeJaneiro_Titulo"/>
 			<port id="portaRiodeJaneiroTelaSelecao" component="imgRiodeJaneiro_Background"/>
 			<port id="portaRiodeJaneiroBotaoSair" component="botaoRiodeJaneiro_Sair"/>
 			<port id="portaRiodeJaneiroBotaoVoltar" component="botaoRiodeJaneiro_Voltar"/>
@@ -819,12 +811,10 @@
 			<port id="portaRiodeJaneiro_PTur2" component="imgRiodeJaneiro_PTur2"/>
 			<port id="portaRiodeJaneiro_PTur3" component="imgRiodeJaneiro_PTur3"/>
 			<port id="portaRiodeJaneiro_PTur4" component="imgRiodeJaneiro_PTur4"/>
-			
 			<media id="imgRiodeJaneiro_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="botaoRiodeJaneiro_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoRiodeJaneiro_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="imgRiodeJaneiro_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-
 			<media id="imgRiodeJaneiro_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgRiodeJaneiro_PTur1" src="media/RiodeJaneiro/ponto1.png" descriptor="des#idPontoTur1"/>
 			<media id="imgRiodeJaneiro_PTur2" src="media/RiodeJaneiro/ponto2.png" descriptor="des#idPontoTur2"/>
@@ -835,7 +825,6 @@
 			<media id="imgRiodeJaneiro_PTur3_G" src="media/RiodeJaneiro/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgRiodeJaneiro_PTur4_G" src="media/RiodeJaneiro/ponto4.png" descriptor="des#idInfoPTur"/>
 			<media id="imagemSelecao11" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			
 			<link id="link_SelRiodeJaneiro_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgRiodeJaneiro_PTur1"/>
 				<bind role="stop" component="imgRiodeJaneiro_PTur1"/>
@@ -843,6 +832,7 @@
 				<bind role="stop" component="imgRiodeJaneiro_PTur3"/>
 				<bind role="stop" component="imgRiodeJaneiro_PTur4"/>
 				<bind role="stop" component="imgRiodeJaneiro_Selecao"/>
+				<bind role="stop" component="imgRiodeJaneiro_Titulo"/>
 				<bind role="start" component="imgRiodeJaneiro_PTur1_G"/>
 			</link>
 			<link id="link_SelRiodeJaneiro_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -852,6 +842,7 @@
 				<bind role="stop" component="imgRiodeJaneiro_PTur3"/>
 				<bind role="stop" component="imgRiodeJaneiro_PTur4"/>
 				<bind role="stop" component="imgRiodeJaneiro_Selecao"/>
+				<bind role="stop" component="imgRiodeJaneiro_Titulo"/>
 				<bind role="start" component="imgRiodeJaneiro_PTur2_G"/>
 			</link>
 			<link id="link_SelRiodeJaneiro_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -861,6 +852,7 @@
 				<bind role="stop" component="imgRiodeJaneiro_PTur3"/>
 				<bind role="stop" component="imgRiodeJaneiro_PTur4"/>
 				<bind role="stop" component="imgRiodeJaneiro_Selecao"/>
+				<bind role="stop" component="imgRiodeJaneiro_Titulo"/>
 				<bind role="start" component="imgRiodeJaneiro_PTur3_G"/>
 			</link>
 			<link id="link_SelRiodeJaneiro_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -870,6 +862,7 @@
 				<bind role="stop" component="imgRiodeJaneiro_PTur3"/>
 				<bind role="stop" component="imgRiodeJaneiro_PTur4"/>
 				<bind role="stop" component="imgRiodeJaneiro_Selecao"/>
+				<bind role="stop" component="imgRiodeJaneiro_Titulo"/>
 				<bind role="start" component="imgRiodeJaneiro_PTur4_G"/>
 			</link>
 			<link id="lVoltaRiodeJaneiroParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
@@ -892,12 +885,11 @@
 				<bind component="imgRiodeJaneiro_PTur2_G" role="stop"/>
 				<bind component="imgRiodeJaneiro_PTur3_G" role="stop"/>
 				<bind component="imgRiodeJaneiro_PTur4_G" role="stop"/>
-				
 				<bind component="ctxRiodeJaneiro" role="start"/>
 			</link>
 		</context>
 		<context id="ctxSalvador">
-			<port id="portaSalvador" component="imgSalvador_Titulo"/> 
+			<port id="portaSalvador" component="imgSalvador_Titulo"/>
 			<port id="portaSalvadorTelaSelecao" component="imgSalvador_Background"/>
 			<port id="portaSalvadorBotaoSair" component="botaoSalvador_Sair"/>
 			<port id="portaSalvadorBotaoVoltar" component="botaoSalvador_Voltar"/>
@@ -906,12 +898,10 @@
 			<port id="portaSalvador_PTur2" component="imgSalvador_PTur2"/>
 			<port id="portaSalvador_PTur3" component="imgSalvador_PTur3"/>
 			<port id="portaSalvador_PTur4" component="imgSalvador_PTur4"/>
-			
 			<media id="imgSalvador_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="botaoSalvador_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoSalvador_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="imgSalvador_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			
 			<media id="imgSalvador_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgSalvador_PTur1" src="media/Salvador/ponto1.png" descriptor="des#idPontoTur1"/>
 			<media id="imgSalvador_PTur2" src="media/Salvador/ponto2.png" descriptor="des#idPontoTur2"/>
@@ -922,7 +912,6 @@
 			<media id="imgSalvador_PTur3_G" src="media/Salvador/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgSalvador_PTur4_G" src="media/Salvador/ponto4.png" descriptor="des#idInfoPTur"/>
 			<media id="imagemSelecao12" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			
 			<link id="link_SelSalvador_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgSalvador_PTur1"/>
 				<bind role="stop" component="imgSalvador_PTur1"/>
@@ -930,6 +919,7 @@
 				<bind role="stop" component="imgSalvador_PTur3"/>
 				<bind role="stop" component="imgSalvador_PTur4"/>
 				<bind role="stop" component="imgSalvador_Selecao"/>
+				<bind role="stop" component="imgSalvador_Titulo"/>
 				<bind role="start" component="imgSalvador_PTur1_G"/>
 			</link>
 			<link id="link_SelSalvador_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -939,6 +929,7 @@
 				<bind role="stop" component="imgSalvador_PTur3"/>
 				<bind role="stop" component="imgSalvador_PTur4"/>
 				<bind role="stop" component="imgSalvador_Selecao"/>
+				<bind role="stop" component="imgSalvador_Titulo"/>
 				<bind role="start" component="imgSalvador_PTur2_G"/>
 			</link>
 			<link id="link_SelSalvador_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -948,6 +939,7 @@
 				<bind role="stop" component="imgSalvador_PTur3"/>
 				<bind role="stop" component="imgSalvador_PTur4"/>
 				<bind role="stop" component="imgSalvador_Selecao"/>
+				<bind role="stop" component="imgSalvador_Titulo"/>
 				<bind role="start" component="imgSalvador_PTur3_G"/>
 			</link>
 			<link id="link_SelSalvador_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -957,9 +949,9 @@
 				<bind role="stop" component="imgSalvador_PTur3"/>
 				<bind role="stop" component="imgSalvador_PTur4"/>
 				<bind role="stop" component="imgSalvador_Selecao"/>
+				<bind role="stop" component="imgSalvador_Titulo"/>
 				<bind role="start" component="imgSalvador_PTur4_G"/>
 			</link>
-			
 			<link id="lVoltaSalvadorParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
 				<bind role="onSelection" component="botaoSalvador_Voltar">
 					<bindParam name="vKey" value="GREEN"/>
@@ -980,12 +972,11 @@
 				<bind component="imgSalvador_PTur2_G" role="stop"/>
 				<bind component="imgSalvador_PTur3_G" role="stop"/>
 				<bind component="imgSalvador_PTur4_G" role="stop"/>
-				
 				<bind component="ctxSalvador" role="start"/>
 			</link>
 		</context>
 		<context id="ctxSaoPaulo">
-			<port id="portaSaoPaulo" component="imgSaoPaulo_Titulo"/> 
+			<port id="portaSaoPaulo" component="imgSaoPaulo_Titulo"/>
 			<port id="portaSaoPauloTelaSelecao" component="imgSaoPaulo_Background"/>
 			<port id="portaSaoPauloBotaoSair" component="botaoSaoPaulo_Sair"/>
 			<port id="portaSaoPauloBotaoVoltar" component="botaoSaoPaulo_Voltar"/>
@@ -994,12 +985,10 @@
 			<port id="portaSaoPaulo_PTur2" component="imgSaoPaulo_PTur2"/>
 			<port id="portaSaoPaulo_PTur3" component="imgSaoPaulo_PTur3"/>
 			<port id="portaSaoPaulo_PTur4" component="imgSaoPaulo_PTur4"/>
-			
 			<media id="imgSaoPaulo_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
 			<media id="botaoSaoPaulo_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoSaoPaulo_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="imgSaoPaulo_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			
 			<media id="imgSaoPaulo_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
 			<media id="imgSaoPaulo_PTur1" src="media/SaoPaulo/ponto1.png" descriptor="des#idPontoTur1"/>
 			<media id="imgSaoPaulo_PTur2" src="media/SaoPaulo/ponto2.png" descriptor="des#idPontoTur2"/>
@@ -1010,7 +999,6 @@
 			<media id="imgSaoPaulo_PTur3_G" src="media/SaoPaulo/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgSaoPaulo_PTur4_G" src="media/SaoPaulo/ponto4.png" descriptor="des#idInfoPTur"/>
 			<media id="imagemSelecao13" src="media/ponto1.png" descriptor="des#idSelecao"/>
-
 			<link id="link_SelSaoPaulo_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgSaoPaulo_PTur1"/>
 				<bind role="stop" component="imgSaoPaulo_PTur1"/>
@@ -1018,6 +1006,7 @@
 				<bind role="stop" component="imgSaoPaulo_PTur3"/>
 				<bind role="stop" component="imgSaoPaulo_PTur4"/>
 				<bind role="stop" component="imgSaoPaulo_Selecao"/>
+				<bind role="stop" component="imgSaoPaulo_Titulo"/>
 				<bind role="start" component="imgSaoPaulo_PTur1_G"/>
 			</link>
 			<link id="link_SelSaoPaulo_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -1027,6 +1016,7 @@
 				<bind role="stop" component="imgSaoPaulo_PTur3"/>
 				<bind role="stop" component="imgSaoPaulo_PTur4"/>
 				<bind role="stop" component="imgSaoPaulo_Selecao"/>
+				<bind role="stop" component="imgSaoPaulo_Titulo"/>
 				<bind role="start" component="imgSaoPaulo_PTur2_G"/>
 			</link>
 			<link id="link_SelSaoPaulo_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -1036,6 +1026,7 @@
 				<bind role="stop" component="imgSaoPaulo_PTur3"/>
 				<bind role="stop" component="imgSaoPaulo_PTur4"/>
 				<bind role="stop" component="imgSaoPaulo_Selecao"/>
+				<bind role="stop" component="imgSaoPaulo_Titulo"/>
 				<bind role="start" component="imgSaoPaulo_PTur3_G"/>
 			</link>
 			<link id="link_SelSaoPaulo_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -1045,6 +1036,7 @@
 				<bind role="stop" component="imgSaoPaulo_PTur3"/>
 				<bind role="stop" component="imgSaoPaulo_PTur4"/>
 				<bind role="stop" component="imgSaoPaulo_Selecao"/>
+				<bind role="stop" component="imgSaoPaulo_Titulo"/>
 				<bind role="start" component="imgSaoPaulo_PTur4_G"/>
 			</link>
 			<link id="lVoltaSaoPauloParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
@@ -1067,53 +1059,8 @@
 				<bind component="imgSaoPaulo_PTur2_G" role="stop"/>
 				<bind component="imgSaoPaulo_PTur3_G" role="stop"/>
 				<bind component="imgSaoPaulo_PTur4_G" role="stop"/>
-				
 				<bind component="ctxSaoPaulo" role="start"/>
 			</link>
 		</context>
 	</body>
 </ncl>
-
-<!--
-			<port id="portateste" component="imgteste_Titulo"/> 
-			<port id="portatesteTelaSelecao" component="imgteste_Background"/>
-			<port id="portatesteBotaoSair" component="botaoteste_Sair"/>
-			<port id="portatesteBotaoVoltar" component="botaoteste_Voltar"/>
-			<port id="portateste_Selecao" component="imgteste_Selecao"/>
-			<port id="portateste_PTur1" component="imgteste_PTur1"/>
-			<port id="portateste_PTur2" component="imgteste_PTur2"/>
-			<port id="portateste_PTur3" component="imgteste_PTur3"/>
-			<port id="portateste_PTur4" component="imgteste_PTur4"/>
-			
-			<media id="imgteste_Background" src="media/plano_fundo.png" descriptor="idImagemBackground"/>
-			<media id="imgteste_Video" src="media/ponto1.png" descriptor="idVideo"/>
-			<media id="botaoteste_Sair" src="media/botaoSair.png" descriptor="idBotaoSair"/>
-			<media id="botaoteste_Voltar" src="media/botaoVoltar.png" descriptor="idBotaoVoltar"/>
-			<media id="imgteste_Selecao" src="media/ponto1.png" descriptor="idSelecao"/>
-			
-			<link id="lVoltatesteParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
-				<bind role="onSelection" component="botaoteste_Voltar">
-					<bindParam name="vKey" value="GREEN"/>
-				</bind>
-				<bind role="test" component="imgteste_Selecao">
-					<bindParam name="vState" value="occurring"/>
-				</bind>
-				<bind component="ctxteste" role="stop"/>
-			</link>
-			<link id="lVoltatesteParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
-				<bind role="onSelection" component="botaoteste_Voltar">
-					<bindParam name="vKey" value="
-"/>
-				</bind>
-				<bind role="test" component="imgteste_Selecao">
-					<bindParam name="vState" value="sleeping"/>
-				</bind>
-				<bind component="imgteste_PTur1_G" role="stop"/>
-				<bind component="imgteste_PTur2_G" role="stop"/>
-				<bind component="imgteste_PTur3_G" role="stop"/>
-				<bind component="imgteste_PTur4_G" role="stop"/>
-				
-				<bind component="ctxteste" role="start"/>
-			</link>
-			-->
-			
