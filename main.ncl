@@ -27,7 +27,7 @@
 	 !	 			definem o comportamento dos elos				 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 		<connectorBase>
-			<importBase documentURI="connectorBaseTelaInicial.ncl" alias="conectores"/>
+			<importBase documentURI="conectores.ncl" alias="conectores"/>
 		</connectorBase>
 	</head>
 	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

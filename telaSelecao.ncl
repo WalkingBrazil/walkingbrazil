@@ -9,7 +9,7 @@
 			<importBase alias="des" documentURI="descritores.ncl"/>
 		</descriptorBase>
 		<connectorBase>
-			<importBase documentURI="connectorBaseTelaInicial.ncl" alias="conectores"/>
+			<importBase documentURI="conectores.ncl" alias="conectores"/>
 		</connectorBase>
 	</head>
 	<body id="bodyTelaSelecao">
