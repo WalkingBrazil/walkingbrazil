@@ -10,18 +10,18 @@
 			<descriptor id="idTelaInicial" region="reg#regiaoTelaInicial"/>
 			<descriptor id="idMapa" region="reg#regiaoMapa"/>
 			
-			<descriptor id="idPontoAM" region="reg#regiaoPontoAM" focusIndex="ixPontoAM" moveDown="ixPontoMT" moveRight="ixPontoCE" focusSrc="media/pontoManaus.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoMT" region="reg#regiaoPontoMT" focusIndex="ixPontoMT" moveUp="ixPontoAM" moveDown="ixPontoDF" moveRight="ixPontoDF" focusSrc="media/pontoCuiaba.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoCE" region="reg#regiaoPontoCE" focusIndex="ixPontoCE" moveUp="ixPontoRS" moveDown="ixPontoRN" moveLeft="ixPontoAM" moveRight="ixPontoRN" focusSrc="media/pontoFortaleza.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoDF" region="reg#regiaoPontoDF" focusIndex="ixPontoDF" moveUp="ixPontoMT" moveDown="ixPontoMG" moveLeft="ixPontoMT" moveRight="ixPontoMG" focusSrc="media/pontoBrasilia.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoSP" region="reg#regiaoPontoSP" focusIndex="ixPontoSP" moveUp="ixPontoMG" moveLeft="ixPontoPR" moveRight="ixPontoRJ" moveDown="ixPontoPR" focusSrc="media/pontoSaoPaulo.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoRJ" region="reg#regiaoPontoRJ" focusIndex="ixPontoRJ" moveUp="ixPontoMG" moveLeft="ixPontoSP" focusSrc="media/pontoRiodeJaneiro.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoRS" region="reg#regiaoPontoRS" focusIndex="ixPontoRS" moveUp="ixPontoPR" moveDown="ixBotaoSobre" moveLeft="ixBotaoSobre" focusSrc="media/pontoPortoAlegre.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoMG" region="reg#regiaoPontoMG" focusIndex="ixPontoMG" moveUp="ixPontoBA" moveDown="ixPontoRJ" moveLeft="ixPontoDF" focusSrc="media/pontoBeloHorizonte.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoPR" region="reg#regiaoPontoPR" focusIndex="ixPontoPR" moveUp="ixPontoSP" moveDown="ixPontoRS" moveRight="ixPontoSP" focusSrc="media/pontoCuritiba.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoBA" region="reg#regiaoPontoBA" focusIndex="ixPontoBA" moveUp="ixPontoPE" moveDown="ixPontoMG" moveLeft="ixPontoDF" focusSrc="media/pontoSalvador.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoPE" region="reg#regiaoPontoPE" focusIndex="ixPontoPE" moveUp="ixPontoRN" moveDown="ixPontoBA" focusSrc="media/pontoRecife.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoRN" region="reg#regiaoPontoRN" focusIndex="ixPontoRN" moveUp="ixPontoCE" moveDown="ixPontoPE" moveLeft="ixPontoCE" focusSrc="media/pontoNatal.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoAM" region="reg#regiaoPontoAM" focusIndex="ixPontoAM" moveUp="ixPontoRS" moveDown="ixPontoMT" moveLeft="ixPontoCE" moveRight="ixPontoCE" focusSrc="media/pontoManaus.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoMT" region="reg#regiaoPontoMT" focusIndex="ixPontoMT" moveUp="ixPontoAM" moveDown="ixPontoDF" moveLeft="ixPontoBA" moveRight="ixPontoDF" focusSrc="media/pontoCuiaba.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoDF" region="reg#regiaoPontoDF" focusIndex="ixPontoDF" moveUp="ixPontoMT" moveDown="ixPontoMG" moveLeft="ixPontoMT" moveRight="ixPontoBA"  focusSrc="media/pontoBrasilia.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoCE" region="reg#regiaoPontoCE" focusIndex="ixPontoCE" moveUp="ixPontoRS" moveDown="ixPontoRN" moveLeft="ixPontoAM" moveRight="ixPontoRN"  focusSrc="media/pontoFortaleza.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoSP" region="reg#regiaoPontoSP" focusIndex="ixPontoSP" moveUp="ixPontoMG" moveDown="ixPontoPR" moveLeft="ixPontoRJ" moveRight="ixPontoRJ" focusSrc="media/pontoSaoPaulo.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoRJ" region="reg#regiaoPontoRJ" focusIndex="ixPontoRJ" moveUp="ixPontoMG" moveDown="ixPontoPR" moveLeft="ixPontoSP" moveRight="ixPontoSP"  focusSrc="media/pontoRiodeJaneiro.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoRS" region="reg#regiaoPontoRS" focusIndex="ixPontoRS" moveUp="ixPontoPR" moveDown="ixPontoAM" focusSrc="media/pontoPortoAlegre.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoMG" region="reg#regiaoPontoMG" focusIndex="ixPontoMG" moveUp="ixPontoDF" moveDown="ixPontoRJ" moveLeft="ixPontoDF" moveRight="ixPontoMG"  focusSrc="media/pontoBeloHorizonte.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoPR" region="reg#regiaoPontoPR" focusIndex="ixPontoPR" moveUp="ixPontoSP" moveDown="ixPontoRS" moveLeft="ixPontoRJ" moveRight="ixPontoRJ" focusSrc="media/pontoCuritiba.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoBA" region="reg#regiaoPontoBA" focusIndex="ixPontoBA" moveUp="ixPontoPE" moveDown="ixPontoDF" moveLeft="ixPontoDF" moveRight="ixPontoMT"  focusSrc="media/pontoSalvador.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoPE" region="reg#regiaoPontoPE" focusIndex="ixPontoPE" moveUp="ixPontoRN" moveDown="ixPontoBA" moveLeft="ixPontoAM" moveRight="ixPontoAM"  focusSrc="media/pontoRecife.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoRN" region="reg#regiaoPontoRN" focusIndex="ixPontoRN" moveUp="ixPontoCE" moveDown="ixPontoPE" moveLeft="ixPontoCE" moveRight="ixPontoAM" focusSrc="media/pontoNatal.png" focusBorderWidth="0"/>
 			
 			<descriptor id="idNavegacao" region="reg#regiaoNavegacao"/>
 			<descriptor id="idBotaoSair" region="reg#regiaoBotaoSair"/>
