@@ -38,6 +38,15 @@
 					<simpleAction role="start" max="unbounded"/>
 				</compoundAction>
 			</causalConnector>
+			<causalConnector id="onEndStartStopSet">
+				<connectorParam name="var"/>
+				<simpleCondition role="onEnd"/>
+				<compoundAction operator="seq">
+					<simpleAction role="set" value="$var"/>
+					<simpleAction role="stop"/>
+					<simpleAction role="start"/>
+				</compoundAction>
+			</causalConnector>
 			<causalConnector id="onKeySelectionSetStartNStop">
 				<connectorParam name="key"/>
 				<connectorParam name="var"/>
