@@ -146,6 +146,15 @@
 					<simpleAction role="stop"/>
 				</compoundAction>
 			</causalConnector>
+			<causalConnector id="onEndStartStopSet">
+				<connectorParam name="var"/>
+				<simpleCondition role="onEnd"/>
+				<compoundAction operator="seq">
+					<simpleAction role="set" value="$var"/>
+					<simpleAction role="stop"/>
+					<simpleAction role="start"/>
+				</compoundAction>
+			</causalConnector>
 			<causalConnector id="onEndAttributionSet">
 				<connectorParam name="var"/>
 				<simpleCondition role="onEndAttribution"/>
