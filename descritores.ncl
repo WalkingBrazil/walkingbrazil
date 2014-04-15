@@ -15,7 +15,7 @@
 			<descriptor id="idPontoDF" region="reg#regiaoPontoDF" focusIndex="ixPontoDF" moveUp="ixPontoMT" moveDown="ixPontoMG" moveLeft="ixPontoMT" moveRight="ixPontoBA"  focusSrc="media/pontoBrasilia.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoCE" region="reg#regiaoPontoCE" focusIndex="ixPontoCE" moveUp="ixPontoRS" moveDown="ixPontoRN" moveLeft="ixPontoAM" moveRight="ixPontoRN"  focusSrc="media/pontoFortaleza.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoSP" region="reg#regiaoPontoSP" focusIndex="ixPontoSP" moveUp="ixPontoMG" moveDown="ixPontoPR" moveLeft="ixPontoRJ" moveRight="ixPontoRJ" focusSrc="media/pontoSaoPaulo.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoRJ" region="reg#regiaoPontoRJ" focusIndex="ixPontoRJ" moveUp="ixPontoMG" moveDown="ixPontoPR" moveLeft="ixPontoSP" moveRight="ixPontoSP"  focusSrc="media/pontoRiodeJaneiro.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoRJ" region="reg#regiaoPontoRJ" focusIndex="ixPontoRJ" moveUp="ixPontoMG" moveDown="ixPontoSP" moveLeft="ixPontoSP" moveRight="ixPontoSP"  focusSrc="media/pontoRiodeJaneiro.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoRS" region="reg#regiaoPontoRS" focusIndex="ixPontoRS" moveUp="ixPontoPR" moveDown="ixPontoAM" focusSrc="media/pontoPortoAlegre.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoMG" region="reg#regiaoPontoMG" focusIndex="ixPontoMG" moveUp="ixPontoDF" moveDown="ixPontoRJ" moveLeft="ixPontoDF" moveRight="ixPontoMG"  focusSrc="media/pontoBeloHorizonte.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoPR" region="reg#regiaoPontoPR" focusIndex="ixPontoPR" moveUp="ixPontoSP" moveDown="ixPontoRS" moveLeft="ixPontoRJ" moveRight="ixPontoRJ" focusSrc="media/pontoCuritiba.png" focusBorderWidth="0"/>
