@@ -61,6 +61,7 @@
 				<bind role="stop" component="imgBeloHorizonte_PTur3"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur4"/>
 				<bind role="stop" component="imgBeloHorizonte_Selecao"/>
+				<bind role="stop" component="imgBeloHorizonte_Titulo"/>
 				<bind role="start" component="imgBH_PTur2_G"/>
 			</link>
 			<link id="link_SelBH_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -70,6 +71,7 @@
 				<bind role="stop" component="imgBeloHorizonte_PTur3"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur4"/>
 				<bind role="stop" component="imgBeloHorizonte_Selecao"/>
+				<bind role="stop" component="imgBeloHorizonte_Titulo"/>
 				<bind role="start" component="imgBH_PTur3_G"/>
 			</link>
 			<link id="link_SelBH_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -79,6 +81,7 @@
 				<bind role="stop" component="imgBeloHorizonte_PTur3"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur4"/>
 				<bind role="stop" component="imgBeloHorizonte_Selecao"/>
+				<bind role="stop" component="imgBeloHorizonte_Titulo"/>
 				<bind role="start" component="imgBH_PTur4_G"/>
 			</link>
 			
@@ -142,6 +145,7 @@
 				<bind role="stop" component="imgBrasilia_PTur3"/>
 				<bind role="stop" component="imgBrasilia_PTur4"/>
 				<bind role="stop" component="imgBrasilia_Selecao"/>
+				<bind role="stop" component="imgBrasilia_Titulo"/>
 				<bind role="start" component="imgBrasilia_PTur1_G"/>
 			</link>
 			<link id="link_SelBrasilia_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -151,6 +155,7 @@
 				<bind role="stop" component="imgBrasilia_PTur3"/>
 				<bind role="stop" component="imgBrasilia_PTur4"/>
 				<bind role="stop" component="imgBrasilia_Selecao"/>
+				<bind role="stop" component="imgBrasilia_Titulo"/>
 				<bind role="start" component="imgBrasilia_PTur2_G"/>
 			</link>
 			<link id="link_SelBrasilia_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -160,6 +165,7 @@
 				<bind role="stop" component="imgBrasilia_PTur3"/>
 				<bind role="stop" component="imgBrasilia_PTur4"/>
 				<bind role="stop" component="imgBrasilia_Selecao"/>
+				<bind role="stop" component="imgBrasilia_Titulo"/>
 				<bind role="start" component="imgBrasilia_PTur3_G"/>
 			</link>
 			<link id="link_SelBrasilia_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -169,6 +175,7 @@
 				<bind role="stop" component="imgBrasilia_PTur3"/>
 				<bind role="stop" component="imgBrasilia_PTur4"/>
 				<bind role="stop" component="imgBrasilia_Selecao"/>
+				<bind role="stop" component="imgBrasilia_Titulo"/>
 				<bind role="start" component="imgBrasilia_PTur4_G"/>
 			</link>
 			<link id="lVoltaBrasiliaParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
@@ -231,6 +238,7 @@
 				<bind role="stop" component="imgCuiaba_PTur3"/>
 				<bind role="stop" component="imgCuiaba_PTur4"/>
 				<bind role="stop" component="imgCuiaba_Selecao"/>
+				<bind role="stop" component="imgCuiaba_Titulo"/>
 				<bind role="start" component="imgCuiaba_PTur1_G"/>
 			</link>
 			<link id="link_SelCuiaba_PTur2" xconnector="conectores#onSelectionStartNStop">
@@ -240,6 +248,7 @@
 				<bind role="stop" component="imgCuiaba_PTur3"/>
 				<bind role="stop" component="imgCuiaba_PTur4"/>
 				<bind role="stop" component="imgCuiaba_Selecao"/>
+				<bind role="stop" component="imgCuiaba_Titulo"/>
 				<bind role="start" component="imgCuiaba_PTur2_G"/>
 			</link>
 			<link id="link_SelCuiaba_PTur3" xconnector="conectores#onSelectionStartNStop">
@@ -249,6 +258,7 @@
 				<bind role="stop" component="imgCuiaba_PTur3"/>
 				<bind role="stop" component="imgCuiaba_PTur4"/>
 				<bind role="stop" component="imgCuiaba_Selecao"/>
+				<bind role="stop" component="imgCuiaba_Titulo"/>
 				<bind role="start" component="imgCuiaba_PTur3_G"/>
 			</link>
 			<link id="link_SelCuiaba_PTur4" xconnector="conectores#onSelectionStartNStop">
@@ -258,6 +268,7 @@
 				<bind role="stop" component="imgCuiaba_PTur3"/>
 				<bind role="stop" component="imgCuiaba_PTur4"/>
 				<bind role="stop" component="imgCuiaba_Selecao"/>
+				<bind role="stop" component="imgCuiaba_Titulo"/>
 				<bind role="start" component="imgCuiaba_PTur4_G"/>
 			</link>
 			<link id="lVoltaCuiabaParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
