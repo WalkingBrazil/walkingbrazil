@@ -13,6 +13,94 @@
 		</connectorBase>
 	</head>
 	<body id="bodyTelaSelecao">
+		<context id="ctxManaus">
+			<port id="portaManaus" component="imgManaus_Titulo"/>
+			<port id="portaManausTelaSelecao" component="imgManaus_Background"/>
+			<port id="portaManausBotaoSair" component="botaoManaus_Sair"/>
+			<port id="portaManausBotaoVoltar" component="botaoManaus_Voltar"/>
+			<port id="portaManaus_Selecao" component="imgManaus_Selecao"/>
+			<port id="portaManaus_PTur1" component="imgManaus_PTur1"/>
+			<port id="portaManaus_PTur2" component="imgManaus_PTur2"/>
+			<port id="portaManaus_PTur3" component="imgManaus_PTur3"/>
+			<port id="portaManaus_PTur4" component="imgManaus_PTur4"/>
+			<media id="imgManaus_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
+			<media id="botaoManaus_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
+			<media id="botaoManaus_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
+			<media id="imgManaus_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
+			<media id="imgManaus_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgManaus_PTur1" src="media/Manaus/ponto1.png" descriptor="des#idPontoTur1"/>
+			<media id="imgManaus_PTur2" src="media/Manaus/ponto2.png" descriptor="des#idPontoTur2"/>
+			<media id="imgManaus_PTur3" src="media/Manaus/ponto3.png" descriptor="des#idPontoTur3"/>
+			<media id="imgManaus_PTur4" src="media/Manaus/ponto4.png" descriptor="des#idPontoTur4"/>
+			<media id="imgManaus_PTur1_G" src="media/Manaus/ponto1.png" descriptor="des#idInfoPTur"/>
+			<media id="imgManaus_PTur2_G" src="media/Manaus/ponto2.png" descriptor="des#idInfoPTur"/>
+			<media id="imgManaus_PTur3_G" src="media/Manaus/ponto3.png" descriptor="des#idInfoPTur"/>
+			<media id="imgManaus_PTur4_G" src="media/Manaus/ponto4.png" descriptor="des#idInfoPTur"/>
+			<media id="imagemSelecao7" src="media/ponto1.png" descriptor="des#idSelecao"/>
+			<link id="link_SelManaus_PTur1" xconnector="conectores#onSelectionStartNStop">
+				<bind role="onSelection" component="imgManaus_PTur1"/>
+				<bind role="stop" component="imgManaus_Titulo"/>
+				<bind role="stop" component="imgManaus_PTur1"/>
+				<bind role="stop" component="imgManaus_PTur2"/>
+				<bind role="stop" component="imgManaus_PTur3"/>
+				<bind role="stop" component="imgManaus_PTur4"/>
+				<bind role="stop" component="imgManaus_Selecao"/>
+				<bind role="stop" component="imgManaus_Titulo"/>
+				<bind role="start" component="imgManaus_PTur1_G"/>
+			</link>
+			<link id="link_SelManaus_PTur2" xconnector="conectores#onSelectionStartNStop">
+				<bind role="onSelection" component="imgManaus_PTur2"/>
+				<bind role="stop" component="imgManaus_PTur1"/>
+				<bind role="stop" component="imgManaus_PTur2"/>
+				<bind role="stop" component="imgManaus_PTur3"/>
+				<bind role="stop" component="imgManaus_PTur4"/>
+				<bind role="stop" component="imgManaus_Selecao"/>
+				<bind role="stop" component="imgManaus_Titulo"/>
+				<bind role="start" component="imgManaus_PTur2_G"/>
+			</link>
+			<link id="link_SelManaus_PTur3" xconnector="conectores#onSelectionStartNStop">
+				<bind role="onSelection" component="imgManaus_PTur3"/>
+				<bind role="stop" component="imgManaus_PTur1"/>
+				<bind role="stop" component="imgManaus_PTur2"/>
+				<bind role="stop" component="imgManaus_PTur3"/>
+				<bind role="stop" component="imgManaus_PTur4"/>
+				<bind role="stop" component="imgManaus_Selecao"/>
+				<bind role="stop" component="imgManaus_Titulo"/>
+				<bind role="start" component="imgManaus_PTur3_G"/>
+			</link>
+			<link id="link_SelManaus_PTur4" xconnector="conectores#onSelectionStartNStop">
+				<bind role="onSelection" component="imgManaus_PTur4"/>
+				<bind role="stop" component="imgManaus_PTur1"/>
+				<bind role="stop" component="imgManaus_PTur2"/>
+				<bind role="stop" component="imgManaus_PTur3"/>
+				<bind role="stop" component="imgManaus_PTur4"/>
+				<bind role="stop" component="imgManaus_Selecao"/>
+				<bind role="stop" component="imgManaus_Titulo"/>
+				<bind role="start" component="imgManaus_PTur4_G"/>
+			</link>
+			<link id="lVoltaManausParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
+				<bind role="onSelection" component="botaoManaus_Voltar">
+					<bindParam name="vKey" value="GREEN"/>
+				</bind>
+				<bind role="test" component="imgManaus_Selecao">
+					<bindParam name="vState" value="occurring"/>
+				</bind>
+				<bind component="ctxManaus" role="stop"/>
+			</link>
+			<link id="lVoltaManausParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
+				<bind role="onSelection" component="botaoManaus_Voltar">
+					<bindParam name="vKey" value="GREEN"/>
+				</bind>
+				<bind role="test" component="imgManaus_Selecao">
+					<bindParam name="vState" value="sleeping"/>
+				</bind>
+				<bind component="imgManaus_PTur1_G" role="stop"/>
+				<bind component="imgManaus_PTur2_G" role="stop"/>
+				<bind component="imgManaus_PTur3_G" role="stop"/>
+				<bind component="imgManaus_PTur4_G" role="stop"/>
+				<bind component="ctxManaus" role="start"/>
+			</link>
+		</context>
 		<context id="ctxBeloHorizonte">
 			<port id="portaBotaoSair" component="botaoSair"/>
 			<port id="portaBotaoVoltar" component="botaoVoltar"/>
@@ -35,10 +123,10 @@
 			<media id="imgBH_PTur3_G" src="media/BeloHorizonte/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgBH_PTur4_G" src="media/BeloHorizonte/ponto4.png" descriptor="des#idInfoPTur"/>
 			<media id="imgBeloHorizonte_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			<link id="lIniciaTelaSelecao" xconnector="conectores#noInicio">
+			<!--			<link id="lIniciaTelaSelecao" xconnector="conectores#noInicio">
 				<bind role="onBegin" component="imagemBackground"/>
 				<bind role="start" component="botaoSair"/>
-			</link>
+			</link>-->
 			<link id="link_SelBH_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgBeloHorizonte_PTur1"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur1"/>
@@ -128,6 +216,7 @@
 			<media id="imgBrasilia_PTur2_G" src="media/Brasilia/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgBrasilia_PTur3_G" src="media/Brasilia/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgBrasilia_PTur4_G" src="media/Brasilia/ponto4.png" descriptor="des#idInfoPTur"/>
+
 			<link id="link_SelBrasilia_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgBrasilia_PTur1"/>
 				<bind role="stop" component="imgBrasilia_PTur1"/>
@@ -450,94 +539,6 @@
 				<bind component="imgFortaleza_PTur3_G" role="stop"/>
 				<bind component="imgFortaleza_PTur4_G" role="stop"/>
 				<bind component="ctxFortaleza" role="start"/>
-			</link>
-		</context>
-		<context id="ctxManaus">
-			<port id="portaManaus" component="imgManaus_Titulo"/>
-			<port id="portaManausTelaSelecao" component="imgManaus_Background"/>
-			<port id="portaManausBotaoSair" component="botaoManaus_Sair"/>
-			<port id="portaManausBotaoVoltar" component="botaoManaus_Voltar"/>
-			<port id="portaManaus_Selecao" component="imgManaus_Selecao"/>
-			<port id="portaManaus_PTur1" component="imgManaus_PTur1"/>
-			<port id="portaManaus_PTur2" component="imgManaus_PTur2"/>
-			<port id="portaManaus_PTur3" component="imgManaus_PTur3"/>
-			<port id="portaManaus_PTur4" component="imgManaus_PTur4"/>
-			<media id="imgManaus_Background" src="media/plano_fundo.png" descriptor="des#idImagemBackground"/>
-			<media id="botaoManaus_Sair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
-			<media id="botaoManaus_Voltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
-			<media id="imgManaus_Selecao" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			<media id="imgManaus_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
-			<media id="imgManaus_PTur1" src="media/Manaus/ponto1.png" descriptor="des#idPontoTur1"/>
-			<media id="imgManaus_PTur2" src="media/Manaus/ponto2.png" descriptor="des#idPontoTur2"/>
-			<media id="imgManaus_PTur3" src="media/Manaus/ponto3.png" descriptor="des#idPontoTur3"/>
-			<media id="imgManaus_PTur4" src="media/Manaus/ponto4.png" descriptor="des#idPontoTur4"/>
-			<media id="imgManaus_PTur1_G" src="media/Manaus/ponto1.png" descriptor="des#idInfoPTur"/>
-			<media id="imgManaus_PTur2_G" src="media/Manaus/ponto2.png" descriptor="des#idInfoPTur"/>
-			<media id="imgManaus_PTur3_G" src="media/Manaus/ponto3.png" descriptor="des#idInfoPTur"/>
-			<media id="imgManaus_PTur4_G" src="media/Manaus/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imagemSelecao7" src="media/ponto1.png" descriptor="des#idSelecao"/>
-			<link id="link_SelManaus_PTur1" xconnector="conectores#onSelectionStartNStop">
-				<bind role="onSelection" component="imgManaus_PTur1"/>
-				<bind role="stop" component="imgManaus_Titulo"/>
-				<bind role="stop" component="imgManaus_PTur1"/>
-				<bind role="stop" component="imgManaus_PTur2"/>
-				<bind role="stop" component="imgManaus_PTur3"/>
-				<bind role="stop" component="imgManaus_PTur4"/>
-				<bind role="stop" component="imgManaus_Selecao"/>
-				<bind role="stop" component="imgManaus_Titulo"/>
-				<bind role="start" component="imgManaus_PTur1_G"/>
-			</link>
-			<link id="link_SelManaus_PTur2" xconnector="conectores#onSelectionStartNStop">
-				<bind role="onSelection" component="imgManaus_PTur2"/>
-				<bind role="stop" component="imgManaus_PTur1"/>
-				<bind role="stop" component="imgManaus_PTur2"/>
-				<bind role="stop" component="imgManaus_PTur3"/>
-				<bind role="stop" component="imgManaus_PTur4"/>
-				<bind role="stop" component="imgManaus_Selecao"/>
-				<bind role="stop" component="imgManaus_Titulo"/>
-				<bind role="start" component="imgManaus_PTur2_G"/>
-			</link>
-			<link id="link_SelManaus_PTur3" xconnector="conectores#onSelectionStartNStop">
-				<bind role="onSelection" component="imgManaus_PTur3"/>
-				<bind role="stop" component="imgManaus_PTur1"/>
-				<bind role="stop" component="imgManaus_PTur2"/>
-				<bind role="stop" component="imgManaus_PTur3"/>
-				<bind role="stop" component="imgManaus_PTur4"/>
-				<bind role="stop" component="imgManaus_Selecao"/>
-				<bind role="stop" component="imgManaus_Titulo"/>
-				<bind role="start" component="imgManaus_PTur3_G"/>
-			</link>
-			<link id="link_SelManaus_PTur4" xconnector="conectores#onSelectionStartNStop">
-				<bind role="onSelection" component="imgManaus_PTur4"/>
-				<bind role="stop" component="imgManaus_PTur1"/>
-				<bind role="stop" component="imgManaus_PTur2"/>
-				<bind role="stop" component="imgManaus_PTur3"/>
-				<bind role="stop" component="imgManaus_PTur4"/>
-				<bind role="stop" component="imgManaus_Selecao"/>
-				<bind role="stop" component="imgManaus_Titulo"/>
-				<bind role="start" component="imgManaus_PTur4_G"/>
-			</link>
-			<link id="lVoltaManausParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStop">
-				<bind role="onSelection" component="botaoManaus_Voltar">
-					<bindParam name="vKey" value="GREEN"/>
-				</bind>
-				<bind role="test" component="imgManaus_Selecao">
-					<bindParam name="vState" value="occurring"/>
-				</bind>
-				<bind component="ctxManaus" role="stop"/>
-			</link>
-			<link id="lVoltaManausParaTelaSelecao" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
-				<bind role="onSelection" component="botaoManaus_Voltar">
-					<bindParam name="vKey" value="GREEN"/>
-				</bind>
-				<bind role="test" component="imgManaus_Selecao">
-					<bindParam name="vState" value="sleeping"/>
-				</bind>
-				<bind component="imgManaus_PTur1_G" role="stop"/>
-				<bind component="imgManaus_PTur2_G" role="stop"/>
-				<bind component="imgManaus_PTur3_G" role="stop"/>
-				<bind component="imgManaus_PTur4_G" role="stop"/>
-				<bind component="ctxManaus" role="start"/>
 			</link>
 		</context>
 		<context id="ctxNatal">

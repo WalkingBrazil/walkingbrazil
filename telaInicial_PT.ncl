@@ -48,6 +48,18 @@
 			<context id="ctxRiodeJaneiro" refer="tSel#ctxRiodeJaneiro"/>
 			<context id="ctxSalvador" refer="tSel#ctxSalvador"/>
 			<context id="ctxSaoPaulo" refer="tSel#ctxSaoPaulo"/>
+			<context id="ctxSelecaoIdiomaPT">
+				<port id="pMenuPT" component="MenuPT"/>
+				<port id="popA" component="opA"/>
+				<port id="popB" component="opB"/>
+				<media id="MenuPT" src="media/telaIdioma/menuPT.png" descriptor="des#idMenuIdioma"/>
+				<media id="opA" src="media/telaIdioma/opEN.png" descriptor="des#idOpA"/>
+				<media id="opB" src="media/telaIdioma/opES.png" descriptor="des#idOpB"/>
+			</context>
+			<context id="ctxSobre">
+				<port id="pSobre" component="sobrePT"/>
+				<media id="sobrePT" src="media/telaIdioma/menuPT.png" descriptor="des#idMenuIdioma"/>
+			</context>
 			<!--<port id="portaTelaInicial"		component="imagemTelaInicial"/>-->
 			<port id="portaMapa" component="imagemMapa"/>
 			<port id="portaPontoAM" component="pontoAM"/>
@@ -92,6 +104,39 @@
 		 !						ELOS						             !
 		 ! 	  define os elos que regem o sincronismo entre as m�dias     !					 
 		 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+			<link id="lIniciaMapa" xconnector="conectores#noInicioStartStop">
+				<bind role="onBegin" component="imagemMapa"/>
+				
+				<bind role="start" component="pontoAM"/>
+				<bind role="start" component="pontoMT"/>
+				<bind role="start" component="pontoDF"/>
+				<bind role="start" component="pontoSP"/>
+				<bind role="start" component="pontoRJ"/>
+				<bind role="start" component="pontoRS"/>
+				<bind role="start" component="pontoMG"/>
+				<bind role="start" component="pontoPR"/>
+				<bind role="start" component="pontoBA"/>
+				<bind role="start" component="pontoPE"/>
+				<bind role="start" component="pontoRN"/>
+				<bind role="start" component="pontoCE"/>
+				<bind role="stop" component="botaoVoltar"/>
+			</link>
+			<link id="lFimMapa" xconnector="conectores#noFim">
+				<bind role="onEnd" component="imagemMapa"/>
+
+				<bind role="stop" component="pontoAM"/>
+				<bind role="stop" component="pontoMT"/>
+				<bind role="stop" component="pontoDF"/>
+				<bind role="stop" component="pontoSP"/>
+				<bind role="stop" component="pontoRJ"/>
+				<bind role="stop" component="pontoRS"/>
+				<bind role="stop" component="pontoMG"/>
+				<bind role="stop" component="pontoPR"/>
+				<bind role="stop" component="pontoBA"/>
+				<bind role="stop" component="pontoPE"/>
+				<bind role="stop" component="pontoRN"/>
+				<bind role="stop" component="pontoCE"/>
+			</link>
 			<link id="lReiniciaTelaInicial" xconnector="conectores#onEndOr">
 				<bind role="onEnd" component="ctxBeloHorizonte"/>
 				<bind role="onEnd" component="ctxBrasilia"/>
@@ -214,6 +259,50 @@
 				<bind role="stop" component="ctxTelaInicial"/>
 				<bind role="start" component="ctxSaoPaulo"/>
 				<bind role="start" component="botaoSair"/>
+			</link>
+			<link id="lIdiPT_2_IniPT" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
+				<bind role="onSelection" component="botaoVoltar">
+					<bindParam name="vKey" value="GREEN"/>
+				</bind>
+				<bind role="test" component="ctxSelecaoIdiomaPT">
+					<bindParam name="vState" value="occurring"/>
+				</bind>
+				<bind component="ctxSelecaoIdiomaPT" role="stop"/>
+				<bind role="start" component="botaoVoltar"/>
+				<bind component="imagemMapa" role="start"/>
+			</link>
+			<link id="lIniPT_2_IdiPT" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
+				<bind role="onSelection" component="imagemMapa">
+					<bindParam name="vKey" value="BLUE"/>
+				</bind>
+				<bind role="test" component="ctxTelaInicial">
+					<bindParam name="vState" value="occurring"/>
+				</bind>
+				<bind component="imagemMapa" role="stop"/>
+				<bind role="start" component="botaoVoltar"/>
+				<bind component="ctxSelecaoIdiomaPT" role="start"/>
+			</link>
+			<link id="lSobre_2_IniPT" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
+				<bind role="onSelection" component="botaoVoltar">
+					<bindParam name="vKey" value="GREEN"/>
+				</bind>
+				<bind role="test" component="ctxSobre">
+					<bindParam name="vState" value="occurring"/>
+				</bind>
+				<bind component="ctxSobre" role="stop"/>
+				<bind role="start" component="botaoVoltar"/>
+				<bind component="imagemMapa" role="start"/>
+			</link>
+			<link id="lIniPT_2_Sobre" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
+				<bind role="onSelection" component="imagemMapa">
+					<bindParam name="vKey" value="YELLOW"/>
+				</bind>
+				<bind role="test" component="ctxTelaInicial">
+					<bindParam name="vState" value="occurring"/>
+				</bind>
+				<bind component="imagemMapa" role="stop"/>
+				<bind role="start" component="botaoVoltar"/>
+				<bind component="ctxSobre" role="start"/>
 			</link>
 			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionStop">
 				<bind role="onSelection" component="botaoSair">
