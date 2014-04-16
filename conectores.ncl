@@ -14,6 +14,12 @@
 					<simpleAction role="start" max="unbounded"/>
 				</compoundAction>
 			</causalConnector>
+			<causalConnector id="noInicioStop">
+				<simpleCondition role="onBegin"/>
+				<compoundAction operator="seq">
+					<simpleAction role="stop" max="unbounded"/>
+				</compoundAction>
+			</causalConnector>
 			<causalConnector id="noFim">
 				<simpleCondition role="onEnd"/>
 				<simpleAction role="stop" max="unbounded"/>
@@ -54,6 +60,15 @@
 					<simpleAction role="start"/>
 				</compoundAction>
 			</causalConnector>
+			<causalConnector id="onAbortStartStopSet">
+				<connectorParam name="var"/>
+				<simpleCondition role="onAbort"/>
+				<compoundAction operator="seq">
+					<simpleAction role="set" value="$var"/>
+					<simpleAction role="stop"/>
+					<simpleAction role="start"/>
+				</compoundAction>
+			</causalConnector>
 			<causalConnector id="onKeySelectionSetStartNStop">
 				<connectorParam name="key"/>
 				<connectorParam name="var"/>
@@ -86,6 +101,20 @@
 				</compoundCondition>
 				<compoundAction operator="seq">
 					<simpleAction role="stop"/>
+				</compoundAction>
+			</causalConnector>
+			<causalConnector id="onKeySelection_and_NodeStateTestAbort">
+				<connectorParam name="vKey"/>
+				<connectorParam name="vState"/>
+				<compoundCondition operator="and">
+					<simpleCondition role="onSelection" key="$vKey" max="unbounded"/>
+					<assessmentStatement comparator="eq">
+						<attributeAssessment role="test" eventType="presentation" attributeType="state"/>
+						<valueAssessment value="$vState"/>
+					</assessmentStatement>
+				</compoundCondition>
+				<compoundAction operator="seq">
+					<simpleAction role="abort"/>
 				</compoundAction>
 			</causalConnector>
 			<causalConnector id="onKeySelection_and_NodeStateTestStartStop">
@@ -121,6 +150,11 @@
 				<simpleCondition role="onSelection" key="$key"/>
 				<simpleAction role="stop" max="unbounded"/>
 			</causalConnector>
+			<causalConnector id="onKeySelectionAbort">
+				<connectorParam name="key"/>
+				<simpleCondition role="onSelection" key="$key"/>
+				<simpleAction role="abort" max="unbounded"/>
+			</causalConnector>
 			<causalConnector id="onKeySelectionStartNStop">
 				<connectorParam name="key"/>
 				<simpleCondition role="onSelection" key="$key"/>
@@ -141,6 +175,10 @@
 			<causalConnector id="onEndStop">
 				<simpleCondition role="onEnd"/>
 				<simpleAction role="stop"/>
+			</causalConnector>
+			<causalConnector id="onEndAbort">
+				<simpleCondition role="onEnd"/>
+				<simpleAction role="abort"/>
 			</causalConnector>
 			<causalConnector id="onAbortStop">
 				<simpleCondition role="onAbort"/>

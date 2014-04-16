@@ -36,7 +36,7 @@
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 	<body>
 		<port id="porta1" component="Video"/>
-		<context id="ctxTelaInicial_PT" refer="tInicial#ctxTelaInicial"/>
+		<context id="ctxTelaInicial_PT" refer="tInicial#ctxTelaInicial_PT"/>
 		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						PONTO DE ENTRADA						 !
 	 !	 		indica o componente onde o programa inicia			 !						 
@@ -73,8 +73,8 @@
 			<bind role="start" component="imagemTelaInicial"/>
 			<bind role="start" component="ctxTelaInicial_PT"/>
 		</link>
-		<link id="lTerminaAplicacao" xconnector="conectores#onEndStartStopSet">
-			<bind role="onEnd" component="ctxTelaInicial_PT"/>
+		<link id="lTerminaAplicacao" xconnector="conectores#onAbortStartStopSet">
+			<bind role="onAbort" component="ctxTelaInicial_PT"/>
 			<bind role="set" component="Video" interface="bounds">
 				<bindParam name="var" value="0,0,1920,1080"/>
 				<!-- As dimensões de bounds são: left, top, width, height -->

@@ -35,45 +35,8 @@
 	 !	 		define as m�dias e a estrutura do programa			 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 	<body>
-		<context id="ctxTelaInicial">
-			<context id="ctxBeloHorizonte" refer="tSel#ctxBeloHorizonte"/>
-			<context id="ctxBrasilia" refer="tSel#ctxBrasilia"/>
-			<context id="ctxCuiaba" refer="tSel#ctxCuiaba"/>
-			<context id="ctxCuritiba" refer="tSel#ctxCuritiba"/>
-			<context id="ctxFortaleza" refer="tSel#ctxFortaleza"/>
-			<context id="ctxManaus" refer="tSel#ctxManaus"/>
-			<context id="ctxNatal" refer="tSel#ctxNatal"/>
-			<context id="ctxPortoAlegre" refer="tSel#ctxPortoAlegre"/>
-			<context id="ctxRecife" refer="tSel#ctxRecife"/>
-			<context id="ctxRiodeJaneiro" refer="tSel#ctxRiodeJaneiro"/>
-			<context id="ctxSalvador" refer="tSel#ctxSalvador"/>
-			<context id="ctxSaoPaulo" refer="tSel#ctxSaoPaulo"/>
-			<context id="ctxSelecaoIdiomaPT">
-				<port id="pMenuPT" component="MenuPT"/>
-				<port id="popA" component="opA"/>
-				<port id="popB" component="opB"/>
-				<media id="MenuPT" src="media/telaIdioma/menuPT.png" descriptor="des#idMenuIdioma"/>
-				<media id="opA" src="media/telaIdioma/opEN.png" descriptor="des#idOpA"/>
-				<media id="opB" src="media/telaIdioma/opES.png" descriptor="des#idOpB"/>
-			</context>
-			<context id="ctxSobre">
-				<port id="pSobre" component="sobrePT"/>
-				<media id="sobrePT" src="media/telaIdioma/menuPT.png" descriptor="des#idMenuIdioma"/>
-			</context>
-			<!--<port id="portaTelaInicial"		component="imagemTelaInicial"/>-->
-			<port id="portaMapa" component="imagemMapa"/>
-			<port id="portaPontoAM" component="pontoAM"/>
-			<port id="portaPontoMT" component="pontoMT"/>
-			<port id="portaPontoDF" component="pontoDF"/>
-			<port id="portaPontoSP" component="pontoSP"/>
-			<port id="portaPontoRJ" component="pontoRJ"/>
-			<port id="portaPontoRS" component="pontoRS"/>
-			<port id="portaPontoMG" component="pontoMG"/>
-			<port id="portaPontoPR" component="pontoPR"/>
-			<port id="portaPontoBA" component="pontoBA"/>
-			<port id="portaPontoPE" component="pontoPE"/>
-			<port id="portaPontoRN" component="pontoRN"/>
-			<port id="portaPontoCE" component="pontoCE"/>
+		<context id="ctxTelaInicial_PT">
+			<port id="portaCtxTelaNavegacao" component="ctxTelaNavegacao"/>
 			<port id="portaPainelNavegacao" component="painelNavegacao"/>
 			<port id="portaBotaoSair" component="botaoSair"/>
 			<port id="portaBotaoSobre" component="botaoSobre"/>
@@ -84,231 +47,234 @@
 			<media id="botaoSobre" src="media/botaoSobre.png" descriptor="des#idBotaoSobre"/>
 			<media id="botaoVoltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="des#idBotaoIdioma"/>
-			<media id="pontoAM" src="media/pontoAzul.png" descriptor="des#idPontoAM"/>
-			<media id="pontoMT" src="media/pontoAzul.png" descriptor="des#idPontoMT"/>
-			<media id="pontoDF" src="media/pontoAzul.png" descriptor="des#idPontoDF"/>
-			<media id="pontoSP" src="media/pontoAzul.png" descriptor="des#idPontoSP"/>
-			<media id="pontoRJ" src="media/pontoAzul.png" descriptor="des#idPontoRJ"/>
-			<media id="pontoRS" src="media/pontoAzul.png" descriptor="des#idPontoRS"/>
-			<media id="pontoMG" src="media/pontoAzul.png" descriptor="des#idPontoMG"/>
-			<media id="pontoPR" src="media/pontoAzul.png" descriptor="des#idPontoPR"/>
-			<media id="pontoBA" src="media/pontoAzul.png" descriptor="des#idPontoBA"/>
-			<media id="pontoPE" src="media/pontoAzul.png" descriptor="des#idPontoPE"/>
-			<media id="pontoRN" src="media/pontoAzul.png" descriptor="des#idPontoRN"/>
-			<media id="pontoCE" src="media/pontoAzul.png" descriptor="des#idPontoCE"/>
-			<media id="imagemMapa" src="media/mapa_novo.png" descriptor="des#idMapa"/>
-			<media id="settings" type="application/x-ginga-settings">
-				<property name="service.currentKeyMaster" value=""/>
-			</media>
+			<context id="ctxTelaNavegacao">
+				<context id="ctxBeloHorizonte" refer="tSel#ctxBeloHorizonte"/>
+				<context id="ctxBrasilia" refer="tSel#ctxBrasilia"/>
+				<context id="ctxCuiaba" refer="tSel#ctxCuiaba"/>
+				<context id="ctxCuritiba" refer="tSel#ctxCuritiba"/>
+				<context id="ctxFortaleza" refer="tSel#ctxFortaleza"/>
+				<context id="ctxManaus" refer="tSel#ctxManaus"/>
+				<context id="ctxNatal" refer="tSel#ctxNatal"/>
+				<context id="ctxPortoAlegre" refer="tSel#ctxPortoAlegre"/>
+				<context id="ctxRecife" refer="tSel#ctxRecife"/>
+				<context id="ctxRiodeJaneiro" refer="tSel#ctxRiodeJaneiro"/>
+				<context id="ctxSalvador" refer="tSel#ctxSalvador"/>
+				<context id="ctxSaoPaulo" refer="tSel#ctxSaoPaulo"/>
+				<port id="portaMapa" component="imagemMapa"/>
+				<port id="portaPontoAM" component="pontoAM"/>
+				<port id="portaPontoMT" component="pontoMT"/>
+				<port id="portaPontoDF" component="pontoDF"/>
+				<port id="portaPontoSP" component="pontoSP"/>
+				<port id="portaPontoRJ" component="pontoRJ"/>
+				<port id="portaPontoRS" component="pontoRS"/>
+				<port id="portaPontoMG" component="pontoMG"/>
+				<port id="portaPontoPR" component="pontoPR"/>
+				<port id="portaPontoBA" component="pontoBA"/>
+				<port id="portaPontoPE" component="pontoPE"/>
+				<port id="portaPontoRN" component="pontoRN"/>
+				<port id="portaPontoCE" component="pontoCE"/>
+				<media id="pontoAM" src="media/pontoAzul.png" descriptor="des#idPontoAM"/>
+				<media id="pontoMT" src="media/pontoAzul.png" descriptor="des#idPontoMT"/>
+				<media id="pontoDF" src="media/pontoAzul.png" descriptor="des#idPontoDF"/>
+				<media id="pontoSP" src="media/pontoAzul.png" descriptor="des#idPontoSP"/>
+				<media id="pontoRJ" src="media/pontoAzul.png" descriptor="des#idPontoRJ"/>
+				<media id="pontoRS" src="media/pontoAzul.png" descriptor="des#idPontoRS"/>
+				<media id="pontoMG" src="media/pontoAzul.png" descriptor="des#idPontoMG"/>
+				<media id="pontoPR" src="media/pontoAzul.png" descriptor="des#idPontoPR"/>
+				<media id="pontoBA" src="media/pontoAzul.png" descriptor="des#idPontoBA"/>
+				<media id="pontoPE" src="media/pontoAzul.png" descriptor="des#idPontoPE"/>
+				<media id="pontoRN" src="media/pontoAzul.png" descriptor="des#idPontoRN"/>
+				<media id="pontoCE" src="media/pontoAzul.png" descriptor="des#idPontoCE"/>
+				<media id="imagemMapa" src="media/mapa_novo.png" descriptor="des#idMapa"/>
+				<media id="settings" type="application/x-ginga-settings">
+					<property name="service.currentKeyMaster" value=""/>
+				</media>
+				
+				<media id="refer_botaoIdioma" refer="botaoIdioma" instance="instSame">
+					
+				</media>
+				<link id="lLimpaBotaoVerdeNBotaoAzul" xconnector="conectores#onEndAbort">
+					<bind role="onEnd" component="ctxTelaNavegacao"/>
+					<bind role="abort" component="refer_botaoIdioma"/>
+				</link>
+				<link id="lReiniciaTelaInicial" xconnector="conectores#onEndOr">
+					<bind role="onEnd" component="ctxBeloHorizonte"/>
+					<bind role="onEnd" component="ctxBrasilia"/>
+					<bind role="onEnd" component="ctxCuiaba"/>
+					<bind role="onEnd" component="ctxCuritiba"/>
+					<bind role="onEnd" component="ctxFortaleza"/>
+					<bind role="onEnd" component="ctxManaus"/>
+					<bind role="onEnd" component="ctxNatal"/>
+					<bind role="onEnd" component="ctxPortoAlegre"/>
+					<bind role="onEnd" component="ctxRecife"/>
+					<bind role="onEnd" component="ctxRiodeJaneiro"/>
+					<bind role="onEnd" component="ctxSalvador"/>
+					<bind role="onEnd" component="ctxSaoPaulo"/>
+					<bind role="start" component="ctxTelaNavegacao"/>
+				</link>
+				<link id="lSelecionaBeloHorizonte" xconnector="conectores#onSelectionSetStartNStop">
+					<bind role="onSelection" component="pontoMG"/>
+					<bind role="set" component="settings" interface="service.currentKeyMaster">
+						<bindParam name="var" value="tSel"/>
+					</bind>
+					<bind role="stop" component="ctxTelaNavegacao"/>
+					<bind role="start" component="ctxBeloHorizonte"/>
+				</link>
+				<link id="lSelecionaBrasilia" xconnector="conectores#onSelectionSetStartNStop">
+					<bind role="onSelection" component="pontoDF"/>
+					<bind role="set" component="settings" interface="service.currentKeyMaster">
+						<bindParam name="var" value="tSel"/>
+					</bind>
+					<bind role="stop" component="ctxTelaNavegacao"/>
+					<bind role="start" component="ctxBrasilia"/>
+				</link>
+				<link id="lSelecionaCuiaba" xconnector="conectores#onSelectionSetStartNStop">
+					<bind role="onSelection" component="pontoMT"/>
+					<bind role="set" component="settings" interface="service.currentKeyMaster">
+						<bindParam name="var" value="tSel"/>
+					</bind>
+					<bind role="stop" component="ctxTelaNavegacao"/>
+					<bind role="start" component="ctxCuiaba"/>
+				</link>
+				<link id="lSelecionaCuritiba" xconnector="conectores#onSelectionSetStartNStop">
+					<bind role="onSelection" component="pontoPR"/>
+					<bind role="set" component="settings" interface="service.currentKeyMaster">
+						<bindParam name="var" value="tSel"/>
+					</bind>
+					<bind role="stop" component="ctxTelaNavegacao"/>
+					<bind role="start" component="ctxCuritiba"/>
+				</link>
+				<link id="lSelecionaFortaleza" xconnector="conectores#onSelectionSetStartNStop">
+					<bind role="onSelection" component="pontoCE"/>
+					<bind role="set" component="settings" interface="service.currentKeyMaster">
+						<bindParam name="var" value="tSel"/>
+					</bind>
+					<bind role="stop" component="ctxTelaNavegacao"/>
+					<bind role="start" component="ctxFortaleza"/>
+				</link>
+				<link id="lSelecionaManaus" xconnector="conectores#onSelectionSetStartNStop">
+					<bind role="onSelection" component="pontoAM"/>
+					<bind role="set" component="settings" interface="service.currentKeyMaster">
+						<bindParam name="var" value="tSel"/>
+					</bind>
+					<bind role="stop" component="ctxTelaNavegacao"/>
+					<bind role="start" component="ctxManaus"/>
+				</link>
+				<link id="lSelecionaNatal" xconnector="conectores#onSelectionSetStartNStop">
+					<bind role="onSelection" component="pontoRN"/>
+					<bind role="set" component="settings" interface="service.currentKeyMaster">
+						<bindParam name="var" value="tSel"/>
+					</bind>
+					<bind role="stop" component="ctxTelaNavegacao"/>
+					<bind role="start" component="ctxNatal"/>
+				</link>
+				<link id="lSelecionaPortoAlegre" xconnector="conectores#onSelectionSetStartNStop">
+					<bind role="onSelection" component="pontoRS"/>
+					<bind role="set" component="settings" interface="service.currentKeyMaster">
+						<bindParam name="var" value="tSel"/>
+					</bind>
+					<bind role="stop" component="ctxTelaNavegacao"/>
+					<bind role="start" component="ctxPortoAlegre"/>
+				</link>
+				<link id="lSelecionaRecife" xconnector="conectores#onSelectionSetStartNStop">
+					<bind role="onSelection" component="pontoPE"/>
+					<bind role="set" component="settings" interface="service.currentKeyMaster">
+						<bindParam name="var" value="tSel"/>
+					</bind>
+					<bind role="stop" component="ctxTelaNavegacao"/>
+					<bind role="start" component="ctxRecife"/>
+				</link>
+				<link id="lSelecionaRioJaneiro" xconnector="conectores#onSelectionSetStartNStop">
+					<bind role="onSelection" component="pontoRJ"/>
+					<bind role="set" component="settings" interface="service.currentKeyMaster">
+						<bindParam name="var" value="tSel"/>
+					</bind>
+					<bind role="stop" component="ctxTelaNavegacao"/>
+					<bind role="start" component="ctxRiodeJaneiro"/>
+				</link>
+				<link id="lSelecionaSalvador" xconnector="conectores#onSelectionSetStartNStop">
+					<bind role="onSelection" component="pontoBA"/>
+					<bind role="set" component="settings" interface="service.currentKeyMaster">
+						<bindParam name="var" value="tSel"/>
+					</bind>
+					<bind role="stop" component="ctxTelaNavegacao"/>
+					<bind role="start" component="ctxSalvador"/>
+				</link>
+				<link id="lSelecionaSaoPaulo" xconnector="conectores#onSelectionSetStartNStop">
+					<bind role="onSelection" component="pontoSP"/>
+					<bind role="set" component="settings" interface="service.currentKeyMaster">
+						<bindParam name="var" value="tSel"/>
+					</bind>
+					<bind role="stop" component="ctxTelaNavegacao"/>
+					<bind role="start" component="ctxSaoPaulo"/>
+				</link>
+			</context>
+			<context id="ctxSelecaoIdioma_PT">
+				<port id="pMenuPT" component="MenuPT"/>
+				<port id="popA" component="opA"/>
+				<port id="popB" component="opB"/>
+				<media id="MenuPT" src="media/telaIdioma/menuPT.png" descriptor="des#idMenuIdioma"/>
+				<media id="opA" src="media/telaIdioma/opEN.png" descriptor="des#idOpA"/>
+				<media id="opB" src="media/telaIdioma/opES.png" descriptor="des#idOpB"/>
+			</context>
+			<context id="ctxSobre_PT">
+				<port id="pSobre" component="sobrePT"/>
+				<media id="sobrePT" src="media/telaIdioma/menuPT.png" descriptor="des#idMenuIdioma"/>
+			</context>
+			<!--<port id="portaTelaInicial"		component="imagemTelaInicial"/>-->
 			<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 		 !						ELOS						             !
 		 ! 	  define os elos que regem o sincronismo entre as m�dias     !					 
 		 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<link id="lIniciaMapa" xconnector="conectores#noInicioStartStop">
-				<bind role="onBegin" component="imagemMapa"/>
-				
-				<bind role="start" component="pontoAM"/>
-				<bind role="start" component="pontoMT"/>
-				<bind role="start" component="pontoDF"/>
-				<bind role="start" component="pontoSP"/>
-				<bind role="start" component="pontoRJ"/>
-				<bind role="start" component="pontoRS"/>
-				<bind role="start" component="pontoMG"/>
-				<bind role="start" component="pontoPR"/>
-				<bind role="start" component="pontoBA"/>
-				<bind role="start" component="pontoPE"/>
-				<bind role="start" component="pontoRN"/>
-				<bind role="start" component="pontoCE"/>
-				<bind role="stop" component="botaoVoltar"/>
-			</link>
-			<link id="lFimMapa" xconnector="conectores#noFim">
-				<bind role="onEnd" component="imagemMapa"/>
-
-				<bind role="stop" component="pontoAM"/>
-				<bind role="stop" component="pontoMT"/>
-				<bind role="stop" component="pontoDF"/>
-				<bind role="stop" component="pontoSP"/>
-				<bind role="stop" component="pontoRJ"/>
-				<bind role="stop" component="pontoRS"/>
-				<bind role="stop" component="pontoMG"/>
-				<bind role="stop" component="pontoPR"/>
-				<bind role="stop" component="pontoBA"/>
-				<bind role="stop" component="pontoPE"/>
-				<bind role="stop" component="pontoRN"/>
-				<bind role="stop" component="pontoCE"/>
-			</link>
-			<link id="lReiniciaTelaInicial" xconnector="conectores#onEndOr">
-				<bind role="onEnd" component="ctxBeloHorizonte"/>
-				<bind role="onEnd" component="ctxBrasilia"/>
-				<bind role="onEnd" component="ctxCuiaba"/>
-				<bind role="onEnd" component="ctxCuritiba"/>
-				<bind role="onEnd" component="ctxFortaleza"/>
-				<bind role="onEnd" component="ctxManaus"/>
-				<bind role="onEnd" component="ctxNatal"/>
-				<bind role="onEnd" component="ctxPortoAlegre"/>
-				<bind role="onEnd" component="ctxRecife"/>
-				<bind role="onEnd" component="ctxRiodeJaneiro"/>
-				<bind role="onEnd" component="ctxSalvador"/>
-				<bind role="onEnd" component="ctxSaoPaulo"/>
-				<bind role="start" component="ctxTelaInicial"/>
-			</link>
-			<link id="lSelecionaBeloHorizonte" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="pontoMG"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
-				</bind>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxBeloHorizonte"/>
-				<bind role="start" component="botaoSair"/>
-			</link>
-			<link id="lSelecionaBrasilia" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="pontoDF"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
-				</bind>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxBrasilia"/>
-				<bind role="start" component="botaoSair"/>
-			</link>
-			<link id="lSelecionaCuiaba" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="pontoMT"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
-				</bind>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxCuiaba"/>
-				<bind role="start" component="botaoSair"/>
-			</link>
-			<link id="lSelecionaCuritiba" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="pontoPR"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
-				</bind>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxCuritiba"/>
-				<bind role="start" component="botaoSair"/>
-			</link>
-			<link id="lSelecionaFortaleza" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="pontoCE"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
-				</bind>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxFortaleza"/>
-				<bind role="start" component="botaoSair"/>
-			</link>
-			<link id="lSelecionaManaus" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="pontoAM"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
-				</bind>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxManaus"/>
-				<bind role="start" component="botaoSair"/>
-			</link>
-			<link id="lSelecionaNatal" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="pontoRN"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
-				</bind>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxNatal"/>
-				<bind role="start" component="botaoSair"/>
-			</link>
-			<link id="lSelecionaPortoAlegre" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="pontoRS"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
-				</bind>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxPortoAlegre"/>
-				<bind role="start" component="botaoSair"/>
-			</link>
-			<link id="lSelecionaRecife" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="pontoPE"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
-				</bind>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxRecife"/>
-				<bind role="start" component="botaoSair"/>
-			</link>
-			<link id="lSelecionaRioJaneiro" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="pontoRJ"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
-				</bind>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxRiodeJaneiro"/>
-				<bind role="start" component="botaoSair"/>
-			</link>
-			<link id="lSelecionaSalvador" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="pontoBA"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
-				</bind>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxSalvador"/>
-				<bind role="start" component="botaoSair"/>
-			</link>
-			<link id="lSelecionaSaoPaulo" xconnector="conectores#onSelectionSetStartNStop">
-				<bind role="onSelection" component="pontoSP"/>
-				<bind role="set" component="settings" interface="service.currentKeyMaster">
-					<bindParam name="var" value="tSel"/>
-				</bind>
-				<bind role="stop" component="ctxTelaInicial"/>
-				<bind role="start" component="ctxSaoPaulo"/>
-				<bind role="start" component="botaoSair"/>
-			</link>
-			<link id="lIdiPT_2_IniPT" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
-				<bind role="onSelection" component="botaoVoltar">
-					<bindParam name="vKey" value="GREEN"/>
-				</bind>
-				<bind role="test" component="ctxSelecaoIdiomaPT">
-					<bindParam name="vState" value="occurring"/>
-				</bind>
-				<bind component="ctxSelecaoIdiomaPT" role="stop"/>
-				<bind role="start" component="botaoVoltar"/>
-				<bind component="imagemMapa" role="start"/>
-			</link>
-			<link id="lIniPT_2_IdiPT" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
-				<bind role="onSelection" component="imagemMapa">
-					<bindParam name="vKey" value="BLUE"/>
-				</bind>
-				<bind role="test" component="ctxTelaInicial">
-					<bindParam name="vState" value="occurring"/>
-				</bind>
-				<bind component="imagemMapa" role="stop"/>
-				<bind role="start" component="botaoVoltar"/>
-				<bind component="ctxSelecaoIdiomaPT" role="start"/>
-			</link>
-			<link id="lSobre_2_IniPT" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
-				<bind role="onSelection" component="botaoVoltar">
-					<bindParam name="vKey" value="GREEN"/>
-				</bind>
-				<bind role="test" component="ctxSobre">
-					<bindParam name="vState" value="occurring"/>
-				</bind>
-				<bind component="ctxSobre" role="stop"/>
-				<bind role="start" component="botaoVoltar"/>
-				<bind component="imagemMapa" role="start"/>
-			</link>
-			<link id="lIniPT_2_Sobre" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
-				<bind role="onSelection" component="imagemMapa">
+			<link id="lTelaSobre" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
+				<bind role="onSelection" component="botaoSobre">
 					<bindParam name="vKey" value="YELLOW"/>
 				</bind>
-				<bind role="test" component="ctxTelaInicial">
+				<bind role="test" component="ctxTelaInicial_PT">
 					<bindParam name="vState" value="occurring"/>
 				</bind>
-				<bind component="imagemMapa" role="stop"/>
+				<bind component="ctxTelaNavegacao" role="stop"/>
 				<bind role="start" component="botaoVoltar"/>
-				<bind component="ctxSobre" role="start"/>
+				<bind component="ctxSobre_PT" role="start"/>
 			</link>
-			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionStop">
+			<link id="lTelaIdioma" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
+				<bind role="onSelection" component="botaoIdioma">
+					<bindParam name="vKey" value="BLUE"/>
+				</bind>
+				<bind role="test" component="ctxTelaInicial_PT">
+					<bindParam name="vState" value="occurring"/>
+				</bind>
+				<bind component="ctxTelaNavegacao" role="stop"/>
+				<bind role="start" component="botaoVoltar"/>
+				<bind component="ctxSelecaoIdioma_PT" role="start"/>
+			</link>
+			<link id="lVoltaTelaSobreParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
+				<bind role="onSelection" component="botaoVoltar">
+					<bindParam name="vKey" value="GREEN"/>
+				</bind>
+				<bind role="test" component="ctxSobre_PT">
+					<bindParam name="vState" value="occurring"/>
+				</bind>
+				<bind component="ctxSobre_PT" role="stop"/>
+				<bind role="start" component="botaoVoltar"/>
+				<bind component="ctxTelaNavegacao" role="start"/>
+			</link>
+			<link id="lVoltaTelaIdiomaParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
+				<bind role="onSelection" component="botaoVoltar">
+					<bindParam name="vKey" value="GREEN"/>
+				</bind>
+				<bind role="test" component="ctxSelecaoIdioma_PT">
+					<bindParam name="vState" value="occurring"/>
+				</bind>
+				<bind component="ctxSelecaoIdioma_PT" role="stop"/>
+				<bind role="start" component="botaoVoltar"/>
+				<bind component="ctxTelaNavegacao" role="start"/>
+			</link>
+			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionAbort">
 				<bind role="onSelection" component="botaoSair">
 					<bindParam name="key" value="RED"/>
 				</bind>
-				<bind component="ctxTelaInicial" role="stop"/>
+				<bind component="ctxTelaInicial_PT" role="abort"/>
 			</link>
 		</context>
 	</body>
