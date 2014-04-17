@@ -216,6 +216,17 @@
 				<media id="MenuPT" src="media/telaIdioma/menuPT.png" descriptor="des#idMenuIdioma"/>
 				<media id="opA" src="media/telaIdioma/opEN.png" descriptor="des#idOpA"/>
 				<media id="opB" src="media/telaIdioma/opES.png" descriptor="des#idOpB"/>
+				
+				<!--<link id="lSelecionaIdioma_EN" xconnector="conectores#onKeySelection_and_NodeStateTestStartAbort2">
+				<bind role="onSelection" component="opA">
+				</bind>
+				<bind role="test" component="ctxTelaNavegacao">
+					<bindParam name="vState" value="occurring"/>
+				</bind>
+				<bind component="ctxTelaNavegacao" role="abort"/>
+				<bind role="start" component="botaoVoltar"/>
+				<bind component="ctxSelecaoIdioma_PT" role="start"/>
+			</link>-->
 			</context>
 			<context id="ctxSobre_PT">
 				<port id="pSobre" component="sobrePT"/>
@@ -226,28 +237,27 @@
 		 !						ELOS						             !
 		 ! 	  define os elos que regem o sincronismo entre as m�dias     !					 
 		 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<link id="lTelaSobre" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
+			<link id="lTelaSobre" xconnector="conectores#onKeySelection_and_NodeStateTestStartAbort2">
 				<bind role="onSelection" component="botaoSobre">
 					<bindParam name="vKey" value="YELLOW"/>
 				</bind>
-				<bind role="test" component="ctxTelaInicial_PT">
+				<bind role="test" component="ctxTelaNavegacao">
 					<bindParam name="vState" value="occurring"/>
 				</bind>
-				<bind component="ctxTelaNavegacao" role="stop"/>
-				<bind role="start" component="botaoVoltar"/>
+				<bind component="ctxTelaNavegacao" role="abort"/>
 				<bind component="ctxSobre_PT" role="start"/>
 			</link>
-			<link id="lTelaIdioma" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
+			<link id="lTelaIdioma" xconnector="conectores#onKeySelection_and_NodeStateTestStartAbort2">
 				<bind role="onSelection" component="botaoIdioma">
 					<bindParam name="vKey" value="BLUE"/>
 				</bind>
-				<bind role="test" component="ctxTelaInicial_PT">
+				<bind role="test" component="ctxTelaNavegacao">
 					<bindParam name="vState" value="occurring"/>
 				</bind>
-				<bind component="ctxTelaNavegacao" role="stop"/>
-				<bind role="start" component="botaoVoltar"/>
+				<bind component="ctxTelaNavegacao" role="abort"/>
 				<bind component="ctxSelecaoIdioma_PT" role="start"/>
 			</link>
+			
 			<link id="lVoltaTelaSobreParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
 				<bind role="onSelection" component="botaoVoltar">
 					<bindParam name="vKey" value="GREEN"/>
@@ -256,7 +266,6 @@
 					<bindParam name="vState" value="occurring"/>
 				</bind>
 				<bind component="ctxSobre_PT" role="stop"/>
-				<bind role="start" component="botaoVoltar"/>
 				<bind component="ctxTelaNavegacao" role="start"/>
 			</link>
 			<link id="lVoltaTelaIdiomaParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
@@ -267,7 +276,6 @@
 					<bindParam name="vState" value="occurring"/>
 				</bind>
 				<bind component="ctxSelecaoIdioma_PT" role="stop"/>
-				<bind role="start" component="botaoVoltar"/>
 				<bind component="ctxTelaNavegacao" role="start"/>
 			</link>
 			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionAbort">
