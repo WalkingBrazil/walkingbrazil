@@ -5,13 +5,18 @@
 	 !					CABEÇALHO DO PROGRAMA						 !
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 	<head>
+		<importedDocumentBase>
+			<importNCL alias="tInicial" documentURI="telaInicial_PT.ncl"/>
+			<importNCL alias="tInicial_EN" documentURI="telaInicial_EN.ncl"/>
+		</importedDocumentBase>
+		<ruleBase>
+			<rule id="rCtx_PT" var="system.language" comparator="eq" value="pt"/>
+			<rule id="rCtx_EN" var="system.language" comparator="eq" value="en"/>
+		</ruleBase>
 		<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE REGIÕES							 !
 	 !	 define as regiï¿½es na tela onde as mï¿½dias serï¿½o mostradas	 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		<importedDocumentBase>
-			<importNCL alias="tInicial" documentURI="telaInicial_PT.ncl"/>
-		</importedDocumentBase>
 		<regionBase>
 			<importBase alias="reg" documentURI="regioes.ncl"/>
 		</regionBase>
@@ -37,6 +42,7 @@
 	<body>
 		<port id="porta1" component="Video"/>
 		<context id="ctxTelaInicial_PT" refer="tInicial#ctxTelaInicial_PT"/>
+		<context id="ctxTelaInicial_EN" refer="tInicial_EN#ctxTelaInicial_EN"/>
 		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						PONTO DE ENTRADA						 !
 	 !	 		indica o componente onde o programa inicia			 !						 
@@ -52,6 +58,21 @@
 		</media>
 		<media id="botaoInt" src="media/botaoInteratividade.png" descriptor="des#idBotaoInt"/>
 		<media id="imagemTelaInicial" src="media/plano_fundo.png" descriptor="des#idTelaInicial"/>
+		<media id="varIdioma" type="application/x-ncl-settings">
+			<property name="system.language"/>
+		</media>
+		<switch id="switchIdioma">
+			<switchPort id="spCtx">
+				<mapping component="ctx_PT"/>
+				<mapping component="ctx_EN"/>
+			</switchPort>
+			<bindRule constituent="ctx_PT" rule="rCtx_PT"/>
+			<bindRule constituent="ctx_EN" rule="rCtx_EN"/>
+			<!--			<defaultComponent component="ctx_EN"/>
+-->
+			<context id="ctx_PT" refer="tInicial#ctxTelaInicial_PT"/>
+			<context id="ctx_EN" refer="tInicial_EN#ctxTelaInicial_EN"/>
+		</switch>
 		<link id="lImagBotaoIntAparece" xconnector="conectores#noInicio">
 			<bind role="onBegin" component="Video"/>
 			<bind role="start" component="botaoInt"/>
@@ -68,19 +89,83 @@
 				<bindParam name="novaDimensao" value="4.16666666666667%,5.55555555555556%,50%,50%"/>
 				<!-- As dimensões de bounds são: left, top, width, height -->
 			</bind>
+			<bind role="set" component="varIdioma" interface="system.language">
+				<bindParam name="novaDimensao" value="pt"/>
+			</bind>
 			<bind role="stop" component="botaoInt"/>
 			<bind role="abort" component="botaoInt"/>
 			<bind role="start" component="imagemTelaInicial"/>
+			<bind role="start" component="botaoIdioma"/>
 			<bind role="start" component="ctxTelaInicial_PT"/>
+			<!--			<bind role="start" component="switchIdioma"/>
+-->
 		</link>
-		<link id="lTerminaAplicacao" xconnector="conectores#onAbortStartStopSet">
+		<media id="botaoIdioma" src="media/botaoIdioma.png" descriptor="des#idBotaoIdioma"/>
+		<media id="MenuPT" src="media/telaIdioma/menuPT.png" descriptor="des#idMenuIdioma"/>
+		<media id="opA" src="media/telaIdioma/opEN.png" descriptor="des#idOpA"/>
+		<media id="opB" src="media/telaIdioma/opES.png" descriptor="des#idOpB"/>
+		<link id="lTelaIdioma" xconnector="conectores#onKeySelection_and_NodeStateTestStartAbort2">
+			<bind role="onSelection" component="botaoIdioma">
+				<bindParam name="vKey" value="BLUE"/>
+			</bind>
+			<bind role="test" component="ctxTelaInicial_PT">
+				<bindParam name="vState" value="occurring"/>
+			</bind>
+			<bind component="ctxTelaInicial_PT" role="abort"/>
+			<bind role="start" component="MenuPT"/>
+			<bind role="start" component="opA"/>
+			<bind role="start" component="opB"/>
+		</link>
+		
+		<link id="lTelaIdioma_EN" xconnector="conectores#onKeySelection_and_NodeStateTestStartAbort2">
+			<bind role="onSelection" component="botaoIdioma">
+				<bindParam name="vKey" value="BLUE"/>
+			</bind>
+			<bind role="test" component="ctxTelaInicial_EN">
+				<bindParam name="vState" value="occurring"/>
+			</bind>
+			<bind component="ctxTelaInicial_EN" role="abort"/>
+			<bind role="start" component="MenuPT"/>
+			<bind role="start" component="opA"/>
+			<bind role="start" component="opB"/>
+		</link>
+		
+		<link id="lSelecionaIdioma_EN" xconnector="conectores#onSelectionStartNStop">
+			<bind role="onSelection" component="opA">
+			</bind>
+			<bind role="stop" component="MenuPT"/>
+			<bind role="stop" component="opA"/>
+			<bind role="stop" component="opB"/>
+			<bind role="stop" component="ctxTelaInicial_PT">
+				
+			</bind>
+			<bind role="start" component="ctxTelaInicial_EN">
+				
+			</bind>
+			
+		</link>
+		
+		<link id="lSelecionaIdioma_ES" xconnector="conectores#onSelectionStartNStop">
+			<bind role="onSelection" component="opB">
+			</bind>
+			<bind role="stop" component="MenuPT"/>
+			<bind role="stop" component="opA"/>
+			<bind role="stop" component="opB"/>
+			<bind role="stop" component="ctxTelaInicial_EN">
+				
+			</bind>
+			<bind role="start" component="ctxTelaInicial_PT">
+				
+			</bind>
+			
+		</link>
+		<!--<link id="lTerminaAplicacao" xconnector="conectores#onAbortStartStopSet">
 			<bind role="onAbort" component="ctxTelaInicial_PT"/>
 			<bind role="set" component="Video" interface="bounds">
 				<bindParam name="var" value="0,0,1920,1080"/>
-				<!-- As dimensões de bounds são: left, top, width, height -->
 			</bind>
 			<bind role="stop" component="imagemTelaInicial"/>
 			<bind role="start" component="botaoInt"/>
-		</link>
+		</link>-->
 	</body>
 </ncl>

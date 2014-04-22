@@ -7,6 +7,11 @@
 				<simpleCondition role="onBegin"/>
 				<simpleAction role="start" max="unbounded" qualifier="par"/>
 			</causalConnector>
+			<causalConnector id="noInicioSet">
+				<connectorParam name="idioma"/>
+				<simpleCondition role="onBegin"/>
+				<simpleAction role="set" value="$idioma"/>
+			</causalConnector>
 			<causalConnector id="noInicioStartStop">
 				<simpleCondition role="onBegin"/>
 				<compoundAction operator="seq">
@@ -40,6 +45,15 @@
 				<simpleCondition role="onSelection"/>
 				<compoundAction operator="seq">
 					<simpleAction role="set" value="$var"/>
+					<simpleAction role="stop" max="unbounded"/>
+					<simpleAction role="start" max="unbounded"/>
+				</compoundAction>
+			</causalConnector>
+			<causalConnector id="onSelectionAbortNStartNStop">
+				<connectorParam name="var"/>
+				<simpleCondition role="onSelection"/>
+				<compoundAction operator="seq">
+					<simpleAction role="abort" max="unbounded"/>
 					<simpleAction role="stop" max="unbounded"/>
 					<simpleAction role="start" max="unbounded"/>
 				</compoundAction>
