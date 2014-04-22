@@ -79,7 +79,7 @@
 				<simpleCondition role="onAbort"/>
 				<compoundAction operator="seq">
 					<simpleAction role="set" value="$var"/>
-					<simpleAction role="stop"/>
+					<simpleAction role="stop" max="unbounded"/>
 					<simpleAction role="start"/>
 				</compoundAction>
 			</causalConnector>

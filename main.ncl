@@ -159,13 +159,14 @@
 			</bind>
 			
 		</link>
-		<!--<link id="lTerminaAplicacao" xconnector="conectores#onAbortStartStopSet">
+		<link id="lTerminaAplicacao" xconnector="conectores#onAbortStartStopSet">
 			<bind role="onAbort" component="ctxTelaInicial_PT"/>
 			<bind role="set" component="Video" interface="bounds">
 				<bindParam name="var" value="0,0,1920,1080"/>
 			</bind>
 			<bind role="stop" component="imagemTelaInicial"/>
+			<bind role="stop" component="botaoIdioma"/>
 			<bind role="start" component="botaoInt"/>
-		</link>-->
+		</link>
 	</body>
 </ncl>
