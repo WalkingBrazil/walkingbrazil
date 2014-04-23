@@ -37,7 +37,6 @@
 					<simpleAction role="set" value="$novaDimensao" max="unbounded"/>
 					<simpleAction role="start" max="unbounded" value="unbounded" qualifier="par"/>
 					<simpleAction role="stop" value="unbounded" qualifier="par"/>
-					<simpleAction role="abort" value="unbounded" qualifier="par"/>
 				</compoundAction>
 			</causalConnector>
 			<causalConnector id="onSelectionSetStartNStop">
@@ -131,6 +130,7 @@
 					<simpleAction role="abort"/>
 				</compoundAction>
 			</causalConnector>
+			
 			<causalConnector id="onKeySelection_and_NodeStateTestStartStop">
 				<connectorParam name="vKey"/>
 				<connectorParam name="vState"/>
@@ -146,9 +146,32 @@
 					<simpleAction role="start"/>
 				</compoundAction>
 			</causalConnector>
+			<causalConnector id="onKeySelection_and_NodeStateTestStartAbort">
+				<connectorParam name="vKey"/>
+				<connectorParam name="vState"/>
+				<compoundCondition operator="and">
+					<simpleCondition role="onSelection" key="$vKey" max="unbounded"/>
+					<assessmentStatement comparator="eq">
+						<attributeAssessment role="test" eventType="presentation" attributeType="state"/>
+						<valueAssessment value="$vState"/>
+					</assessmentStatement>
+				</compoundCondition>
+				<compoundAction operator="seq">
+					<simpleAction role="abort" max="unbounded"/>
+					<simpleAction role="start"/>
+				</compoundAction>
+			</causalConnector>
 			<causalConnector id="onEndOr">
 				<compoundCondition operator="or">
 					<simpleCondition role="onEnd" max="unbounded"/>
+				</compoundCondition>
+				<compoundAction operator="seq">
+					<simpleAction role="start"/>
+				</compoundAction>
+			</causalConnector>
+			<causalConnector id="onAbortOr">
+				<compoundCondition operator="or">
+					<simpleCondition role="onAbort" max="unbounded"/>
 				</compoundCondition>
 				<compoundAction operator="seq">
 					<simpleAction role="start"/>
@@ -204,6 +227,16 @@
 				<compoundAction operator="seq">
 					<simpleAction role="set" value="$var"/>
 					<simpleAction role="stop"/>
+				</compoundAction>
+			</causalConnector>
+			<causalConnector id="onAbortSetStart">
+				<connectorParam name="var"/>
+				<compoundCondition operator="or">
+					<simpleCondition role="onAbort" max="unbounded"/>
+				</compoundCondition>
+				<compoundAction operator="seq">
+					<simpleAction role="set" value="$var"/>
+					<simpleAction role="start"/>
 				</compoundAction>
 			</causalConnector>
 			<causalConnector id="onEndStopSet">
