@@ -37,7 +37,7 @@
 			<region id="regiaoPontoTur4" width="12.5%" height="12.5%" left="79%" top="52.5%" zIndex="2"/>
 			<region id="regiaoTituloPreviewCidade" width="20%" height="8%" left="10%" top="21%"/>
 			<region id="regiaoDescricaoPreviewCidade" width="20%" height="8%" left="10%" top="48%"/>
-			<region id="regiaoInfoPTur" width="40%" height="80%" right="2.5%" top="2.5%"/>
+			<region id="regiaoInfoPTur" width="40%" height="90%" right="2.5%" top="2.5%"/>
 		</regionBase>
 	</head>
 </ncl>
