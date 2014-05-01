@@ -36,10 +36,10 @@
 			<descriptor id="idSelecao" region="reg#regiaoSelecao"/>
 			<descriptor id="idTituloPreviewCidade" region="reg#regiaoTituloPreviewCidade"/>
 			<descriptor id="idDescricaoPreviewCidade" region="reg#regiaoDescricaoPreviewCidade"/>
-			<descriptor id="idPontoTur1" region="reg#regiaoPontoTur1" focusIndex="ixPontoTur1" moveRight="ixPontoTur2" moveDown="ixPontoTur3"/>
-			<descriptor id="idPontoTur2" region="reg#regiaoPontoTur2" focusIndex="ixPontoTur2" moveLeft="ixPontoTur1" moveDown="ixPontoTur4"/>
-			<descriptor id="idPontoTur3" region="reg#regiaoPontoTur3" focusIndex="ixPontoTur3" moveRight="ixPontoTur4" moveUp="ixPontoTur1"/>
-			<descriptor id="idPontoTur4" region="reg#regiaoPontoTur4" focusIndex="ixPontoTur4" moveLeft="ixPontoTur3" moveUp="ixPontoTur2"/>
+			<descriptor id="idPontoTur1" region="reg#regiaoPontoTur1" focusIndex="ixPontoTur1" moveRight="ixPontoTur2" moveDown="ixPontoTur3" focusSrc="media/icone_ponto1_sel.png"/>
+			<descriptor id="idPontoTur2" region="reg#regiaoPontoTur2" focusIndex="ixPontoTur2" moveLeft="ixPontoTur1" moveDown="ixPontoTur4" focusSrc="media/icone_ponto2_sel.png"/>
+			<descriptor id="idPontoTur3" region="reg#regiaoPontoTur3" focusIndex="ixPontoTur3" moveRight="ixPontoTur4" moveUp="ixPontoTur1" focusSrc="media/icone_ponto3_sel.png"/>
+			<descriptor id="idPontoTur4" region="reg#regiaoPontoTur4" focusIndex="ixPontoTur4" moveLeft="ixPontoTur3" moveUp="ixPontoTur2" focusSrc="media/icone_ponto4_sel.png"/>
 			<descriptor id="idInfoPTur" region="reg#regiaoInfoPTur"/>
 		</descriptorBase>
 	</head>
