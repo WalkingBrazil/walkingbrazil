@@ -55,6 +55,11 @@
 		<media id="varIdioma" type="application/x-ncl-settings">
 			<property name="system.language"/>
 		</media>
+		
+		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	 !						ELOS						             !
+	 ! 	  define os elos que regem o sincronismo entre as m�dias     !					 
+	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 		<link id="lImagBotaoIntAparece" xconnector="conectores#noInicio">
 			<bind role="onBegin" component="Video"/>
 			<bind role="start" component="botaoInt"/>
