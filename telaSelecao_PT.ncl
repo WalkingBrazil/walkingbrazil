@@ -16,8 +16,8 @@
 		
 		<context id="ctxBeloHorizonte_PT">
 			<port id="portaBeloHorizonteTitulo" component="imgBeloHorizonte_Titulo"/>
-<!--			<port id="portaBeloHorizonte_Selecao" component="imgBeloHorizonte_Selecao"/>
--->			<port id="portaBeloHorizonte_PTur1" component="imgBeloHorizonte_PTur1"/>
+			<port id="portaBeloHorizonte_Selecao" component="imgBeloHorizonte_Selecao"/>
+			<port id="portaBeloHorizonte_PTur1" component="imgBeloHorizonte_PTur1"/>
 			<port id="portaBeloHorizonte_PTur2" component="imgBeloHorizonte_PTur2"/>
 			<port id="portaBeloHorizonte_PTur3" component="imgBeloHorizonte_PTur3"/>
 			<port id="portaBeloHorizonte_PTur4" component="imgBeloHorizonte_PTur4"/>
