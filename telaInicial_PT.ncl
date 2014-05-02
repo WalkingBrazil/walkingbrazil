@@ -5,25 +5,24 @@
 	 !					CABEÇALHO DO PROGRAMA						 !
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 	<head>
-		
 		<importedDocumentBase>
 			<importNCL alias="tSel" documentURI="telaSelecao_PT.ncl"/>
 		</importedDocumentBase>
-	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE REGIÕES							  !
 	 !	 Define as regiões na tela onde as mídias serão mostradas	  !						 
 	 !++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 		<regionBase>
 			<importBase alias="reg" documentURI="regioes.ncl"/>
 		</regionBase>
-	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE DESCRITORES						 !
 	 !	 		Define como as mídias serão apresentadas		     !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 		<descriptorBase>
 			<importBase alias="des" documentURI="descritores.ncl"/>
 		</descriptorBase>
-	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						BASE DE CONECTORES						 !
 	 !	 			Definem o comportamento dos elos				 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -31,28 +30,28 @@
 			<importBase documentURI="conectores.ncl" alias="conectores"/>
 		</connectorBase>
 	</head>
-
 	<body>
 		<context id="ctxTelaInicial_PT">
-	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !					PONTO DE ENTRADA TELAINICAL_PT			 	 !
 	 !		Indica o componente onde o contexto inicia				 !
 	 !			 			 										 !						 
-	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->	
+	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<port id="portaCtxTelaNavegacao" component="ctxTelaNavegacao"/>
 			<port id="portaPainelNavegacao" component="painelNavegacao"/>
 			<port id="portaBotaoSair" component="botaoSair"/>
 			<port id="portaBotaoSobre" component="botaoSobre"/>
 			<port id="portaBotaoVoltar" component="botaoVoltar"/>
-	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !					MÍDIAS TELAINICAL_PT			 					 	 !
 	 !		Define o local dos arquivos de mídia e as associa 		 !
 	 !	 	a seus descritores   									 !						 
-	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->	
+	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<media id="painelNavegacao" src="media/navegacao.png" descriptor="des#idNavegacao"/>
 			<media id="botaoSair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
 			<media id="botaoSobre" src="media/botaoSobre.png" descriptor="des#idBotaoSobre"/>
 			<media id="botaoVoltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
+			
 			<context id="ctxTelaNavegacao">
 				<context id="ctxBeloHorizonte" refer="tSel#ctxBeloHorizonte_PT"/>
 				<context id="ctxBrasilia" refer="tSel#ctxBrasilia_PT"/>
@@ -95,12 +94,10 @@
 				<media id="settings" type="application/x-ginga-settings">
 					<property name="service.currentKeyMaster" value=""/>
 				</media>
-				
-	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+				<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !							ELOS TELAINICAL_PT						         !
 	 ! 	  Define os elos que regem o sincronismo entre as mídias     !					 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-				
 				<link id="lReiniciaTelaInicial" xconnector="conectores#onEndOr">
 					<bind role="onEnd" component="ctxBeloHorizonte"/>
 					<bind role="onEnd" component="ctxBrasilia"/>
@@ -217,7 +214,10 @@
 				<port id="pSobre" component="sobrePT"/>
 				<media id="sobrePT" src="media/telaIdioma/menuPT.png" descriptor="des#idMenuIdioma"/>
 			</context>
-	
+			<link id="lApagaPainelNavegacaoTelaSobre" xconnector="conectores#noInicioStop">
+				<bind role="onBegin" component="ctxSobre_PT"/>
+				<bind component="painelNavegacao" role="stop"/>
+			</link>
 			<link id="lTelaSobre" xconnector="conectores#onKeySelection_and_NodeStateTestStartAbort2">
 				<bind role="onSelection" component="botaoSobre">
 					<bindParam name="vKey" value="YELLOW"/>
@@ -228,7 +228,6 @@
 				<bind component="ctxTelaNavegacao" role="abort"/>
 				<bind component="ctxSobre_PT" role="start"/>
 			</link>
-			
 			<link id="lVoltaTelaSobreParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
 				<bind role="onSelection" component="botaoVoltar">
 					<bindParam name="vKey" value="GREEN"/>

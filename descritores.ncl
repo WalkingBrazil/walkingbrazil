@@ -37,10 +37,10 @@
 			<descriptor id="idTituloPreviewCidade" region="reg#regiaoTituloPreviewCidade"/>
 			<descriptor id="idDescricaoPreviewCidade" region="reg#regiaoDescricaoPreviewCidade"/>
 			
-			<descriptor id="idPontoTur1_BeloHorizonte" region="reg#regiaoPontoTur1" focusIndex="ixPontoTur1_BeloHorizonte" moveRight="ixPontoTur2_BeloHorizonte" moveDown="ixPontoTur3_BeloHorizonte" focusSrc="media/estadio_sel.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoTur2_BeloHorizonte" region="reg#regiaoPontoTur2" focusIndex="ixPontoTur2_BeloHorizonte" moveLeft="ixPontoTur1_BeloHorizonte" moveDown="ixPontoTur4_BeloHorizonte" focusSrc="media/centro_historico_sel.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoTur3_BeloHorizonte" region="reg#regiaoPontoTur3" focusIndex="ixPontoTur3_BeloHorizonte" moveRight="ixPontoTur4_BeloHorizonte" moveUp="ixPontoTur1_BeloHorizonte" focusSrc="media/centro_historico_sel.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoTur4_BeloHorizonte" region="reg#regiaoPontoTur4" focusIndex="ixPontoTur4_BeloHorizonte" moveLeft="ixPontoTur3_BeloHorizonte" moveUp="ixPontoTur2_BeloHorizonte" focusSrc="media/centro_historico_sel.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoTur1_BeloHorizonte" region="reg#regiaoPontoTur1" focusIndex="ixPontoTur1_BeloHorizonte" moveRight="ixPontoTur2_BeloHorizonte" moveDown="ixPontoTur3_BeloHorizonte" focusBorderWidth="5"/>
+			<descriptor id="idPontoTur2_BeloHorizonte" region="reg#regiaoPontoTur2" focusIndex="ixPontoTur2_BeloHorizonte" moveLeft="ixPontoTur1_BeloHorizonte" moveDown="ixPontoTur4_BeloHorizonte" focusBorderWidth="5"/>
+			<descriptor id="idPontoTur3_BeloHorizonte" region="reg#regiaoPontoTur3" focusIndex="ixPontoTur3_BeloHorizonte" moveRight="ixPontoTur4_BeloHorizonte" moveUp="ixPontoTur1_BeloHorizonte" focusBorderWidth="5"/>
+			<descriptor id="idPontoTur4_BeloHorizonte" region="reg#regiaoPontoTur4" focusIndex="ixPontoTur4_BeloHorizonte" moveLeft="ixPontoTur3_BeloHorizonte" moveUp="ixPontoTur2_BeloHorizonte" focusBorderWidth="5"/>
 			
 			<descriptor id="idPontoTur1_Brasilia" region="reg#regiaoPontoTur1" focusIndex="ixPontoTur1_Brasilia" moveRight="ixPontoTur2_Brasilia" moveDown="ixPontoTur3_Brasilia" focusSrc="media/estadio_sel.png"/>
 			<descriptor id="idPontoTur2_Brasilia" region="reg#regiaoPontoTur2" focusIndex="ixPontoTur2_Brasilia" moveLeft="ixPontoTur1_Brasilia" moveDown="ixPontoTur4_Brasilia" focusSrc="media/igreja_sel.png"/>

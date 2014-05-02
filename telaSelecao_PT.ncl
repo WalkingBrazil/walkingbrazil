@@ -21,7 +21,7 @@
 			<port id="portaBeloHorizonte_PTur2" component="imgBeloHorizonte_PTur2"/>
 			<port id="portaBeloHorizonte_PTur3" component="imgBeloHorizonte_PTur3"/>
 			<port id="portaBeloHorizonte_PTur4" component="imgBeloHorizonte_PTur4"/>
-			<media id="imgBeloHorizonte_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgBeloHorizonte_Titulo" src="media/BeloHorizonte/belohorizonte_titulo.png" descriptor="des#idTitulo"/>
 			<media id="imgBeloHorizonte_PTur1" src="media/BeloHorizonte/icone_ponto1.png" descriptor="des#idPontoTur1_BeloHorizonte"/>
 			<media id="imgBeloHorizonte_PTur2" src="media/BeloHorizonte/icone_ponto2.png" descriptor="des#idPontoTur2_BeloHorizonte"/>
 			<media id="imgBeloHorizonte_PTur3" src="media/BeloHorizonte/icone_ponto3.png" descriptor="des#idPontoTur3_BeloHorizonte"/>
@@ -30,7 +30,7 @@
 			<media id="imgBH_PTur2_G" src="media/BeloHorizonte/ponto2.png" descriptor="des#idInfoPTur"/>
 			<media id="imgBH_PTur3_G" src="media/BeloHorizonte/ponto3.png" descriptor="des#idInfoPTur"/>
 			<media id="imgBH_PTur4_G" src="media/BeloHorizonte/ponto4.png" descriptor="des#idInfoPTur"/>
-			<media id="imgBeloHorizonte_Selecao" src="media/pontoAzul.png" descriptor="des#idSelecao"/>
+			<media id="imgBeloHorizonte_Selecao" src="media/fundo_selecao_pontos_turisticos.png" descriptor="des#idSelecao"/>
 			<link id="link_SelBH_PTur1" xconnector="conectores#onSelectionStartNStop">
 				<bind role="onSelection" component="imgBeloHorizonte_PTur1"/>
 				<bind role="stop" component="imgBeloHorizonte_PTur1"/>
@@ -350,7 +350,7 @@
 			<port id="portaCuritiba_PTur3" component="imgCuritiba_PTur3"/>
 			<port id="portaCuritiba_PTur4" component="imgCuritiba_PTur4"/>
 			<media id="imgCuritiba_Selecao" src="media/pontoVerde.png" descriptor="des#idSelecao"/>
-			<media id="imgCuritiba_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgCuritiba_Titulo" src="media/Curitiba/curitiba_titulo.png" descriptor="des#idTitulo"/>
 			<media id="imgCuritiba_PTur1" src="media/Curitiba/icone_ponto1.png" descriptor="des#idPontoTur1_Curitiba"/>
 			<media id="imgCuritiba_PTur2" src="media/Curitiba/icone_ponto2.png" descriptor="des#idPontoTur2_Curitiba"/>
 			<media id="imgCuritiba_PTur3" src="media/Curitiba/icone_ponto3.png" descriptor="des#idPontoTur3_Curitiba"/>
@@ -565,7 +565,7 @@
 			<port id="portaManaus_PTur3" component="imgManaus_PTur3"/>
 			<port id="portaManaus_PTur4" component="imgManaus_PTur4"/>
 			<media id="imgManaus_Selecao" src="media/pontoVerde.png" descriptor="des#idSelecao"/>
-			<media id="imgManaus_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgManaus_Titulo" src="media/Manaus/manaus_titulo.png" descriptor="des#idTitulo"/>
 			<media id="imgManaus_PTur1" src="media/Manaus/icone_ponto1.png" descriptor="des#idPontoTur1_Manaus"/>
 			<media id="imgManaus_PTur2" src="media/Manaus/icone_ponto2.png" descriptor="des#idPontoTur2_Manaus"/>
 			<media id="imgManaus_PTur3" src="media/Manaus/icone_ponto3.png" descriptor="des#idPontoTur3_Manaus"/>
@@ -673,7 +673,7 @@
 			<port id="portaNatal_PTur3" component="imgNatal_PTur3"/>
 			<port id="portaNatal_PTur4" component="imgNatal_PTur4"/>
 			<media id="imgNatal_Selecao" src="media/pontoVerde.png" descriptor="des#idSelecao"/>
-			<media id="imgNatal_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgNatal_Titulo" src="media/Natal/natal_titulo.png" descriptor="des#idTitulo"/>
 			<media id="imgNatal_PTur1" src="media/Natal/icone_ponto1.png" descriptor="des#idPontoTur1_Natal"/>
 			<media id="imgNatal_PTur2" src="media/Natal/icone_ponto2.png" descriptor="des#idPontoTur2_Natal"/>
 			<media id="imgNatal_PTur3" src="media/Natal/icone_ponto3.png" descriptor="des#idPontoTur3_Natal"/>
