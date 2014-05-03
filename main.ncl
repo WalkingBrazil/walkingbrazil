@@ -35,7 +35,7 @@
 	 !	 		define as m�dias e a estrutura do programa			 !						 
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 	<body>
-		<port id="porta1" component="Video"/>
+		<port id="portaVideo" component="Video"/>
 		<context id="ctxTelaInicial_PT" refer="tInicial#ctxTelaInicial_PT"/>
 		<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !						PONTO DE ENTRADA						 !
