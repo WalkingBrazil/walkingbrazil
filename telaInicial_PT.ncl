@@ -78,7 +78,7 @@
 				<port id="portaPontoPE" component="pontoPE"/>
 				<port id="portaPontoRN" component="pontoRN"/>
 				<port id="portaPontoCE" component="pontoCE"/>
-				<media id="pontoAM" src="media/pontoAzul.png" descriptor="des#idPontoAM"/>
+				<media id="pontoAM" src="media/pin_manaus.png" descriptor="des#idPontoAM"/>
 				<media id="pontoMT" src="media/pontoAzul.png" descriptor="des#idPontoMT"/>
 				<media id="pontoDF" src="media/pontoAzul.png" descriptor="des#idPontoDF"/>
 				<media id="pontoSP" src="media/pontoAzul.png" descriptor="des#idPontoSP"/>
