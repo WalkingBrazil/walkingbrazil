@@ -78,18 +78,18 @@
 				<port id="portaPontoPE" component="pontoPE"/>
 				<port id="portaPontoRN" component="pontoRN"/>
 				<port id="portaPontoCE" component="pontoCE"/>
-				<media id="pontoAM" src="media/pin_manaus.png" descriptor="des#idPontoAM"/>
-				<media id="pontoMT" src="media/pontoAzul.png" descriptor="des#idPontoMT"/>
-				<media id="pontoDF" src="media/pontoAzul.png" descriptor="des#idPontoDF"/>
-				<media id="pontoSP" src="media/pontoAzul.png" descriptor="des#idPontoSP"/>
-				<media id="pontoRJ" src="media/pontoAzul.png" descriptor="des#idPontoRJ"/>
-				<media id="pontoRS" src="media/pontoAzul.png" descriptor="des#idPontoRS"/>
-				<media id="pontoMG" src="media/pontoAzul.png" descriptor="des#idPontoMG"/>
-				<media id="pontoPR" src="media/pontoAzul.png" descriptor="des#idPontoPR"/>
-				<media id="pontoBA" src="media/pontoAzul.png" descriptor="des#idPontoBA"/>
-				<media id="pontoPE" src="media/pontoAzul.png" descriptor="des#idPontoPE"/>
-				<media id="pontoRN" src="media/pontoAzul.png" descriptor="des#idPontoRN"/>
-				<media id="pontoCE" src="media/pontoAzul.png" descriptor="des#idPontoCE"/>
+				<media id="pontoAM" src="media/Pins/pin_manaus.png" descriptor="des#idPontoAM"/>
+				<media id="pontoMT" src="media/Pins/pin_cuiaba.png" descriptor="des#idPontoMT"/>
+				<media id="pontoDF" src="media/Pins/pin_brasilia.png" descriptor="des#idPontoDF"/>
+				<media id="pontoSP" src="media/Pins/pin_saopaulo.png" descriptor="des#idPontoSP"/>
+				<media id="pontoRJ" src="media/Pins/pin_riodejaneiro.png" descriptor="des#idPontoRJ"/>
+				<media id="pontoRS" src="media/Pins/pin_portoalegre.png" descriptor="des#idPontoRS"/>
+				<media id="pontoMG" src="media/Pins/pin_belohorizonte.png" descriptor="des#idPontoMG"/>
+				<media id="pontoPR" src="media/Pins/pin_curitiba.png" descriptor="des#idPontoPR"/>
+				<media id="pontoBA" src="media/Pins/pin_salvador.png" descriptor="des#idPontoBA"/>
+				<media id="pontoPE" src="media/Pins/pin_recife.png" descriptor="des#idPontoPE"/>
+				<media id="pontoRN" src="media/Pins/pin_natal.png" descriptor="des#idPontoRN"/>
+				<media id="pontoCE" src="media/Pins/pin_fortaleza.png" descriptor="des#idPontoCE"/>
 				<media id="imagemMapa" src="media/mapa.png" descriptor="des#idMapa"/>
 				<media id="settings" type="application/x-ginga-settings">
 					<property name="service.currentKeyMaster" value=""/>

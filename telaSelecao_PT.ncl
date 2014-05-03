@@ -134,7 +134,7 @@
 			<port id="portaBrasilia_PTur3" component="imgBrasilia_PTur3"/>
 			<port id="portaBrasilia_PTur4" component="imgBrasilia_PTur4"/>
 			<media id="imgBrasilia_Selecao" src="media/fundo_selecao_pontos_turisticos.png" descriptor="des#idSelecao"/>
-			<media id="imgBrasilia_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgBrasilia_Titulo" src="media/Brasilia/brasilia_titulo.png" descriptor="des#idTitulo"/>
 			<media id="imgBrasilia_PTur1" src="media/Brasilia/icone_ponto1.png" descriptor="des#idPontoTur1_Brasilia"/>
 			<media id="imgBrasilia_PTur2" src="media/Brasilia/icone_ponto2.png" descriptor="des#idPontoTur2_Brasilia"/>
 			<media id="imgBrasilia_PTur3" src="media/Brasilia/icone_ponto3.png" descriptor="des#idPontoTur3_Brasilia"/>
@@ -242,7 +242,7 @@
 			<port id="portaCuiaba_PTur3" component="imgCuiaba_PTur3"/>
 			<port id="portaCuiaba_PTur4" component="imgCuiaba_PTur4"/>
 			<media id="imgCuiaba_Selecao" src="media/fundo_selecao_pontos_turisticos.png" descriptor="des#idSelecao"/>
-			<media id="imgCuiaba_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgCuiaba_Titulo" src="media/Cuiaba/cuiaba_titulo.png" descriptor="des#idTitulo"/>
 			<media id="imgCuiaba_PTur1" src="media/Cuiaba/icone_ponto1.png" descriptor="des#idPontoTur1_Cuiaba"/>
 			<media id="imgCuiaba_PTur2" src="media/Cuiaba/icone_ponto2.png" descriptor="des#idPontoTur2_Cuiaba"/>
 			<media id="imgCuiaba_PTur3" src="media/Cuiaba/icone_ponto3.png" descriptor="des#idPontoTur3_Cuiaba"/>
@@ -458,7 +458,7 @@
 			<port id="portaFortaleza_PTur3" component="imgFortaleza_PTur3"/>
 			<port id="portaFortaleza_PTur4" component="imgFortaleza_PTur4"/>
 			<media id="imgFortaleza_Selecao" src="media/fundo_selecao_pontos_turisticos.png" descriptor="des#idSelecao"/>
-			<media id="imgFortaleza_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgFortaleza_Titulo" src="media/Fortaleza/fortaleza_titulo.png" descriptor="des#idTitulo"/>
 			<media id="imgFortaleza_PTur1" src="media/Fortaleza/icone_ponto1.png" descriptor="des#idPontoTur1_Fortaleza"/>
 			<media id="imgFortaleza_PTur2" src="media/Fortaleza/icone_ponto2.png" descriptor="des#idPontoTur2_Fortaleza"/>
 			<media id="imgFortaleza_PTur3" src="media/Fortaleza/icone_ponto3.png" descriptor="des#idPontoTur3_Fortaleza"/>
@@ -781,7 +781,7 @@
 			<port id="portaPortoAlegre_PTur3" component="imgPortoAlegre_PTur3"/>
 			<port id="portaPortoAlegre_PTur4" component="imgPortoAlegre_PTur4"/>
 			<media id="imgPortoAlegre_Selecao" src="media/fundo_selecao_pontos_turisticos.png" descriptor="des#idSelecao"/>
-			<media id="imgPortoAlegre_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgPortoAlegre_Titulo" src="media/PortoAlegre/portoalegre_titulo.png" descriptor="des#idTitulo"/>
 			<media id="imgPortoAlegre_PTur1" src="media/PortoAlegre/icone_ponto1.png" descriptor="des#idPontoTur1_PortoAlegre"/>
 			<media id="imgPortoAlegre_PTur2" src="media/PortoAlegre/icone_ponto2.png" descriptor="des#idPontoTur2_PortoAlegre"/>
 			<media id="imgPortoAlegre_PTur3" src="media/PortoAlegre/icone_ponto3.png" descriptor="des#idPontoTur3_PortoAlegre"/>
@@ -888,7 +888,7 @@
 			<port id="portaRecife_PTur3" component="imgRecife_PTur3"/>
 			<port id="portaRecife_PTur4" component="imgRecife_PTur4"/>
 			<media id="imgRecife_Selecao" src="media/fundo_selecao_pontos_turisticos.png" descriptor="des#idSelecao"/>
-			<media id="imgRecife_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgRecife_Titulo" src="media/Recife/recife_titulo.png" descriptor="des#idTitulo"/>
 			<media id="imgRecife_PTur1" src="media/Recife/icone_ponto1.png" descriptor="des#idPontoTur1_Recife"/>
 			<media id="imgRecife_PTur2" src="media/Recife/icone_ponto2.png" descriptor="des#idPontoTur2_Recife"/>
 			<media id="imgRecife_PTur3" src="media/Recife/icone_ponto3.png" descriptor="des#idPontoTur3_Recife"/>
@@ -995,7 +995,7 @@
 			<port id="portaRiodeJaneiro_PTur3" component="imgRiodeJaneiro_PTur3"/>
 			<port id="portaRiodeJaneiro_PTur4" component="imgRiodeJaneiro_PTur4"/>
 			<media id="imgRiodeJaneiro_Selecao" src="media/fundo_selecao_pontos_turisticos.png" descriptor="des#idSelecao"/>
-			<media id="imgRiodeJaneiro_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgRiodeJaneiro_Titulo" src="media/RiodeJaneiro/riodejaneiro_titulo.png" descriptor="des#idTitulo"/>
 			<media id="imgRiodeJaneiro_PTur1" src="media/RiodeJaneiro/icone_ponto1.png" descriptor="des#idPontoTur1_RiodeJaneiro"/>
 			<media id="imgRiodeJaneiro_PTur2" src="media/RiodeJaneiro/icone_ponto2.png" descriptor="des#idPontoTur2_RiodeJaneiro"/>
 			<media id="imgRiodeJaneiro_PTur3" src="media/RiodeJaneiro/icone_ponto3.png" descriptor="des#idPontoTur3_RiodeJaneiro"/>
@@ -1102,7 +1102,7 @@
 			<port id="portaSalvador_PTur3" component="imgSalvador_PTur3"/>
 			<port id="portaSalvador_PTur4" component="imgSalvador_PTur4"/>
 			<media id="imgSalvador_Selecao" src="media/fundo_selecao_pontos_turisticos.png" descriptor="des#idSelecao"/>
-			<media id="imgSalvador_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgSalvador_Titulo" src="media/Salvador/salvador_titulo.png" descriptor="des#idTitulo"/>
 			<media id="imgSalvador_PTur1" src="media/Salvador/icone_ponto1.png" descriptor="des#idPontoTur1_Salvador"/>
 			<media id="imgSalvador_PTur2" src="media/Salvador/icone_ponto2.png" descriptor="des#idPontoTur2_Salvador"/>
 			<media id="imgSalvador_PTur3" src="media/Salvador/icone_ponto3.png" descriptor="des#idPontoTur3_Salvador"/>
@@ -1209,7 +1209,7 @@
 			<port id="portaSaoPaulo_PTur3" component="imgSaoPaulo_PTur3"/>
 			<port id="portaSaoPaulo_PTur4" component="imgSaoPaulo_PTur4"/>
 			<media id="imgSaoPaulo_Selecao" src="media/fundo_selecao_pontos_turisticos.png" descriptor="des#idSelecao"/>
-			<media id="imgSaoPaulo_Titulo" src="media/cidadePreviewTitulo.png" descriptor="des#idTitulo"/>
+			<media id="imgSaoPaulo_Titulo" src="media/SaoPaulo/saopaulo_titulo.png" descriptor="des#idTitulo"/>
 			<media id="imgSaoPaulo_PTur1" src="media/SaoPaulo/icone_ponto1.png" descriptor="des#idPontoTur1_SaoPaulo"/>
 			<media id="imgSaoPaulo_PTur2" src="media/SaoPaulo/icone_ponto2.png" descriptor="des#idPontoTur2_SaoPaulo"/>
 			<media id="imgSaoPaulo_PTur3" src="media/SaoPaulo/icone_ponto3.png" descriptor="des#idPontoTur3_SaoPaulo"/>
