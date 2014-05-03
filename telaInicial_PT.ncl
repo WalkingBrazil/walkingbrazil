@@ -90,7 +90,7 @@
 				<media id="pontoPE" src="media/pontoAzul.png" descriptor="des#idPontoPE"/>
 				<media id="pontoRN" src="media/pontoAzul.png" descriptor="des#idPontoRN"/>
 				<media id="pontoCE" src="media/pontoAzul.png" descriptor="des#idPontoCE"/>
-				<media id="imagemMapa" src="media/mapa_novo.png" descriptor="des#idMapa"/>
+				<media id="imagemMapa" src="media/mapa.png" descriptor="des#idMapa"/>
 				<media id="settings" type="application/x-ginga-settings">
 					<property name="service.currentKeyMaster" value=""/>
 				</media>
