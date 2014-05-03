@@ -7,6 +7,12 @@
 				<simpleCondition role="onBegin"/>
 				<simpleAction role="start" max="unbounded" qualifier="par"/>
 			</causalConnector>
+			<causalConnector id="noInicioStop">
+ 				<simpleCondition role="onBegin"/>
+ 				<compoundAction operator="seq">
+ 					<simpleAction role="stop" max="unbounded"/>
+ 				</compoundAction>
+ 			</causalConnector>
 			<causalConnector id="noFim">
 				<simpleCondition role="onEnd"/>
 				<simpleAction role="stop" max="unbounded"/>
@@ -62,6 +68,20 @@
 					<simpleAction role="abort"/>
 				</compoundAction>
 			</causalConnector>
+			<causalConnector id="onKeySelection_and_NodeStateTestStop">
+ 				<connectorParam name="vKey"/>
+ 				<connectorParam name="vState"/>
+ 				<compoundCondition operator="and">
+ 					<simpleCondition role="onSelection" key="$vKey" max="unbounded"/>
+ 					<assessmentStatement comparator="eq">
+ 						<attributeAssessment role="test" eventType="presentation" attributeType="state"/>
+ 						<valueAssessment value="$vState"/>
+ 					</assessmentStatement>
+ 				</compoundCondition>
+ 				<compoundAction operator="seq">
+ 					<simpleAction role="stop"/>
+ 				</compoundAction>
+ 			</causalConnector>
 			<causalConnector id="onKeySelection_and_NodeStateTestStartStop">
 				<connectorParam name="vKey"/>
 				<connectorParam name="vState"/>

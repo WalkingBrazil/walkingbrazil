@@ -236,6 +236,7 @@
 					<bindParam name="vState" value="occurring"/>
 				</bind>
 				<bind component="ctxSobre_PT" role="stop"/>
+				<bind component="painelNavegacao" role="start"/>
 				<bind component="ctxTelaNavegacao" role="start"/>
 			</link>
 			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionAbort">
