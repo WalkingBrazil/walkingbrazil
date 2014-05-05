@@ -7,9 +7,6 @@
 			<region id="regiaoTelaInicial"/>
 			<region id="regiaoMapa" width="35%" height="70%" left="60%" top="5%" zIndex="5"/>
 			
-			<region id="regiaoMenuIdioma" width="38%" height="60%" left="59%" top="1%"/>
-			<region id="regiaoOpA" width="30%" height="10%" left="63%" top="23%" zIndex="1"/>
-			<region id="regiaoOpB" width="30%" height="10%" left="63%" top="41%" zIndex="2"/>
 			
 				<region id="regiaoPontoAM" width="3%" height="7%" left="70%" top="17%" zIndex="6"/>
 <region id="regiaoPontoMT" width="3%" height="7%" left="75%" top="35%" zIndex="6"/>
@@ -52,6 +49,7 @@
 			<region id="regiaoTituloPreviewCidade" width="20%" height="8%" left="10%" top="21%"/>
 			<region id="regiaoDescricaoPreviewCidade" width="20%" height="8%" left="10%" top="48%"/>
 			<region id="regiaoInfoPTur" width="40%" height="90%" right="2.5%" top="2.5%"/>
+			<region id="regiaoTelaSobre" width="40%" height="90%" right="2.5%" top="2.5%"/>
 		</regionBase>
 	</head>
 </ncl>

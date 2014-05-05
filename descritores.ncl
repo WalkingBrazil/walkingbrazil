@@ -10,11 +10,6 @@
 			<descriptor id="idTelaInicial" region="reg#regiaoTelaInicial"/>
 			<descriptor id="idMapa" region="reg#regiaoMapa"/>
 			
-			<descriptor id="idMenuIdioma" region="reg#regiaoMenuIdioma"/>
-			<descriptor id="idOpA" region="reg#regiaoOpA" focusIndex="1" moveDown="2"/>
-			<descriptor id="idOpB" region="reg#regiaoOpB" focusIndex="2" moveUp="1"/>
-			
-			
 			<descriptor id="idPontoAM" region="reg#regiaoPontoAM" focusIndex="ixPontoAM" moveUp="ixPontoRS" moveDown="ixPontoMT" moveLeft="ixPontoCE" moveRight="ixPontoCE" focusSrc="media/pontoManaus.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoMT" region="reg#regiaoPontoMT" focusIndex="ixPontoMT" moveUp="ixPontoAM" moveDown="ixPontoDF" moveLeft="ixPontoBA" moveRight="ixPontoDF" focusSrc="media/pontoCuiaba.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoDF" region="reg#regiaoPontoDF" focusIndex="ixPontoDF" moveUp="ixPontoMT" moveDown="ixPontoMG" moveLeft="ixPontoMT" moveRight="ixPontoBA" focusSrc="media/pontoBrasilia.png" focusBorderWidth="0"/>
@@ -28,8 +23,8 @@
 			<descriptor id="idPontoPE" region="reg#regiaoPontoPE" focusIndex="ixPontoPE" moveUp="ixPontoRN" moveDown="ixPontoBA" moveLeft="ixPontoAM" moveRight="ixPontoAM" focusSrc="media/pontoRecife.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoRN" region="reg#regiaoPontoRN" focusIndex="ixPontoRN" moveUp="ixPontoCE" moveDown="ixPontoPE" moveLeft="ixPontoCE" moveRight="ixPontoAM" focusSrc="media/pontoNatal.png" focusBorderWidth="0"/>
 			
-			<!--
-			<descriptor id="idPontoAM" region="reg#regiaoPontoAM" focusIndex="ixPontoAM" moveUp="ixPontoRS" moveDown="ixPontoMT" moveLeft="ixPontoCE" moveRight="ixPontoCE" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
+			
+			<!--<descriptor id="idPontoAM" region="reg#regiaoPontoAM" focusIndex="ixPontoAM" moveUp="ixPontoRS" moveDown="ixPontoMT" moveLeft="ixPontoCE" moveRight="ixPontoCE" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoMT" region="reg#regiaoPontoMT" focusIndex="ixPontoMT" moveUp="ixPontoAM" moveDown="ixPontoDF" moveLeft="ixPontoBA" moveRight="ixPontoDF" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoDF" region="reg#regiaoPontoDF" focusIndex="ixPontoDF" moveUp="ixPontoMT" moveDown="ixPontoMG" moveLeft="ixPontoMT" moveRight="ixPontoBA" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoCE" region="reg#regiaoPontoCE" focusIndex="ixPontoCE" moveUp="ixPontoRS" moveDown="ixPontoRN" moveLeft="ixPontoAM" moveRight="ixPontoRN" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
@@ -112,6 +107,8 @@
 			<descriptor id="idPontoTur3_SaoPaulo" region="reg#regiaoPontoTur3" focusIndex="ixPontoTur3_SaoPaulo" moveRight="ixPontoTur4_SaoPaulo" moveUp="ixPontoTur1_SaoPaulo" focusBorderWidth="5"/>
 			<descriptor id="idPontoTur4_SaoPaulo" region="reg#regiaoPontoTur4" focusIndex="ixPontoTur4_SaoPaulo" moveLeft="ixPontoTur3_SaoPaulo" moveUp="ixPontoTur2_SaoPaulo"  focusBorderWidth="5"/>
 			<descriptor id="idInfoPTur" region="reg#regiaoInfoPTur"/>
+			
+			<descriptor id="idTelaSobre" region="reg#regiaoTelaSobre"/>
 		
 		</descriptorBase>
 	</head>
