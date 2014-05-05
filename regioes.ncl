@@ -8,18 +8,18 @@
 			<region id="regiaoMapa" width="35%" height="70%" left="60%" top="5%" zIndex="5"/>
 			
 			
-				<region id="regiaoPontoAM" width="3%" height="7%" left="70%" top="17%" zIndex="6"/>
-<region id="regiaoPontoMT" width="3%" height="7%" left="75%" top="35%" zIndex="6"/>
-<region id="regiaoPontoDF" width="3%" height="7%" left="81%" top="38%" zIndex="6"/>
-<region id="regiaoPontoSP" width="3%" height="7%" left="83%" top="50%" zIndex="6"/>
-<region id="regiaoPontoRJ" width="3%" height="7%" left="87%" top="48%" zIndex="6"/>
-<region id="regiaoPontoRS" width="3%" height="7%" left="77%" top="63%" zIndex="6"/>
-<region id="regiaoPontoMG" width="3%" height="7%" left="85%" top="44%" zIndex="6"/>
-<region id="regiaoPontoPR" width="3%" height="7%" left="80%" top="53%" zIndex="6"/>
-<region id="regiaoPontoBA" width="3%" height="7%" left="89%" top="34%" zIndex="6"/>
-<region id="regiaoPontoPE" width="3%" height="7%" left="92%" top="24%" zIndex="6"/>
-<region id="regiaoPontoRN" width="3%" height="7%" left="92%" top="18%" zIndex="6"/>
-<region id="regiaoPontoCE" width="3%" height="7%" left="90%" top="17%" zIndex="6"/>
+				<region id="regiaoPontoAM" width="10.4%" height="12.6%" left="70%" top="17%" zIndex="6"/>
+				<region id="regiaoPontoMT" width="10.4%" height="12.6%" left="75%" top="35%" zIndex="6"/>
+				<region id="regiaoPontoDF" width="10.4%" height="12.6%" left="81%" top="38%" zIndex="6"/>
+				<region id="regiaoPontoSP" width="10.4%" height="12.6%" left="83%" top="50%" zIndex="6"/>
+				<region id="regiaoPontoRJ" width="10.4%" height="12.6%" left="87%" top="48%" zIndex="6"/>
+				<region id="regiaoPontoRS" width="10.4%" height="12.6%" left="77%" top="63%" zIndex="6"/>
+				<region id="regiaoPontoMG" width="10.4%" height="12.6%" left="85%" top="44%" zIndex="6"/>
+				<region id="regiaoPontoPR" width="10.4%" height="12.6%" left="80%" top="53%" zIndex="6"/>
+				<region id="regiaoPontoBA" width="10.4%" height="12.6%" left="89%" top="34%" zIndex="6"/>
+				<region id="regiaoPontoPE" width="10.4%" height="12.6%" left="92%" top="24%" zIndex="6"/>
+				<region id="regiaoPontoRN" width="10.4%" height="12.6%" left="92%" top="18%" zIndex="6"/>
+				<region id="regiaoPontoCE" width="10.4%" height="12.6%" left="90%" top="17%" zIndex="6"/>
 				
 			<!--
 			<region id="regiaoPontoAM" width="35%" height="70%" left="60%" top="5%" zIndex="6"/>
