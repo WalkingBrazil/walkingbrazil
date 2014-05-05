@@ -23,7 +23,7 @@
 			<region id="regiaoPontoPE" width="35%" height="70%" left="60%" top="5%" zIndex="6"/>
 			<region id="regiaoPontoRN" width="35%" height="70%" left="60%" top="5%" zIndex="6"/>
 			<region id="regiaoPontoCE" width="35%" height="70%" left="60%" top="5%" zIndex="6"/>
-			<region id="regiaoNavegacao" width="30%" height="12%" left="6%" top="60%" zIndex="5"/>
+			<region id="regiaoNavegacao" width="22.7%" height="21.3%" left="6%" top="60%" zIndex="5"/>
 			<region id="regiaoBotaoSair" width="5.625%" height="12.685%" left="6%" top="82%" zIndex="5"/>
 			<region id="regiaoBotaoVoltar" width="5.625%" height="12.685%" left="16%" top="82%" zIndex="5"/>
 			<region id="regiaoBotaoSobre" width="5.625%" height="12.685%" left="26%" top="82%" zIndex="5"/>

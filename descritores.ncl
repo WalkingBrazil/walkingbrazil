@@ -17,7 +17,7 @@
 			<descriptor id="idPontoAM" region="reg#regiaoPontoAM" focusIndex="ixPontoAM" moveUp="ixPontoRS" moveDown="ixPontoMT" moveLeft="ixPontoCE" moveRight="ixPontoCE" focusSrc="media/pontoManaus.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoMT" region="reg#regiaoPontoMT" focusIndex="ixPontoMT" moveUp="ixPontoAM" moveDown="ixPontoDF" moveLeft="ixPontoBA" moveRight="ixPontoDF" focusSrc="media/pontoCuiaba.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoDF" region="reg#regiaoPontoDF" focusIndex="ixPontoDF" moveUp="ixPontoMT" moveDown="ixPontoMG" moveLeft="ixPontoMT" moveRight="ixPontoBA" focusSrc="media/pontoBrasilia.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoCE" region="reg#regiaoPontoCE" focusIndex="ixPontoCE" moveUp="ixPontoRS" moveDown="ixPontoRN" moveLeft="ixPontoAM" moveRight="ixPontoRN" focusSrc="media/pontoFortaleza.png" focusBorderWidth="0"/>
+			<descriptor id="idPontoCE" region="reg#regiaoPontoCE" focusIndex="ixPontoCE" moveUp="ixPontoRS" moveDown="ixPontoRN" moveLeft="ixPontoAM" moveRight="ixPontoRN" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoSP" region="reg#regiaoPontoSP" focusIndex="ixPontoSP" moveUp="ixPontoMG" moveDown="ixPontoPR" moveLeft="ixPontoPR" moveRight="ixPontoRJ" focusSrc="media/pontoSaoPaulo.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoRJ" region="reg#regiaoPontoRJ" focusIndex="ixPontoRJ" moveUp="ixPontoMG" moveDown="ixPontoSP" moveLeft="ixPontoSP" moveRight="ixPontoSP" focusSrc="media/pontoRiodeJaneiro.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoRS" region="reg#regiaoPontoRS" focusIndex="ixPontoRS" moveUp="ixPontoPR" moveDown="ixPontoAM" focusSrc="media/pontoPortoAlegre.png" focusBorderWidth="0"/>
