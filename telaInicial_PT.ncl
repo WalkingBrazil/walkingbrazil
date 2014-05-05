@@ -78,7 +78,7 @@
 				<port id="portaPontoPE" component="pontoPE"/>
 				<port id="portaPontoRN" component="pontoRN"/>
 				<port id="portaPontoCE" component="pontoCE"/>
-				<media id="pontoAM" src="media/Pins/pin_manaus.png" descriptor="des#idPontoAM"/>
+				<!--<media id="pontoAM" src="media/Pins/pin_manaus.png" descriptor="des#idPontoAM"/>
 				<media id="pontoMT" src="media/Pins/pin_cuiaba.png" descriptor="des#idPontoMT"/>
 				<media id="pontoDF" src="media/Pins/pin_brasilia.png" descriptor="des#idPontoDF"/>
 				<media id="pontoSP" src="media/Pins/pin_saopaulo.png" descriptor="des#idPontoSP"/>
@@ -89,7 +89,20 @@
 				<media id="pontoBA" src="media/Pins/pin_salvador.png" descriptor="des#idPontoBA"/>
 				<media id="pontoPE" src="media/Pins/pin_recife.png" descriptor="des#idPontoPE"/>
 				<media id="pontoRN" src="media/Pins/pin_natal.png" descriptor="des#idPontoRN"/>
-				<media id="pontoCE" src="media/Pins/pin_fortaleza.png" descriptor="des#idPontoCE"/>
+				<media id="pontoCE" src="media/Pins/pin_fortaleza.png" descriptor="des#idPontoCE"/>-->
+				
+				<media id="pontoAM" src="media/ponto.png" descriptor="des#idPontoAM"/>
+				<media id="pontoMT" src="media/ponto.png" descriptor="des#idPontoMT"/>
+				<media id="pontoDF" src="media/ponto.png" descriptor="des#idPontoDF"/>
+				<media id="pontoSP" src="media/ponto.png" descriptor="des#idPontoSP"/>
+				<media id="pontoRJ" src="media/ponto.png" descriptor="des#idPontoRJ"/>
+				<media id="pontoRS" src="media/ponto.png" descriptor="des#idPontoRS"/>
+				<media id="pontoMG" src="media/ponto.png" descriptor="des#idPontoMG"/>
+				<media id="pontoPR" src="media/ponto.png" descriptor="des#idPontoPR"/>
+				<media id="pontoBA" src="media/ponto.png" descriptor="des#idPontoBA"/>
+				<media id="pontoPE" src="media/ponto.png" descriptor="des#idPontoPE"/>
+				<media id="pontoRN" src="media/ponto.png" descriptor="des#idPontoRN"/>
+				<media id="pontoCE" src="media/ponto.png" descriptor="des#idPontoCE"/>
 				<media id="imagemMapa" src="media/mapa.png" descriptor="des#idMapa"/>
 				<media id="settings" type="application/x-ginga-settings">
 					<property name="service.currentKeyMaster" value=""/>
