@@ -225,7 +225,7 @@
 			</context>
 			<context id="ctxSobre_PT">
 				<port id="pSobre" component="sobrePT"/>
-				<media id="sobrePT" src="media/Sobre.png" descriptor="des#idMenuIdioma"/>
+				<media id="sobrePT" src="media/Sobre.png" descriptor="des#idTelaSobre"/>
 			</context>
 			<link id="lApagaPainelNavegacaoTelaSobre" xconnector="conectores#noInicioStop">
 				<bind role="onBegin" component="ctxSobre_PT"/>
