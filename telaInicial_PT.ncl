@@ -40,7 +40,6 @@
 			<port id="portaCtxTelaNavegacao" component="ctxTelaNavegacao"/>
 			<port id="portaPainelNavegacao" component="painelNavegacao"/>
 			<port id="portaBotaoSair" component="botaoSair"/>
-			<port id="portaBotaoSobre" component="botaoSobre"/>
 			<port id="portaBotaoVoltar" component="botaoVoltar"/>
 			<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 !					MÍDIAS TELAINICAL_PT			 					 	 !
@@ -49,7 +48,6 @@
 	 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<media id="painelNavegacao" src="media/navegacao.png" descriptor="des#idNavegacao"/>
 			<media id="botaoSair" src="media/botaoSair.png" descriptor="des#idBotaoSair"/>
-			<media id="botaoSobre" src="media/botaoSobre.png" descriptor="des#idBotaoSobre"/>
 			<media id="botaoVoltar" src="media/botaoVoltar.png" descriptor="des#idBotaoVoltar"/>
 			
 			<context id="ctxTelaNavegacao">
@@ -78,6 +76,7 @@
 				<port id="portaPontoPE" component="pontoPE"/>
 				<port id="portaPontoRN" component="pontoRN"/>
 				<port id="portaPontoCE" component="pontoCE"/>
+				<port id="pBotaoSobre" component="botaoSobre"/>
 				<!--<media id="pontoAM" src="media/Pins/pin_manaus.png" descriptor="des#idPontoAM"/>
 				<media id="pontoMT" src="media/Pins/pin_cuiaba.png" descriptor="des#idPontoMT"/>
 				<media id="pontoDF" src="media/Pins/pin_brasilia.png" descriptor="des#idPontoDF"/>
@@ -103,6 +102,8 @@
 				<media id="pontoPE" src="media/ponto.png" descriptor="des#idPontoPE"/>
 				<media id="pontoRN" src="media/ponto.png" descriptor="des#idPontoRN"/>
 				<media id="pontoCE" src="media/ponto.png" descriptor="des#idPontoCE"/>
+				<media id="botaoSobre" src="media/botaoSobre.png" descriptor="des#idBotaoSobre"/>
+				
 				<media id="imagemMapa" src="media/mapa.png" descriptor="des#idMapa"/>
 				<media id="settings" type="application/x-ginga-settings">
 					<property name="service.currentKeyMaster" value=""/>
@@ -232,7 +233,7 @@
 				<bind component="painelNavegacao" role="stop"/>
 			</link>
 			<link id="lTelaSobre" xconnector="conectores#onKeySelection_and_NodeStateTestStartAbort2">
-				<bind role="onSelection" component="botaoSobre">
+				<bind role="onSelection" component="ctxTelaNavegacao" interface="pBotaoSobre">
 					<bindParam name="vKey" value="YELLOW"/>
 				</bind>
 				<bind role="test" component="ctxTelaNavegacao">
@@ -252,6 +253,14 @@
 				<bind component="painelNavegacao" role="start"/>
 				<bind component="ctxTelaNavegacao" role="start"/>
 			</link>
+			<!-- <link id="lInicioTelaInicial" xconnector="conectores#noInicio">
+				<bind role="onBegin" component="ctxTelaNavegacao"/>
+				<bind role="start" component="botaoSobre"/>
+			</link>
+			<link id="lSaidaTelaInicial" xconnector="conectores#noFim">
+				<bind role="onEnd" component="ctxTelaNavegacao"/>
+				<bind role="stop" component="botaoSobre"/>
+			</link> -->
 			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionAbort">
 				<bind role="onSelection" component="botaoSair">
 					<bindParam name="key" value="RED"/>
