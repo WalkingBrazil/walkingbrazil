@@ -83,7 +83,6 @@
 			</link>
 			<link id="lVoltaBeloHorizonteParaTelaSelecao_PTur1" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="imgBH_PTur1_G">
-					<!--muda essa component-->
 					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgBeloHorizonte_Selecao">
@@ -94,7 +93,6 @@
 			</link>
 			<link id="lVoltaBeloHorizonteParaTelaSelecao_PTur2" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="imgBH_PTur2_G">
-					<!--muda essa component-->
 					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgBeloHorizonte_Selecao">
@@ -105,7 +103,6 @@
 			</link>
 			<link id="lVoltaBeloHorizonteParaTelaSelecao_PTur3" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="imgBH_PTur3_G">
-					<!--muda essa component-->
 					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgBeloHorizonte_Selecao">
@@ -116,7 +113,6 @@
 			</link>
 			<link id="lVoltaBeloHorizonteParaTelaSelecao_PTur4" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop">
 				<bind role="onSelection" component="imgBH_PTur4_G">
-					<!--muda essa component-->
 					<bindParam name="vKey" value="GREEN"/>
 				</bind>
 				<bind role="test" component="imgBeloHorizonte_Selecao">
