@@ -8,18 +8,18 @@
 			<region id="regiaoMapa" width="35%" height="70%" left="60%" top="5%" zIndex="5"/>
 			
 			
-				<region id="regiaoPontoAM" width="10.4%" height="12.6%" left="68%" top="9%" zIndex="6"/>
-				<region id="regiaoPontoMT" width="10.4%" height="12.6%" left="72%" top="30%" zIndex="6"/>
-				<region id="regiaoPontoDF" width="10.4%" height="12.6%" left="78.3%" top="31%" zIndex="6"/>
-				<region id="regiaoPontoSP" width="10.4%" height="12.6%" left="79%" top="45%" zIndex="7"/>
-				<region id="regiaoPontoRJ" width="10.4%" height="12.6%" left="81%" top="44%" zIndex="7"/>
-				<region id="regiaoPontoRS" width="10.4%" height="12.6%" left="75.2%" top="55%" zIndex="7"/>
-				<region id="regiaoPontoMG" width="10.4%" height="12.6%" left="81%" top="38%" zIndex="6"/>
-				<region id="regiaoPontoPR" width="10.4%" height="12.6%" left="76.5%" top="47.5%" zIndex="7"/>
-				<region id="regiaoPontoBA" width="10.4%" height="12.6%" left="86%" top="27%" zIndex="6"/>
-				<region id="regiaoPontoPE" width="10%" height="12.6%" left="89.5%" top="19%" zIndex="7"/>
-				<region id="regiaoPontoRN" width="10%" height="12.6%" left="89.5%" top="14%" zIndex="6"/>
-				<region id="regiaoPontoCE" width="10.4%" height="12.6%" left="86%" top="10%" zIndex="6"/>
+			<region id="regiaoPontoAM" width="10.4%" height="12.6%" left="68%" top="9%" zIndex="6"/>
+			<region id="regiaoPontoMT" width="10.4%" height="12.6%" left="72%" top="30%" zIndex="6"/>
+			<region id="regiaoPontoDF" width="10.4%" height="12.6%" left="78.3%" top="31%" zIndex="6"/>
+			<region id="regiaoPontoSP" width="10.4%" height="12.6%" left="79%" top="45%" zIndex="7"/>
+			<region id="regiaoPontoRJ" width="10.4%" height="12.6%" left="81%" top="44%" zIndex="7"/>
+			<region id="regiaoPontoRS" width="10.4%" height="12.6%" left="75.2%" top="55%" zIndex="7"/>
+			<region id="regiaoPontoMG" width="10.4%" height="12.6%" left="81%" top="38%" zIndex="6"/>
+			<region id="regiaoPontoPR" width="10.4%" height="12.6%" left="76.5%" top="47.5%" zIndex="7"/>
+			<region id="regiaoPontoBA" width="10.4%" height="12.6%" left="86%" top="27%" zIndex="6"/>
+			<region id="regiaoPontoPE" width="10%" height="12.6%" left="89.5%" top="19%" zIndex="7"/>
+			<region id="regiaoPontoRN" width="10%" height="12.6%" left="89.5%" top="14%" zIndex="6"/>
+			<region id="regiaoPontoCE" width="10.4%" height="12.6%" left="86%" top="10%" zIndex="6"/>
 		
 			<region id="regiaoNavegacao" width="22.7%" height="21.3%" left="6%" top="60%" zIndex="5"/>
 			<region id="regiaoBotaoSair" width="5.625%" height="12.685%" left="6%" top="82%" zIndex="5"/>
