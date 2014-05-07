@@ -23,19 +23,6 @@
 			<descriptor id="idPontoPE" region="reg#regiaoPontoPE" focusIndex="ixPontoPE" moveUp="ixPontoRN" moveDown="ixPontoBA" moveLeft="ixPontoAM" moveRight="ixPontoAM" focusSrc="media/Pins/pin_selecionado_recife.png" focusBorderWidth="0"/>
 			<descriptor id="idPontoRN" region="reg#regiaoPontoRN" focusIndex="ixPontoRN" moveUp="ixPontoCE" moveDown="ixPontoPE" moveLeft="ixPontoCE" moveRight="ixPontoAM" focusSrc="media/Pins/pin_selecionado_natal.png" focusBorderWidth="0"/>
 			
-			
-			<!--<descriptor id="idPontoAM" region="reg#regiaoPontoAM" focusIndex="ixPontoAM" moveUp="ixPontoRS" moveDown="ixPontoMT" moveLeft="ixPontoCE" moveRight="ixPontoCE" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoMT" region="reg#regiaoPontoMT" focusIndex="ixPontoMT" moveUp="ixPontoAM" moveDown="ixPontoDF" moveLeft="ixPontoBA" moveRight="ixPontoDF" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoDF" region="reg#regiaoPontoDF" focusIndex="ixPontoDF" moveUp="ixPontoMT" moveDown="ixPontoMG" moveLeft="ixPontoMT" moveRight="ixPontoBA" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoCE" region="reg#regiaoPontoCE" focusIndex="ixPontoCE" moveUp="ixPontoRS" moveDown="ixPontoRN" moveLeft="ixPontoAM" moveRight="ixPontoRN" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoSP" region="reg#regiaoPontoSP" focusIndex="ixPontoSP" moveUp="ixPontoMG" moveDown="ixPontoPR" moveLeft="ixPontoPR" moveRight="ixPontoRJ" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoRJ" region="reg#regiaoPontoRJ" focusIndex="ixPontoRJ" moveUp="ixPontoMG" moveDown="ixPontoSP" moveLeft="ixPontoSP" moveRight="ixPontoSP" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoRS" region="reg#regiaoPontoRS" focusIndex="ixPontoRS" moveUp="ixPontoPR" moveDown="ixPontoAM" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoMG" region="reg#regiaoPontoMG" focusIndex="ixPontoMG" moveUp="ixPontoDF" moveDown="ixPontoRJ" moveLeft="ixPontoDF" moveRight="ixPontoRJ" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoPR" region="reg#regiaoPontoPR" focusIndex="ixPontoPR" moveUp="ixPontoSP" moveDown="ixPontoRS" moveLeft="ixPontoSP" moveRight="ixPontoSP" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoBA" region="reg#regiaoPontoBA" focusIndex="ixPontoBA" moveUp="ixPontoPE" moveDown="ixPontoDF" moveLeft="ixPontoDF" moveRight="ixPontoMT" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoPE" region="reg#regiaoPontoPE" focusIndex="ixPontoPE" moveUp="ixPontoRN" moveDown="ixPontoBA" moveLeft="ixPontoAM" moveRight="ixPontoAM" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>
-			<descriptor id="idPontoRN" region="reg#regiaoPontoRN" focusIndex="ixPontoRN" moveUp="ixPontoCE" moveDown="ixPontoPE" moveLeft="ixPontoCE" moveRight="ixPontoAM" focusSrc="media/Pins/pin_fortaleza_selecionado.png" focusBorderWidth="0"/>-->
 			<descriptor id="idNavegacao" region="reg#regiaoNavegacao"/>
 			<descriptor id="idBotaoSair" region="reg#regiaoBotaoSair"/>
 			<descriptor id="idBotaoSobre" region="reg#regiaoBotaoSobre"/>

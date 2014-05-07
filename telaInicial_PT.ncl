@@ -230,6 +230,15 @@
 				<bind component="ctxTelaNavegacao" role="abort"/>
 				<bind component="ctxSobre_PT" role="start"/>
 			</link>
+			<link id="lTelaNavegacaoParaVideo" xconnector="conectores#onKeySelection_and_NodeStateTestAbort2">
+				<bind role="onSelection" component="ctxTelaNavegacao" interface="pBotaoSobre">
+					<bindParam name="vKey" value="GREEN"/>
+				</bind>
+				<bind role="test" component="ctxTelaNavegacao">
+					<bindParam name="vState" value="occurring"/>
+				</bind>
+				<bind component="ctxTelaInicial_PT" role="abort"/>
+			</link>
 			<link id="lVoltaTelaSobreParaTelaInicial" xconnector="conectores#onKeySelection_and_NodeStateTestStartStop2">
 				<bind role="onSelection" component="botaoVoltar">
 					<bindParam name="vKey" value="GREEN"/>
@@ -241,14 +250,7 @@
 				<bind component="painelNavegacao" role="start"/>
 				<bind component="ctxTelaNavegacao" role="start"/>
 			</link>
-			<!-- <link id="lInicioTelaInicial" xconnector="conectores#noInicio">
-				<bind role="onBegin" component="ctxTelaNavegacao"/>
-				<bind role="start" component="botaoSobre"/>
-			</link>
-			<link id="lSaidaTelaInicial" xconnector="conectores#noFim">
-				<bind role="onEnd" component="ctxTelaNavegacao"/>
-				<bind role="stop" component="botaoSobre"/>
-			</link> -->
+
 			<link id="lTerminaAplicacao" xconnector="conectores#onKeySelectionAbort">
 				<bind role="onSelection" component="botaoSair">
 					<bindParam name="key" value="RED"/>
